@@ -18,6 +18,9 @@
             margin: 0;
             height: 100%;
         }
+        canvas {
+            background: #000;
+        }
     </style>
 
     <!--这个标签为通过egret提供的第三方库的方式生成的 javascript 文件。删除 modules_files 标签后，库文件加载列表将不会变化，请谨慎操作！-->
@@ -28,6 +31,8 @@
 	<script egret="lib" src="libs/modules/game/game.web.js" src-release="libs/modules/game/game.web.min.js"></script>
 	<script egret="lib" src="libs/modules/res/res.js" src-release="libs/modules/res/res.min.js"></script>
 	<script egret="lib" src="libs/modules/tween/tween.js" src-release="libs/modules/tween/tween.min.js"></script>
+	<script egret="lib" src="libs/modules/mouse/mouse.js" src-release="libs/modules/mouse/mouse.min.js"></script>
+	<script egret="lib" src="libs/modules/lodash/lodash.js" src-release="libs/modules/lodash/lodash.min.js"></script>
 	<!--modules_files_end-->
 
     <!--这个标签为不通过egret提供的第三方库的方式使用的 javascript 文件，请将这些文件放在libs下，但不要放在modules下面。-->
@@ -36,8 +41,9 @@
 
     <!--这个标签会被替换为项目中所有的 javascript 文件。删除 game_files 标签后，项目文件加载列表将不会变化，请谨慎操作！-->
     <!--game_files_start-->
-	<script egret="game" src="bin-debug/LoadingUI.js"></script>
 	<script egret="game" src="bin-debug/Main.js"></script>
+	<script egret="game" src="bin-debug/Swiper/Slide.js"></script>
+	<script egret="game" src="bin-debug/Swiper/index.js"></script>
 	<!--game_files_end-->
 </head>
 <body>
@@ -46,13 +52,11 @@
          data-entry-class="Main"
          data-orientation="auto"
          data-scale-mode="showAll"
-         data-frame-rate="30"
-         data-content-width="500"
+         data-frame-rate="60"
+         data-content-width="600"
          data-content-height="500"
          data-show-paint-rect="false"
          data-multi-fingered="2"
-         data-show-fps="false" data-show-log="false"
-         data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
     </div>
     <script>
         /**

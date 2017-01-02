@@ -8,8 +8,11 @@ var game_file_list = [
 	"libs/modules/game/game.native.js",
 	"libs/modules/res/res.js",
 	"libs/modules/tween/tween.js",
-	"bin-debug/LoadingUI.js",
+	"libs/modules/mouse/mouse.js",
+	"libs/modules/lodash/lodash.js",
 	"bin-debug/Main.js",
+	"bin-debug/Swiper/Slide.js",
+	"bin-debug/Swiper/index.js",
 	//----auto game_file_list end----
 ];
 
@@ -43,13 +46,13 @@ egret_native.egretStart = function () {
         //以下为自动修改，请勿修改
         //----auto option start----
 		entryClassName: "Main",
-		frameRate: 30,
+		frameRate: 60,
 		scaleMode: "showAll",
-		contentWidth: 500,
+		contentWidth: 600,
 		contentHeight: 500,
 		showPaintRect: false,
 		showFPS: false,
-		fpsStyles: "x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9",
+		fpsStyles: "",
 		showLog: false,
 		logFilter: "",
 		maxTouches: 2,

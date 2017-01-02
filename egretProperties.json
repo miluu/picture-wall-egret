@@ -20,6 +20,14 @@
     },
     {
       "name": "tween"
+    },
+    {
+      "name": "mouse",
+      "path": "/Users/miluu/works/egret-game-library/mouse/libsrc"
+    },
+    {
+      "name": "lodash",
+      "path": "/Users/miluu/works/egret-game-library/lodash"
     }
   ]
 }
