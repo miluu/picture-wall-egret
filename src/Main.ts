@@ -21,12 +21,24 @@ class Main extends egret.DisplayObjectContainer {
     });
     this.swiper.x = 10;
     this.swiper.y = 30;
+    let t1 = new egret.TextField();
+    let t2 = new egret.TextField();
+    let t3 = new egret.TextField();
+    let t4 = new egret.TextField();
+    let t5 = new egret.TextField();
+    t1.text = '1';
+    t2.text = '2';
+    t3.text = '3';
+    t4.text = '4';
+    t5.text = '5';
+    t1.textColor = t2.textColor = t5.textColor = t3.textColor = t4.textColor = 0x000000;
+    t1.textColor = t2.textColor = t5.textColor = t3.textColor = t4.textColor = 14;
     this.swiper
-      .addSlide()
-      .addSlide()
-      .addSlide()
-      .addSlide()
-      .addSlide()
+      .addSlide(t1)
+      .addSlide(t2)
+      .addSlide(t3)
+      .addSlide(t4)
+      .addSlide(t5)
       .start();
     this.swiper.onChange = function(activeIndex: number, preActiveIndex: number) {
       console.log(`active index changed from ${preActiveIndex} to ${activeIndex}.`);

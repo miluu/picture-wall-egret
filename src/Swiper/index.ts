@@ -44,8 +44,8 @@ class Swiper extends egret.DisplayObjectContainer {
     let posOffset: number = activeCenter
       ? viewWidth / 2
       : slideWidth / 2 + padding;
-    _.forEach(this.slides, (slide, index) => {
-      this._useEffect(slide, index, posOffset);
+    _.forEach(this.slides, (slide) => {
+      this._useEffect(slide, slide.options.index, posOffset);
     });
     if (this._options.effect === 'carrousel') {
       console.log(`\n\n`);
@@ -72,7 +72,7 @@ class Swiper extends egret.DisplayObjectContainer {
     const {slideWidth, padding, effect} = this._options;
     switch (effect) {
       case 'carrousel':
-        let radius = 150;
+        let radius = 130;
         let slideOffset = index - this._slideOffset;
         let ang = slideOffset / 5 * Math.PI / 2;
         let x = radius * Math.sin(ang);
