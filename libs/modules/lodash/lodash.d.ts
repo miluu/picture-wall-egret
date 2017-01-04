@@ -1,247 +1,9 @@
 
-// Type definitions for Lo-Dash 4.14
-// Project: http://lodash.com/
-// Definitions by: Brian Zengel <https://github.com/bczengel>, Ilya Mochalov <https://github.com/chrootsu>, Stepan Mikhaylyuk <https://github.com/stepancar>
-// Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
-
-/**
-### 4.0.0 Changelog (https://github.com/lodash/lodash/wiki/Changelog)
-
-#### TODO:
-removed:
-- [x] Removed _.support
-- [x] Removed _.findWhere in favor of _.find with iteratee shorthand
-- [x] Removed _.where in favor of _.filter with iteratee shorthand
-- [x] Removed _.pluck in favor of _.map with iteratee shorthand
-
-renamed:
-- [x] Renamed _.first to _.head
-- [x] Renamed _.indexBy to _.keyBy
-- [x] Renamed _.invoke to _.invokeMap
-- [x] Renamed _.overArgs to _.overArgs
-- [x] Renamed _.padLeft & _.padRight to _.padStart & _.padEnd
-- [x] Renamed _.pairs to _.toPairs
-- [x] Renamed _.rest to _.tail
-- [x] Renamed _.restParam to _.rest
-- [x] Renamed _.sortByOrder to _.orderBy
-- [x] Renamed _.trimLeft & _.trimRight to _.trimStart & _.trimEnd
-- [x] Renamed _.trunc to _.truncate
-
-split:
-- [x] Split _.indexOf & _.lastIndexOf into _.sortedIndexOf & _.sortedLastIndexOf
-- [x] Split _.max & _.min into _.maxBy & _.minBy
-- [x] Split _.omit & _.pick into _.omitBy & _.pickBy
-- [x] Split _.sample into _.sampleSize
-- [x] Split _.sortedIndex into _.sortedIndexBy
-- [x] Split _.sortedLastIndex into _.sortedLastIndexBy
-- [x] Split _.uniq into _.sortedUniq, _.sortedUniqBy, & _.uniqBy
-
-changes:
-- [x] Absorbed _.sortByAll into _.sortBy
-- [x] Changed the category of _.at to “Object”
-- [x] Changed the category of _.bindAll to “Utility”
-- [x] Made _.capitalize uppercase the first character & lowercase the rest
-- [x] Made _.functions return only own method names
-
-
-added 23 array methods:
-- [x] _.concat
-- [x] _.differenceBy
-- [x] _.differenceWith
-- [x] _.flatMap
-- [x] _.fromPairs
-- [x] _.intersectionBy
-- [x] _.intersectionWith
-- [x] _.join
-- [x] _.pullAll
-- [x] _.pullAllBy
-- [x] _.reverse
-- [x] _.sortedIndexBy
-- [x] _.sortedIndexOf
-- [x] _.sortedLastIndexBy
-- [x] _.sortedLastIndexOf
-- [x] _.sortedUniq
-- [x] _.sortedUniqBy
-- [x] _.unionBy
-- [x] _.unionWith
-- [x] _.uniqBy
-- [x] _.uniqWith
-- [x] _.xorBy
-- [x] _.xorWith
-
-added 18 lang methods:
-- [x] _.cloneDeepWith
-- [x] _.cloneWith
-- [x] _.eq
-- [x] _.isArrayLike
-- [x] _.isArrayLikeObject
-- [x] _.isEqualWith
-- [x] _.isInteger
-- [x] _.isLength
-- [x] _.isMatchWith
-- [x] _.isNil
-- [x] _.isObjectLike
-- [x] _.isSafeInteger
-- [x] _.isSymbol
-- [x] _.toInteger
-- [x] _.toLength
-- [x] _.toNumber
-- [x] _.toSafeInteger
-- [x] _.toString
-
-added 13 object methods:
-- [x] _.assignIn
-- [x] _.assignInWith
-- [x] _.assignWith
-- [x] _.functionsIn
-- [x] _.hasIn
-- [x] _.mergeWith
-- [x] _.omitBy
-- [x] _.pickBy
-
-
-added 8 string methods:
-- [x] _.lowerCase
-- [x] _.lowerFirst
-- [x] _.upperCase
-- [x] _.upperFirst
-- [x] _.toLower
-- [x] _.toUpper
-
-added 8 utility methods:
-- [x] _.toPath
-
-added 4 math methods:
-- [x] _.maxBy
-- [x] _.mean
-- [x] _.minBy
-- [x] _.sumBy
-
-added 2 function methods:
-- [x] _.flip
-- [x] _.unary
-
-added 2 number methods:
-- [x] _.clamp
-- [x] _.subtract
-
-added collection method:
-- [x] _.sampleSize
-
-Added 3 aliases
-
-- [x] _.first as an alias of _.head
-
-Removed 17 aliases
-- [x] Removed aliase _.all
-- [x] Removed aliase _.any
-- [x] Removed aliase _.backflow
-- [x] Removed aliase _.callback
-- [x] Removed aliase _.collect
-- [x] Removed aliase _.compose
-- [x] Removed aliase _.contains
-- [x] Removed aliase _.detect
-- [x] Removed aliase _.foldl
-- [x] Removed aliase _.foldr
-- [x] Removed aliase _.include
-- [x] Removed aliase _.inject
-- [x] Removed aliase _.methods
-- [x] Removed aliase _.object
-- [x] Removed aliase _.run
-- [x] Removed aliase _.select
-- [x] Removed aliase _.unique
-
-Other changes
-- [x] Added support for array buffers to _.isEqual
-- [x] Added support for converting iterators to _.toArray
-- [x] Added support for deep paths to _.zipObject
-- [x] Changed UMD to export to window or self when available regardless of other exports
-- [x] Ensured debounce cancel clears args & thisArg references
-- [x] Ensured _.add, _.subtract, & _.sum don’t skip NaN values
-- [x] Ensured _.clone treats generators like functions
-- [x] Ensured _.clone produces clones with the source’s [[Prototype]]
-- [x] Ensured _.defaults assigns properties that shadow Object.prototype
-- [x] Ensured _.defaultsDeep doesn’t merge a string into an array
-- [x] Ensured _.defaultsDeep & _.merge don’t modify sources
-- [x] Ensured _.defaultsDeep works with circular references
-- [x] Ensured _.keys skips “length” on strict mode arguments objects in Safari 9
-- [x] Ensured _.merge doesn’t convert strings to arrays
-- [x] Ensured _.merge merges plain-objects onto non plain-objects
-- [x] Ensured _#plant resets iterator data of cloned sequences
-- [x] Ensured _.random swaps min & max if min is greater than max
-- [x] Ensured _.range preserves the sign of start of -0
-- [x] Ensured _.reduce & _.reduceRight use getIteratee in their array branch
-- [x] Fixed rounding issue with the precision param of _.floor
-- [x] Added flush method to debounced & throttled functions
-
-** LATER **
-Misc:
-- [ ] Made _.forEach, _.forIn, _.forOwn, & _.times implicitly end a chain sequence
-- [ ] Removed thisArg params from most methods
-- [ ] Made “By” methods provide a single param to iteratees
-- [ ] Made _.words chainable by default
-- [ ] Removed isDeep params from _.clone & _.flatten
-- [ ] Removed _.bindAll support for binding all methods when no names are provided
-- [ ] Removed func-first param signature from _.before & _.after
-- [ ] _.extend as an alias of _.assignIn
-- [ ] _.extendWith as an alias of _.assignInWith
-- [ ] Added clear method to _.memoize.Cache
-- [ ] Added support for ES6 maps, sets, & symbols to _.clone, _.isEqual, & _.toArray
-- [ ] Enabled _.flow & _.flowRight to accept an array of functions
-- [ ] Ensured “Collection” methods treat functions as objects
-- [ ] Ensured _.assign, _.defaults, & _.merge coerce object values to objects
-- [ ] Ensured _.bindKey bound functions call object[key] when called with the new operator
-- [ ] Ensured _.isFunction returns true for generator functions
-- [ ] Ensured _.merge assigns typed arrays directly
-- [ ] Made _(...) an iterator & iterable
-- [ ] Made _.drop, _.take, & right forms coerce n of undefined to 0
-
-Methods:
-- [ ] _.concat
-- [ ] _.differenceBy
-- [ ] _.differenceWith
-- [ ] _.flatMap
-- [ ] _.fromPairs
-- [ ] _.intersectionBy
-- [ ] _.intersectionWith
-- [ ] _.join
-- [ ] _.pullAll
-- [ ] _.pullAllBy
-- [ ] _.reverse
-- [ ] _.sortedLastIndexOf
-- [ ] _.unionBy
-- [ ] _.unionWith
-- [ ] _.uniqWith
-- [ ] _.xorBy
-- [ ] _.xorWith
-- [ ] _.toString
-
-- [ ] _.invoke
-- [ ] _.setWith
-- [ ] _.toPairs
-- [ ] _.toPairsIn
-- [ ] _.unset
-
-- [ ] _.replace
-- [ ] _.split
-
-- [ ] _.cond
-- [ ] _.conforms
-- [ ] _.nthArg
-- [ ] _.over
-- [ ] _.overEvery
-- [ ] _.overSome
-- [ ] _.rangeRight
-
-- [ ] _.next
-*/
-
-
+// Generated by typings
+// Source: https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/56a4356292163a8dd087810b820e511346882255/lodash/lodash.d.ts
 declare var _: _.LoDashStatic;
 
-declare namespace _ {
-    type Many<T> = T | T[];
-
+declare module _ {
     interface LoDashStatic {
         /**
         * Creates a lodash object which wraps the given value to enable intuitive method chaining.
@@ -277,8 +39,8 @@ declare namespace _ {
         (value: number): LoDashImplicitWrapper<number>;
         (value: string): LoDashImplicitStringWrapper;
         (value: boolean): LoDashImplicitWrapper<boolean>;
-        (value: number[]): LoDashImplicitNumberArrayWrapper;
-        <T>(value: T[]): LoDashImplicitArrayWrapper<T>;
+        (value: Array<number>): LoDashImplicitNumberArrayWrapper;
+        <T>(value: Array<T>): LoDashImplicitArrayWrapper<T>;
         <T extends {}>(value: T): LoDashImplicitObjectWrapper<T>;
         (value: any): LoDashImplicitWrapper<any>;
 
@@ -515,7 +277,7 @@ declare namespace _ {
          * console.log(array);
          * // => [1]
          */
-         concat<T>(array: List<T>, ...values: Array<T|List<T>>): T[];
+         concat<T>(array: T[]|List<T>, ...values: (T|T[]|List<T>)[]) : T[];
     }
 
     //_.difference
@@ -529,8 +291,8 @@ declare namespace _ {
          * @return Returns the new array of filtered values.
          */
         difference<T>(
-            array: List<T>,
-            ...values: Array<List<T>>
+            array: T[]|List<T>,
+            ...values: Array<T[]|List<T>>
         ): T[];
     }
 
@@ -538,28 +300,28 @@ declare namespace _ {
         /**
          * @see _.difference
          */
-        difference(...values: Array<List<T>>): LoDashImplicitArrayWrapper<T>;
+        difference(...values: (T[]|List<T>)[]): LoDashImplicitArrayWrapper<T>;
     }
 
     interface LoDashImplicitObjectWrapper<T> {
         /**
          * @see _.difference
          */
-        difference<TValue>(...values: Array<List<TValue>>): LoDashImplicitArrayWrapper<TValue>;
+        difference<TValue>(...values: (TValue[]|List<TValue>)[]): LoDashImplicitArrayWrapper<TValue>;
     }
 
     interface LoDashExplicitArrayWrapper<T> {
         /**
          * @see _.difference
          */
-        difference(...values: Array<List<T>>): LoDashExplicitArrayWrapper<T>;
+        difference(...values: (T[]|List<T>)[]): LoDashExplicitArrayWrapper<T>;
     }
 
     interface LoDashExplicitObjectWrapper<T> {
         /**
          * @see _.difference
          */
-        difference<TValue>(...values: Array<List<TValue>>): LoDashExplicitArrayWrapper<TValue>;
+        difference<TValue>(...values: (TValue[]|List<TValue>)[]): LoDashExplicitArrayWrapper<TValue>;
     }
 
     //_.differenceBy
@@ -575,8 +337,8 @@ declare namespace _ {
          * @returns Returns the new array of filtered values.
          */
         differenceBy<T>(
-            array: List<T>,
-            values?: List<T>,
+            array: T[]|List<T>,
+            values?: T[]|List<T>,
             iteratee?: ((value: T) => any)|string
         ): T[];
 
@@ -584,8 +346,8 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T, W extends Object>(
-            array: List<T>,
-            values?: List<T>,
+            array: T[]|List<T>,
+            values?: T[]|List<T>,
             iteratee?: W
         ): T[];
 
@@ -593,9 +355,9 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T>(
-            array: List<T>,
-            values1?: List<T>,
-            values2?: List<T>,
+            array: T[]|List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
             iteratee?: ((value: T) => any)|string
         ): T[];
 
@@ -603,9 +365,9 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T, W extends Object>(
-            array: List<T>,
-            values1?: List<T>,
-            values2?: List<T>,
+            array: T[]|List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
             iteratee?: W
         ): T[];
 
@@ -613,10 +375,10 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T>(
-            array: List<T>,
-            values1?: List<T>,
-            values2?: List<T>,
-            values3?: List<T>,
+            array: T[]|List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
+            values3?: T[]|List<T>,
             iteratee?: ((value: T) => any)|string
         ): T[];
 
@@ -624,10 +386,10 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T, W extends Object>(
-            array: List<T>,
-            values1?: List<T>,
-            values2?: List<T>,
-            values3?: List<T>,
+            array: T[]|List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
+            values3?: T[]|List<T>,
             iteratee?: W
         ): T[];
 
@@ -635,11 +397,11 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T, W extends Object>(
-            array: List<T>,
-            values1?: List<T>,
-            values2?: List<T>,
-            values3?: List<T>,
-            values4?: List<T>,
+            array: T[]|List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
+            values3?: T[]|List<T>,
+            values4?: T[]|List<T>,
             iteratee?: W
         ): T[];
 
@@ -647,11 +409,11 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T>(
-            array: List<T>,
-            values1?: List<T>,
-            values2?: List<T>,
-            values3?: List<T>,
-            values4?: List<T>,
+            array: T[]|List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
+            values3?: T[]|List<T>,
+            values4?: T[]|List<T>,
             iteratee?: ((value: T) => any)|string
         ): T[];
 
@@ -659,12 +421,12 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T>(
-            array: List<T>,
-            values1?: List<T>,
-            values2?: List<T>,
-            values3?: List<T>,
-            values4?: List<T>,
-            values5?: List<T>,
+            array: T[]|List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
+            values3?: T[]|List<T>,
+            values4?: T[]|List<T>,
+            values5?: T[]|List<T>,
             iteratee?: ((value: T) => any)|string
         ): T[];
 
@@ -672,12 +434,12 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T, W extends Object>(
-            array: List<T>,
-            values1?: List<T>,
-            values2?: List<T>,
-            values3?: List<T>,
-            values4?: List<T>,
-            values5?: List<T>,
+            array: T[]|List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
+            values3?: T[]|List<T>,
+            values4?: T[]|List<T>,
+            values5?: T[]|List<T>,
             iteratee?: W
         ): T[];
 
@@ -685,7 +447,7 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T>(
-            array: List<T>,
+            array: T[]|List<T>,
             ...values: any[]
         ): T[];
     }
@@ -695,7 +457,7 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T>(
-            values?: List<T>,
+            values?: T[]|List<T>,
             iteratee?: ((value: T) => any)|string
         ): LoDashImplicitArrayWrapper<T>;
 
@@ -703,7 +465,7 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T, W extends Object>(
-            values?: List<T>,
+            values?: T[]|List<T>,
             iteratee?: W
         ): LoDashImplicitArrayWrapper<T>;
 
@@ -711,8 +473,8 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T>(
-            values1?: List<T>,
-            values2?: List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
             iteratee?: ((value: T) => any)|string
         ): LoDashImplicitArrayWrapper<T>;
 
@@ -720,8 +482,8 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T, W extends Object>(
-            values1?: List<T>,
-            values2?: List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
             iteratee?: W
         ): LoDashImplicitArrayWrapper<T>;
 
@@ -729,9 +491,9 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T>(
-            values1?: List<T>,
-            values2?: List<T>,
-            values3?: List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
+            values3?: T[]|List<T>,
             iteratee?: ((value: T) => any)|string
         ): LoDashImplicitArrayWrapper<T>;
 
@@ -739,9 +501,9 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T, W extends Object>(
-            values1?: List<T>,
-            values2?: List<T>,
-            values3?: List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
+            values3?: T[]|List<T>,
             iteratee?: W
         ): LoDashImplicitArrayWrapper<T>;
 
@@ -749,10 +511,10 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T>(
-            values1?: List<T>,
-            values2?: List<T>,
-            values3?: List<T>,
-            values4?: List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
+            values3?: T[]|List<T>,
+            values4?: T[]|List<T>,
             iteratee?: ((value: T) => any)|string
         ): LoDashImplicitArrayWrapper<T>;
 
@@ -760,10 +522,10 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T, W extends Object>(
-            values1?: List<T>,
-            values2?: List<T>,
-            values3?: List<T>,
-            values4?: List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
+            values3?: T[]|List<T>,
+            values4?: T[]|List<T>,
             iteratee?: W
         ): LoDashImplicitArrayWrapper<T>;
 
@@ -771,11 +533,11 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T>(
-            values1?: List<T>,
-            values2?: List<T>,
-            values3?: List<T>,
-            values4?: List<T>,
-            values5?: List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
+            values3?: T[]|List<T>,
+            values4?: T[]|List<T>,
+            values5?: T[]|List<T>,
             iteratee?: ((value: T) => any)|string
         ): LoDashImplicitArrayWrapper<T>;
 
@@ -783,11 +545,11 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T, W extends Object>(
-            values1?: List<T>,
-            values2?: List<T>,
-            values3?: List<T>,
-            values4?: List<T>,
-            values5?: List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
+            values3?: T[]|List<T>,
+            values4?: T[]|List<T>,
+            values5?: T[]|List<T>,
             iteratee?: W
         ): LoDashImplicitArrayWrapper<T>;
 
@@ -804,7 +566,7 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T>(
-            values?: List<T>,
+            values?: T[]|List<T>,
             iteratee?: ((value: T) => any)|string
         ): LoDashImplicitArrayWrapper<T>;
 
@@ -812,7 +574,7 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T, W extends Object>(
-            values?: List<T>,
+            values?: T[]|List<T>,
             iteratee?: W
         ): LoDashImplicitArrayWrapper<T>;
 
@@ -820,8 +582,8 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T>(
-            values1?: List<T>,
-            values2?: List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
             iteratee?: ((value: T) => any)|string
         ): LoDashImplicitArrayWrapper<T>;
 
@@ -829,8 +591,8 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T, W extends Object>(
-            values1?: List<T>,
-            values2?: List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
             iteratee?: W
         ): LoDashImplicitArrayWrapper<T>;
 
@@ -838,9 +600,9 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T>(
-            values1?: List<T>,
-            values2?: List<T>,
-            values3?: List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
+            values3?: T[]|List<T>,
             iteratee?: ((value: T) => any)|string
         ): LoDashImplicitArrayWrapper<T>;
 
@@ -848,9 +610,9 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T, W extends Object>(
-            values1?: List<T>,
-            values2?: List<T>,
-            values3?: List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
+            values3?: T[]|List<T>,
             iteratee?: W
         ): LoDashImplicitArrayWrapper<T>;
 
@@ -858,10 +620,10 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T>(
-            values1?: List<T>,
-            values2?: List<T>,
-            values3?: List<T>,
-            values4?: List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
+            values3?: T[]|List<T>,
+            values4?: T[]|List<T>,
             iteratee?: ((value: T) => any)|string
         ): LoDashImplicitArrayWrapper<T>;
 
@@ -869,10 +631,10 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T, W extends Object>(
-            values1?: List<T>,
-            values2?: List<T>,
-            values3?: List<T>,
-            values4?: List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
+            values3?: T[]|List<T>,
+            values4?: T[]|List<T>,
             iteratee?: W
         ): LoDashImplicitArrayWrapper<T>;
 
@@ -880,11 +642,11 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T>(
-            values1?: List<T>,
-            values2?: List<T>,
-            values3?: List<T>,
-            values4?: List<T>,
-            values5?: List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
+            values3?: T[]|List<T>,
+            values4?: T[]|List<T>,
+            values5?: T[]|List<T>,
             iteratee?: ((value: T) => any)|string
         ): LoDashImplicitArrayWrapper<T>;
 
@@ -892,11 +654,11 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T, W extends Object>(
-            values1?: List<T>,
-            values2?: List<T>,
-            values3?: List<T>,
-            values4?: List<T>,
-            values5?: List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
+            values3?: T[]|List<T>,
+            values4?: T[]|List<T>,
+            values5?: T[]|List<T>,
             iteratee?: W
         ): LoDashImplicitArrayWrapper<T>;
 
@@ -913,7 +675,7 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T>(
-            values?: List<T>,
+            values?: T[]|List<T>,
             iteratee?: ((value: T) => any)|string
         ): LoDashExplicitArrayWrapper<T>;
 
@@ -921,7 +683,7 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T, W extends Object>(
-            values?: List<T>,
+            values?: T[]|List<T>,
             iteratee?: W
         ): LoDashExplicitArrayWrapper<T>;
 
@@ -929,8 +691,8 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T>(
-            values1?: List<T>,
-            values2?: List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
             iteratee?: ((value: T) => any)|string
         ): LoDashExplicitArrayWrapper<T>;
 
@@ -938,8 +700,8 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T, W extends Object>(
-            values1?: List<T>,
-            values2?: List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
             iteratee?: W
         ): LoDashExplicitArrayWrapper<T>;
 
@@ -947,9 +709,9 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T>(
-            values1?: List<T>,
-            values2?: List<T>,
-            values3?: List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
+            values3?: T[]|List<T>,
             iteratee?: ((value: T) => any)|string
         ): LoDashExplicitArrayWrapper<T>;
 
@@ -957,9 +719,9 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T, W extends Object>(
-            values1?: List<T>,
-            values2?: List<T>,
-            values3?: List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
+            values3?: T[]|List<T>,
             iteratee?: W
         ): LoDashExplicitArrayWrapper<T>;
 
@@ -967,10 +729,10 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T>(
-            values1?: List<T>,
-            values2?: List<T>,
-            values3?: List<T>,
-            values4?: List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
+            values3?: T[]|List<T>,
+            values4?: T[]|List<T>,
             iteratee?: ((value: T) => any)|string
         ): LoDashExplicitArrayWrapper<T>;
 
@@ -978,10 +740,10 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T, W extends Object>(
-            values1?: List<T>,
-            values2?: List<T>,
-            values3?: List<T>,
-            values4?: List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
+            values3?: T[]|List<T>,
+            values4?: T[]|List<T>,
             iteratee?: W
         ): LoDashExplicitArrayWrapper<T>;
 
@@ -989,11 +751,11 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T>(
-            values1?: List<T>,
-            values2?: List<T>,
-            values3?: List<T>,
-            values4?: List<T>,
-            values5?: List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
+            values3?: T[]|List<T>,
+            values4?: T[]|List<T>,
+            values5?: T[]|List<T>,
             iteratee?: ((value: T) => any)|string
         ): LoDashExplicitArrayWrapper<T>;
 
@@ -1001,11 +763,11 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T, W extends Object>(
-            values1?: List<T>,
-            values2?: List<T>,
-            values3?: List<T>,
-            values4?: List<T>,
-            values5?: List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
+            values3?: T[]|List<T>,
+            values4?: T[]|List<T>,
+            values5?: T[]|List<T>,
             iteratee?: W
         ): LoDashExplicitArrayWrapper<T>;
 
@@ -1022,7 +784,7 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T>(
-            values?: List<T>,
+            values?: T[]|List<T>,
             iteratee?: ((value: T) => any)|string
         ): LoDashExplicitArrayWrapper<T>;
 
@@ -1030,7 +792,7 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T, W extends Object>(
-            values?: List<T>,
+            values?: T[]|List<T>,
             iteratee?: W
         ): LoDashExplicitArrayWrapper<T>;
 
@@ -1038,8 +800,8 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T>(
-            values1?: List<T>,
-            values2?: List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
             iteratee?: ((value: T) => any)|string
         ): LoDashExplicitArrayWrapper<T>;
 
@@ -1047,8 +809,8 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T, W extends Object>(
-            values1?: List<T>,
-            values2?: List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
             iteratee?: W
         ): LoDashExplicitArrayWrapper<T>;
 
@@ -1056,9 +818,9 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T>(
-            values1?: List<T>,
-            values2?: List<T>,
-            values3?: List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
+            values3?: T[]|List<T>,
             iteratee?: ((value: T) => any)|string
         ): LoDashExplicitArrayWrapper<T>;
 
@@ -1066,9 +828,9 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T, W extends Object>(
-            values1?: List<T>,
-            values2?: List<T>,
-            values3?: List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
+            values3?: T[]|List<T>,
             iteratee?: W
         ): LoDashExplicitArrayWrapper<T>;
 
@@ -1076,10 +838,10 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T>(
-            values1?: List<T>,
-            values2?: List<T>,
-            values3?: List<T>,
-            values4?: List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
+            values3?: T[]|List<T>,
+            values4?: T[]|List<T>,
             iteratee?: ((value: T) => any)|string
         ): LoDashExplicitArrayWrapper<T>;
 
@@ -1087,10 +849,10 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T, W extends Object>(
-            values1?: List<T>,
-            values2?: List<T>,
-            values3?: List<T>,
-            values4?: List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
+            values3?: T[]|List<T>,
+            values4?: T[]|List<T>,
             iteratee?: W
         ): LoDashExplicitArrayWrapper<T>;
 
@@ -1098,11 +860,11 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T>(
-            values1?: List<T>,
-            values2?: List<T>,
-            values3?: List<T>,
-            values4?: List<T>,
-            values5?: List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
+            values3?: T[]|List<T>,
+            values4?: T[]|List<T>,
+            values5?: T[]|List<T>,
             iteratee?: ((value: T) => any)|string
         ): LoDashExplicitArrayWrapper<T>;
 
@@ -1110,11 +872,11 @@ declare namespace _ {
          * @see _.differenceBy
          */
         differenceBy<T, W extends Object>(
-            values1?: List<T>,
-            values2?: List<T>,
-            values3?: List<T>,
-            values4?: List<T>,
-            values5?: List<T>,
+            values1?: T[]|List<T>,
+            values2?: T[]|List<T>,
+            values3?: T[]|List<T>,
+            values4?: T[]|List<T>,
+            values5?: T[]|List<T>,
             iteratee?: W
         ): LoDashExplicitArrayWrapper<T>;
 
@@ -1145,7 +907,7 @@ declare namespace _ {
          * // => [3, 1]
          */
         differenceWith(
-            array: List<any>,
+            array: any[]|List<any>,
             ...values: any[]
         ): any[];
     }
@@ -1159,7 +921,7 @@ declare namespace _ {
          * @param n The number of elements to drop.
          * @return Returns the slice of array.
          */
-        drop<T>(array: List<T>, n?: number): T[];
+        drop<T>(array: T[]|List<T>, n?: number): T[];
     }
 
     interface LoDashImplicitArrayWrapper<T> {
@@ -1941,7 +1703,7 @@ declare namespace _ {
         /**
          * @see _.flatten
          */
-        flatten<T>(array: List<Many<T>>): T[];
+        flatten<T>(array: List<T|T[]>): T[];
 
         /**
          * @see _.flatten
@@ -2250,7 +2012,7 @@ declare namespace _ {
          * // => [{ 'x': 1 }]
          */
         intersectionBy(
-            array: List<any>,
+            array: any[]|List<any>,
             ...values: any[]
         ): any[];
     }
@@ -2277,7 +2039,7 @@ declare namespace _ {
          * // => [{ 'x': 1, 'y': 2 }]
          */
         intersectionWith(
-            array: List<any>,
+            array: any[]|List<any>,
             ...values: any[]
         ): any[];
     }
@@ -2361,7 +2123,7 @@ declare namespace _ {
          * // => [1, 1]
          */
         pullAll(
-            array: List<any>,
+            array: any[]|List<any>,
             ...values: any[]
         ): any[];
     }
@@ -2391,7 +2153,7 @@ declare namespace _ {
          * // => [{ 'x': 2 }]
          */
         pullAllBy(
-            array: List<any>,
+            array: any[]|List<any>,
             ...values: any[]
         ): any[];
     }
@@ -2419,7 +2181,7 @@ declare namespace _ {
          * // => [3, 2, 1]
          */
         reverse(
-            array: List<any>,
+            array: any[]|List<any>,
             ...values: any[]
         ): any[];
     }
@@ -2531,35 +2293,35 @@ declare namespace _ {
          * @param arrays The arrays to inspect.
          * @return Returns the new array of shared values.
          */
-        intersection<T>(...arrays: Array<List<T>>): T[];
+        intersection<T>(...arrays: (T[]|List<T>)[]): T[];
     }
 
     interface LoDashImplicitArrayWrapper<T> {
         /**
          * @see _.intersection
          */
-        intersection<TResult>(...arrays: Array<List<TResult>>): LoDashImplicitArrayWrapper<TResult>;
+        intersection<TResult>(...arrays: (TResult[]|List<TResult>)[]): LoDashImplicitArrayWrapper<TResult>;
     }
 
     interface LoDashImplicitObjectWrapper<T> {
         /**
          * @see _.intersection
          */
-        intersection<TResult>(...arrays: Array<List<TResult>>): LoDashImplicitArrayWrapper<TResult>;
+        intersection<TResult>(...arrays: (TResult[]|List<TResult>)[]): LoDashImplicitArrayWrapper<TResult>;
     }
 
     interface LoDashExplicitArrayWrapper<T> {
         /**
          * @see _.intersection
          */
-        intersection<TResult>(...arrays: Array<List<TResult>>): LoDashExplicitArrayWrapper<TResult>;
+        intersection<TResult>(...arrays: (TResult[]|List<TResult>)[]): LoDashExplicitArrayWrapper<TResult>;
     }
 
     interface LoDashExplicitObjectWrapper<T> {
         /**
          * @see _.intersection
          */
-        intersection<TResult>(...arrays: Array<List<TResult>>): LoDashExplicitArrayWrapper<TResult>;
+        intersection<TResult>(...arrays: (TResult[]|List<TResult>)[]): LoDashExplicitArrayWrapper<TResult>;
     }
 
     //_.last
@@ -2739,7 +2501,7 @@ declare namespace _ {
          */
         pullAt<T>(
             array: List<T>,
-            ...indexes: Array<Many<number>>
+            ...indexes: (number|number[])[]
         ): T[];
     }
 
@@ -2747,28 +2509,28 @@ declare namespace _ {
         /**
          * @see _.pullAt
          */
-        pullAt(...indexes: Array<Many<number>>): LoDashImplicitArrayWrapper<T>;
+        pullAt(...indexes: (number|number[])[]): LoDashImplicitArrayWrapper<T>;
     }
 
     interface LoDashImplicitObjectWrapper<T> {
         /**
          * @see _.pullAt
          */
-        pullAt<T>(...indexes: Array<Many<number>>): LoDashImplicitArrayWrapper<T>;
+        pullAt<T>(...indexes: (number|number[])[]): LoDashImplicitArrayWrapper<T>;
     }
 
     interface LoDashExplicitArrayWrapper<T> {
         /**
          * @see _.pullAt
          */
-        pullAt(...indexes: Array<Many<number>>): LoDashExplicitArrayWrapper<T>;
+        pullAt(...indexes: (number|number[])[]): LoDashExplicitArrayWrapper<T>;
     }
 
     interface LoDashExplicitObjectWrapper<T> {
         /**
          * @see _.pullAt
          */
-        pullAt<T>(...indexes: Array<Many<number>>): LoDashExplicitArrayWrapper<T>;
+        pullAt<T>(...indexes: (number|number[])[]): LoDashExplicitArrayWrapper<T>;
     }
 
     //_.remove
@@ -3768,7 +3530,7 @@ declare namespace _ {
          * // => 3
          */
         sortedLastIndexOf(
-            array: List<any>,
+            array: any[]|List<any>,
             ...values: any[]
         ): any[];
     }
@@ -4172,45 +3934,45 @@ declare namespace _ {
          * @param arrays The arrays to inspect.
          * @return Returns the new array of combined values.
          */
-        union<T>(...arrays: Array<List<T>>): T[];
+        union<T>(...arrays: List<T>[]): T[];
     }
 
     interface LoDashImplicitArrayWrapper<T> {
         /**
          * @see _.union
          */
-        union(...arrays: Array<List<T>>): LoDashImplicitArrayWrapper<T>;
+        union(...arrays: List<T>[]): LoDashImplicitArrayWrapper<T>;
 
         /**
          * @see _.union
          */
-        union<T>(...arrays: Array<List<T>>): LoDashImplicitArrayWrapper<T>;
+        union<T>(...arrays: List<T>[]): LoDashImplicitArrayWrapper<T>;
     }
 
     interface LoDashImplicitObjectWrapper<T> {
         /**
          * @see _.union
          */
-        union<T>(...arrays: Array<List<T>>): LoDashImplicitArrayWrapper<T>;
+        union<T>(...arrays: List<T>[]): LoDashImplicitArrayWrapper<T>;
     }
 
     interface LoDashExplicitArrayWrapper<T> {
         /**
          * @see _.union
          */
-        union(...arrays: Array<List<T>>): LoDashExplicitArrayWrapper<T>;
+        union(...arrays: List<T>[]): LoDashExplicitArrayWrapper<T>;
 
         /**
          * @see _.union
          */
-        union<T>(...arrays: Array<List<T>>): LoDashExplicitArrayWrapper<T>;
+        union<T>(...arrays: List<T>[]): LoDashExplicitArrayWrapper<T>;
     }
 
     interface LoDashExplicitObjectWrapper<T> {
         /**
          * @see _.union
          */
-        union<T>(...arrays: Array<List<T>>): LoDashExplicitArrayWrapper<T>;
+        union<T>(...arrays: List<T>[]): LoDashExplicitArrayWrapper<T>;
     }
 
     //_.unionBy
@@ -4225,7 +3987,7 @@ declare namespace _ {
          * @return Returns the new array of combined values.
          */
         unionBy<T>(
-            arrays: List<T>,
+            arrays: T[]|List<T>,
             iteratee?: (value: T) => any
         ): T[];
 
@@ -4233,7 +3995,7 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T, W extends Object>(
-            arrays: List<T>,
+            arrays: T[]|List<T>,
             iteratee?: W
         ): T[];
 
@@ -4241,8 +4003,8 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T>(
-            arrays1: List<T>,
-            arrays2: List<T>,
+            arrays1: T[]|List<T>,
+            arrays2: T[]|List<T>,
             iteratee?: (value: T) => any
         ): T[];
 
@@ -4250,8 +4012,8 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T, W extends Object>(
-            arrays1: List<T>,
-            arrays2: List<T>,
+            arrays1: T[]|List<T>,
+            arrays2: T[]|List<T>,
             iteratee?: W
         ): T[];
 
@@ -4259,9 +4021,9 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T>(
-            arrays1: List<T>,
-            arrays2: List<T>,
-            arrays3: List<T>,
+            arrays1: T[]|List<T>,
+            arrays2: T[]|List<T>,
+            arrays3: T[]|List<T>,
             iteratee?: (value: T) => any
         ): T[];
 
@@ -4269,9 +4031,9 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T, W extends Object>(
-            arrays1: List<T>,
-            arrays2: List<T>,
-            arrays3: List<T>,
+            arrays1: T[]|List<T>,
+            arrays2: T[]|List<T>,
+            arrays3: T[]|List<T>,
             iteratee?: W
         ): T[];
 
@@ -4279,10 +4041,10 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T>(
-            arrays1: List<T>,
-            arrays2: List<T>,
-            arrays3: List<T>,
-            arrays4: List<T>,
+            arrays1: T[]|List<T>,
+            arrays2: T[]|List<T>,
+            arrays3: T[]|List<T>,
+            arrays4: T[]|List<T>,
             iteratee?: (value: T) => any
         ): T[];
 
@@ -4290,10 +4052,10 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T, W extends Object>(
-            arrays1: List<T>,
-            arrays2: List<T>,
-            arrays3: List<T>,
-            arrays4: List<T>,
+            arrays1: T[]|List<T>,
+            arrays2: T[]|List<T>,
+            arrays3: T[]|List<T>,
+            arrays4: T[]|List<T>,
             iteratee?: W
         ): T[];
 
@@ -4301,11 +4063,11 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T>(
-            arrays1: List<T>,
-            arrays2: List<T>,
-            arrays3: List<T>,
-            arrays4: List<T>,
-            arrays5: List<T>,
+            arrays1: T[]|List<T>,
+            arrays2: T[]|List<T>,
+            arrays3: T[]|List<T>,
+            arrays4: T[]|List<T>,
+            arrays5: T[]|List<T>,
             iteratee?: (value: T) => any
         ): T[];
 
@@ -4313,11 +4075,11 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T, W extends Object>(
-            arrays1: List<T>,
-            arrays2: List<T>,
-            arrays3: List<T>,
-            arrays4: List<T>,
-            arrays5: List<T>,
+            arrays1: T[]|List<T>,
+            arrays2: T[]|List<T>,
+            arrays3: T[]|List<T>,
+            arrays4: T[]|List<T>,
+            arrays5: T[]|List<T>,
             iteratee?: W
         ): T[];
 
@@ -4325,7 +4087,7 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T>(
-            arrays: List<T>,
+            arrays: T[]|List<T>,
             ...iteratee: any[]
         ): T[];
     }
@@ -4349,7 +4111,7 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T>(
-            arrays2: List<T>,
+            arrays2: T[]|List<T>,
             iteratee?: (value: T) => any
         ): LoDashImplicitArrayWrapper<T>;
 
@@ -4357,7 +4119,7 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T, W extends Object>(
-            arrays2: List<T>,
+            arrays2: T[]|List<T>,
             iteratee?: W
         ): LoDashImplicitArrayWrapper<T>;
 
@@ -4365,8 +4127,8 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T>(
-            arrays2: List<T>,
-            arrays3: List<T>,
+            arrays2: T[]|List<T>,
+            arrays3: T[]|List<T>,
             iteratee?: (value: T) => any
         ): LoDashImplicitArrayWrapper<T>;
 
@@ -4374,8 +4136,8 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T, W extends Object>(
-            arrays2: List<T>,
-            arrays3: List<T>,
+            arrays2: T[]|List<T>,
+            arrays3: T[]|List<T>,
             iteratee?: W
         ): LoDashImplicitArrayWrapper<T>;
 
@@ -4383,9 +4145,9 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T>(
-            arrays2: List<T>,
-            arrays3: List<T>,
-            arrays4: List<T>,
+            arrays2: T[]|List<T>,
+            arrays3: T[]|List<T>,
+            arrays4: T[]|List<T>,
             iteratee?: (value: T) => any
         ): LoDashImplicitArrayWrapper<T>;
 
@@ -4393,9 +4155,9 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T, W extends Object>(
-            arrays2: List<T>,
-            arrays3: List<T>,
-            arrays4: List<T>,
+            arrays2: T[]|List<T>,
+            arrays3: T[]|List<T>,
+            arrays4: T[]|List<T>,
             iteratee?: W
         ): LoDashImplicitArrayWrapper<T>;
 
@@ -4403,10 +4165,10 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T>(
-            arrays2: List<T>,
-            arrays3: List<T>,
-            arrays4: List<T>,
-            arrays5: List<T>,
+            arrays2: T[]|List<T>,
+            arrays3: T[]|List<T>,
+            arrays4: T[]|List<T>,
+            arrays5: T[]|List<T>,
             iteratee?: (value: T) => any
         ): LoDashImplicitArrayWrapper<T>;
 
@@ -4414,10 +4176,10 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T, W extends Object>(
-            arrays2: List<T>,
-            arrays3: List<T>,
-            arrays4: List<T>,
-            arrays5: List<T>,
+            arrays2: T[]|List<T>,
+            arrays3: T[]|List<T>,
+            arrays4: T[]|List<T>,
+            arrays5: T[]|List<T>,
             iteratee?: W
         ): LoDashImplicitArrayWrapper<T>;
 
@@ -4448,7 +4210,7 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T>(
-            arrays2: List<T>,
+            arrays2: T[]|List<T>,
             iteratee?: (value: T) => any
         ): LoDashImplicitArrayWrapper<T>;
 
@@ -4456,7 +4218,7 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T, W extends Object>(
-            arrays2: List<T>,
+            arrays2: T[]|List<T>,
             iteratee?: W
         ): LoDashImplicitArrayWrapper<T>;
 
@@ -4464,8 +4226,8 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T>(
-            arrays2: List<T>,
-            arrays3: List<T>,
+            arrays2: T[]|List<T>,
+            arrays3: T[]|List<T>,
             iteratee?: (value: T) => any
         ): LoDashImplicitArrayWrapper<T>;
 
@@ -4473,8 +4235,8 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T, W extends Object>(
-            arrays2: List<T>,
-            arrays3: List<T>,
+            arrays2: T[]|List<T>,
+            arrays3: T[]|List<T>,
             iteratee?: W
         ): LoDashImplicitArrayWrapper<T>;
 
@@ -4482,9 +4244,9 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T>(
-            arrays2: List<T>,
-            arrays3: List<T>,
-            arrays4: List<T>,
+            arrays2: T[]|List<T>,
+            arrays3: T[]|List<T>,
+            arrays4: T[]|List<T>,
             iteratee?: (value: T) => any
         ): LoDashImplicitArrayWrapper<T>;
 
@@ -4492,9 +4254,9 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T, W extends Object>(
-            arrays2: List<T>,
-            arrays3: List<T>,
-            arrays4: List<T>,
+            arrays2: T[]|List<T>,
+            arrays3: T[]|List<T>,
+            arrays4: T[]|List<T>,
             iteratee?: W
         ): LoDashImplicitArrayWrapper<T>;
 
@@ -4502,10 +4264,10 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T>(
-            arrays2: List<T>,
-            arrays3: List<T>,
-            arrays4: List<T>,
-            arrays5: List<T>,
+            arrays2: T[]|List<T>,
+            arrays3: T[]|List<T>,
+            arrays4: T[]|List<T>,
+            arrays5: T[]|List<T>,
             iteratee?: (value: T) => any
         ): LoDashImplicitArrayWrapper<T>;
 
@@ -4513,10 +4275,10 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T, W extends Object>(
-            arrays2: List<T>,
-            arrays3: List<T>,
-            arrays4: List<T>,
-            arrays5: List<T>,
+            arrays2: T[]|List<T>,
+            arrays3: T[]|List<T>,
+            arrays4: T[]|List<T>,
+            arrays5: T[]|List<T>,
             iteratee?: W
         ): LoDashImplicitArrayWrapper<T>;
 
@@ -4547,7 +4309,7 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T>(
-            arrays2: List<T>,
+            arrays2: T[]|List<T>,
             iteratee?: (value: T) => any
         ): LoDashExplicitArrayWrapper<T>;
 
@@ -4555,7 +4317,7 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T, W extends Object>(
-            arrays2: List<T>,
+            arrays2: T[]|List<T>,
             iteratee?: W
         ): LoDashExplicitArrayWrapper<T>;
 
@@ -4563,8 +4325,8 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T>(
-            arrays2: List<T>,
-            arrays3: List<T>,
+            arrays2: T[]|List<T>,
+            arrays3: T[]|List<T>,
             iteratee?: (value: T) => any
         ): LoDashExplicitArrayWrapper<T>;
 
@@ -4572,8 +4334,8 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T, W extends Object>(
-            arrays2: List<T>,
-            arrays3: List<T>,
+            arrays2: T[]|List<T>,
+            arrays3: T[]|List<T>,
             iteratee?: W
         ): LoDashExplicitArrayWrapper<T>;
 
@@ -4581,9 +4343,9 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T>(
-            arrays2: List<T>,
-            arrays3: List<T>,
-            arrays4: List<T>,
+            arrays2: T[]|List<T>,
+            arrays3: T[]|List<T>,
+            arrays4: T[]|List<T>,
             iteratee?: (value: T) => any
         ): LoDashExplicitArrayWrapper<T>;
 
@@ -4591,9 +4353,9 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T, W extends Object>(
-            arrays2: List<T>,
-            arrays3: List<T>,
-            arrays4: List<T>,
+            arrays2: T[]|List<T>,
+            arrays3: T[]|List<T>,
+            arrays4: T[]|List<T>,
             iteratee?: W
         ): LoDashExplicitArrayWrapper<T>;
 
@@ -4601,10 +4363,10 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T>(
-            arrays2: List<T>,
-            arrays3: List<T>,
-            arrays4: List<T>,
-            arrays5: List<T>,
+            arrays2: T[]|List<T>,
+            arrays3: T[]|List<T>,
+            arrays4: T[]|List<T>,
+            arrays5: T[]|List<T>,
             iteratee?: (value: T) => any
         ): LoDashExplicitArrayWrapper<T>;
 
@@ -4612,10 +4374,10 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T, W extends Object>(
-            arrays2: List<T>,
-            arrays3: List<T>,
-            arrays4: List<T>,
-            arrays5: List<T>,
+            arrays2: T[]|List<T>,
+            arrays3: T[]|List<T>,
+            arrays4: T[]|List<T>,
+            arrays5: T[]|List<T>,
             iteratee?: W
         ): LoDashExplicitArrayWrapper<T>;
 
@@ -4646,7 +4408,7 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T>(
-            arrays2: List<T>,
+            arrays2: T[]|List<T>,
             iteratee?: (value: T) => any
         ): LoDashExplicitArrayWrapper<T>;
 
@@ -4654,7 +4416,7 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T, W extends Object>(
-            arrays2: List<T>,
+            arrays2: T[]|List<T>,
             iteratee?: W
         ): LoDashExplicitArrayWrapper<T>;
 
@@ -4662,8 +4424,8 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T>(
-            arrays2: List<T>,
-            arrays3: List<T>,
+            arrays2: T[]|List<T>,
+            arrays3: T[]|List<T>,
             iteratee?: (value: T) => any
         ): LoDashExplicitArrayWrapper<T>;
 
@@ -4671,8 +4433,8 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T, W extends Object>(
-            arrays2: List<T>,
-            arrays3: List<T>,
+            arrays2: T[]|List<T>,
+            arrays3: T[]|List<T>,
             iteratee?: W
         ): LoDashExplicitArrayWrapper<T>;
 
@@ -4680,9 +4442,9 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T>(
-            arrays2: List<T>,
-            arrays3: List<T>,
-            arrays4: List<T>,
+            arrays2: T[]|List<T>,
+            arrays3: T[]|List<T>,
+            arrays4: T[]|List<T>,
             iteratee?: (value: T) => any
         ): LoDashExplicitArrayWrapper<T>;
 
@@ -4690,9 +4452,9 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T, W extends Object>(
-            arrays2: List<T>,
-            arrays3: List<T>,
-            arrays4: List<T>,
+            arrays2: T[]|List<T>,
+            arrays3: T[]|List<T>,
+            arrays4: T[]|List<T>,
             iteratee?: W
         ): LoDashExplicitArrayWrapper<T>;
 
@@ -4700,10 +4462,10 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T>(
-            arrays2: List<T>,
-            arrays3: List<T>,
-            arrays4: List<T>,
-            arrays5: List<T>,
+            arrays2: T[]|List<T>,
+            arrays3: T[]|List<T>,
+            arrays4: T[]|List<T>,
+            arrays5: T[]|List<T>,
             iteratee?: (value: T) => any
         ): LoDashExplicitArrayWrapper<T>;
 
@@ -4711,10 +4473,10 @@ declare namespace _ {
          * @see _.unionBy
          */
         unionBy<T, W extends Object>(
-            arrays2: List<T>,
-            arrays3: List<T>,
-            arrays4: List<T>,
-            arrays5: List<T>,
+            arrays2: T[]|List<T>,
+            arrays3: T[]|List<T>,
+            arrays4: T[]|List<T>,
+            arrays5: T[]|List<T>,
             iteratee?: W
         ): LoDashExplicitArrayWrapper<T>;
 
@@ -5315,7 +5077,7 @@ declare namespace _ {
          * // => [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 }, { 'x': 1, 'y': 1 }]
          */
         unionWith(
-            array: List<any>,
+            array: any[]|List<any>,
             ...values: any[]
         ): any[];
     }
@@ -5341,7 +5103,7 @@ declare namespace _ {
          * // => [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 }]
          */
         uniqWith(
-            array: List<any>,
+            array: any[]|List<any>,
             ...values: any[]
         ): any[];
     }
@@ -5473,35 +5235,35 @@ declare namespace _ {
          * @param arrays The arrays to inspect.
          * @return Returns the new array of values.
          */
-        xor<T>(...arrays: Array<List<T>>): T[];
+        xor<T>(...arrays: List<T>[]): T[];
     }
 
     interface LoDashImplicitArrayWrapper<T> {
         /**
          * @see _.xor
          */
-        xor(...arrays: Array<List<T>>): LoDashImplicitArrayWrapper<T>;
+        xor(...arrays: List<T>[]): LoDashImplicitArrayWrapper<T>;
     }
 
     interface LoDashImplicitObjectWrapper<T> {
         /**
          * @see _.xor
          */
-        xor<T>(...arrays: Array<List<T>>): LoDashImplicitArrayWrapper<T>;
+        xor<T>(...arrays: List<T>[]): LoDashImplicitArrayWrapper<T>;
     }
 
     interface LoDashExplicitArrayWrapper<T> {
         /**
          * @see _.xor
          */
-        xor(...arrays: Array<List<T>>): LoDashExplicitArrayWrapper<T>;
+        xor(...arrays: List<T>[]): LoDashExplicitArrayWrapper<T>;
     }
 
     interface LoDashExplicitObjectWrapper<T> {
         /**
          * @see _.xor
          */
-        xor<T>(...arrays: Array<List<T>>): LoDashExplicitArrayWrapper<T>;
+        xor<T>(...arrays: List<T>[]): LoDashExplicitArrayWrapper<T>;
     }
 
     //_.xorBy DUMMY
@@ -5527,7 +5289,7 @@ declare namespace _ {
          * // => [{ 'x': 2 }]
          */
         xorBy(
-            array: List<any>,
+            array: any[]|List<any>,
             ...values: any[]
         ): any[];
     }
@@ -5554,7 +5316,7 @@ declare namespace _ {
          * // => [{ 'x': 2, 'y': 1 }, { 'x': 1, 'y': 1 }]
          */
         xorWith(
-            array: List<any>,
+            array: any[]|List<any>,
             ...values: any[]
         ): any[];
     }
@@ -5568,35 +5330,35 @@ declare namespace _ {
          * @param arrays The arrays to process.
          * @return Returns the new array of grouped elements.
          */
-        zip<T>(...arrays: Array<List<T>>): T[][];
+        zip<T>(...arrays: List<T>[]): T[][];
     }
 
     interface LoDashImplicitArrayWrapper<T> {
         /**
          * @see _.zip
          */
-        zip<T>(...arrays: Array<List<T>>): _.LoDashImplicitArrayWrapper<T[]>;
+        zip<T>(...arrays: List<T>[]): _.LoDashImplicitArrayWrapper<T[]>;
     }
 
     interface LoDashImplicitObjectWrapper<T> {
         /**
          * @see _.zip
          */
-        zip<T>(...arrays: Array<List<T>>): _.LoDashImplicitArrayWrapper<T[]>;
+        zip<T>(...arrays: List<T>[]): _.LoDashImplicitArrayWrapper<T[]>;
     }
 
     interface LoDashExplicitArrayWrapper<T> {
         /**
          * @see _.zip
          */
-        zip<T>(...arrays: Array<List<T>>): _.LoDashExplicitArrayWrapper<T[]>;
+        zip<T>(...arrays: List<T>[]): _.LoDashExplicitArrayWrapper<T[]>;
     }
 
     interface LoDashExplicitObjectWrapper<T> {
         /**
          * @see _.zip
          */
-        zip<T>(...arrays: Array<List<T>>): _.LoDashExplicitArrayWrapper<T[]>;
+        zip<T>(...arrays: List<T>[]): _.LoDashExplicitArrayWrapper<T[]>;
     }
 
     //_.zipObject
@@ -5939,24 +5701,24 @@ declare namespace _ {
          * @param items
          * @return Returns the new concatenated array.
          */
-        concat<TItem>(...items: Array<Many<TItem>>): LoDashImplicitArrayWrapper<TItem>;
+        concat<TItem>(...items: Array<TItem|Array<TItem>>): LoDashImplicitArrayWrapper<TItem>;
 
         /**
          * @see _.concat
          */
-        concat(...items: Array<Many<T>>): LoDashImplicitArrayWrapper<T>;
+        concat(...items: Array<T|Array<T>>): LoDashImplicitArrayWrapper<T>;
     }
 
     interface LoDashExplicitWrapperBase<T, TWrapper> {
         /**
          * @see _.concat
          */
-        concat<TItem>(...items: Array<Many<TItem>>): LoDashExplicitArrayWrapper<TItem>;
+        concat<TItem>(...items: Array<TItem|Array<TItem>>): LoDashExplicitArrayWrapper<TItem>;
 
         /**
          * @see _.concat
          */
-        concat(...items: Array<Many<T>>): LoDashExplicitArrayWrapper<T>;
+        concat(...items: Array<T|Array<T>>): LoDashExplicitArrayWrapper<T>;
     }
 
     //_.prototype.plant
@@ -6110,7 +5872,7 @@ declare namespace _ {
          */
         at<T>(
             collection: List<T>|Dictionary<T>,
-            ...props: Array<Many<number|string>>
+            ...props: (number|string|(number|string)[])[]
         ): T[];
     }
 
@@ -6118,28 +5880,28 @@ declare namespace _ {
         /**
          * @see _.at
          */
-        at(...props: Array<Many<number|string>>): LoDashImplicitArrayWrapper<T>;
+        at(...props: (number|string|(number|string)[])[]): LoDashImplicitArrayWrapper<T>;
     }
 
     interface LoDashImplicitObjectWrapper<T> {
         /**
          * @see _.at
          */
-        at<T>(...props: Array<Many<number|string>>): LoDashImplicitArrayWrapper<T>;
+        at<T>(...props: (number|string|(number|string)[])[]): LoDashImplicitArrayWrapper<T>;
     }
 
     interface LoDashExplicitArrayWrapper<T> {
         /**
          * @see _.at
          */
-        at(...props: Array<Many<number|string>>): LoDashExplicitArrayWrapper<T>;
+        at(...props: (number|string|(number|string)[])[]): LoDashExplicitArrayWrapper<T>;
     }
 
     interface LoDashExplicitObjectWrapper<T> {
         /**
          * @see _.at
          */
-        at<T>(...props: Array<Many<number|string>>): LoDashExplicitArrayWrapper<T>;
+        at<T>(...props: (number|string|(number|string)[])[]): LoDashExplicitArrayWrapper<T>;
     }
 
     //_.countBy
@@ -6931,7 +6693,7 @@ declare namespace _ {
         * @return The found element, else undefined.
         **/
         findLast<T>(
-            collection: T[],
+            collection: Array<T>,
             callback: ListIterator<T, boolean>,
             fromIndex?: number
         ): T;
@@ -6959,7 +6721,7 @@ declare namespace _ {
         * @param _.pluck style callback
         **/
         findLast<W, T>(
-            collection: T[],
+            collection: Array<T>,
             whereValue: W,
             fromIndex?: number
         ): T;
@@ -6989,7 +6751,7 @@ declare namespace _ {
         * @param _.where style callback
         **/
         findLast<T>(
-            collection: T[],
+            collection: Array<T>,
             pluckValue: string,
             fromIndex?: number
         ): T;
@@ -7055,7 +6817,7 @@ declare namespace _ {
          */
         flatMap<T, TResult>(
             collection: List<T>,
-            iteratee?: ListIterator<T, Many<TResult>>
+            iteratee?: ListIterator<T, TResult|TResult[]>
         ): TResult[];
 
         /**
@@ -7063,7 +6825,7 @@ declare namespace _ {
          */
         flatMap<TResult>(
             collection: List<any>,
-            iteratee?: ListIterator<any, Many<TResult>>
+            iteratee?: ListIterator<any, TResult|TResult[]>
         ): TResult[];
 
         /**
@@ -7071,7 +6833,7 @@ declare namespace _ {
          */
         flatMap<T, TResult>(
             collection: Dictionary<T>,
-            iteratee?: DictionaryIterator<T, Many<TResult>>
+            iteratee?: DictionaryIterator<T, TResult|TResult[]>
         ): TResult[];
 
         /**
@@ -7079,7 +6841,7 @@ declare namespace _ {
          */
         flatMap<TResult>(
             collection: Dictionary<any>,
-            iteratee?: DictionaryIterator<any, Many<TResult>>
+            iteratee?: DictionaryIterator<any, TResult|TResult[]>
         ): TResult[];
 
         /**
@@ -7087,7 +6849,7 @@ declare namespace _ {
          */
         flatMap<T, TResult>(
             collection: NumericDictionary<T>,
-            iteratee?: NumericDictionaryIterator<T, Many<TResult>>
+            iteratee?: NumericDictionaryIterator<T, TResult|TResult[]>
         ): TResult[];
 
         /**
@@ -7095,7 +6857,7 @@ declare namespace _ {
          */
         flatMap<TResult>(
             collection: NumericDictionary<any>,
-            iteratee?: NumericDictionaryIterator<any, Many<TResult>>
+            iteratee?: NumericDictionaryIterator<any, TResult|TResult[]>
         ): TResult[];
 
         /**
@@ -7103,7 +6865,7 @@ declare namespace _ {
          */
         flatMap<TObject extends Object, TResult>(
             collection: TObject,
-            iteratee?: ObjectIterator<any, Many<TResult>>
+            iteratee?: ObjectIterator<any, TResult|TResult[]>
         ): TResult[];
 
         /**
@@ -7111,7 +6873,7 @@ declare namespace _ {
          */
         flatMap<TResult>(
             collection: Object,
-            iteratee?: ObjectIterator<any, Many<TResult>>
+            iteratee?: ObjectIterator<any, TResult|TResult[]>
         ): TResult[];
 
         /**
@@ -7159,7 +6921,7 @@ declare namespace _ {
          * @see _.flatMap
          */
         flatMap<TResult>(
-            iteratee: ListIterator<string, Many<TResult>>
+            iteratee: ListIterator<string, TResult|TResult[]>
         ): LoDashImplicitArrayWrapper<TResult>;
 
         /**
@@ -7173,7 +6935,7 @@ declare namespace _ {
          * @see _.flatMap
          */
         flatMap<TResult>(
-            iteratee: ListIterator<T, Many<TResult>>|string
+            iteratee: ListIterator<T, TResult|TResult[]>|string
         ): LoDashImplicitArrayWrapper<TResult>;
 
         /**
@@ -7201,14 +6963,14 @@ declare namespace _ {
          * @see _.flatMap
          */
         flatMap<T, TResult>(
-            iteratee: ListIterator<T, Many<TResult>>|DictionaryIterator<T, Many<TResult>>|NumericDictionaryIterator<T, Many<TResult>>
+            iteratee: ListIterator<T, TResult|TResult[]>|DictionaryIterator<T, TResult|TResult[]>|NumericDictionaryIterator<T, TResult|TResult[]>
         ): LoDashImplicitArrayWrapper<TResult>;
 
         /**
          * @see _.flatMap
          */
         flatMap<TResult>(
-            iteratee: ObjectIterator<any, Many<TResult>>|string
+            iteratee: ObjectIterator<any, TResult|TResult[]>|string
         ): LoDashImplicitArrayWrapper<TResult>;
 
         /**
@@ -7236,7 +6998,7 @@ declare namespace _ {
          * @see _.flatMap
          */
         flatMap<TResult>(
-            iteratee: ListIterator<string, Many<TResult>>
+            iteratee: ListIterator<string, TResult|TResult[]>
         ): LoDashExplicitArrayWrapper<TResult>;
 
         /**
@@ -7250,7 +7012,7 @@ declare namespace _ {
          * @see _.flatMap
          */
         flatMap<TResult>(
-            iteratee: ListIterator<T, Many<TResult>>|string
+            iteratee: ListIterator<T, TResult|TResult[]>|string
         ): LoDashExplicitArrayWrapper<TResult>;
 
         /**
@@ -7278,14 +7040,14 @@ declare namespace _ {
          * @see _.flatMap
          */
         flatMap<T, TResult>(
-            iteratee: ListIterator<T, Many<TResult>>|DictionaryIterator<T, Many<TResult>>|NumericDictionaryIterator<T, Many<TResult>>
+            iteratee: ListIterator<T, TResult|TResult[]>|DictionaryIterator<T, TResult|TResult[]>|NumericDictionaryIterator<T, TResult|TResult[]>
         ): LoDashExplicitArrayWrapper<TResult>;
 
         /**
          * @see _.flatMap
          */
         flatMap<TResult>(
-            iteratee: ObjectIterator<any, Many<TResult>>|string
+            iteratee: ObjectIterator<any, TResult|TResult[]>|string
         ): LoDashExplicitArrayWrapper<TResult>;
 
         /**
@@ -8044,7 +7806,7 @@ declare namespace _ {
         **/
         invoke<TObject extends Object, TResult>(
             object: TObject,
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             ...args: any[]): TResult;
 
         /**
@@ -8052,7 +7814,7 @@ declare namespace _ {
         **/
         invoke<TValue, TResult>(
             object: Dictionary<TValue>|TValue[],
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             ...args: any[]): TResult;
 
         /**
@@ -8060,7 +7822,7 @@ declare namespace _ {
         **/
         invoke<TResult>(
             object: any,
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             ...args: any[]): TResult;
     }
 
@@ -8069,7 +7831,7 @@ declare namespace _ {
         * @see _.invoke
         **/
         invoke<TResult>(
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             ...args: any[]): TResult;
     }
 
@@ -8078,7 +7840,7 @@ declare namespace _ {
         * @see _.invoke
         **/
         invoke<TResult>(
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             ...args: any[]): TResult;
     }
 
@@ -8087,7 +7849,7 @@ declare namespace _ {
         * @see _.invoke
         **/
         invoke<TResult>(
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             ...args: any[]): TResult;
     }
 
@@ -8096,7 +7858,7 @@ declare namespace _ {
         * @see _.invoke
         **/
         invoke<TResult>(
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             ...args: any[]): TResult;
     }
 
@@ -8128,7 +7890,7 @@ declare namespace _ {
         * @see _.invokeMap
         **/
         invokeMap<TResult>(
-            collection: Array<{}>,
+            collection: {}[],
             methodName: string,
             ...args: any[]): TResult[];
 
@@ -8160,7 +7922,7 @@ declare namespace _ {
         * @see _.invokeMap
         **/
         invokeMap<TResult>(
-            collection: Array<{}>,
+            collection: {}[],
             method: (...args: any[]) => TResult,
             ...args: any[]): TResult[];
 
@@ -8549,7 +8311,7 @@ declare namespace _ {
         * @return Returns the accumulated value.
         **/
         reduce<T, TResult>(
-            collection: T[],
+            collection: Array<T>,
             callback: MemoIterator<T, TResult>,
             accumulator: TResult): TResult;
 
@@ -8581,7 +8343,7 @@ declare namespace _ {
         * @see _.reduce
         **/
         reduce<T, TResult>(
-            collection: T[],
+            collection: Array<T>,
             callback: MemoIterator<T, TResult>): TResult;
 
         /**
@@ -8679,7 +8441,7 @@ declare namespace _ {
         * @return The accumulated value.
         **/
         reduceRight<T, TResult>(
-            collection: T[],
+            collection: Array<T>,
             callback: MemoIterator<T, TResult>,
             accumulator: TResult): TResult;
 
@@ -8703,7 +8465,7 @@ declare namespace _ {
         * @see _.reduceRight
         **/
         reduceRight<T, TResult>(
-            collection: T[],
+            collection: Array<T>,
             callback: MemoIterator<T, TResult>): TResult;
 
         /**
@@ -9391,15 +9153,15 @@ declare namespace _ {
          * @see _.sortBy
          */
         sortBy<T>(
-            collection: List<T>,
-            iteratees: Array<ListIterator<T, any>|string|Object>): T[];
+            collection: (Array<T>|List<T>),
+            iteratees: (ListIterator<T, any>|string|Object)[]): T[];
 
         /**
          * @see _.sortBy
          */
         sortBy<T>(
-            collection: List<T>,
-            ...iteratees: Array<ListIterator<T, boolean>|Object|string>): T[];
+            collection: (Array<T>|List<T>),
+            ...iteratees: (ListIterator<T, boolean>|Object|string)[]): T[];
     }
 
     interface LoDashImplicitArrayWrapper<T> {
@@ -9428,12 +9190,12 @@ declare namespace _ {
         /**
          * @see _.sortBy
          */
-        sortBy(...iteratees: Array<ListIterator<T, boolean>|Object|string>): LoDashImplicitArrayWrapper<T>;
+        sortBy(...iteratees: (ListIterator<T, boolean>|Object|string)[]): LoDashImplicitArrayWrapper<T>;
 
         /**
         * @see _.sortBy
         **/
-        sortBy(iteratees: Array<ListIterator<T, any>|string|Object>): LoDashImplicitArrayWrapper<T>;
+        sortBy(iteratees: (ListIterator<T, any>|string|Object)[]): LoDashImplicitArrayWrapper<T>;
     }
 
     interface LoDashImplicitObjectWrapper<T> {
@@ -9539,8 +9301,8 @@ declare namespace _ {
          */
         orderBy<W extends Object, T>(
             collection: List<T>,
-            iteratees: Many<ListIterator<T, any>|string|W>,
-            orders?: Many<boolean|string>
+            iteratees: ListIterator<T, any>|string|W|(ListIterator<T, any>|string|W)[],
+            orders?: boolean|string|(boolean|string)[]
         ): T[];
 
         /**
@@ -9548,8 +9310,8 @@ declare namespace _ {
          */
         orderBy<T>(
             collection: List<T>,
-            iteratees: Many<ListIterator<T, any>|string|Object>,
-            orders?: Many<boolean|string>
+            iteratees: ListIterator<T, any>|string|Object|(ListIterator<T, any>|string|Object)[],
+            orders?: boolean|string|(boolean|string)[]
         ): T[];
 
         /**
@@ -9557,8 +9319,8 @@ declare namespace _ {
          */
         orderBy<W extends Object, T>(
             collection: NumericDictionary<T>,
-            iteratees: Many<NumericDictionaryIterator<T, any>|string|W>,
-            orders?: Many<boolean|string>
+            iteratees: NumericDictionaryIterator<T, any>|string|W|(NumericDictionaryIterator<T, any>|string|W)[],
+            orders?: boolean|string|(boolean|string)[]
         ): T[];
 
         /**
@@ -9566,8 +9328,8 @@ declare namespace _ {
          */
         orderBy<T>(
             collection: NumericDictionary<T>,
-            iteratees: Many<NumericDictionaryIterator<T, any>|string|Object>,
-            orders?: Many<boolean|string>
+            iteratees: NumericDictionaryIterator<T, any>|string|Object|(NumericDictionaryIterator<T, any>|string|Object)[],
+            orders?: boolean|string|(boolean|string)[]
         ): T[];
 
         /**
@@ -9575,8 +9337,8 @@ declare namespace _ {
          */
         orderBy<W extends Object, T>(
             collection: Dictionary<T>,
-            iteratees: Many<DictionaryIterator<T, any>|string|W>,
-            orders?: Many<boolean|string>
+            iteratees: DictionaryIterator<T, any>|string|W|(DictionaryIterator<T, any>|string|W)[],
+            orders?: boolean|string|(boolean|string)[]
         ): T[];
 
         /**
@@ -9584,8 +9346,8 @@ declare namespace _ {
          */
         orderBy<T>(
             collection: Dictionary<T>,
-            iteratees: Many<DictionaryIterator<T, any>|string|Object>,
-            orders?: Many<boolean|string>
+            iteratees: DictionaryIterator<T, any>|string|Object|(DictionaryIterator<T, any>|string|Object)[],
+            orders?: boolean|string|(boolean|string)[]
         ): T[];
     }
 
@@ -9594,8 +9356,8 @@ declare namespace _ {
          * @see _.orderBy
          */
         orderBy(
-            iteratees: Many<ListIterator<T, any>|string>,
-            orders?: Many<boolean|string>
+            iteratees: ListIterator<T, any>|string|(ListIterator<T, any>|string)[],
+            orders?: boolean|string|(boolean|string)[]
         ): LoDashImplicitArrayWrapper<T>;
     }
 
@@ -9604,8 +9366,8 @@ declare namespace _ {
          * @see _.orderBy
          */
         orderBy<W extends Object>(
-            iteratees: Many<ListIterator<T, any>|string|W>,
-            orders?: Many<boolean|string>
+            iteratees: ListIterator<T, any>|string|W|(ListIterator<T, any>|string|W)[],
+            orders?: boolean|string|(boolean|string)[]
         ): LoDashImplicitArrayWrapper<T>;
     }
 
@@ -9614,48 +9376,48 @@ declare namespace _ {
          * @see _.orderBy
          */
         orderBy<W extends Object, T>(
-            iteratees: Many<ListIterator<T, any>|string|W>,
-            orders?: Many<boolean|string>
+            iteratees: ListIterator<T, any>|string|W|(ListIterator<T, any>|string|W)[],
+            orders?: boolean|string|(boolean|string)[]
         ): LoDashImplicitArrayWrapper<T>;
 
         /**
          * @see _.orderBy
          */
         orderBy<T>(
-            iteratees: Many<ListIterator<T, any>|string|Object>,
-            orders?: Many<boolean|string>
+            iteratees: ListIterator<T, any>|string|Object|(ListIterator<T, any>|string|Object)[],
+            orders?: boolean|string|(boolean|string)[]
         ): LoDashImplicitArrayWrapper<T>;
 
         /**
          * @see _.orderBy
          */
         orderBy<W extends Object, T>(
-            iteratees: Many<NumericDictionaryIterator<T, any>|string|W>,
-            orders?: Many<boolean|string>
+            iteratees: NumericDictionaryIterator<T, any>|string|W|(NumericDictionaryIterator<T, any>|string|W)[],
+            orders?: boolean|string|(boolean|string)[]
         ): LoDashImplicitArrayWrapper<T>;
 
         /**
          * @see _.orderBy
          */
         orderBy<T>(
-            iteratees: Many<NumericDictionaryIterator<T, any>|string|Object>,
-            orders?: Many<boolean|string>
+            iteratees: NumericDictionaryIterator<T, any>|string|Object|(NumericDictionaryIterator<T, any>|string|Object)[],
+            orders?: boolean|string|(boolean|string)[]
         ): LoDashImplicitArrayWrapper<T>;
 
         /**
          * @see _.orderBy
          */
         orderBy<W extends Object, T>(
-            iteratees: Many<DictionaryIterator<T, any>|string|W>,
-            orders?: Many<boolean|string>
+            iteratees: DictionaryIterator<T, any>|string|W|(DictionaryIterator<T, any>|string|W)[],
+            orders?: boolean|string|(boolean|string)[]
         ): LoDashImplicitArrayWrapper<T>;
 
         /**
          * @see _.orderBy
          */
         orderBy<T>(
-            iteratees: Many<DictionaryIterator<T, any>|string|Object>,
-            orders?: Many<boolean|string>
+            iteratees: DictionaryIterator<T, any>|string|Object|(DictionaryIterator<T, any>|string|Object)[],
+            orders?: boolean|string|(boolean|string)[]
         ): LoDashImplicitArrayWrapper<T>;
     }
 
@@ -9664,8 +9426,8 @@ declare namespace _ {
          * @see _.orderBy
          */
         orderBy(
-            iteratees: Many<ListIterator<T, any>|string>,
-            orders?: Many<boolean|string>
+            iteratees: ListIterator<T, any>|string|(ListIterator<T, any>|string)[],
+            orders?: boolean|string|(boolean|string)[]
         ): LoDashExplicitArrayWrapper<T>;
     }
 
@@ -9674,8 +9436,8 @@ declare namespace _ {
          * @see _.orderBy
          */
         orderBy<W extends Object>(
-            iteratees: Many<ListIterator<T, any>|string|W|(ListIterator<T, any>|string|W)>,
-            orders?: Many<boolean|string>
+            iteratees: ListIterator<T, any>|string|W|(ListIterator<T, any>|string|W)[],
+            orders?: boolean|string|(boolean|string)[]
         ): LoDashExplicitArrayWrapper<T>;
     }
 
@@ -9684,48 +9446,48 @@ declare namespace _ {
          * @see _.orderBy
          */
         orderBy<W extends Object, T>(
-            iteratees: Many<ListIterator<T, any>|string|W>,
-            orders?: Many<boolean|string>
+            iteratees: ListIterator<T, any>|string|W|(ListIterator<T, any>|string|W)[],
+            orders?: boolean|string|(boolean|string)[]
         ): LoDashExplicitArrayWrapper<T>;
 
         /**
          * @see _.orderBy
          */
         orderBy<T>(
-            iteratees: Many<ListIterator<T, any>|string|Object>,
-            orders?: Many<boolean|string>
+            iteratees: ListIterator<T, any>|string|Object|(ListIterator<T, any>|string|Object)[],
+            orders?: boolean|string|(boolean|string)[]
         ): LoDashExplicitArrayWrapper<T>;
 
         /**
          * @see _.orderBy
          */
         orderBy<W extends Object, T>(
-            iteratees: Many<NumericDictionaryIterator<T, any>|string|W>,
-            orders?: Many<boolean|string>
+            iteratees: NumericDictionaryIterator<T, any>|string|W|(NumericDictionaryIterator<T, any>|string|W)[],
+            orders?: boolean|string|(boolean|string)[]
         ): LoDashExplicitArrayWrapper<T>;
 
         /**
          * @see _.orderBy
          */
         orderBy<T>(
-            iteratees: Many<NumericDictionaryIterator<T, any>|string|Object>,
-            orders?: Many<boolean|string>
+            iteratees: NumericDictionaryIterator<T, any>|string|Object|(NumericDictionaryIterator<T, any>|string|Object)[],
+            orders?: boolean|string|(boolean|string)[]
         ): LoDashExplicitArrayWrapper<T>;
 
         /**
          * @see _.orderBy
          */
         orderBy<W extends Object, T>(
-            iteratees: Many<DictionaryIterator<T, any>|string|W>,
-            orders?: Many<boolean|string>
+            iteratees: DictionaryIterator<T, any>|string|W|(DictionaryIterator<T, any>|string|W)[],
+            orders?: boolean|string|(boolean|string)[]
         ): LoDashExplicitArrayWrapper<T>;
 
         /**
          * @see _.orderBy
          */
         orderBy<T>(
-            iteratees: Many<DictionaryIterator<T, any>|string|Object>,
-            orders?: Many<boolean|string>
+            iteratees: DictionaryIterator<T, any>|string|Object|(DictionaryIterator<T, any>|string|Object)[],
+            orders?: boolean|string|(boolean|string)[]
         ): LoDashExplicitArrayWrapper<T>;
     }
 
@@ -9926,7 +9688,7 @@ declare namespace _ {
          */
         bindAll<T>(
             object: T,
-            ...methodNames: Array<Many<string>>
+            ...methodNames: (string|string[])[]
         ): T;
     }
 
@@ -9934,14 +9696,14 @@ declare namespace _ {
         /**
          * @see _.bindAll
          */
-        bindAll(...methodNames: Array<Many<string>>): LoDashImplicitObjectWrapper<T>;
+        bindAll(...methodNames: (string|string[])[]): LoDashImplicitObjectWrapper<T>;
     }
 
     interface LoDashExplicitObjectWrapper<T> {
         /**
          * @see _.bindAll
          */
-        bindAll(...methodNames: Array<Many<string>>): LoDashExplicitObjectWrapper<T>;
+        bindAll(...methodNames: (string|string[])[]): LoDashExplicitObjectWrapper<T>;
     }
 
     //_.bindKey
@@ -10472,7 +10234,7 @@ declare namespace _ {
         memoize: {
             <T extends Function>(func: T, resolver?: Function): T & MemoizedFunction;
             Cache: MapCacheConstructor;
-        };
+        }
     }
 
     interface LoDashImplicitObjectWrapper<T> {
@@ -10619,11 +10381,21 @@ declare namespace _ {
 
     type PH = LoDashStatic;
 
-    type Function0<R> = () => R;
-    type Function1<T1, R> = (t1: T1) => R;
-    type Function2<T1, T2, R> = (t1: T1, t2: T2) => R;
-    type Function3<T1, T2, T3, R> = (t1: T1, t2: T2, t3: T3) => R;
-    type Function4<T1, T2, T3, T4, R> = (t1: T1, t2: T2, t3: T3, t4: T4) => R;
+    interface Function0<R> {
+        (): R;
+    }
+    interface Function1<T1, R> {
+        (t1: T1): R;
+    }
+    interface Function2<T1, T2, R> {
+        (t1: T1, t2: T2): R;
+    }
+    interface Function3<T1, T2, T3, R> {
+        (t1: T1, t2: T2, t3: T3): R;
+    }
+    interface Function4<T1, T2, T3, T4, R> {
+        (t1: T1, t2: T2, t3: T3, t4: T4): R;
+    }
 
     interface Partial {
         // arity 0
@@ -10675,7 +10447,7 @@ declare namespace _ {
         * @param args Arguments to be partially applied.
         * @return The new partially applied function.
         **/
-        partialRight: PartialRight;
+        partialRight: PartialRight
     }
 
     interface PartialRight {
@@ -11029,7 +10801,7 @@ declare namespace _ {
          * @param value The value to inspect.
          * @return Returns the cast array.
          */
-        castArray<T>(value?: Many<T>): T[];
+        castArray<T>(value: T): T[];
     }
 
     interface LoDashImplicitWrapper<T> {
@@ -11188,7 +10960,9 @@ declare namespace _ {
     }
 
     //_.cloneDeepWith
-    type CloneDeepWithCustomizer<TValue, TResult> = (value: TValue) => TResult;
+    interface CloneDeepWithCustomizer<TValue, TResult> {
+        (value: TValue): TResult;
+    }
 
     interface LoDashStatic {
         /**
@@ -11309,7 +11083,9 @@ declare namespace _ {
     }
 
     //_.cloneWith
-    type CloneWithCustomizer<TValue, TResult> = (value: TValue) => TResult;
+    interface CloneWithCustomizer<TValue, TResult> {
+        (value: TValue): TResult;
+    }
 
     interface LoDashStatic {
         /**
@@ -11580,14 +11356,14 @@ declare namespace _ {
         isArray<T>(value?: any): value is T[];
     }
 
-    interface LoDashImplicitWrapperBase<T, TWrapper> {
+    interface LoDashImplicitWrapperBase<T,TWrapper> {
         /**
          * @see _.isArray
          */
         isArray(): boolean;
     }
 
-    interface LoDashExplicitWrapperBase<T, TWrapper> {
+    interface LoDashExplicitWrapperBase<T,TWrapper> {
         /**
          * @see _.isArray
          */
@@ -11649,14 +11425,14 @@ declare namespace _ {
         isArrayLike<T>(value?: any): value is T[];
     }
 
-    interface LoDashImplicitWrapperBase<T, TWrapper> {
+    interface LoDashImplicitWrapperBase<T,TWrapper> {
         /**
          * @see _.isArrayLike
          */
         isArrayLike(): boolean;
     }
 
-    interface LoDashExplicitWrapperBase<T, TWrapper> {
+    interface LoDashExplicitWrapperBase<T,TWrapper> {
         /**
          * @see _.isArrayLike
          */
@@ -11692,14 +11468,14 @@ declare namespace _ {
         isArrayLikeObject<T>(value?: any): value is T[];
     }
 
-    interface LoDashImplicitWrapperBase<T, TWrapper> {
+    interface LoDashImplicitWrapperBase<T,TWrapper> {
         /**
          * @see _.isArrayLikeObject
          */
         isArrayLikeObject(): boolean;
     }
 
-    interface LoDashExplicitWrapperBase<T, TWrapper> {
+    interface LoDashExplicitWrapperBase<T,TWrapper> {
         /**
          * @see _.isArrayLikeObject
          */
@@ -11886,7 +11662,9 @@ declare namespace _ {
     }
 
     // _.isEqualWith
-    type IsEqualCustomizer = (value: any, other: any, indexOrKey?: number|string) => boolean;
+    interface IsEqualCustomizer {
+        (value: any, other: any, indexOrKey?: number|string): boolean;
+    }
 
     interface LoDashStatic {
         /**
@@ -12137,7 +11915,9 @@ declare namespace _ {
     }
 
     //_.isMatch
-    type isMatchCustomizer = (value: any, other: any, indexOrKey?: number|string) => boolean;
+    interface isMatchCustomizer {
+        (value: any, other: any, indexOrKey?: number|string): boolean;
+    }
 
     interface LoDashStatic {
         /**
@@ -12173,7 +11953,9 @@ declare namespace _ {
     }
 
     //_.isMatchWith
-    type isMatchWithCustomizer = (value: any, other: any, indexOrKey?: number|string) => boolean;
+    interface isMatchWithCustomizer {
+        (value: any, other: any, indexOrKey?: number|string): boolean;
+    }
 
     interface LoDashStatic {
         /**
@@ -14040,6 +13822,11 @@ declare namespace _ {
         assign<TResult>(...otherArgs: any[]): LoDashExplicitObjectWrapper<TResult>;
     }
 
+    //_.assignWith
+    interface AssignCustomizer {
+        (objectValue: any, sourceValue: any, key?: string, object?: {}, source?: {}): any;
+    }
+
     interface LoDashStatic {
         /**
          * This method is like `_.assign` except that it accepts `customizer` which
@@ -14393,7 +14180,9 @@ declare namespace _ {
     }
 
     //_.assignInWith
-    type AssignCustomizer = (objectValue: any, sourceValue: any, key?: string, object?: {}, source?: {}) => any;
+    interface AssignCustomizer {
+        (objectValue: any, sourceValue: any, key?: string, object?: {}, source?: {}): any;
+    }
 
     interface LoDashStatic {
         /**
@@ -14778,7 +14567,7 @@ declare namespace _ {
         /**
          * @see _.defaultsDeep
          **/
-        defaultsDeep<TResult>(...sources: any[]): LoDashImplicitObjectWrapper<TResult>;
+        defaultsDeep<TResult>(...sources: any[]): LoDashImplicitObjectWrapper<TResult>
     }
 
     // _.extend
@@ -15568,7 +15357,7 @@ declare namespace _ {
          */
         get<TObject, TResult>(
             object: TObject,
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             defaultValue?: TResult
         ): TResult;
 
@@ -15577,7 +15366,7 @@ declare namespace _ {
          */
         get<TResult>(
             object: any,
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             defaultValue?: TResult
         ): TResult;
     }
@@ -15587,7 +15376,7 @@ declare namespace _ {
          * @see _.get
          */
         get<TResult>(
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             defaultValue?: TResult
         ): TResult;
     }
@@ -15597,7 +15386,7 @@ declare namespace _ {
          * @see _.get
          */
         get<TResult>(
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             defaultValue?: TResult
         ): TResult;
     }
@@ -15607,7 +15396,7 @@ declare namespace _ {
          * @see _.get
          */
         get<TResult>(
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             defaultValue?: TResult
         ): TResult;
     }
@@ -15617,7 +15406,7 @@ declare namespace _ {
          * @see _.get
          */
         get<TResultWrapper>(
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             defaultValue?: any
         ): TResultWrapper;
     }
@@ -15627,7 +15416,7 @@ declare namespace _ {
          * @see _.get
          */
         get<TResultWrapper>(
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             defaultValue?: any
         ): TResultWrapper;
     }
@@ -15637,7 +15426,7 @@ declare namespace _ {
          * @see _.get
          */
         get<TResultWrapper>(
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             defaultValue?: any
         ): TResultWrapper;
     }
@@ -15672,7 +15461,7 @@ declare namespace _ {
          */
         has<T extends {}>(
             object: T,
-            path: Many<StringRepresentable>
+            path: StringRepresentable|StringRepresentable[]
         ): boolean;
     }
 
@@ -15680,14 +15469,14 @@ declare namespace _ {
         /**
          * @see _.has
          */
-        has(path: Many<StringRepresentable>): boolean;
+        has(path: StringRepresentable|StringRepresentable[]): boolean;
     }
 
     interface LoDashExplicitObjectWrapper<T> {
         /**
          * @see _.has
          */
-        has(path: Many<StringRepresentable>): LoDashExplicitWrapper<boolean>;
+        has(path: StringRepresentable|StringRepresentable[]): LoDashExplicitWrapper<boolean>;
     }
 
     //_.hasIn
@@ -15719,7 +15508,7 @@ declare namespace _ {
          */
         hasIn<T extends {}>(
             object: T,
-            path: Many<StringRepresentable>
+            path: StringRepresentable|StringRepresentable[]
         ): boolean;
     }
 
@@ -15727,14 +15516,14 @@ declare namespace _ {
         /**
          * @see _.hasIn
          */
-        hasIn(path: Many<StringRepresentable>): boolean;
+        hasIn(path: StringRepresentable|StringRepresentable[]): boolean;
     }
 
     interface LoDashExplicitObjectWrapper<T> {
         /**
          * @see _.hasIn
          */
-        hasIn(path: Many<StringRepresentable>): LoDashExplicitWrapper<boolean>;
+        hasIn(path: StringRepresentable|StringRepresentable[]): LoDashExplicitWrapper<boolean>;
     }
 
     //_.invert
@@ -15776,7 +15565,9 @@ declare namespace _ {
     }
 
     //_.inverBy
-    type InvertByIterator<T> = (value: T) => any;
+    interface InvertByIterator<T> {
+        (value: T): any;
+    }
 
     interface LoDashStatic {
         /**
@@ -16318,7 +16109,9 @@ declare namespace _ {
     }
 
     //_.mergeWith
-    type MergeWithCustomizer = (value: any, srcValue: any, key?: string, object?: Object, source?: Object) => any;
+    interface MergeWithCustomizer {
+        (value: any, srcValue: any, key?: string, object?: Object, source?: Object): any;
+    }
 
     interface LoDashStatic {
         /**
@@ -16474,7 +16267,7 @@ declare namespace _ {
 
         omit<TResult extends {}, T extends {}>(
             object: T,
-            ...predicate: Array<Many<StringRepresentable>>
+            ...predicate: (StringRepresentable|StringRepresentable[])[]
         ): TResult;
     }
 
@@ -16484,7 +16277,7 @@ declare namespace _ {
          * @see _.omit
          */
         omit<TResult extends {}>(
-            ...predicate: Array<Many<StringRepresentable>>
+            ...predicate: (StringRepresentable|StringRepresentable[])[]
         ): LoDashImplicitObjectWrapper<TResult>;
     }
 
@@ -16494,7 +16287,7 @@ declare namespace _ {
          * @see _.omit
          */
         omit<TResult extends {}>(
-            ...predicate: Array<Many<StringRepresentable>>
+            ...predicate: (StringRepresentable|StringRepresentable[])[]
         ): LoDashExplicitObjectWrapper<TResult>;
     }
 
@@ -16563,7 +16356,7 @@ declare namespace _ {
          */
         pick<TResult extends {}, T extends {}>(
             object: T,
-            ...predicate: Array<Many<StringRepresentable>>
+            ...predicate: (StringRepresentable|StringRepresentable[])[]
         ): TResult;
     }
 
@@ -16572,7 +16365,7 @@ declare namespace _ {
          * @see _.pick
          */
         pick<TResult extends {}>(
-            ...predicate: Array<Many<StringRepresentable>>
+            ...predicate: (StringRepresentable|StringRepresentable[])[]
         ): LoDashImplicitObjectWrapper<TResult>;
     }
 
@@ -16581,7 +16374,7 @@ declare namespace _ {
          * @see _.pick
          */
         pick<TResult extends {}>(
-            ...predicate: Array<Many<StringRepresentable>>
+            ...predicate: (StringRepresentable|StringRepresentable[])[]
         ): LoDashExplicitObjectWrapper<TResult>;
     }
 
@@ -16641,7 +16434,7 @@ declare namespace _ {
          */
         result<TObject, TResult>(
             object: TObject,
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             defaultValue?: TResult|((...args: any[]) => TResult)
         ): TResult;
 
@@ -16650,7 +16443,7 @@ declare namespace _ {
          */
         result<TResult>(
             object: any,
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             defaultValue?: TResult|((...args: any[]) => TResult)
         ): TResult;
     }
@@ -16660,7 +16453,7 @@ declare namespace _ {
          * @see _.result
          */
         result<TResult>(
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             defaultValue?: TResult|((...args: any[]) => TResult)
         ): TResult;
     }
@@ -16670,7 +16463,7 @@ declare namespace _ {
          * @see _.result
          */
         result<TResult>(
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             defaultValue?: TResult|((...args: any[]) => TResult)
         ): TResult;
     }
@@ -16680,7 +16473,7 @@ declare namespace _ {
          * @see _.result
          */
         result<TResult>(
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             defaultValue?: TResult|((...args: any[]) => TResult)
         ): TResult;
     }
@@ -16690,7 +16483,7 @@ declare namespace _ {
          * @see _.result
          */
         result<TResultWrapper>(
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             defaultValue?: any
         ): TResultWrapper;
     }
@@ -16700,7 +16493,7 @@ declare namespace _ {
          * @see _.result
          */
         result<TResultWrapper>(
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             defaultValue?: any
         ): TResultWrapper;
     }
@@ -16710,7 +16503,7 @@ declare namespace _ {
          * @see _.result
          */
         result<TResultWrapper>(
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             defaultValue?: any
         ): TResultWrapper;
     }
@@ -16729,7 +16522,7 @@ declare namespace _ {
          */
         set<TResult>(
             object: Object,
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             value: any
         ): TResult;
 
@@ -16738,7 +16531,7 @@ declare namespace _ {
          */
         set<V, TResult>(
             object: Object,
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             value: V
         ): TResult;
 
@@ -16747,7 +16540,7 @@ declare namespace _ {
          */
         set<O, V, TResult>(
             object: O,
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             value: V
         ): TResult;
     }
@@ -16757,7 +16550,7 @@ declare namespace _ {
          * @see _.set
          */
         set<TResult>(
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             value: any
         ): LoDashImplicitObjectWrapper<TResult>;
 
@@ -16765,7 +16558,7 @@ declare namespace _ {
          * @see _.set
          */
         set<V, TResult>(
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             value: V
         ): LoDashImplicitObjectWrapper<TResult>;
     }
@@ -16775,7 +16568,7 @@ declare namespace _ {
          * @see _.set
          */
         set<TResult>(
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             value: any
         ): LoDashExplicitObjectWrapper<TResult>;
 
@@ -16783,13 +16576,15 @@ declare namespace _ {
          * @see _.set
          */
         set<V, TResult>(
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             value: V
         ): LoDashExplicitObjectWrapper<TResult>;
     }
 
     //_.setWith
-    type SetWithCustomizer<T> = (nsValue: any, key: string, nsObject: T) => any;
+    interface SetWithCustomizer<T> {
+        (nsValue: any, key: string, nsObject: T): any;
+    }
 
     interface LoDashStatic {
         /**
@@ -16805,7 +16600,7 @@ declare namespace _ {
          */
         setWith<TResult>(
             object: Object,
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             value: any,
             customizer?: SetWithCustomizer<Object>
         ): TResult;
@@ -16815,7 +16610,7 @@ declare namespace _ {
          */
         setWith<V, TResult>(
             object: Object,
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             value: V,
             customizer?: SetWithCustomizer<Object>
         ): TResult;
@@ -16825,7 +16620,7 @@ declare namespace _ {
          */
         setWith<O, V, TResult>(
             object: O,
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             value: V,
             customizer?: SetWithCustomizer<O>
         ): TResult;
@@ -16836,7 +16631,7 @@ declare namespace _ {
          * @see _.setWith
          */
         setWith<TResult>(
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             value: any,
             customizer?: SetWithCustomizer<T>
         ): LoDashImplicitObjectWrapper<TResult>;
@@ -16845,7 +16640,7 @@ declare namespace _ {
          * @see _.setWith
          */
         setWith<V, TResult>(
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             value: V,
             customizer?: SetWithCustomizer<T>
         ): LoDashImplicitObjectWrapper<TResult>;
@@ -16856,7 +16651,7 @@ declare namespace _ {
          * @see _.setWith
          */
         setWith<TResult>(
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             value: any,
             customizer?: SetWithCustomizer<T>
         ): LoDashExplicitObjectWrapper<TResult>;
@@ -16865,7 +16660,7 @@ declare namespace _ {
          * @see _.setWith
          */
         setWith<V, TResult>(
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             value: V,
             customizer?: SetWithCustomizer<T>
         ): LoDashExplicitObjectWrapper<TResult>;
@@ -17022,7 +16817,7 @@ declare namespace _ {
          */
         unset<T>(
             object: T,
-            path: Many<StringRepresentable>
+            path: StringRepresentable|StringRepresentable[]
         ): boolean;
     }
 
@@ -17030,14 +16825,14 @@ declare namespace _ {
         /**
          * @see _.unset
          */
-        unset(path: Many<StringRepresentable>): LoDashImplicitWrapper<boolean>;
+        unset(path: StringRepresentable|StringRepresentable[]): LoDashImplicitWrapper<boolean>;
     }
 
     interface LoDashExplicitObjectWrapper<T> {
         /**
          * @see _.unset
          */
-        unset(path: Many<StringRepresentable>): LoDashExplicitWrapper<boolean>;
+        unset(path: StringRepresentable|StringRepresentable[]): LoDashExplicitWrapper<boolean>;
     }
 
     //_.update
@@ -17053,7 +16848,7 @@ declare namespace _ {
          */
         update<TResult>(
             object: Object,
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             updater: Function
         ): TResult;
 
@@ -17062,7 +16857,7 @@ declare namespace _ {
          */
         update<U extends Function, TResult>(
             object: Object,
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             updater: U
         ): TResult;
 
@@ -17071,7 +16866,7 @@ declare namespace _ {
          */
         update<O extends {}, TResult>(
             object: O,
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             updater: Function
         ): TResult;
 
@@ -17080,7 +16875,7 @@ declare namespace _ {
          */
         update<O, U extends Function, TResult>(
             object: O,
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             updater: U
         ): TResult;
     }
@@ -17090,7 +16885,7 @@ declare namespace _ {
          * @see _.update
          */
         update<TResult>(
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             updater: any
         ): LoDashImplicitObjectWrapper<TResult>;
 
@@ -17098,7 +16893,7 @@ declare namespace _ {
          * @see _.update
          */
         update<U extends Function, TResult>(
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             updater: U
         ): LoDashImplicitObjectWrapper<TResult>;
     }
@@ -17108,7 +16903,7 @@ declare namespace _ {
          * @see _.update
          */
         update<TResult>(
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             updater: any
         ): LoDashExplicitObjectWrapper<TResult>;
 
@@ -17116,7 +16911,7 @@ declare namespace _ {
          * @see _.update
          */
         update<U extends Function, TResult>(
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             updater: U
         ): LoDashExplicitObjectWrapper<TResult>;
     }
@@ -18236,7 +18031,7 @@ declare namespace _ {
          * Checks `value` to determine whether a default value should be returned in
          * its place. The `defaultValue` is returned if `value` is `NaN`, `null`,
          * or `undefined`.
-         *
+         * 
          * @param value The value to check.
          * @param defaultValue The default value.
          * @returns Returns the resolved value.
@@ -18452,7 +18247,7 @@ declare namespace _ {
          * @return Returns the new function.
          */
         matchesProperty<T>(
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             srcValue: T
         ): (value: any) => boolean;
 
@@ -18460,7 +18255,7 @@ declare namespace _ {
          * @see _.matchesProperty
          */
         matchesProperty<T, V>(
-            path: Many<StringRepresentable>,
+            path: StringRepresentable|StringRepresentable[],
             srcValue: T
         ): (value: V) => boolean;
     }
@@ -18582,7 +18377,7 @@ declare namespace _ {
         methodOf<TObject extends {}, TResult>(
             object: TObject,
             ...args: any[]
-        ): (path: Many<StringRepresentable>) => TResult;
+        ): (path: StringRepresentable|StringRepresentable[]) => TResult;
 
         /**
          * @see _.methodOf
@@ -18590,7 +18385,7 @@ declare namespace _ {
         methodOf<TResult>(
             object: {},
             ...args: any[]
-        ): (path: Many<StringRepresentable>) => TResult;
+        ): (path: StringRepresentable|StringRepresentable[]) => TResult;
     }
 
     interface LoDashImplicitObjectWrapper<T> {
@@ -18599,7 +18394,7 @@ declare namespace _ {
          */
         methodOf<TResult>(
             ...args: any[]
-        ): LoDashImplicitObjectWrapper<(path: Many<StringRepresentable>) => TResult>;
+        ): LoDashImplicitObjectWrapper<(path: StringRepresentable|StringRepresentable[]) => TResult>;
     }
 
     interface LoDashExplicitObjectWrapper<T> {
@@ -18608,7 +18403,7 @@ declare namespace _ {
          */
         methodOf<TResult>(
             ...args: any[]
-        ): LoDashExplicitObjectWrapper<(path: Many<StringRepresentable>) => TResult>;
+        ): LoDashExplicitObjectWrapper<(path: StringRepresentable|StringRepresentable[]) => TResult>;
     }
 
     //_.mixin
@@ -18761,35 +18556,35 @@ declare namespace _ {
          * @param iteratees The iteratees to invoke.
          * @return Returns the new function.
          */
-        over<TResult>(...iteratees: Array<Many<Function>>): (...args: any[]) => TResult[];
+        over<TResult>(...iteratees: (Function|Function[])[]): (...args: any[]) => TResult[];
     }
 
     interface LoDashImplicitArrayWrapper<T> {
         /**
          * @see _.over
          */
-        over<TResult>(...iteratees: Array<Many<Function>>): LoDashImplicitObjectWrapper<(...args: any[]) => TResult[]>;
+        over<TResult>(...iteratees: (Function|Function[])[]): LoDashImplicitObjectWrapper<(...args: any[]) => TResult[]>;
     }
 
     interface LoDashImplicitObjectWrapper<T> {
         /**
          * @see _.over
          */
-        over<TResult>(...iteratees: Array<Many<Function>>): LoDashImplicitObjectWrapper<(...args: any[]) => TResult[]>;
+        over<TResult>(...iteratees: (Function|Function[])[]): LoDashImplicitObjectWrapper<(...args: any[]) => TResult[]>;
     }
 
     interface LoDashExplicitArrayWrapper<T> {
         /**
          * @see _.over
          */
-        over<TResult>(...iteratees: Array<Many<Function>>): LoDashExplicitObjectWrapper<(...args: any[]) => TResult[]>;
+        over<TResult>(...iteratees: (Function|Function[])[]): LoDashExplicitObjectWrapper<(...args: any[]) => TResult[]>;
     }
 
     interface LoDashExplicitObjectWrapper<T> {
         /**
          * @see _.over
          */
-        over<TResult>(...iteratees: Array<Many<Function>>): LoDashExplicitObjectWrapper<(...args: any[]) => TResult[]>;
+        over<TResult>(...iteratees: (Function|Function[])[]): LoDashExplicitObjectWrapper<(...args: any[]) => TResult[]>;
     }
 
     //_.overEvery
@@ -18801,35 +18596,35 @@ declare namespace _ {
          * @param predicates The predicates to check.
          * @return Returns the new function.
          */
-        overEvery(...predicates: Array<Many<Function>>): (...args: any[]) => boolean;
+        overEvery(...predicates: (Function|Function[])[]): (...args: any[]) => boolean;
     }
 
     interface LoDashImplicitArrayWrapper<T> {
         /**
          * @see _.overEvery
          */
-        overEvery(...predicates: Array<Many<Function>>): LoDashImplicitObjectWrapper<(...args: any[]) => boolean>;
+        overEvery(...predicates: (Function|Function[])[]): LoDashImplicitObjectWrapper<(...args: any[]) => boolean>;
     }
 
     interface LoDashImplicitObjectWrapper<T> {
         /**
          * @see _.overEvery
          */
-        overEvery(...predicates: Array<Many<Function>>): LoDashImplicitObjectWrapper<(...args: any[]) => boolean>;
+        overEvery(...predicates: (Function|Function[])[]): LoDashImplicitObjectWrapper<(...args: any[]) => boolean>;
     }
 
     interface LoDashExplicitArrayWrapper<T> {
         /**
          * @see _.overEvery
          */
-        overEvery(...predicates: Array<Many<Function>>): LoDashExplicitObjectWrapper<(...args: any[]) => boolean>;
+        overEvery(...predicates: (Function|Function[])[]): LoDashExplicitObjectWrapper<(...args: any[]) => boolean>;
     }
 
     interface LoDashExplicitObjectWrapper<T> {
         /**
          * @see _.overEvery
          */
-        overEvery(...predicates: Array<Many<Function>>): LoDashExplicitObjectWrapper<(...args: any[]) => boolean>;
+        overEvery(...predicates: (Function|Function[])[]): LoDashExplicitObjectWrapper<(...args: any[]) => boolean>;
     }
 
     //_.overSome
@@ -18841,35 +18636,35 @@ declare namespace _ {
          * @param predicates The predicates to check.
          * @return Returns the new function.
          */
-        overSome(...predicates: Array<Many<Function>>): (...args: any[]) => boolean;
+        overSome(...predicates: (Function|Function[])[]): (...args: any[]) => boolean;
     }
 
     interface LoDashImplicitArrayWrapper<T> {
         /**
          * @see _.overSome
          */
-        overSome(...predicates: Array<Many<Function>>): LoDashImplicitObjectWrapper<(...args: any[]) => boolean>;
+        overSome(...predicates: (Function|Function[])[]): LoDashImplicitObjectWrapper<(...args: any[]) => boolean>;
     }
 
     interface LoDashImplicitObjectWrapper<T> {
         /**
          * @see _.overSome
          */
-        overSome(...predicates: Array<Many<Function>>): LoDashImplicitObjectWrapper<(...args: any[]) => boolean>;
+        overSome(...predicates: (Function|Function[])[]): LoDashImplicitObjectWrapper<(...args: any[]) => boolean>;
     }
 
     interface LoDashExplicitArrayWrapper<T> {
         /**
          * @see _.overSome
          */
-        overSome(...predicates: Array<Many<Function>>): LoDashExplicitObjectWrapper<(...args: any[]) => boolean>;
+        overSome(...predicates: (Function|Function[])[]): LoDashExplicitObjectWrapper<(...args: any[]) => boolean>;
     }
 
     interface LoDashExplicitObjectWrapper<T> {
         /**
          * @see _.overSome
          */
-        overSome(...predicates: Array<Many<Function>>): LoDashExplicitObjectWrapper<(...args: any[]) => boolean>;
+        overSome(...predicates: (Function|Function[])[]): LoDashExplicitObjectWrapper<(...args: any[]) => boolean>;
     }
 
     //_.property
@@ -18880,7 +18675,7 @@ declare namespace _ {
          * @param path The path of the property to get.
          * @return Returns the new function.
          */
-        property<TObj, TResult>(path: Many<StringRepresentable>): (obj: TObj) => TResult;
+        property<TObj, TResult>(path: StringRepresentable|StringRepresentable[]): (obj: TObj) => TResult;
     }
 
     interface LoDashImplicitWrapper<T> {
@@ -18920,21 +18715,21 @@ declare namespace _ {
          * @param object The object to query.
          * @return Returns the new function.
          */
-        propertyOf<T extends {}>(object: T): (path: Many<string>) => any;
+        propertyOf<T extends {}>(object: T): (path: string|string[]) => any;
     }
 
     interface LoDashImplicitObjectWrapper<T> {
         /**
          * @see _.propertyOf
          */
-        propertyOf(): LoDashImplicitObjectWrapper<(path: Many<string>) => any>;
+        propertyOf(): LoDashImplicitObjectWrapper<(path: string|string[]) => any>;
     }
 
     interface LoDashExplicitObjectWrapper<T> {
         /**
          * @see _.propertyOf
          */
-        propertyOf(): LoDashExplicitObjectWrapper<(path: Many<string>) => any>;
+        propertyOf(): LoDashExplicitObjectWrapper<(path: string|string[]) => any>;
     }
 
     //_.range
@@ -19191,22 +18986,41 @@ declare namespace _ {
         uniqueId(): LoDashExplicitWrapper<string>;
     }
 
-    type ListIterator<T, TResult> = (value: T, index: number, collection: List<T>) => TResult;
+    interface ListIterator<T, TResult> {
+        (value: T, index: number, collection: List<T>): TResult;
+    }
 
-    type DictionaryIterator<T, TResult> = (value: T, key?: string, collection?: Dictionary<T>) => TResult;
+    interface DictionaryIterator<T, TResult> {
+        (value: T, key?: string, collection?: Dictionary<T>): TResult;
+    }
 
-    type NumericDictionaryIterator<T, TResult> = (value: T, key?: number, collection?: Dictionary<T>) => TResult;
+    interface NumericDictionaryIterator<T, TResult> {
+        (value: T, key?: number, collection?: Dictionary<T>): TResult;
+    }
 
-    type ObjectIterator<T, TResult> = (element: T, key?: string, collection?: any) => TResult;
+    interface ObjectIterator<T, TResult> {
+        (element: T, key?: string, collection?: any): TResult;
+    }
 
-    type StringIterator<TResult> = (char: string, index?: number, string?: string) => TResult;
+    interface StringIterator<TResult> {
+        (char: string, index?: number, string?: string): TResult;
+    }
 
-    type MemoVoidIterator<T, TResult> = (prev: TResult, curr: T, indexOrKey?: any, list?: T[]) => void;
+    interface MemoVoidIterator<T, TResult> {
+        (prev: TResult, curr: T, indexOrKey?: any, list?: T[]): void;
+    }
+    interface MemoIterator<T, TResult> {
+        (prev: TResult, curr: T, indexOrKey?: any, list?: T[]): TResult;
+    }
 
-    type MemoIterator<T, TResult> = (prev: TResult, curr: T, indexOrKey?: any, list?: T[]) => TResult;
+    interface MemoVoidArrayIterator<T, TResult> {
+        (acc: TResult, curr: T, index?: number, arr?: T[]): void;
+    }
+    interface MemoVoidDictionaryIterator<T, TResult> {
+        (acc: TResult, curr: T, key?: string, dict?: Dictionary<T>): void;
+    }
 
-    type MemoVoidArrayIterator<T, TResult> = (acc: TResult, curr: T, index?: number, arr?: T[]) => void;
-    type MemoVoidDictionaryIterator<T, TResult> = (acc: TResult, curr: T, key?: string, dict?: Dictionary<T>) => void;
+    //interface Collection<T> {}
 
     // Common interface between Arrays and jQuery objects
     interface List<T> {
@@ -19232,8 +19046,3669 @@ declare namespace _ {
     }
 }
 
+// Named exports
 
-interface Set<T> { }
-interface Map<K, V> { }
-interface WeakSet<T> { }
-interface WeakMap<K, V> { }
+declare module "lodash/after" {
+   const after: typeof _.after;
+   export = after;
+}
+
+
+declare module "lodash/ary" {
+   const ary: typeof _.ary;
+   export = ary;
+}
+
+
+declare module "lodash/assign" {
+   const assign: typeof _.assign;
+   export = assign;
+}
+
+
+declare module "lodash/assignIn" {
+   const assignIn: typeof _.assignIn;
+   export = assignIn;
+}
+
+
+declare module "lodash/assignInWith" {
+   const assignInWith: typeof _.assignInWith;
+   export = assignInWith;
+}
+
+
+declare module "lodash/assignWith" {
+   const assignWith: typeof _.assignWith;
+   export = assignWith;
+}
+
+
+declare module "lodash/at" {
+   const at: typeof _.at;
+   export = at;
+}
+
+
+declare module "lodash/before" {
+   const before: typeof _.before;
+   export = before;
+}
+
+
+declare module "lodash/bind" {
+   const bind: typeof _.bind;
+   export = bind;
+}
+
+
+declare module "lodash/bindAll" {
+   const bindAll: typeof _.bindAll;
+   export = bindAll;
+}
+
+
+declare module "lodash/bindKey" {
+   const bindKey: typeof _.bindKey;
+   export = bindKey;
+}
+
+
+declare module "lodash/castArray" {
+   const castArray: typeof _.castArray;
+   export = castArray;
+}
+
+
+declare module "lodash/chain" {
+   const chain: typeof _.chain;
+   export = chain;
+}
+
+
+declare module "lodash/chunk" {
+   const chunk: typeof _.chunk;
+   export = chunk;
+}
+
+
+declare module "lodash/compact" {
+   const compact: typeof _.compact;
+   export = compact;
+}
+
+
+declare module "lodash/concat" {
+   const concat: typeof _.concat;
+   export = concat;
+}
+
+/**
+* uncoment it if definition exists
+*/
+/*
+declare module "lodash/cond" {
+   const cond: typeof _.cond;
+   export = cond;
+}
+*/
+
+/**
+* uncoment it if definition exists
+*/
+/*
+declare module "lodash/conforms" {
+   const conforms: typeof _.conforms;
+   export = conforms;
+}
+*/
+
+declare module "lodash/constant" {
+   const constant: typeof _.constant;
+   export = constant;
+}
+
+
+declare module "lodash/countBy" {
+   const countBy: typeof _.countBy;
+   export = countBy;
+}
+
+
+declare module "lodash/create" {
+   const create: typeof _.create;
+   export = create;
+}
+
+
+declare module "lodash/curry" {
+   const curry: typeof _.curry;
+   export = curry;
+}
+
+
+declare module "lodash/curryRight" {
+   const curryRight: typeof _.curryRight;
+   export = curryRight;
+}
+
+
+declare module "lodash/debounce" {
+   const debounce: typeof _.debounce;
+   export = debounce;
+}
+
+
+declare module "lodash/defaults" {
+   const defaults: typeof _.defaults;
+   export = defaults;
+}
+
+
+declare module "lodash/defaultsDeep" {
+   const defaultsDeep: typeof _.defaultsDeep;
+   export = defaultsDeep;
+}
+
+
+declare module "lodash/defer" {
+   const defer: typeof _.defer;
+   export = defer;
+}
+
+
+declare module "lodash/delay" {
+   const delay: typeof _.delay;
+   export = delay;
+}
+
+
+declare module "lodash/difference" {
+   const difference: typeof _.difference;
+   export = difference;
+}
+
+
+declare module "lodash/differenceBy" {
+   const differenceBy: typeof _.differenceBy;
+   export = differenceBy;
+}
+
+
+declare module "lodash/differenceWith" {
+   const differenceWith: typeof _.differenceWith;
+   export = differenceWith;
+}
+
+
+declare module "lodash/drop" {
+   const drop: typeof _.drop;
+   export = drop;
+}
+
+
+declare module "lodash/dropRight" {
+   const dropRight: typeof _.dropRight;
+   export = dropRight;
+}
+
+
+declare module "lodash/dropRightWhile" {
+   const dropRightWhile: typeof _.dropRightWhile;
+   export = dropRightWhile;
+}
+
+
+declare module "lodash/dropWhile" {
+   const dropWhile: typeof _.dropWhile;
+   export = dropWhile;
+}
+
+
+declare module "lodash/fill" {
+   const fill: typeof _.fill;
+   export = fill;
+}
+
+
+declare module "lodash/filter" {
+   const filter: typeof _.filter;
+   export = filter;
+}
+
+
+declare module "lodash/flatMap" {
+   const flatMap: typeof _.flatMap;
+   export = flatMap;
+}
+
+/**
+* uncoment it if definition exists
+*/
+/*
+declare module "lodash/flatMapDeep" {
+   const flatMapDeep: typeof _.flatMapDeep;
+   export = flatMapDeep;
+}
+*/
+/**
+* uncoment it if definition exists
+*/
+/*
+declare module "lodash/flatMapDepth" {
+   const flatMapDepth: typeof _.flatMapDepth;
+   export = flatMapDepth;
+}
+*/
+
+declare module "lodash/flatten" {
+   const flatten: typeof _.flatten;
+   export = flatten;
+}
+
+
+declare module "lodash/flattenDeep" {
+   const flattenDeep: typeof _.flattenDeep;
+   export = flattenDeep;
+}
+
+declare module "lodash/flattenDepth" {
+   const flattenDepth: typeof _.flattenDepth;
+   export = flattenDepth;
+}
+
+declare module "lodash/flip" {
+   const flip: typeof _.flip;
+   export = flip;
+}
+
+
+declare module "lodash/flow" {
+   const flow: typeof _.flow;
+   export = flow;
+}
+
+
+declare module "lodash/flowRight" {
+   const flowRight: typeof _.flowRight;
+   export = flowRight;
+}
+
+
+declare module "lodash/fromPairs" {
+   const fromPairs: typeof _.fromPairs;
+   export = fromPairs;
+}
+
+
+declare module "lodash/functions" {
+   const functions: typeof _.functions;
+   export = functions;
+}
+
+
+declare module "lodash/functionsIn" {
+   const functionsIn: typeof _.functionsIn;
+   export = functionsIn;
+}
+
+
+declare module "lodash/groupBy" {
+   const groupBy: typeof _.groupBy;
+   export = groupBy;
+}
+
+
+declare module "lodash/initial" {
+   const initial: typeof _.initial;
+   export = initial;
+}
+
+
+declare module "lodash/intersection" {
+   const intersection: typeof _.intersection;
+   export = intersection;
+}
+
+
+declare module "lodash/intersectionBy" {
+   const intersectionBy: typeof _.intersectionBy;
+   export = intersectionBy;
+}
+
+
+declare module "lodash/intersectionWith" {
+   const intersectionWith: typeof _.intersectionWith;
+   export = intersectionWith;
+}
+
+
+declare module "lodash/invert" {
+   const invert: typeof _.invert;
+   export = invert;
+}
+
+
+declare module "lodash/invertBy" {
+   const invertBy: typeof _.invertBy;
+   export = invertBy;
+}
+
+
+declare module "lodash/invokeMap" {
+   const invokeMap: typeof _.invokeMap;
+   export = invokeMap;
+}
+
+
+declare module "lodash/iteratee" {
+   const iteratee: typeof _.iteratee;
+   export = iteratee;
+}
+
+
+declare module "lodash/keyBy" {
+   const keyBy: typeof _.keyBy;
+   export = keyBy;
+}
+
+
+declare module "lodash/keys" {
+   const keys: typeof _.keys;
+   export = keys;
+}
+
+
+declare module "lodash/keysIn" {
+   const keysIn: typeof _.keysIn;
+   export = keysIn;
+}
+
+
+declare module "lodash/map" {
+   const map: typeof _.map;
+   export = map;
+}
+
+
+declare module "lodash/mapKeys" {
+   const mapKeys: typeof _.mapKeys;
+   export = mapKeys;
+}
+
+
+declare module "lodash/mapValues" {
+   const mapValues: typeof _.mapValues;
+   export = mapValues;
+}
+
+
+declare module "lodash/matches" {
+   const matches: typeof _.matches;
+   export = matches;
+}
+
+
+declare module "lodash/matchesProperty" {
+   const matchesProperty: typeof _.matchesProperty;
+   export = matchesProperty;
+}
+
+
+declare module "lodash/memoize" {
+   const memoize: typeof _.memoize;
+   export = memoize;
+}
+
+
+declare module "lodash/merge" {
+   const merge: typeof _.merge;
+   export = merge;
+}
+
+
+declare module "lodash/mergeWith" {
+   const mergeWith: typeof _.mergeWith;
+   export = mergeWith;
+}
+
+
+declare module "lodash/method" {
+   const method: typeof _.method;
+   export = method;
+}
+
+
+declare module "lodash/methodOf" {
+   const methodOf: typeof _.methodOf;
+   export = methodOf;
+}
+
+
+declare module "lodash/mixin" {
+   const mixin: typeof _.mixin;
+   export = mixin;
+}
+
+
+declare module "lodash/negate" {
+   const negate: typeof _.negate;
+   export = negate;
+}
+
+
+declare module "lodash/nthArg" {
+   const nthArg: typeof _.nthArg;
+   export = nthArg;
+}
+
+
+declare module "lodash/omit" {
+   const omit: typeof _.omit;
+   export = omit;
+}
+
+
+declare module "lodash/omitBy" {
+   const omitBy: typeof _.omitBy;
+   export = omitBy;
+}
+
+
+declare module "lodash/once" {
+   const once: typeof _.once;
+   export = once;
+}
+
+
+declare module "lodash/orderBy" {
+   const orderBy: typeof _.orderBy;
+   export = orderBy;
+}
+
+
+declare module "lodash/over" {
+   const over: typeof _.over;
+   export = over;
+}
+
+
+declare module "lodash/overArgs" {
+   const overArgs: typeof _.overArgs;
+   export = overArgs;
+}
+
+
+declare module "lodash/overEvery" {
+   const overEvery: typeof _.overEvery;
+   export = overEvery;
+}
+
+
+declare module "lodash/overSome" {
+   const overSome: typeof _.overSome;
+   export = overSome;
+}
+
+
+declare module "lodash/partial" {
+   const partial: typeof _.partial;
+   export = partial;
+}
+
+
+declare module "lodash/partialRight" {
+   const partialRight: typeof _.partialRight;
+   export = partialRight;
+}
+
+
+declare module "lodash/partition" {
+   const partition: typeof _.partition;
+   export = partition;
+}
+
+
+declare module "lodash/pick" {
+   const pick: typeof _.pick;
+   export = pick;
+}
+
+
+declare module "lodash/pickBy" {
+   const pickBy: typeof _.pickBy;
+   export = pickBy;
+}
+
+
+declare module "lodash/property" {
+   const property: typeof _.property;
+   export = property;
+}
+
+
+declare module "lodash/propertyOf" {
+   const propertyOf: typeof _.propertyOf;
+   export = propertyOf;
+}
+
+
+declare module "lodash/pull" {
+   const pull: typeof _.pull;
+   export = pull;
+}
+
+
+declare module "lodash/pullAll" {
+   const pullAll: typeof _.pullAll;
+   export = pullAll;
+}
+
+
+declare module "lodash/pullAllBy" {
+   const pullAllBy: typeof _.pullAllBy;
+   export = pullAllBy;
+}
+
+/**
+* uncoment it if definition exists
+*/
+/*
+declare module "lodash/pullAllWith" {
+   const pullAllWith: typeof _.pullAllWith;
+   export = pullAllWith;
+}
+*/
+
+declare module "lodash/pullAt" {
+   const pullAt: typeof _.pullAt;
+   export = pullAt;
+}
+
+
+declare module "lodash/range" {
+   const range: typeof _.range;
+   export = range;
+}
+
+
+declare module "lodash/rangeRight" {
+   const rangeRight: typeof _.rangeRight;
+   export = rangeRight;
+}
+
+
+declare module "lodash/rearg" {
+   const rearg: typeof _.rearg;
+   export = rearg;
+}
+
+
+declare module "lodash/reject" {
+   const reject: typeof _.reject;
+   export = reject;
+}
+
+
+declare module "lodash/remove" {
+   const remove: typeof _.remove;
+   export = remove;
+}
+
+
+declare module "lodash/rest" {
+   const rest: typeof _.rest;
+   export = rest;
+}
+
+
+declare module "lodash/reverse" {
+   const reverse: typeof _.reverse;
+   export = reverse;
+}
+
+
+declare module "lodash/sampleSize" {
+   const sampleSize: typeof _.sampleSize;
+   export = sampleSize;
+}
+
+
+declare module "lodash/set" {
+   const set: typeof _.set;
+   export = set;
+}
+
+
+declare module "lodash/setWith" {
+   const setWith: typeof _.setWith;
+   export = setWith;
+}
+
+
+declare module "lodash/shuffle" {
+   const shuffle: typeof _.shuffle;
+   export = shuffle;
+}
+
+
+declare module "lodash/slice" {
+   const slice: typeof _.slice;
+   export = slice;
+}
+
+
+declare module "lodash/sortBy" {
+   const sortBy: typeof _.sortBy;
+   export = sortBy;
+}
+
+
+declare module "lodash/sortedUniq" {
+   const sortedUniq: typeof _.sortedUniq;
+   export = sortedUniq;
+}
+
+
+declare module "lodash/sortedUniqBy" {
+   const sortedUniqBy: typeof _.sortedUniqBy;
+   export = sortedUniqBy;
+}
+
+
+declare module "lodash/split" {
+   const split: typeof _.split;
+   export = split;
+}
+
+
+declare module "lodash/spread" {
+   const spread: typeof _.spread;
+   export = spread;
+}
+
+
+declare module "lodash/tail" {
+   const tail: typeof _.tail;
+   export = tail;
+}
+
+
+declare module "lodash/take" {
+   const take: typeof _.take;
+   export = take;
+}
+
+
+declare module "lodash/takeRight" {
+   const takeRight: typeof _.takeRight;
+   export = takeRight;
+}
+
+
+declare module "lodash/takeRightWhile" {
+   const takeRightWhile: typeof _.takeRightWhile;
+   export = takeRightWhile;
+}
+
+
+declare module "lodash/takeWhile" {
+   const takeWhile: typeof _.takeWhile;
+   export = takeWhile;
+}
+
+
+declare module "lodash/tap" {
+   const tap: typeof _.tap;
+   export = tap;
+}
+
+
+declare module "lodash/throttle" {
+   const throttle: typeof _.throttle;
+   export = throttle;
+}
+
+
+declare module "lodash/thru" {
+   const thru: typeof _.thru;
+   export = thru;
+}
+
+
+declare module "lodash/toArray" {
+   const toArray: typeof _.toArray;
+   export = toArray;
+}
+
+
+declare module "lodash/toPairs" {
+   const toPairs: typeof _.toPairs;
+   export = toPairs;
+}
+
+
+declare module "lodash/toPairsIn" {
+   const toPairsIn: typeof _.toPairsIn;
+   export = toPairsIn;
+}
+
+
+declare module "lodash/toPath" {
+   const toPath: typeof _.toPath;
+   export = toPath;
+}
+
+
+declare module "lodash/toPlainObject" {
+   const toPlainObject: typeof _.toPlainObject;
+   export = toPlainObject;
+}
+
+
+declare module "lodash/transform" {
+   const transform: typeof _.transform;
+   export = transform;
+}
+
+
+declare module "lodash/unary" {
+   const unary: typeof _.unary;
+   export = unary;
+}
+
+
+declare module "lodash/union" {
+   const union: typeof _.union;
+   export = union;
+}
+
+
+declare module "lodash/unionBy" {
+   const unionBy: typeof _.unionBy;
+   export = unionBy;
+}
+
+
+declare module "lodash/unionWith" {
+   const unionWith: typeof _.unionWith;
+   export = unionWith;
+}
+
+
+declare module "lodash/uniq" {
+   const uniq: typeof _.uniq;
+   export = uniq;
+}
+
+
+declare module "lodash/uniqBy" {
+   const uniqBy: typeof _.uniqBy;
+   export = uniqBy;
+}
+
+
+declare module "lodash/uniqWith" {
+   const uniqWith: typeof _.uniqWith;
+   export = uniqWith;
+}
+
+
+declare module "lodash/unset" {
+   const unset: typeof _.unset;
+   export = unset;
+}
+
+
+declare module "lodash/unzip" {
+   const unzip: typeof _.unzip;
+   export = unzip;
+}
+
+
+declare module "lodash/unzipWith" {
+   const unzipWith: typeof _.unzipWith;
+   export = unzipWith;
+}
+
+
+declare module "lodash/update" {
+   const update: typeof _.update;
+   export = update;
+}
+
+/**
+* uncoment it if definition exists
+*/
+/*
+declare module "lodash/updateWith" {
+   const updateWith: typeof _.updateWith;
+   export = updateWith;
+}
+*/
+
+declare module "lodash/values" {
+   const values: typeof _.values;
+   export = values;
+}
+
+
+declare module "lodash/valuesIn" {
+   const valuesIn: typeof _.valuesIn;
+   export = valuesIn;
+}
+
+
+declare module "lodash/without" {
+   const without: typeof _.without;
+   export = without;
+}
+
+
+declare module "lodash/words" {
+   const words: typeof _.words;
+   export = words;
+}
+
+
+declare module "lodash/wrap" {
+   const wrap: typeof _.wrap;
+   export = wrap;
+}
+
+
+declare module "lodash/xor" {
+   const xor: typeof _.xor;
+   export = xor;
+}
+
+
+declare module "lodash/xorBy" {
+   const xorBy: typeof _.xorBy;
+   export = xorBy;
+}
+
+
+declare module "lodash/xorWith" {
+   const xorWith: typeof _.xorWith;
+   export = xorWith;
+}
+
+
+declare module "lodash/zip" {
+   const zip: typeof _.zip;
+   export = zip;
+}
+
+
+declare module "lodash/zipObject" {
+   const zipObject: typeof _.zipObject;
+   export = zipObject;
+}
+
+/**
+* uncoment it if definition exists
+*/
+/*
+declare module "lodash/zipObjectDeep" {
+   const zipObjectDeep: typeof _.zipObjectDeep;
+   export = zipObjectDeep;
+}
+*/
+
+
+declare module "lodash/zipWith" {
+   const zipWith: typeof _.zipWith;
+   export = zipWith;
+}
+
+/**
+* uncoment it if definition exists
+*/
+/*
+declare module "lodash/entries" {
+   const entries: typeof _.entries;
+   export = entries;
+}
+*/
+/**
+* uncoment it if definition exists
+*/
+/*
+declare module "lodash/entriesIn" {
+   const entriesIn: typeof _.entriesIn;
+   export = entriesIn;
+}
+*/
+
+
+declare module "lodash/extend" {
+   const extend: typeof _.extend;
+   export = extend;
+}
+
+
+declare module "lodash/extendWith" {
+   const extendWith: typeof _.extendWith;
+   export = extendWith;
+}
+
+
+declare module "lodash/add" {
+   const add: typeof _.add;
+   export = add;
+}
+
+
+declare module "lodash/attempt" {
+   const attempt: typeof _.attempt;
+   export = attempt;
+}
+
+
+declare module "lodash/camelCase" {
+   const camelCase: typeof _.camelCase;
+   export = camelCase;
+}
+
+
+declare module "lodash/capitalize" {
+   const capitalize: typeof _.capitalize;
+   export = capitalize;
+}
+
+
+declare module "lodash/ceil" {
+   const ceil: typeof _.ceil;
+   export = ceil;
+}
+
+
+declare module "lodash/clamp" {
+   const clamp: typeof _.clamp;
+   export = clamp;
+}
+
+
+declare module "lodash/clone" {
+   const clone: typeof _.clone;
+   export = clone;
+}
+
+
+declare module "lodash/cloneDeep" {
+   const cloneDeep: typeof _.cloneDeep;
+   export = cloneDeep;
+}
+
+
+declare module "lodash/cloneDeepWith" {
+   const cloneDeepWith: typeof _.cloneDeepWith;
+   export = cloneDeepWith;
+}
+
+
+declare module "lodash/cloneWith" {
+   const cloneWith: typeof _.cloneWith;
+   export = cloneWith;
+}
+
+
+declare module "lodash/deburr" {
+   const deburr: typeof _.deburr;
+   export = deburr;
+}
+
+/**
+* uncoment it if definition exists
+*/
+/*
+declare module "lodash/divide" {
+   const divide: typeof _.divide;
+   export = divide;
+}
+*/
+
+declare module "lodash/endsWith" {
+   const endsWith: typeof _.endsWith;
+   export = endsWith;
+}
+
+
+declare module "lodash/eq" {
+   const eq: typeof _.eq;
+   export = eq;
+}
+
+
+declare module "lodash/escape" {
+   const escape: typeof _.escape;
+   export = escape;
+}
+
+
+declare module "lodash/escapeRegExp" {
+   const escapeRegExp: typeof _.escapeRegExp;
+   export = escapeRegExp;
+}
+
+
+declare module "lodash/every" {
+   const every: typeof _.every;
+   export = every;
+}
+
+
+declare module "lodash/find" {
+   const find: typeof _.find;
+   export = find;
+}
+
+
+declare module "lodash/findIndex" {
+   const findIndex: typeof _.findIndex;
+   export = findIndex;
+}
+
+
+declare module "lodash/findKey" {
+   const findKey: typeof _.findKey;
+   export = findKey;
+}
+
+
+declare module "lodash/findLast" {
+   const findLast: typeof _.findLast;
+   export = findLast;
+}
+
+
+declare module "lodash/findLastIndex" {
+   const findLastIndex: typeof _.findLastIndex;
+   export = findLastIndex;
+}
+
+
+declare module "lodash/findLastKey" {
+   const findLastKey: typeof _.findLastKey;
+   export = findLastKey;
+}
+
+
+declare module "lodash/floor" {
+   const floor: typeof _.floor;
+   export = floor;
+}
+
+
+declare module "lodash/forEach" {
+   const forEach: typeof _.forEach;
+   export = forEach;
+}
+
+
+declare module "lodash/forEachRight" {
+   const forEachRight: typeof _.forEachRight;
+   export = forEachRight;
+}
+
+
+declare module "lodash/forIn" {
+   const forIn: typeof _.forIn;
+   export = forIn;
+}
+
+
+declare module "lodash/forInRight" {
+   const forInRight: typeof _.forInRight;
+   export = forInRight;
+}
+
+
+declare module "lodash/forOwn" {
+   const forOwn: typeof _.forOwn;
+   export = forOwn;
+}
+
+
+declare module "lodash/forOwnRight" {
+   const forOwnRight: typeof _.forOwnRight;
+   export = forOwnRight;
+}
+
+
+declare module "lodash/get" {
+   const get: typeof _.get;
+   export = get;
+}
+
+
+declare module "lodash/gt" {
+   const gt: typeof _.gt;
+   export = gt;
+}
+
+
+declare module "lodash/gte" {
+   const gte: typeof _.gte;
+   export = gte;
+}
+
+
+declare module "lodash/has" {
+   const has: typeof _.has;
+   export = has;
+}
+
+
+declare module "lodash/hasIn" {
+   const hasIn: typeof _.hasIn;
+   export = hasIn;
+}
+
+
+declare module "lodash/head" {
+   const head: typeof _.head;
+   export = head;
+}
+
+
+declare module "lodash/identity" {
+   const identity: typeof _.identity;
+   export = identity;
+}
+
+
+declare module "lodash/includes" {
+   const includes: typeof _.includes;
+   export = includes;
+}
+
+
+declare module "lodash/indexOf" {
+   const indexOf: typeof _.indexOf;
+   export = indexOf;
+}
+
+
+declare module "lodash/inRange" {
+   const inRange: typeof _.inRange;
+   export = inRange;
+}
+
+
+declare module "lodash/invoke" {
+   const invoke: typeof _.invoke;
+   export = invoke;
+}
+
+
+declare module "lodash/isArguments" {
+   const isArguments: typeof _.isArguments;
+   export = isArguments;
+}
+
+
+declare module "lodash/isArray" {
+   const isArray: typeof _.isArray;
+   export = isArray;
+}
+
+
+declare module "lodash/isArrayBuffer" {
+   const isArrayBuffer: typeof _.isArrayBuffer;
+   export = isArrayBuffer;
+}
+
+
+declare module "lodash/isArrayLike" {
+   const isArrayLike: typeof _.isArrayLike;
+   export = isArrayLike;
+}
+
+
+declare module "lodash/isArrayLikeObject" {
+   const isArrayLikeObject: typeof _.isArrayLikeObject;
+   export = isArrayLikeObject;
+}
+
+
+declare module "lodash/isBoolean" {
+   const isBoolean: typeof _.isBoolean;
+   export = isBoolean;
+}
+
+
+declare module "lodash/isBuffer" {
+   const isBuffer: typeof _.isBuffer;
+   export = isBuffer;
+}
+
+
+declare module "lodash/isDate" {
+   const isDate: typeof _.isDate;
+   export = isDate;
+}
+
+
+declare module "lodash/isElement" {
+   const isElement: typeof _.isElement;
+   export = isElement;
+}
+
+
+declare module "lodash/isEmpty" {
+   const isEmpty: typeof _.isEmpty;
+   export = isEmpty;
+}
+
+
+declare module "lodash/isEqual" {
+   const isEqual: typeof _.isEqual;
+   export = isEqual;
+}
+
+
+declare module "lodash/isEqualWith" {
+   const isEqualWith: typeof _.isEqualWith;
+   export = isEqualWith;
+}
+
+
+declare module "lodash/isError" {
+   const isError: typeof _.isError;
+   export = isError;
+}
+
+
+declare module "lodash/isFinite" {
+   const isFinite: typeof _.isFinite;
+   export = isFinite;
+}
+
+
+declare module "lodash/isFunction" {
+   const isFunction: typeof _.isFunction;
+   export = isFunction;
+}
+
+
+declare module "lodash/isInteger" {
+   const isInteger: typeof _.isInteger;
+   export = isInteger;
+}
+
+
+declare module "lodash/isLength" {
+   const isLength: typeof _.isLength;
+   export = isLength;
+}
+
+
+declare module "lodash/isMap" {
+   const isMap: typeof _.isMap;
+   export = isMap;
+}
+
+
+declare module "lodash/isMatch" {
+   const isMatch: typeof _.isMatch;
+   export = isMatch;
+}
+
+
+declare module "lodash/isMatchWith" {
+   const isMatchWith: typeof _.isMatchWith;
+   export = isMatchWith;
+}
+
+
+declare module "lodash/isNaN" {
+   const isNaN: typeof _.isNaN;
+   export = isNaN;
+}
+
+
+declare module "lodash/isNative" {
+   const isNative: typeof _.isNative;
+   export = isNative;
+}
+
+
+declare module "lodash/isNil" {
+   const isNil: typeof _.isNil;
+   export = isNil;
+}
+
+
+declare module "lodash/isNull" {
+   const isNull: typeof _.isNull;
+   export = isNull;
+}
+
+
+declare module "lodash/isNumber" {
+   const isNumber: typeof _.isNumber;
+   export = isNumber;
+}
+
+
+declare module "lodash/isObject" {
+   const isObject: typeof _.isObject;
+   export = isObject;
+}
+
+
+declare module "lodash/isObjectLike" {
+   const isObjectLike: typeof _.isObjectLike;
+   export = isObjectLike;
+}
+
+
+declare module "lodash/isPlainObject" {
+   const isPlainObject: typeof _.isPlainObject;
+   export = isPlainObject;
+}
+
+
+declare module "lodash/isRegExp" {
+   const isRegExp: typeof _.isRegExp;
+   export = isRegExp;
+}
+
+
+declare module "lodash/isSafeInteger" {
+   const isSafeInteger: typeof _.isSafeInteger;
+   export = isSafeInteger;
+}
+
+
+declare module "lodash/isSet" {
+   const isSet: typeof _.isSet;
+   export = isSet;
+}
+
+
+declare module "lodash/isString" {
+   const isString: typeof _.isString;
+   export = isString;
+}
+
+
+declare module "lodash/isSymbol" {
+   const isSymbol: typeof _.isSymbol;
+   export = isSymbol;
+}
+
+
+declare module "lodash/isTypedArray" {
+   const isTypedArray: typeof _.isTypedArray;
+   export = isTypedArray;
+}
+
+
+declare module "lodash/isUndefined" {
+   const isUndefined: typeof _.isUndefined;
+   export = isUndefined;
+}
+
+
+declare module "lodash/isWeakMap" {
+   const isWeakMap: typeof _.isWeakMap;
+   export = isWeakMap;
+}
+
+
+declare module "lodash/isWeakSet" {
+   const isWeakSet: typeof _.isWeakSet;
+   export = isWeakSet;
+}
+
+
+declare module "lodash/join" {
+   const join: typeof _.join;
+   export = join;
+}
+
+
+declare module "lodash/kebabCase" {
+   const kebabCase: typeof _.kebabCase;
+   export = kebabCase;
+}
+
+
+declare module "lodash/last" {
+   const last: typeof _.last;
+   export = last;
+}
+
+
+declare module "lodash/lastIndexOf" {
+   const lastIndexOf: typeof _.lastIndexOf;
+   export = lastIndexOf;
+}
+
+
+declare module "lodash/lowerCase" {
+   const lowerCase: typeof _.lowerCase;
+   export = lowerCase;
+}
+
+
+declare module "lodash/lowerFirst" {
+   const lowerFirst: typeof _.lowerFirst;
+   export = lowerFirst;
+}
+
+
+declare module "lodash/lt" {
+   const lt: typeof _.lt;
+   export = lt;
+}
+
+
+declare module "lodash/lte" {
+   const lte: typeof _.lte;
+   export = lte;
+}
+
+
+declare module "lodash/max" {
+   const max: typeof _.max;
+   export = max;
+}
+
+
+declare module "lodash/maxBy" {
+   const maxBy: typeof _.maxBy;
+   export = maxBy;
+}
+
+
+declare module "lodash/mean" {
+   const mean: typeof _.mean;
+   export = mean;
+}
+
+/**
+* uncoment it if definition exists
+*/
+/*
+declare module "lodash/meanBy" {
+   const meanBy: typeof _.meanBy;
+   export = meanBy;
+}
+*/
+
+declare module "lodash/min" {
+   const min: typeof _.min;
+   export = min;
+}
+
+
+declare module "lodash/minBy" {
+   const minBy: typeof _.minBy;
+   export = minBy;
+}
+
+/**
+* uncoment it if definition exists
+*/
+/*
+declare module "lodash/multiply" {
+   const multiply: typeof _.multiply;
+   export = multiply;
+}
+*/
+
+/**
+* uncoment it if definition exists
+*/
+/*
+declare module "lodash/nth" {
+   const nth: typeof _.nth;
+   export = nth;
+}
+*/
+
+declare module "lodash/noConflict" {
+   const noConflict: typeof _.noConflict;
+   export = noConflict;
+}
+
+
+declare module "lodash/noop" {
+   const noop: typeof _.noop;
+   export = noop;
+}
+
+
+declare module "lodash/now" {
+   const now: typeof _.now;
+   export = now;
+}
+
+
+declare module "lodash/pad" {
+   const pad: typeof _.pad;
+   export = pad;
+}
+
+
+declare module "lodash/padEnd" {
+   const padEnd: typeof _.padEnd;
+   export = padEnd;
+}
+
+
+declare module "lodash/padStart" {
+   const padStart: typeof _.padStart;
+   export = padStart;
+}
+
+
+declare module "lodash/parseInt" {
+   const parseInt: typeof _.parseInt;
+   export = parseInt;
+}
+
+
+declare module "lodash/random" {
+   const random: typeof _.random;
+   export = random;
+}
+
+
+declare module "lodash/reduce" {
+   const reduce: typeof _.reduce;
+   export = reduce;
+}
+
+
+declare module "lodash/reduceRight" {
+   const reduceRight: typeof _.reduceRight;
+   export = reduceRight;
+}
+
+
+declare module "lodash/repeat" {
+   const repeat: typeof _.repeat;
+   export = repeat;
+}
+
+
+declare module "lodash/replace" {
+   const replace: typeof _.replace;
+   export = replace;
+}
+
+
+declare module "lodash/result" {
+   const result: typeof _.result;
+   export = result;
+}
+
+
+declare module "lodash/round" {
+   const round: typeof _.round;
+   export = round;
+}
+
+
+declare module "lodash/runInContext" {
+   const runInContext: typeof _.runInContext;
+   export = runInContext;
+}
+
+
+declare module "lodash/sample" {
+   const sample: typeof _.sample;
+   export = sample;
+}
+
+
+declare module "lodash/size" {
+   const size: typeof _.size;
+   export = size;
+}
+
+
+declare module "lodash/snakeCase" {
+   const snakeCase: typeof _.snakeCase;
+   export = snakeCase;
+}
+
+
+declare module "lodash/some" {
+   const some: typeof _.some;
+   export = some;
+}
+
+
+declare module "lodash/sortedIndex" {
+   const sortedIndex: typeof _.sortedIndex;
+   export = sortedIndex;
+}
+
+
+declare module "lodash/sortedIndexBy" {
+   const sortedIndexBy: typeof _.sortedIndexBy;
+   export = sortedIndexBy;
+}
+
+
+declare module "lodash/sortedIndexOf" {
+   const sortedIndexOf: typeof _.sortedIndexOf;
+   export = sortedIndexOf;
+}
+
+
+declare module "lodash/sortedLastIndex" {
+   const sortedLastIndex: typeof _.sortedLastIndex;
+   export = sortedLastIndex;
+}
+
+
+declare module "lodash/sortedLastIndexBy" {
+   const sortedLastIndexBy: typeof _.sortedLastIndexBy;
+   export = sortedLastIndexBy;
+}
+
+
+declare module "lodash/sortedLastIndexOf" {
+   const sortedLastIndexOf: typeof _.sortedLastIndexOf;
+   export = sortedLastIndexOf;
+}
+
+
+declare module "lodash/startCase" {
+   const startCase: typeof _.startCase;
+   export = startCase;
+}
+
+
+declare module "lodash/startsWith" {
+   const startsWith: typeof _.startsWith;
+   export = startsWith;
+}
+
+
+declare module "lodash/subtract" {
+   const subtract: typeof _.subtract;
+   export = subtract;
+}
+
+
+declare module "lodash/sum" {
+   const sum: typeof _.sum;
+   export = sum;
+}
+
+
+declare module "lodash/sumBy" {
+   const sumBy: typeof _.sumBy;
+   export = sumBy;
+}
+
+
+declare module "lodash/template" {
+   const template: typeof _.template;
+   export = template;
+}
+
+
+declare module "lodash/times" {
+   const times: typeof _.times;
+   export = times;
+}
+
+
+declare module "lodash/toInteger" {
+   const toInteger: typeof _.toInteger;
+   export = toInteger;
+}
+
+
+declare module "lodash/toLength" {
+   const toLength: typeof _.toLength;
+   export = toLength;
+}
+
+
+declare module "lodash/toLower" {
+   const toLower: typeof _.toLower;
+   export = toLower;
+}
+
+
+declare module "lodash/toNumber" {
+   const toNumber: typeof _.toNumber;
+   export = toNumber;
+}
+
+
+declare module "lodash/toSafeInteger" {
+   const toSafeInteger: typeof _.toSafeInteger;
+   export = toSafeInteger;
+}
+
+
+declare module "lodash/toString" {
+   const toString: typeof _.toString;
+   export = toString;
+}
+
+
+declare module "lodash/toUpper" {
+   const toUpper: typeof _.toUpper;
+   export = toUpper;
+}
+
+
+declare module "lodash/trim" {
+   const trim: typeof _.trim;
+   export = trim;
+}
+
+
+declare module "lodash/trimEnd" {
+   const trimEnd: typeof _.trimEnd;
+   export = trimEnd;
+}
+
+
+declare module "lodash/trimStart" {
+   const trimStart: typeof _.trimStart;
+   export = trimStart;
+}
+
+
+declare module "lodash/truncate" {
+   const truncate: typeof _.truncate;
+   export = truncate;
+}
+
+
+declare module "lodash/unescape" {
+   const unescape: typeof _.unescape;
+   export = unescape;
+}
+
+
+declare module "lodash/uniqueId" {
+   const uniqueId: typeof _.uniqueId;
+   export = uniqueId;
+}
+
+
+declare module "lodash/upperCase" {
+   const upperCase: typeof _.upperCase;
+   export = upperCase;
+}
+
+
+declare module "lodash/upperFirst" {
+   const upperFirst: typeof _.upperFirst;
+   export = upperFirst;
+}
+
+
+declare module "lodash/each" {
+   const each: typeof _.each;
+   export = each;
+}
+
+
+declare module "lodash/eachRight" {
+   const eachRight: typeof _.eachRight;
+   export = eachRight;
+}
+
+
+declare module "lodash/first" {
+   const first: typeof _.first;
+   export = first;
+}
+
+declare module "lodash/fp" {
+    export = _;
+}
+
+declare module "lodash" {
+    export = _;
+}
+
+/*************************************************
+ *                                               * 
+ * The lodash method _.XXX exported as a module. *
+ *                                               *
+ *************************************************/
+
+
+declare module "lodash.after" {
+   const after: typeof _.after;
+   export = after;
+}
+
+
+declare module "lodash.ary" {
+   const ary: typeof _.ary;
+   export = ary;
+}
+
+
+declare module "lodash.assign" {
+   const assign: typeof _.assign;
+   export = assign;
+}
+
+
+declare module "lodash.assignIn" {
+   const assignIn: typeof _.assignIn;
+   export = assignIn;
+}
+
+
+declare module "lodash.assignInWith" {
+   const assignInWith: typeof _.assignInWith;
+   export = assignInWith;
+}
+
+
+declare module "lodash.assignWith" {
+   const assignWith: typeof _.assignWith;
+   export = assignWith;
+}
+
+
+declare module "lodash.at" {
+   const at: typeof _.at;
+   export = at;
+}
+
+
+declare module "lodash.before" {
+   const before: typeof _.before;
+   export = before;
+}
+
+
+declare module "lodash.bind" {
+   const bind: typeof _.bind;
+   export = bind;
+}
+
+
+declare module "lodash.bindAll" {
+   const bindAll: typeof _.bindAll;
+   export = bindAll;
+}
+
+
+declare module "lodash.bindKey" {
+   const bindKey: typeof _.bindKey;
+   export = bindKey;
+}
+
+
+declare module "lodash.castArray" {
+   const castArray: typeof _.castArray;
+   export = castArray;
+}
+
+
+declare module "lodash.chain" {
+   const chain: typeof _.chain;
+   export = chain;
+}
+
+
+declare module "lodash.chunk" {
+   const chunk: typeof _.chunk;
+   export = chunk;
+}
+
+
+declare module "lodash.compact" {
+   const compact: typeof _.compact;
+   export = compact;
+}
+
+
+declare module "lodash.concat" {
+   const concat: typeof _.concat;
+   export = concat;
+}
+
+/**
+* uncoment it if definition exists
+*/
+/*
+declare module "lodash.cond" {
+   const cond: typeof _.cond;
+   export = cond;
+}
+*/
+
+/**
+* uncoment it if definition exists
+*/
+/*
+declare module "lodash.conforms" {
+   const conforms: typeof _.conforms;
+   export = conforms;
+}
+*/
+
+declare module "lodash.constant" {
+   const constant: typeof _.constant;
+   export = constant;
+}
+
+
+declare module "lodash.countBy" {
+   const countBy: typeof _.countBy;
+   export = countBy;
+}
+
+
+declare module "lodash.create" {
+   const create: typeof _.create;
+   export = create;
+}
+
+
+declare module "lodash.curry" {
+   const curry: typeof _.curry;
+   export = curry;
+}
+
+
+declare module "lodash.curryRight" {
+   const curryRight: typeof _.curryRight;
+   export = curryRight;
+}
+
+
+declare module "lodash.debounce" {
+   const debounce: typeof _.debounce;
+   export = debounce;
+}
+
+
+declare module "lodash.defaults" {
+   const defaults: typeof _.defaults;
+   export = defaults;
+}
+
+
+declare module "lodash.defaultsDeep" {
+   const defaultsDeep: typeof _.defaultsDeep;
+   export = defaultsDeep;
+}
+
+
+declare module "lodash.defer" {
+   const defer: typeof _.defer;
+   export = defer;
+}
+
+
+declare module "lodash.delay" {
+   const delay: typeof _.delay;
+   export = delay;
+}
+
+
+declare module "lodash.difference" {
+   const difference: typeof _.difference;
+   export = difference;
+}
+
+
+declare module "lodash.differenceBy" {
+   const differenceBy: typeof _.differenceBy;
+   export = differenceBy;
+}
+
+
+declare module "lodash.differenceWith" {
+   const differenceWith: typeof _.differenceWith;
+   export = differenceWith;
+}
+
+
+declare module "lodash.drop" {
+   const drop: typeof _.drop;
+   export = drop;
+}
+
+
+declare module "lodash.dropRight" {
+   const dropRight: typeof _.dropRight;
+   export = dropRight;
+}
+
+
+declare module "lodash.dropRightWhile" {
+   const dropRightWhile: typeof _.dropRightWhile;
+   export = dropRightWhile;
+}
+
+
+declare module "lodash.dropWhile" {
+   const dropWhile: typeof _.dropWhile;
+   export = dropWhile;
+}
+
+
+declare module "lodash.fill" {
+   const fill: typeof _.fill;
+   export = fill;
+}
+
+
+declare module "lodash.filter" {
+   const filter: typeof _.filter;
+   export = filter;
+}
+
+
+declare module "lodash.flatMap" {
+   const flatMap: typeof _.flatMap;
+   export = flatMap;
+}
+
+/**
+* uncoment it if definition exists
+*/
+/*
+declare module "lodash.flatMapDeep" {
+   const flatMapDeep: typeof _.flatMapDeep;
+   export = flatMapDeep;
+}
+*/
+/**
+* uncoment it if definition exists
+*/
+/*
+declare module "lodash.flatMapDepth" {
+   const flatMapDepth: typeof _.flatMapDepth;
+   export = flatMapDepth;
+}
+*/
+
+declare module "lodash.flatten" {
+   const flatten: typeof _.flatten;
+   export = flatten;
+}
+
+
+declare module "lodash.flattenDeep" {
+   const flattenDeep: typeof _.flattenDeep;
+   export = flattenDeep;
+}
+
+declare module "lodash.flattenDepth" {
+   const flattenDepth: typeof _.flattenDepth;
+   export = flattenDepth;
+}
+
+declare module "lodash.flip" {
+   const flip: typeof _.flip;
+   export = flip;
+}
+
+
+declare module "lodash.flow" {
+   const flow: typeof _.flow;
+   export = flow;
+}
+
+
+declare module "lodash.flowRight" {
+   const flowRight: typeof _.flowRight;
+   export = flowRight;
+}
+
+
+declare module "lodash.fromPairs" {
+   const fromPairs: typeof _.fromPairs;
+   export = fromPairs;
+}
+
+
+declare module "lodash.functions" {
+   const functions: typeof _.functions;
+   export = functions;
+}
+
+
+declare module "lodash.functionsIn" {
+   const functionsIn: typeof _.functionsIn;
+   export = functionsIn;
+}
+
+
+declare module "lodash.groupBy" {
+   const groupBy: typeof _.groupBy;
+   export = groupBy;
+}
+
+
+declare module "lodash.initial" {
+   const initial: typeof _.initial;
+   export = initial;
+}
+
+
+declare module "lodash.intersection" {
+   const intersection: typeof _.intersection;
+   export = intersection;
+}
+
+
+declare module "lodash.intersectionBy" {
+   const intersectionBy: typeof _.intersectionBy;
+   export = intersectionBy;
+}
+
+
+declare module "lodash.intersectionWith" {
+   const intersectionWith: typeof _.intersectionWith;
+   export = intersectionWith;
+}
+
+
+declare module "lodash.invert" {
+   const invert: typeof _.invert;
+   export = invert;
+}
+
+
+declare module "lodash.invertBy" {
+   const invertBy: typeof _.invertBy;
+   export = invertBy;
+}
+
+
+declare module "lodash.invokeMap" {
+   const invokeMap: typeof _.invokeMap;
+   export = invokeMap;
+}
+
+
+declare module "lodash.iteratee" {
+   const iteratee: typeof _.iteratee;
+   export = iteratee;
+}
+
+
+declare module "lodash.keyBy" {
+   const keyBy: typeof _.keyBy;
+   export = keyBy;
+}
+
+
+declare module "lodash.keys" {
+   const keys: typeof _.keys;
+   export = keys;
+}
+
+
+declare module "lodash.keysIn" {
+   const keysIn: typeof _.keysIn;
+   export = keysIn;
+}
+
+
+declare module "lodash.map" {
+   const map: typeof _.map;
+   export = map;
+}
+
+
+declare module "lodash.mapKeys" {
+   const mapKeys: typeof _.mapKeys;
+   export = mapKeys;
+}
+
+
+declare module "lodash.mapValues" {
+   const mapValues: typeof _.mapValues;
+   export = mapValues;
+}
+
+
+declare module "lodash.matches" {
+   const matches: typeof _.matches;
+   export = matches;
+}
+
+
+declare module "lodash.matchesProperty" {
+   const matchesProperty: typeof _.matchesProperty;
+   export = matchesProperty;
+}
+
+
+declare module "lodash.memoize" {
+   const memoize: typeof _.memoize;
+   export = memoize;
+}
+
+
+declare module "lodash.merge" {
+   const merge: typeof _.merge;
+   export = merge;
+}
+
+
+declare module "lodash.mergeWith" {
+   const mergeWith: typeof _.mergeWith;
+   export = mergeWith;
+}
+
+
+declare module "lodash.method" {
+   const method: typeof _.method;
+   export = method;
+}
+
+
+declare module "lodash.methodOf" {
+   const methodOf: typeof _.methodOf;
+   export = methodOf;
+}
+
+
+declare module "lodash.mixin" {
+   const mixin: typeof _.mixin;
+   export = mixin;
+}
+
+
+declare module "lodash.negate" {
+   const negate: typeof _.negate;
+   export = negate;
+}
+
+
+declare module "lodash.nthArg" {
+   const nthArg: typeof _.nthArg;
+   export = nthArg;
+}
+
+
+declare module "lodash.omit" {
+   const omit: typeof _.omit;
+   export = omit;
+}
+
+
+declare module "lodash.omitBy" {
+   const omitBy: typeof _.omitBy;
+   export = omitBy;
+}
+
+
+declare module "lodash.once" {
+   const once: typeof _.once;
+   export = once;
+}
+
+
+declare module "lodash.orderBy" {
+   const orderBy: typeof _.orderBy;
+   export = orderBy;
+}
+
+
+declare module "lodash.over" {
+   const over: typeof _.over;
+   export = over;
+}
+
+
+declare module "lodash.overArgs" {
+   const overArgs: typeof _.overArgs;
+   export = overArgs;
+}
+
+
+declare module "lodash.overEvery" {
+   const overEvery: typeof _.overEvery;
+   export = overEvery;
+}
+
+
+declare module "lodash.overSome" {
+   const overSome: typeof _.overSome;
+   export = overSome;
+}
+
+
+declare module "lodash.partial" {
+   const partial: typeof _.partial;
+   export = partial;
+}
+
+
+declare module "lodash.partialRight" {
+   const partialRight: typeof _.partialRight;
+   export = partialRight;
+}
+
+
+declare module "lodash.partition" {
+   const partition: typeof _.partition;
+   export = partition;
+}
+
+
+declare module "lodash.pick" {
+   const pick: typeof _.pick;
+   export = pick;
+}
+
+
+declare module "lodash.pickBy" {
+   const pickBy: typeof _.pickBy;
+   export = pickBy;
+}
+
+
+declare module "lodash.property" {
+   const property: typeof _.property;
+   export = property;
+}
+
+
+declare module "lodash.propertyOf" {
+   const propertyOf: typeof _.propertyOf;
+   export = propertyOf;
+}
+
+
+declare module "lodash.pull" {
+   const pull: typeof _.pull;
+   export = pull;
+}
+
+
+declare module "lodash.pullAll" {
+   const pullAll: typeof _.pullAll;
+   export = pullAll;
+}
+
+
+declare module "lodash.pullAllBy" {
+   const pullAllBy: typeof _.pullAllBy;
+   export = pullAllBy;
+}
+
+/**
+* uncoment it if definition exists
+*/
+/*
+declare module "lodash.pullAllWith" {
+   const pullAllWith: typeof _.pullAllWith;
+   export = pullAllWith;
+}
+*/
+
+declare module "lodash.pullAt" {
+   const pullAt: typeof _.pullAt;
+   export = pullAt;
+}
+
+
+declare module "lodash.range" {
+   const range: typeof _.range;
+   export = range;
+}
+
+
+declare module "lodash.rangeRight" {
+   const rangeRight: typeof _.rangeRight;
+   export = rangeRight;
+}
+
+
+declare module "lodash.rearg" {
+   const rearg: typeof _.rearg;
+   export = rearg;
+}
+
+
+declare module "lodash.reject" {
+   const reject: typeof _.reject;
+   export = reject;
+}
+
+
+declare module "lodash.remove" {
+   const remove: typeof _.remove;
+   export = remove;
+}
+
+
+declare module "lodash.rest" {
+   const rest: typeof _.rest;
+   export = rest;
+}
+
+
+declare module "lodash.reverse" {
+   const reverse: typeof _.reverse;
+   export = reverse;
+}
+
+
+declare module "lodash.sampleSize" {
+   const sampleSize: typeof _.sampleSize;
+   export = sampleSize;
+}
+
+
+declare module "lodash.set" {
+   const set: typeof _.set;
+   export = set;
+}
+
+
+declare module "lodash.setWith" {
+   const setWith: typeof _.setWith;
+   export = setWith;
+}
+
+
+declare module "lodash.shuffle" {
+   const shuffle: typeof _.shuffle;
+   export = shuffle;
+}
+
+
+declare module "lodash.slice" {
+   const slice: typeof _.slice;
+   export = slice;
+}
+
+
+declare module "lodash.sortBy" {
+   const sortBy: typeof _.sortBy;
+   export = sortBy;
+}
+
+
+declare module "lodash.sortedUniq" {
+   const sortedUniq: typeof _.sortedUniq;
+   export = sortedUniq;
+}
+
+
+declare module "lodash.sortedUniqBy" {
+   const sortedUniqBy: typeof _.sortedUniqBy;
+   export = sortedUniqBy;
+}
+
+
+declare module "lodash.split" {
+   const split: typeof _.split;
+   export = split;
+}
+
+
+declare module "lodash.spread" {
+   const spread: typeof _.spread;
+   export = spread;
+}
+
+
+declare module "lodash.tail" {
+   const tail: typeof _.tail;
+   export = tail;
+}
+
+
+declare module "lodash.take" {
+   const take: typeof _.take;
+   export = take;
+}
+
+
+declare module "lodash.takeRight" {
+   const takeRight: typeof _.takeRight;
+   export = takeRight;
+}
+
+
+declare module "lodash.takeRightWhile" {
+   const takeRightWhile: typeof _.takeRightWhile;
+   export = takeRightWhile;
+}
+
+
+declare module "lodash.takeWhile" {
+   const takeWhile: typeof _.takeWhile;
+   export = takeWhile;
+}
+
+
+declare module "lodash.tap" {
+   const tap: typeof _.tap;
+   export = tap;
+}
+
+
+declare module "lodash.throttle" {
+   const throttle: typeof _.throttle;
+   export = throttle;
+}
+
+
+declare module "lodash.thru" {
+   const thru: typeof _.thru;
+   export = thru;
+}
+
+
+declare module "lodash.toArray" {
+   const toArray: typeof _.toArray;
+   export = toArray;
+}
+
+
+declare module "lodash.toPairs" {
+   const toPairs: typeof _.toPairs;
+   export = toPairs;
+}
+
+
+declare module "lodash.toPairsIn" {
+   const toPairsIn: typeof _.toPairsIn;
+   export = toPairsIn;
+}
+
+
+declare module "lodash.toPath" {
+   const toPath: typeof _.toPath;
+   export = toPath;
+}
+
+
+declare module "lodash.toPlainObject" {
+   const toPlainObject: typeof _.toPlainObject;
+   export = toPlainObject;
+}
+
+
+declare module "lodash.transform" {
+   const transform: typeof _.transform;
+   export = transform;
+}
+
+
+declare module "lodash.unary" {
+   const unary: typeof _.unary;
+   export = unary;
+}
+
+
+declare module "lodash.union" {
+   const union: typeof _.union;
+   export = union;
+}
+
+
+declare module "lodash.unionBy" {
+   const unionBy: typeof _.unionBy;
+   export = unionBy;
+}
+
+
+declare module "lodash.unionWith" {
+   const unionWith: typeof _.unionWith;
+   export = unionWith;
+}
+
+
+declare module "lodash.uniq" {
+   const uniq: typeof _.uniq;
+   export = uniq;
+}
+
+
+declare module "lodash.uniqBy" {
+   const uniqBy: typeof _.uniqBy;
+   export = uniqBy;
+}
+
+
+declare module "lodash.uniqWith" {
+   const uniqWith: typeof _.uniqWith;
+   export = uniqWith;
+}
+
+
+declare module "lodash.unset" {
+   const unset: typeof _.unset;
+   export = unset;
+}
+
+
+declare module "lodash.unzip" {
+   const unzip: typeof _.unzip;
+   export = unzip;
+}
+
+
+declare module "lodash.unzipWith" {
+   const unzipWith: typeof _.unzipWith;
+   export = unzipWith;
+}
+
+
+declare module "lodash.update" {
+   const update: typeof _.update;
+   export = update;
+}
+
+/**
+* uncoment it if definition exists
+*/
+/*
+declare module "lodash.updateWith" {
+   const updateWith: typeof _.updateWith;
+   export = updateWith;
+}
+*/
+
+declare module "lodash.values" {
+   const values: typeof _.values;
+   export = values;
+}
+
+
+declare module "lodash.valuesIn" {
+   const valuesIn: typeof _.valuesIn;
+   export = valuesIn;
+}
+
+
+declare module "lodash.without" {
+   const without: typeof _.without;
+   export = without;
+}
+
+
+declare module "lodash.words" {
+   const words: typeof _.words;
+   export = words;
+}
+
+
+declare module "lodash.wrap" {
+   const wrap: typeof _.wrap;
+   export = wrap;
+}
+
+
+declare module "lodash.xor" {
+   const xor: typeof _.xor;
+   export = xor;
+}
+
+
+declare module "lodash.xorBy" {
+   const xorBy: typeof _.xorBy;
+   export = xorBy;
+}
+
+
+declare module "lodash.xorWith" {
+   const xorWith: typeof _.xorWith;
+   export = xorWith;
+}
+
+
+declare module "lodash.zip" {
+   const zip: typeof _.zip;
+   export = zip;
+}
+
+
+declare module "lodash.zipObject" {
+   const zipObject: typeof _.zipObject;
+   export = zipObject;
+}
+
+/**
+* uncoment it if definition exists
+*/
+/*
+declare module "lodash.zipObjectDeep" {
+   const zipObjectDeep: typeof _.zipObjectDeep;
+   export = zipObjectDeep;
+}
+*/
+
+
+declare module "lodash.zipWith" {
+   const zipWith: typeof _.zipWith;
+   export = zipWith;
+}
+
+/**
+* uncoment it if definition exists
+*/
+/*
+declare module "lodash.entries" {
+   const entries: typeof _.entries;
+   export = entries;
+}
+*/
+/**
+* uncoment it if definition exists
+*/
+/*
+declare module "lodash.entriesIn" {
+   const entriesIn: typeof _.entriesIn;
+   export = entriesIn;
+}
+*/
+
+
+declare module "lodash.extend" {
+   const extend: typeof _.extend;
+   export = extend;
+}
+
+
+declare module "lodash.extendWith" {
+   const extendWith: typeof _.extendWith;
+   export = extendWith;
+}
+
+
+declare module "lodash.add" {
+   const add: typeof _.add;
+   export = add;
+}
+
+
+declare module "lodash.attempt" {
+   const attempt: typeof _.attempt;
+   export = attempt;
+}
+
+
+declare module "lodash.camelCase" {
+   const camelCase: typeof _.camelCase;
+   export = camelCase;
+}
+
+
+declare module "lodash.capitalize" {
+   const capitalize: typeof _.capitalize;
+   export = capitalize;
+}
+
+
+declare module "lodash.ceil" {
+   const ceil: typeof _.ceil;
+   export = ceil;
+}
+
+
+declare module "lodash.clamp" {
+   const clamp: typeof _.clamp;
+   export = clamp;
+}
+
+
+declare module "lodash.clone" {
+   const clone: typeof _.clone;
+   export = clone;
+}
+
+
+declare module "lodash.cloneDeep" {
+   const cloneDeep: typeof _.cloneDeep;
+   export = cloneDeep;
+}
+
+
+declare module "lodash.cloneDeepWith" {
+   const cloneDeepWith: typeof _.cloneDeepWith;
+   export = cloneDeepWith;
+}
+
+
+declare module "lodash.cloneWith" {
+   const cloneWith: typeof _.cloneWith;
+   export = cloneWith;
+}
+
+
+declare module "lodash.deburr" {
+   const deburr: typeof _.deburr;
+   export = deburr;
+}
+
+/**
+* uncoment it if definition exists
+*/
+/*
+declare module "lodash.divide" {
+   const divide: typeof _.divide;
+   export = divide;
+}
+*/
+
+declare module "lodash.endsWith" {
+   const endsWith: typeof _.endsWith;
+   export = endsWith;
+}
+
+
+declare module "lodash.eq" {
+   const eq: typeof _.eq;
+   export = eq;
+}
+
+
+declare module "lodash.escape" {
+   const escape: typeof _.escape;
+   export = escape;
+}
+
+
+declare module "lodash.escapeRegExp" {
+   const escapeRegExp: typeof _.escapeRegExp;
+   export = escapeRegExp;
+}
+
+
+declare module "lodash.every" {
+   const every: typeof _.every;
+   export = every;
+}
+
+
+declare module "lodash.find" {
+   const find: typeof _.find;
+   export = find;
+}
+
+
+declare module "lodash.findIndex" {
+   const findIndex: typeof _.findIndex;
+   export = findIndex;
+}
+
+
+declare module "lodash.findKey" {
+   const findKey: typeof _.findKey;
+   export = findKey;
+}
+
+
+declare module "lodash.findLast" {
+   const findLast: typeof _.findLast;
+   export = findLast;
+}
+
+
+declare module "lodash.findLastIndex" {
+   const findLastIndex: typeof _.findLastIndex;
+   export = findLastIndex;
+}
+
+
+declare module "lodash.findLastKey" {
+   const findLastKey: typeof _.findLastKey;
+   export = findLastKey;
+}
+
+
+declare module "lodash.floor" {
+   const floor: typeof _.floor;
+   export = floor;
+}
+
+
+declare module "lodash.forEach" {
+   const forEach: typeof _.forEach;
+   export = forEach;
+}
+
+
+declare module "lodash.forEachRight" {
+   const forEachRight: typeof _.forEachRight;
+   export = forEachRight;
+}
+
+
+declare module "lodash.forIn" {
+   const forIn: typeof _.forIn;
+   export = forIn;
+}
+
+
+declare module "lodash.forInRight" {
+   const forInRight: typeof _.forInRight;
+   export = forInRight;
+}
+
+
+declare module "lodash.forOwn" {
+   const forOwn: typeof _.forOwn;
+   export = forOwn;
+}
+
+
+declare module "lodash.forOwnRight" {
+   const forOwnRight: typeof _.forOwnRight;
+   export = forOwnRight;
+}
+
+
+declare module "lodash.get" {
+   const get: typeof _.get;
+   export = get;
+}
+
+
+declare module "lodash.gt" {
+   const gt: typeof _.gt;
+   export = gt;
+}
+
+
+declare module "lodash.gte" {
+   const gte: typeof _.gte;
+   export = gte;
+}
+
+
+declare module "lodash.has" {
+   const has: typeof _.has;
+   export = has;
+}
+
+
+declare module "lodash.hasIn" {
+   const hasIn: typeof _.hasIn;
+   export = hasIn;
+}
+
+
+declare module "lodash.head" {
+   const head: typeof _.head;
+   export = head;
+}
+
+
+declare module "lodash.identity" {
+   const identity: typeof _.identity;
+   export = identity;
+}
+
+
+declare module "lodash.includes" {
+   const includes: typeof _.includes;
+   export = includes;
+}
+
+
+declare module "lodash.indexOf" {
+   const indexOf: typeof _.indexOf;
+   export = indexOf;
+}
+
+
+declare module "lodash.inRange" {
+   const inRange: typeof _.inRange;
+   export = inRange;
+}
+
+
+declare module "lodash.invoke" {
+   const invoke: typeof _.invoke;
+   export = invoke;
+}
+
+
+declare module "lodash.isArguments" {
+   const isArguments: typeof _.isArguments;
+   export = isArguments;
+}
+
+
+declare module "lodash.isArray" {
+   const isArray: typeof _.isArray;
+   export = isArray;
+}
+
+
+declare module "lodash.isArrayBuffer" {
+   const isArrayBuffer: typeof _.isArrayBuffer;
+   export = isArrayBuffer;
+}
+
+
+declare module "lodash.isArrayLike" {
+   const isArrayLike: typeof _.isArrayLike;
+   export = isArrayLike;
+}
+
+
+declare module "lodash.isArrayLikeObject" {
+   const isArrayLikeObject: typeof _.isArrayLikeObject;
+   export = isArrayLikeObject;
+}
+
+
+declare module "lodash.isBoolean" {
+   const isBoolean: typeof _.isBoolean;
+   export = isBoolean;
+}
+
+
+declare module "lodash.isBuffer" {
+   const isBuffer: typeof _.isBuffer;
+   export = isBuffer;
+}
+
+
+declare module "lodash.isDate" {
+   const isDate: typeof _.isDate;
+   export = isDate;
+}
+
+
+declare module "lodash.isElement" {
+   const isElement: typeof _.isElement;
+   export = isElement;
+}
+
+
+declare module "lodash.isEmpty" {
+   const isEmpty: typeof _.isEmpty;
+   export = isEmpty;
+}
+
+
+declare module "lodash.isEqual" {
+   const isEqual: typeof _.isEqual;
+   export = isEqual;
+}
+
+
+declare module "lodash.isEqualWith" {
+   const isEqualWith: typeof _.isEqualWith;
+   export = isEqualWith;
+}
+
+
+declare module "lodash.isError" {
+   const isError: typeof _.isError;
+   export = isError;
+}
+
+
+declare module "lodash.isFinite" {
+   const isFinite: typeof _.isFinite;
+   export = isFinite;
+}
+
+
+declare module "lodash.isFunction" {
+   const isFunction: typeof _.isFunction;
+   export = isFunction;
+}
+
+
+declare module "lodash.isInteger" {
+   const isInteger: typeof _.isInteger;
+   export = isInteger;
+}
+
+
+declare module "lodash.isLength" {
+   const isLength: typeof _.isLength;
+   export = isLength;
+}
+
+
+declare module "lodash.isMap" {
+   const isMap: typeof _.isMap;
+   export = isMap;
+}
+
+
+declare module "lodash.isMatch" {
+   const isMatch: typeof _.isMatch;
+   export = isMatch;
+}
+
+
+declare module "lodash.isMatchWith" {
+   const isMatchWith: typeof _.isMatchWith;
+   export = isMatchWith;
+}
+
+
+declare module "lodash.isNaN" {
+   const isNaN: typeof _.isNaN;
+   export = isNaN;
+}
+
+
+declare module "lodash.isNative" {
+   const isNative: typeof _.isNative;
+   export = isNative;
+}
+
+
+declare module "lodash.isNil" {
+   const isNil: typeof _.isNil;
+   export = isNil;
+}
+
+
+declare module "lodash.isNull" {
+   const isNull: typeof _.isNull;
+   export = isNull;
+}
+
+
+declare module "lodash.isNumber" {
+   const isNumber: typeof _.isNumber;
+   export = isNumber;
+}
+
+
+declare module "lodash.isObject" {
+   const isObject: typeof _.isObject;
+   export = isObject;
+}
+
+
+declare module "lodash.isObjectLike" {
+   const isObjectLike: typeof _.isObjectLike;
+   export = isObjectLike;
+}
+
+
+declare module "lodash.isPlainObject" {
+   const isPlainObject: typeof _.isPlainObject;
+   export = isPlainObject;
+}
+
+
+declare module "lodash.isRegExp" {
+   const isRegExp: typeof _.isRegExp;
+   export = isRegExp;
+}
+
+
+declare module "lodash.isSafeInteger" {
+   const isSafeInteger: typeof _.isSafeInteger;
+   export = isSafeInteger;
+}
+
+
+declare module "lodash.isSet" {
+   const isSet: typeof _.isSet;
+   export = isSet;
+}
+
+
+declare module "lodash.isString" {
+   const isString: typeof _.isString;
+   export = isString;
+}
+
+
+declare module "lodash.isSymbol" {
+   const isSymbol: typeof _.isSymbol;
+   export = isSymbol;
+}
+
+
+declare module "lodash.isTypedArray" {
+   const isTypedArray: typeof _.isTypedArray;
+   export = isTypedArray;
+}
+
+
+declare module "lodash.isUndefined" {
+   const isUndefined: typeof _.isUndefined;
+   export = isUndefined;
+}
+
+
+declare module "lodash.isWeakMap" {
+   const isWeakMap: typeof _.isWeakMap;
+   export = isWeakMap;
+}
+
+
+declare module "lodash.isWeakSet" {
+   const isWeakSet: typeof _.isWeakSet;
+   export = isWeakSet;
+}
+
+
+declare module "lodash.join" {
+   const join: typeof _.join;
+   export = join;
+}
+
+
+declare module "lodash.kebabCase" {
+   const kebabCase: typeof _.kebabCase;
+   export = kebabCase;
+}
+
+
+declare module "lodash.last" {
+   const last: typeof _.last;
+   export = last;
+}
+
+
+declare module "lodash.lastIndexOf" {
+   const lastIndexOf: typeof _.lastIndexOf;
+   export = lastIndexOf;
+}
+
+
+declare module "lodash.lowerCase" {
+   const lowerCase: typeof _.lowerCase;
+   export = lowerCase;
+}
+
+
+declare module "lodash.lowerFirst" {
+   const lowerFirst: typeof _.lowerFirst;
+   export = lowerFirst;
+}
+
+
+declare module "lodash.lt" {
+   const lt: typeof _.lt;
+   export = lt;
+}
+
+
+declare module "lodash.lte" {
+   const lte: typeof _.lte;
+   export = lte;
+}
+
+
+declare module "lodash.max" {
+   const max: typeof _.max;
+   export = max;
+}
+
+
+declare module "lodash.maxBy" {
+   const maxBy: typeof _.maxBy;
+   export = maxBy;
+}
+
+
+declare module "lodash.mean" {
+   const mean: typeof _.mean;
+   export = mean;
+}
+
+/**
+* uncoment it if definition exists
+*/
+/*
+declare module "lodash.meanBy" {
+   const meanBy: typeof _.meanBy;
+   export = meanBy;
+}
+*/
+
+declare module "lodash.min" {
+   const min: typeof _.min;
+   export = min;
+}
+
+
+declare module "lodash.minBy" {
+   const minBy: typeof _.minBy;
+   export = minBy;
+}
+
+/**
+* uncoment it if definition exists
+*/
+/*
+declare module "lodash.multiply" {
+   const multiply: typeof _.multiply;
+   export = multiply;
+}
+*/
+
+/**
+* uncoment it if definition exists
+*/
+/*
+declare module "lodash.nth" {
+   const nth: typeof _.nth;
+   export = nth;
+}
+*/
+
+declare module "lodash.noConflict" {
+   const noConflict: typeof _.noConflict;
+   export = noConflict;
+}
+
+
+declare module "lodash.noop" {
+   const noop: typeof _.noop;
+   export = noop;
+}
+
+
+declare module "lodash.now" {
+   const now: typeof _.now;
+   export = now;
+}
+
+
+declare module "lodash.pad" {
+   const pad: typeof _.pad;
+   export = pad;
+}
+
+
+declare module "lodash.padEnd" {
+   const padEnd: typeof _.padEnd;
+   export = padEnd;
+}
+
+
+declare module "lodash.padStart" {
+   const padStart: typeof _.padStart;
+   export = padStart;
+}
+
+
+declare module "lodash.parseInt" {
+   const parseInt: typeof _.parseInt;
+   export = parseInt;
+}
+
+
+declare module "lodash.random" {
+   const random: typeof _.random;
+   export = random;
+}
+
+
+declare module "lodash.reduce" {
+   const reduce: typeof _.reduce;
+   export = reduce;
+}
+
+
+declare module "lodash.reduceRight" {
+   const reduceRight: typeof _.reduceRight;
+   export = reduceRight;
+}
+
+
+declare module "lodash.repeat" {
+   const repeat: typeof _.repeat;
+   export = repeat;
+}
+
+
+declare module "lodash.replace" {
+   const replace: typeof _.replace;
+   export = replace;
+}
+
+
+declare module "lodash.result" {
+   const result: typeof _.result;
+   export = result;
+}
+
+
+declare module "lodash.round" {
+   const round: typeof _.round;
+   export = round;
+}
+
+
+declare module "lodash.runInContext" {
+   const runInContext: typeof _.runInContext;
+   export = runInContext;
+}
+
+
+declare module "lodash.sample" {
+   const sample: typeof _.sample;
+   export = sample;
+}
+
+
+declare module "lodash.size" {
+   const size: typeof _.size;
+   export = size;
+}
+
+
+declare module "lodash.snakeCase" {
+   const snakeCase: typeof _.snakeCase;
+   export = snakeCase;
+}
+
+
+declare module "lodash.some" {
+   const some: typeof _.some;
+   export = some;
+}
+
+
+declare module "lodash.sortedIndex" {
+   const sortedIndex: typeof _.sortedIndex;
+   export = sortedIndex;
+}
+
+
+declare module "lodash.sortedIndexBy" {
+   const sortedIndexBy: typeof _.sortedIndexBy;
+   export = sortedIndexBy;
+}
+
+
+declare module "lodash.sortedIndexOf" {
+   const sortedIndexOf: typeof _.sortedIndexOf;
+   export = sortedIndexOf;
+}
+
+
+declare module "lodash.sortedLastIndex" {
+   const sortedLastIndex: typeof _.sortedLastIndex;
+   export = sortedLastIndex;
+}
+
+
+declare module "lodash.sortedLastIndexBy" {
+   const sortedLastIndexBy: typeof _.sortedLastIndexBy;
+   export = sortedLastIndexBy;
+}
+
+
+declare module "lodash.sortedLastIndexOf" {
+   const sortedLastIndexOf: typeof _.sortedLastIndexOf;
+   export = sortedLastIndexOf;
+}
+
+
+declare module "lodash.startCase" {
+   const startCase: typeof _.startCase;
+   export = startCase;
+}
+
+
+declare module "lodash.startsWith" {
+   const startsWith: typeof _.startsWith;
+   export = startsWith;
+}
+
+
+declare module "lodash.subtract" {
+   const subtract: typeof _.subtract;
+   export = subtract;
+}
+
+
+declare module "lodash.sum" {
+   const sum: typeof _.sum;
+   export = sum;
+}
+
+
+declare module "lodash.sumBy" {
+   const sumBy: typeof _.sumBy;
+   export = sumBy;
+}
+
+
+declare module "lodash.template" {
+   const template: typeof _.template;
+   export = template;
+}
+
+
+declare module "lodash.times" {
+   const times: typeof _.times;
+   export = times;
+}
+
+
+declare module "lodash.toInteger" {
+   const toInteger: typeof _.toInteger;
+   export = toInteger;
+}
+
+
+declare module "lodash.toLength" {
+   const toLength: typeof _.toLength;
+   export = toLength;
+}
+
+
+declare module "lodash.toLower" {
+   const toLower: typeof _.toLower;
+   export = toLower;
+}
+
+
+declare module "lodash.toNumber" {
+   const toNumber: typeof _.toNumber;
+   export = toNumber;
+}
+
+
+declare module "lodash.toSafeInteger" {
+   const toSafeInteger: typeof _.toSafeInteger;
+   export = toSafeInteger;
+}
+
+
+declare module "lodash.toString" {
+   const toString: typeof _.toString;
+   export = toString;
+}
+
+
+declare module "lodash.toUpper" {
+   const toUpper: typeof _.toUpper;
+   export = toUpper;
+}
+
+
+declare module "lodash.trim" {
+   const trim: typeof _.trim;
+   export = trim;
+}
+
+
+declare module "lodash.trimEnd" {
+   const trimEnd: typeof _.trimEnd;
+   export = trimEnd;
+}
+
+
+declare module "lodash.trimStart" {
+   const trimStart: typeof _.trimStart;
+   export = trimStart;
+}
+
+
+declare module "lodash.truncate" {
+   const truncate: typeof _.truncate;
+   export = truncate;
+}
+
+
+declare module "lodash.unescape" {
+   const unescape: typeof _.unescape;
+   export = unescape;
+}
+
+
+declare module "lodash.uniqueId" {
+   const uniqueId: typeof _.uniqueId;
+   export = uniqueId;
+}
+
+
+declare module "lodash.upperCase" {
+   const upperCase: typeof _.upperCase;
+   export = upperCase;
+}
+
+
+declare module "lodash.upperFirst" {
+   const upperFirst: typeof _.upperFirst;
+   export = upperFirst;
+}
+
+
+declare module "lodash.each" {
+   const each: typeof _.each;
+   export = each;
+}
+
+
+declare module "lodash.eachRight" {
+   const eachRight: typeof _.eachRight;
+   export = eachRight;
+}
+
+
+declare module "lodash.first" {
+   const first: typeof _.first;
+   export = first;
+}
+
+// Backward compatibility with --target es5
+interface Set<T> {}
+interface Map<K, V> {}
+interface WeakSet<T> {}
+interface WeakMap<K, V> {}

@@ -52,6 +52,7 @@ class Swiper extends egret.DisplayObjectContainer {
   }
   public updateSlidesPosition() {
     let offset = this._slideOffset;
+    console.log(offset.toFixed(3));
     const {activeCenter, viewWidth, slideWidth, padding} = this._options;
     let posOffset: number = activeCenter
       ? viewWidth / 2
@@ -73,39 +74,30 @@ class Swiper extends egret.DisplayObjectContainer {
     const {slideWidth, padding, effect} = this._options;
     switch (effect) {
       case 'carrousel':
+        let haha = index === 0;
         let slidesCount = this.slidesCount();
         let carrouselOptions = this._options.carrousel;
         let radius = carrouselOptions.radius || 130;
-        let maxSideSidesCount = carrouselOptions.maxSideSidesCount || 6;
         let minScale = carrouselOptions.minScale || 0.2;
-        let sideSlidesCount = _.min([Math.floor(slidesCount / 2), maxSideSidesCount]);
-        let slideOffset = this._slideOffset % slidesCount;
+        let sideSlidesCount = Math.floor(slidesCount / 2);
+        let slideOffset = (this._slideOffset + index) % slidesCount;
         if (slideOffset < 0) {
           slideOffset += slidesCount;
         }
-        if (this._options.loop) {
-          if (index - slideOffset >= sideSlidesCount + 1) {
-            index = index - slidesCount;
-          } else if (slideOffset - index >= sideSlidesCount + 1) {
-            index = index + slidesCount;
-          }
+        if (haha) {
+          // console.log('--------');
+          // console.log('this._slideOffset', this._slideOffset);
+          // console.log('slideOffset', slideOffset);
         }
-        let currentSlideOffset = index - slideOffset;
-        let ang = currentSlideOffset / (sideSlidesCount + 1) * Math.PI / 2;
+        let ang = slideOffset / (sideSlidesCount + 1) * Math.PI / 2;
         let x = radius * Math.sin(ang);
         let z = Math.abs(Math.cos(ang));
-        if (Math.abs(ang) > Math.PI / 2) {
-          slide.visible = false;
-          slide.scaleX = slide.scaleY = 0;
-        } else {
-          slide.visible = true;
-          slide.x = x + posOffset;
-          slide.scaleX = slide.scaleY = z * (1 - minScale) + minScale;
-          slide.alpha = z;
-        }
+        slide.x = x + posOffset;
+        slide.scaleX = slide.scaleY = z * (1 - minScale) + minScale;
+        slide.alpha = z;
         break;
       default:
-        slide.x = (this._options.slideWidth + this._options.padding * 2) * (index - this._slideOffset) + posOffset;
+        slide.x = (this._options.slideWidth + this._options.padding * 2) * (index + this._slideOffset) + posOffset;
         break;
     }
   }
@@ -140,7 +132,7 @@ class Swiper extends egret.DisplayObjectContainer {
         index = lastIndex;
       }
     }
-    this._tw =  egret.Tween.get(this, {
+    this._tw = egret.Tween.get(this, {
       onChange: function() {
         this.updateSlidesPosition();
       },
@@ -165,21 +157,23 @@ class Swiper extends egret.DisplayObjectContainer {
     this._startSlideOffset = null;
     let endOffset = this._slideOffset;
     let nearOffset: number = Math.round(endOffset);
+    console.log(speed);
     if (Math.abs(speed) > 0.2) {
       if (speed > 0) {
-        nearOffset = Math.floor(endOffset);
-      } else {
         nearOffset = Math.ceil(endOffset);
+      } else {
+        nearOffset = Math.floor(endOffset);
       }
     } else {
       nearOffset = Math.round(endOffset);
     }
+    console.log('nearOffset:', nearOffset);
     this.goto(nearOffset);
   }
   private _updateOffset(currentX) {
     let offsetX = currentX - this._startX;
     let {padding, slideWidth} = this._options;
-    this._slideOffset = this._startSlideOffset - (offsetX / (slideWidth + padding * 2));
+    this._slideOffset = this._startSlideOffset + (offsetX / (slideWidth + padding * 2));
   }
   private _onTouchBegin(e: egret.TouchEvent) {
     this._startX = e.stageX;
