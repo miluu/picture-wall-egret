@@ -23,11 +23,11 @@
     },
     {
       "name": "mouse",
-      "path": "/Users/miluu/works/egret-game-library/mouse/libsrc"
+      "path": "../egret-game-library/mouse/libsrc"
     },
     {
       "name": "lodash",
-      "path": "/Users/miluu/works/egret-game-library/lodash"
+      "path": "../egret-game-library/lodash"
     }
   ]
 }

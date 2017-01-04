@@ -7,7 +7,7 @@ interface ISlideOptions {
 
 class Slide extends egret.Sprite {
   static index: number = 0;
-  public bg: egret.Shape;/**/
+  public bg: egret.Shape;
   public options: ISlideOptions;
   constructor(public slideWidth: number, public slideHeight: number, public content?: egret.DisplayObject, isCopy: boolean = false) {
     super();

@@ -7,6 +7,14 @@ interface ISwiperOptions {
   effect?: 'none' | 'slide' | 'carrousel';
   backTime?: number;
   activeCenter?: boolean;
+  loop?: boolean;
+  carrousel?: IEffectCarrouselOptions;
+}
+
+interface IEffectCarrouselOptions {
+  maxSideSidesCount?: number;
+  minScale?: number;
+  radius?: number;
 }
 
 class Swiper extends egret.DisplayObjectContainer {
@@ -29,7 +37,8 @@ class Swiper extends egret.DisplayObjectContainer {
       padding: 10,
       effect: 'slide',
       backTime: 500,
-      activeCenter: true
+      activeCenter: true,
+      carrousel: {}
     }, options);
     this._addBg();
     this._createSlidesContainer();
@@ -37,6 +46,9 @@ class Swiper extends egret.DisplayObjectContainer {
   public start() {
     this.updateSlidesPosition();
     return this;
+  }
+  public slidesCount() {
+    return this.slides.length;
   }
   public updateSlidesPosition() {
     let offset = this._slideOffset;
@@ -48,33 +60,38 @@ class Swiper extends egret.DisplayObjectContainer {
       this._useEffect(slide, slide.options.index, posOffset);
     });
     if (this._options.effect === 'carrousel') {
-      console.log(`\n\n`);
-      console.log('==================');
-      console.log(this.slides);
-      console.log('----');
-      let sortedSlides = _.sortBy(this.slides, 'scaleX');
-      console.log(_.sortBy(this.slides, 'scaleX'));
-      _.forEach(sortedSlides, function(slide, index) {
-        console.log(slide.scaleX);
-        this._slidesContainer.setChildIndex(slide, index);
-      }.bind(this));
-      // _.chain(this.slides)
-      //   .sortBy('scaleX')
-      //   .forEach((slide, index) => {
-      //     console.log(slide.scaleX);
-      //     this._slidesContainer.setChildIndex(slide, index);
-      //   });
+      _.chain(this.slides)
+        .sortBy('scaleX')
+        .forEach((slide, index) => {
+          this._slidesContainer.setChildIndex(slide, index);
+        })
+        .value();
     }
     return this;
   }
   private _useEffect(slide: Slide, index: number, posOffset: number) {
-    console.log(this._options.effect);
     const {slideWidth, padding, effect} = this._options;
     switch (effect) {
       case 'carrousel':
-        let radius = 130;
-        let slideOffset = index - this._slideOffset;
-        let ang = slideOffset / 5 * Math.PI / 2;
+        let slidesCount = this.slidesCount();
+        let carrouselOptions = this._options.carrousel;
+        let radius = carrouselOptions.radius || 130;
+        let maxSideSidesCount = carrouselOptions.maxSideSidesCount || 6;
+        let minScale = carrouselOptions.minScale || 0.2;
+        let sideSlidesCount = _.min([Math.floor(slidesCount / 2), maxSideSidesCount]);
+        let slideOffset = this._slideOffset % slidesCount;
+        if (slideOffset < 0) {
+          slideOffset += slidesCount;
+        }
+        if (this._options.loop) {
+          if (index - slideOffset >= sideSlidesCount + 1) {
+            index = index - slidesCount;
+          } else if (slideOffset - index >= sideSlidesCount + 1) {
+            index = index + slidesCount;
+          }
+        }
+        let currentSlideOffset = index - slideOffset;
+        let ang = currentSlideOffset / (sideSlidesCount + 1) * Math.PI / 2;
         let x = radius * Math.sin(ang);
         let z = Math.abs(Math.cos(ang));
         if (Math.abs(ang) > Math.PI / 2) {
@@ -83,7 +100,7 @@ class Swiper extends egret.DisplayObjectContainer {
         } else {
           slide.visible = true;
           slide.x = x + posOffset;
-          slide.scaleX = slide.scaleY = z * 0.8 + 0.2;
+          slide.scaleX = slide.scaleY = z * (1 - minScale) + minScale;
           slide.alpha = z;
         }
         break;
@@ -114,7 +131,15 @@ class Swiper extends egret.DisplayObjectContainer {
   }
   public goto(index: number) {
     let preActiveIndex = this._activeIndex;
-    const {backTime} = this._options;
+    const {backTime, loop} = this._options;
+    const lastIndex = this.slidesCount() - 1;
+    if (!loop) {
+      if (index < 0) {
+        index = 0;
+      } else if (index > lastIndex) {
+        index = lastIndex;
+      }
+    }
     this._tw =  egret.Tween.get(this, {
       onChange: function() {
         this.updateSlidesPosition();

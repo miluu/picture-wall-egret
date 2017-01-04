@@ -17,7 +17,12 @@ class Main extends egret.DisplayObjectContainer {
       slideWidth: 100,
       slideHeight: 100,
       activeCenter: true,
-      effect: 'carrousel'
+      loop: true,
+      effect: 'carrousel',
+      carrousel: {
+        minScale: 0.1,
+        radius: 100
+      }
     });
     this.swiper.x = 10;
     this.swiper.y = 30;
@@ -26,11 +31,11 @@ class Main extends egret.DisplayObjectContainer {
     let t3 = new egret.TextField();
     let t4 = new egret.TextField();
     let t5 = new egret.TextField();
-    t1.text = '1';
-    t2.text = '2';
-    t3.text = '3';
-    t4.text = '4';
-    t5.text = '5';
+    t1.text = '0';
+    t2.text = '1';
+    t3.text = '2';
+    t4.text = '3';
+    t5.text = '4';
     t1.textColor = t2.textColor = t5.textColor = t3.textColor = t4.textColor = 0x000000;
     t1.textColor = t2.textColor = t5.textColor = t3.textColor = t4.textColor = 14;
     this.swiper
