@@ -20,10 +20,12 @@ class Main extends egret.DisplayObjectContainer {
       this.addChild(item);
     });
     let r = new Repel(0, 0, 100, 1);
-    r.toStrong(0, 2000, () => {
-      console.log('done!');
-    });
+    // r.toStrong(0, 2000, () => {
+    //   console.log('done!');
+    // });
     egret.Ticker.getInstance().register(this._animate, this);
+    let p = new egret.Point();
+    console.log(typeof p);
   }
 
   private _animate() {
