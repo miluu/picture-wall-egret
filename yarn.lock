@@ -482,8 +482,8 @@ tslint:
     update-notifier "^1.0.2"
 
 typescript:
-  version "2.0.10"
-  resolved "http://registry.npm.taobao.org/typescript/download/typescript-2.0.10.tgz#ccdd4ed86fd5550a407101a0814012e1b3fac3dd"
+  version "2.1.5"
+  resolved "http://registry.npm.taobao.org/typescript/download/typescript-2.1.5.tgz#6fe9479e00e01855247cea216e7561bafcdbcd4a"
 
 underscore.string@^3.3.4:
   version "3.3.4"

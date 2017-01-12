@@ -11,8 +11,8 @@ var game_file_list = [
 	"libs/modules/mouse/mouse.js",
 	"libs/modules/lodash/lodash.js",
 	"bin-debug/Main.js",
-	"bin-debug/Swiper/Slide.js",
 	"bin-debug/Swiper/index.js",
+	"bin-debug/Swiper/Slide.js",
 	//----auto game_file_list end----
 ];
 

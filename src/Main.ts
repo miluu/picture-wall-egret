@@ -18,11 +18,11 @@ class Main extends egret.DisplayObjectContainer {
       slideHeight: 100,
       activeCenter: false,
       loop: true,
-      // effect: 'carrousel',
-      // carrousel: {
-      //   minScale: 0.1,
-      //   radius: 100
-      // }
+      effect: 'carrousel',
+      carrousel: {
+        minScale: 0.1,
+        radius: 100
+      }
     });
     this.swiper.x = 10;
     this.swiper.y = 30;
