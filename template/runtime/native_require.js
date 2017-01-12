@@ -12,6 +12,8 @@ var game_file_list = [
 	"libs/modules/lodash/lodash.js",
 	"bin-debug/Main.js",
 	"bin-debug/components/Item.js",
+	"bin-debug/components/Repel.js",
+	"bin-debug/components/Scene.js",
 	"bin-debug/modules/swiper/Slide.js",
 	"bin-debug/modules/swiper/Swiper.js",
 	"bin-debug/utils/index.js",

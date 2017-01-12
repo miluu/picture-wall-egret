@@ -1,5 +1,5 @@
 class Main extends egret.DisplayObjectContainer {
-  private swiper: swiper.Swiper;
+  // private swiper: swiper.Swiper;
   public constructor() {
     super();
     this.addEventListener(egret.Event.ADDED_TO_STAGE, this._onAddToStage, this);
@@ -19,6 +19,15 @@ class Main extends egret.DisplayObjectContainer {
       item.y = pos.y;
       this.addChild(item);
     });
+    let r = new Repel(0, 0, 100, 1);
+    r.toStrong(0, 2000, () => {
+      console.log('done!');
+    });
+    egret.Ticker.getInstance().register(this._animate, this);
+  }
+
+  private _animate() {
+    TWEEN.update();
   }
 
   // private _addSwiper() {
