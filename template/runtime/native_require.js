@@ -11,8 +11,10 @@ var game_file_list = [
 	"libs/modules/mouse/mouse.js",
 	"libs/modules/lodash/lodash.js",
 	"bin-debug/Main.js",
+	"bin-debug/components/Item.js",
 	"bin-debug/modules/swiper/Slide.js",
 	"bin-debug/modules/swiper/Swiper.js",
+	"bin-debug/utils/index.js",
 	//----auto game_file_list end----
 ];
 
@@ -47,7 +49,7 @@ egret_native.egretStart = function () {
         //----auto option start----
 		entryClassName: "Main",
 		frameRate: 60,
-		scaleMode: "showAll",
+		scaleMode: "noScale",
 		contentWidth: 600,
 		contentHeight: 500,
 		showPaintRect: false,
