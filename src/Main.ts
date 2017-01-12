@@ -1,5 +1,5 @@
 class Main extends egret.DisplayObjectContainer {
-  private swiper: Swiper;
+  private swiper: swiper.Swiper;
   public constructor() {
     super();
     this.addEventListener(egret.Event.ADDED_TO_STAGE, this._onAddToStage, this);
@@ -11,7 +11,7 @@ class Main extends egret.DisplayObjectContainer {
   }
 
   private _addSwiper() {
-    this.swiper = new Swiper({
+    this.swiper = new swiper.Swiper({
       viewHeight: 100,
       viewWidth: 500,
       slideWidth: 100,
@@ -60,5 +60,3 @@ class Main extends egret.DisplayObjectContainer {
     this.addChild(this.swiper);
   }
 }
-
-

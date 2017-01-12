@@ -1,33 +1,33 @@
 {
-  "native": {
-    "path_ignore": []
-  },
-  "publish": {
-    "web": 0,
-    "native": 1,
-    "path": "bin-release"
-  },
-  "egret_version": "3.2.3",
-  "modules": [
-    {
-      "name": "egret"
-    },
-    {
-      "name": "game"
-    },
-    {
-      "name": "res"
-    },
-    {
-      "name": "tween"
-    },
-    {
-      "name": "mouse",
-      "path": "../egret-game-library/mouse/libsrc"
-    },
-    {
-      "name": "lodash",
-      "path": "../egret-game-library/lodash"
-    }
-  ]
+	"native": {
+		"path_ignore": []
+	},
+	"publish": {
+		"web": 0,
+		"native": 1,
+		"path": "bin-release"
+	},
+	"egret_version": "4.0.0",
+	"modules": [
+		{
+			"name": "egret"
+		},
+		{
+			"name": "game"
+		},
+		{
+			"name": "res"
+		},
+		{
+			"name": "tween"
+		},
+		{
+			"name": "mouse",
+			"path": "../egret-game-library/mouse/libsrc"
+		},
+		{
+			"name": "lodash",
+			"path": "../egret-game-library/lodash"
+		}
+	]
 }
