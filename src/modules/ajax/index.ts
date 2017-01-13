@@ -29,13 +29,13 @@ namespace ajax {
       loader.dataFormat = egret.URLLoaderDataFormat.TEXTURE;
     }
     loader.load(req);
-    loader.addEventListener(egret.Event.COMPLETE, function() {
+    loader.once(egret.Event.COMPLETE, function() {
       let {success, data} = format(combinedOptions.type, loader.data);
       success
         ? combinedOptions.onComplete(data)
         : combinedOptions.onError();
     }, null);
-    loader.addEventListener(egret.IOErrorEvent.IO_ERROR, function() {
+    loader.once(egret.IOErrorEvent.IO_ERROR, function() {
       combinedOptions.onError();
     }, null);
   }

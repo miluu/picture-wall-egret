@@ -3,4 +3,6 @@
 		"**/bin-debug": true,
 		"**/bin-release": true
 	}
+,
+"typescript.tsdk": "./node_modules/typescript/lib"
 }

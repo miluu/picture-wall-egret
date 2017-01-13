@@ -6,7 +6,7 @@ var game_file_list = [
 	"libs/modules/egret/egret.native.js",
 	"libs/modules/game/game.js",
 	"libs/modules/game/game.native.js",
-	"libs/modules/res/res.js",
+	"libs/modules/eui/eui.js",
 	"libs/modules/tween/tween.js",
 	"libs/modules/mouse/mouse.js",
 	"libs/modules/lodash/lodash.js",
@@ -52,7 +52,7 @@ egret_native.egretStart = function () {
         //----auto option start----
 		entryClassName: "Main",
 		frameRate: 60,
-		scaleMode: "showAll",
+		scaleMode: "noScale",
 		contentWidth: 500,
 		contentHeight: 800,
 		showPaintRect: false,
