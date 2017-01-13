@@ -33,10 +33,15 @@ class Main extends egret.DisplayObjectContainer {
     }, this);
     egret.Ticker.getInstance().register(this._animate, this);
 
-    ajax.getJson('/api/items.json', {
+    const that = this;
+    ajax.getTexture('/assets/images/icons/1.png', {
       onComplete: function(data) {
         console.log('success!!!');
         console.log(data);
+        let img = new egret.Bitmap(data);
+        that.addChild(img);
+        img.width = img.texture.textureWidth * 2;
+        img.height = img.texture.textureHeight * 2;
       },
       onError: function() {
         console.log('error!!!!');
