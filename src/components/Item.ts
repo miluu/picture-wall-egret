@@ -3,6 +3,7 @@ class Item extends egret.DisplayObjectContainer {
   private _itemHeight: number;
   private _bgColor: number;
   private _bg: egret.Shape = new egret.Shape();
+  public basePosition: egret.Point = new egret.Point(0, 0);
   constructor(itemWidth: number, itemHeight: number, bgColor?: number) {
     super();
     this._itemWidth = itemWidth;

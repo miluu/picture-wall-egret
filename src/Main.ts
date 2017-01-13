@@ -1,35 +1,45 @@
 class Main extends egret.DisplayObjectContainer {
-  // private swiper: swiper.Swiper;
+  items: Item[] = [];
+  repel: Repel;
+  toggle: boolean = false;
   public constructor() {
     super();
     this.addEventListener(egret.Event.ADDED_TO_STAGE, this._onAddToStage, this);
   }
 
   private _onAddToStage() {
+    mouse.enable(this.stage);
+    mouse.setMouseMoveEnabled(true);
     this.touchEnabled = true;
-    let count = 8;
-    let radius = 100;
-    let center = new egret.Point(200, 200);
-    let perDeg = 360 / count;
-    _.times(count, (index) => {
-      let item = new Item(10, 10);
-      let deg = perDeg * index;
-      let pos = util.cyclePoint(center, radius, deg);
-      item.x = pos.x;
-      item.y = pos.y;
-      this.addChild(item);
+    _.times(20, (row) => {
+      _.times(20, (col) => {
+        let item = new Item(10, 10);
+        item.basePosition.x = col * 40;
+        item.basePosition.y = row * 40;
+        this.addChild(item);
+        this.items.push(item);
+      });
     });
-    let r = new Repel(0, 0, 100, 1);
-    // r.toStrong(0, 2000, () => {
-    //   console.log('done!');
-    // });
+    this.repel = new Repel(0, 0, 200, 0.3);
+    this.stage.addEventListener(mouse.MouseEvent.MOUSE_MOVE, function(e: egret.TouchEvent) {
+      this.repel.center.x = e.stageX;
+      this.repel.center.y = e.stageY;
+    }, this);
+
+    this.stage.addEventListener(egret.TouchEvent.TOUCH_TAP, function(e: egret.TouchEvent) {
+      this.repel.toStrong(this.toggle ? 0.5 : 0, 500);
+      this.toggle = !this.toggle;
+    }, this);
     egret.Ticker.getInstance().register(this._animate, this);
-    let p = new egret.Point();
-    console.log(typeof p);
   }
 
   private _animate() {
     TWEEN.update();
+    _.forEach(this.items, (item) => {
+      let point = this.repel.use(item.basePosition);
+      item.x = point.x;
+      item.y = point.y;
+    });
   }
 
   // private _addSwiper() {

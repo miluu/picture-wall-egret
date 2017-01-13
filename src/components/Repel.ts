@@ -10,7 +10,7 @@ class Repel {
   /**
    * 所有 Repel 实例
    */
-  private static _instances: Repel[];
+  private static _instances: Repel[] = [];
 
   /**
    * 依附的目标对象
@@ -44,11 +44,14 @@ class Repel {
     const {center, strong, radius} = this;
     const distance = egret.Point.distance(point, center);
     if (distance < radius) {
-      const r0 = distance * strong;
-      const r1 = radius - r0;
-      const distanceOffet = r1 * (1 - distance / radius);
-      const distanceX = target.x - center.x;
-      const distanceY = target.y - center.y;
+      const r1 = radius * strong;
+      const offsetDistance = (radius - distance) / radius * r1;
+      const distanceX = point.x - center.x;
+      const distanceY = point.y - center.y;
+      const offsetY = offsetDistance / distance * distanceY;
+      const offsetX = offsetDistance / distance * distanceX;
+      point.x += offsetX;
+      point.y += offsetY;
     }
     return point;
   }
@@ -63,7 +66,7 @@ class Repel {
   }
 
   /**
-   * 渐变设置强度值
+   * 指定时间内渐变设置强度值至指定值
    * @param strong {number} 最终的强度值
    * @param time {number} 执行时间间隔
    * @param callback {(Repel?) => any} 执行完毕后的回调函数，可选参数为自身
@@ -72,7 +75,7 @@ class Repel {
     const repel = this;
     let tw = new TWEEN.Tween(this)
       .easing(TWEEN.Easing.Cubic.Out)
-      .to({strong: 0}, time)
+      .to({strong}, time)
       .onComplete(() => {
         if (callback) {
           callback(this);
@@ -142,7 +145,7 @@ class Repel {
    * @parame repel {Repel} 要添加的实例
    */
   private static _add(repel: Repel) {
-    this._instances.push(repel);
+    Repel._instances.push(repel);
   }
 
   /**
