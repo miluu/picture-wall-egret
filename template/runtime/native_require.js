@@ -14,9 +14,10 @@ var game_file_list = [
 	"bin-debug/components/Item.js",
 	"bin-debug/components/Repel.js",
 	"bin-debug/components/Scene.js",
+	"bin-debug/modules/ajax/index.js",
 	"bin-debug/modules/swiper/Slide.js",
 	"bin-debug/modules/swiper/Swiper.js",
-	"bin-debug/utils/index.js",
+	"bin-debug/modules/utils/index.js",
 	//----auto game_file_list end----
 ];
 

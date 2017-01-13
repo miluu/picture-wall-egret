@@ -2,6 +2,7 @@ class Main extends egret.DisplayObjectContainer {
   items: Item[] = [];
   repel: Repel;
   toggle: boolean = false;
+
   public constructor() {
     super();
     this.addEventListener(egret.Event.ADDED_TO_STAGE, this._onAddToStage, this);
@@ -31,6 +32,16 @@ class Main extends egret.DisplayObjectContainer {
       this.toggle = !this.toggle;
     }, this);
     egret.Ticker.getInstance().register(this._animate, this);
+
+    ajax.getJson('/api/items.json', {
+      onComplete: function(data) {
+        console.log('success!!!');
+        console.log(data);
+      },
+      onError: function() {
+        console.log('error!!!!');
+      }
+    });
   }
 
   private _animate() {
