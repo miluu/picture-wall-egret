@@ -1,4 +1,4 @@
-// module swiper {
+// namespace swiper {
 //   export interface ISwiperOptions {
 //     viewWidth: number;
 //     viewHeight: number;

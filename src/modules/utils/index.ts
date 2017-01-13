@@ -1,4 +1,4 @@
-module util {
+namespace util {
   /**
    * 返回距离中心点一定距离和角度的点
    * @param center {egret.Point} 中心点对象

@@ -1,4 +1,4 @@
-module swiper {
+namespace swiper {
   export interface ISlideOptions {
     index: number;
     slideIndex: number;

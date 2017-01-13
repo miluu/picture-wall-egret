@@ -1,4 +1,4 @@
-module ajax {
+namespace ajax {
 
   interface IAjaxOptions {
     type?: string;
