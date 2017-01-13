@@ -1,0 +1,333 @@
+{
+  "status": "success",
+  "message": "加载成功",
+  "result": {
+    "items": [
+      {
+        "id": "0",
+        "brand": "SELECTED",
+        "title": "青少年圆领体恤",
+        "description": "思莱德SELECTED女士纯棉彩色图案休闲T恤C416201037 海军蓝 155/76/XS",
+        "price": 1129,
+        "detailUrl": "/detail.html?id=0",
+        "imgs": [
+          {
+            "url": "/assets/images/TB25v95qFXXXXXyXpXXXXXXXXXX_!!2175014669.jpg",
+            "width": 750,
+            "height": 796
+          },
+          {
+            "url": "/assets/images/TB2OD2XqFXXXXcvXXXXXXXXXXXX_!!2175014669.jpg",
+            "width": 750,
+            "height": 592
+          },
+          {
+            "url": "/assets/images/TB217qCqFXXXXb7XpXXXXXXXXXX_!!2175014669.jpg",
+            "width": 750,
+            "height": 664
+          }
+        ]
+      },
+      {
+        "id": "1",
+        "brand": "SHISHANGJF/时尚解放",
+        "title": "纯棉彩色图案休闲T恤",
+        "description": "材质成分: 棉95% 聚氨酯弹性纤维",
+        "price": 1456,
+        "detailUrl": "/detail.html?id=1",
+        "imgs": [
+          {
+            "url": "/assets/images/TB20dUSkpXXXXXMXXXXXXXXXXXX_!!2143552968.jpg",
+            "width": 790,
+            "height": 1546
+          },
+          {
+            "url": "/assets/images/TB2rJ9_jXXXXXbzXXXXXXXXXXXX_!!2143552968.jpg",
+            "width": 790,
+            "height": 1050
+          },
+          {
+            "url": "/assets/images/TB2w0MgkpXXXXb7XpXXXXXXXXXX_!!2143552968.jpg",
+            "width": 790,
+            "height": 1363
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "brand": "米品品",
+        "title": "5春装16少女装12初中高中学生",
+        "description": "主要颜色: 白色 粉红色 西瓜红 湖蓝色",
+        "price": 1129,
+        "detailUrl": "/detail.html?id=2",
+        "imgs": [
+          {
+            "url": "/assets/images/TB2OGgqlFXXXXXvXXXXXXXXXXXX_!!1986915551.jpg",
+            "width": 751,
+            "height": 1300
+          },
+          {
+            "url": "/assets/images/TB2D.POlFXXXXb9XpXXXXXXXXXX_!!1986915551.jpg",
+            "width": 751,
+            "height": 1134
+          },
+          {
+            "url": "/assets/images/TB26n.hlFXXXXa5XXXXXXXXXXXX_!!1986915551.jpg",
+            "width": 751,
+            "height": 1134
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "brand": "SHISHANGJF/时尚解放",
+        "title": "连帽t恤夏季韩版宽松短袖t恤女带帽大码女装上衣服半袖显瘦体恤衫",
+        "description": "主要颜色: 白+蓝7132 6049白色 2562 白色 6097 灰色 白色 灰色 军绿色 蓝色",
+        "price": 112,
+        "detailUrl": "/detail.html?id=3",
+        "imgs": [
+          {
+            "url": "/assets/images/TB2Arh2eXXXXXaeXXXXXXXXXXXX_!!197223493.jpg",
+            "width": 751,
+            "height": 828
+          },
+          {
+            "url": "/assets/images/TB2vPtIeXXXXXa.XpXXXXXXXXXX_!!197223493.jpg",
+            "width": 751,
+            "height": 632
+          },
+          {
+            "url": "/assets/images/TB2XEJQeXXXXXc6XXXXXXXXXXXX_!!197223493.jpg",
+            "width": 751,
+            "height": 590
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "brand": "Artsdon/阿仕顿",
+        "title": "阿仕顿男装2016夏季新品",
+        "description": "材质成分：棉95.2% 聚氨酯弹性",
+        "price": 232,
+        "detailUrl": "/detail.html?id=4",
+        "imgs": [
+          {
+            "url": "/assets/images/TB2eeyfkVXXXXchXpXXXXXXXXXX_!!1048771310.jpg",
+            "width": 791,
+            "height": 939
+          },
+          {
+            "url": "/assets/images/TB2.r1MkVXXXXboXXXXXXXXXXXX_!!1048771310.jpg",
+            "width": 791,
+            "height": 607
+          },
+          {
+            "url": "/assets/images/TB2VT9AkVXXXXc.XXXXXXXXXXXX_!!1048771310.jpg",
+            "width": 791,
+            "height": 1024
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "brand": "Afs Jeep/战地吉普",
+        "title": "短袖衬衫男夏季大码休闲青年纯棉军旅半截袖夏天纯棉衣服",
+        "description": "思莱德SELECTED女士纯棉彩色图案休闲T恤C416201037 海军蓝 155/76/XS",
+        "price": 133,
+        "detailUrl": "/detail.html?id=5",
+        "imgs": [
+          {
+            "url": "/assets/images/TB2Ct8GlFXXXXbdXpXXXXXXXXXX_!!1716957969.jpg",
+            "width": 791,
+            "height": 840
+          },
+          {
+            "url": "/assets/images/TB20z0SlFXXXXXJXXXXXXXXXXXX_!!1716957969.jpg",
+            "width": 791,
+            "height": 1252
+          },
+          {
+            "url": "/assets/images/TB2rK..dpXXXXakXpXXXXXXXXXX_!!1716957969.jpg",
+            "width": 791,
+            "height": 1101
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "brand": "翰代维",
+        "title": "夏季男士短袖T恤",
+        "description": "材质成分：棉95% 聚氨酯弹性纤维(氨纶)5%",
+        "price": 1555,
+        "detailUrl": "/detail.html?id=6",
+        "imgs": [
+          {
+            "url": "/assets/images/TB2UxneqpXXXXaCXXXXXXXXXXXX_!!827940181.jpg",
+            "width": 791,
+            "height": 963
+          },
+          {
+            "url": "/assets/images/TB2kEU_qVXXXXaEXXXXXXXXXXXX_!!827940181.jpg",
+            "width": 791,
+            "height": 445
+          },
+          {
+            "url": "/assets/images/TB2RAsWrFXXXXaaXXXXXXXXXXXX_!!827940181.jpg",
+            "width": 791,
+            "height": 649
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "brand": "tonlion/唐狮",
+        "title": "唐狮2016夏装新款纯棉短袖衬衫",
+        "description": "基础风格：时尚都市",
+        "price": 112,
+        "detailUrl": "/detail.html?id=7",
+        "imgs": [
+          {
+            "url": "/assets/images/TB2LynbppXXXXXpXpXXXXXXXXXX-188124207.jpg",
+            "width": 751,
+            "height": 522
+          },
+          {
+            "url": "/assets/images/TB2P0_AlpXXXXbcXXXXXXXXXXXX-188124207.jpg",
+            "width": 751,
+            "height": 992
+          },
+          {
+            "url": "/assets/images/TB2TefAlpXXXXbdXXXXXXXXXXXX-188124207.jpg",
+            "width": 751,
+            "height": 657
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "brand": "SELECTED",
+        "title": "夏季女士短袖t恤修身上衣V领",
+        "description": "主要颜色: 彩蓝 皮粉 烟灰色 白色 黑色 玫红色 红色 西瓜红 桔色 黄色 绿色 荧光绿 湖蓝色 紫罗兰 咖啡色",
+        "price": 2003,
+        "detailUrl": "/detail.html?id=8",
+        "imgs": [
+          {
+            "url": "/assets/images/TB2uw_dmVXXXXamXXXXXXXXXXXX_!!1640678487.jpg",
+            "width": 751,
+            "height": 841
+          },
+          {
+            "url": "/assets/images/TB2uNeRmVXXXXXKXpXXXXXXXXXX_!!1640678487.jpg",
+            "width": 751,
+            "height": 862
+          },
+          {
+            "url": "/assets/images/TB2cv9MmVXXXXauXpXXXXXXXXXX_!!1640678487.jpg",
+            "width": 751,
+            "height": 794
+          }
+        ]
+      },
+      {
+        "id": "9",
+        "brand": "Pariwhisper/芭黎密语",
+        "title": "夏装韩版新款短袖女t恤",
+        "description": "条纹经典不衰 清晰的 横细条纹 配色淡雅和谐",
+        "price": 123,
+        "detailUrl": "/detail.html?id=9",
+        "imgs": [
+          {
+            "url": "/assets/images/TB2PoiYkVXXXXbNXXXXXXXXXXXX_!!2030528091.jpg",
+            "width": 791,
+            "height": 665
+          },
+          {
+            "url": "/assets/images/TB2xjS0kVXXXXbrXXXXXXXXXXXX_!!2030528091.jpg",
+            "width": 791,
+            "height": 321
+          },
+          {
+            "url": "/assets/images/TB2NuVfoFXXXXbfXXXXXXXXXXXX_!!2030528091.jpg",
+            "width": 791,
+            "height": 648
+          }
+        ]
+      },
+      {
+        "id": "10",
+        "brand": "澳玛斯汀",
+        "title": "澳玛斯汀民族风新款女装",
+        "description": "【全棉　不变形　不缩水　不起球】【备注：黑色第一次洗会掉毛不易与其它一起洗】",
+        "price": 129,
+        "detailUrl": "/detail.html?id=10",
+        "imgs": [
+          {
+            "url": "/assets/images/TB2JhG5kXXXXXcwXpXXXXXXXXXX_!!598633737.jpg",
+            "width": 751,
+            "height": 623
+          },
+          {
+            "url": "/assets/images/TB2UmHBkXXXXXXSXpXXXXXXXXXX_!!598633737.jpg",
+            "width": 721,
+            "height": 761
+          },
+          {
+            "url": "/assets/images/TB2gTz3kXXXXXaGXXXXXXXXXXXX_!!598633737.jpg",
+            "width": 751,
+            "height": 583
+          }
+        ]
+      },
+      {
+        "id": "11",
+        "brand": "蜜妃儿",
+        "title": "蜜妃儿女装夏装2016新款潮白色宽松中长款",
+        "description": "新品上架 质量保证 青春活力 宽松舒适 百搭潮流",
+        "price": 512,
+        "detailUrl": "/detail.html?id=11",
+        "imgs": [
+          {
+            "url": "/assets/images/TB2ShvsoFXXXXbzXpXXXXXXXXXX_!!2192876822.jpg",
+            "width": 791,
+            "height": 960
+          },
+          {
+            "url": "/assets/images/TB2lYvWoFXXXXX5XXXXXXXXXXXX_!!2192876822.jpg",
+            "width": 791,
+            "height": 811
+          },
+          {
+            "url": "/assets/images/TB2L02moFXXXXcRXpXXXXXXXXXX_!!2192876822.jpg",
+            "width": 791,
+            "height": 900
+          }
+        ]
+      },
+      {
+        "id": "12",
+        "brand": "琴弦小姐",
+        "title": "加肥加大码女装胖mm夏装",
+        "description": "材质成分: 棉95% 聚氨酯弹性纤维(氨纶)5%",
+        "price": 1129,
+        "detailUrl": "/detail.html?id=12",
+        "imgs": [
+          {
+            "url": "/assets/images/TB2zlXMlFXXXXXEXpXXXXXXXXXX_!!2185282132.jpg",
+            "width": 791,
+            "height": 1186
+          },
+          {
+            "url": "/assets/images/TB2qlkLlpXXXXaCXpXXXXXXXXXX_!!2185282132.jpg",
+            "width": 791,
+            "height": 1481
+          },
+          {
+            "url": "/assets/images/TB2upQWlpXXXXcIXXXXXXXXXXXX_!!2185282132.jpg",
+            "width": 791,
+            "height": 1185
+          }
+        ]
+      }
+    ]
+  }
+}

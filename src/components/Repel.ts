@@ -89,7 +89,7 @@ class Repel {
   }
 
   /**
-   * 销毁实例
+   * 移除实例
    */
   public die() {
     this.center.x = null;
