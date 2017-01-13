@@ -37,23 +37,26 @@ class Repel {
   /**
    * 用于获取目标对象应用排斥效果后的新座标点
    * @param target {IPosition} 作用目标对象
-   * @return {egret.Point} 目标对象应用排斥效果后的新座标点
+   * @return {point: egret.Point, offsetDistance: number, effectStrong: number} 目标对象应用排斥效果后的新座标点, 作用后偏移距离, 和作用强度
    */
-  public use(target: IPosition): egret.Point {
+  public use(target: IPosition): {point: egret.Point, offsetDistance: number, effectStrong: number} {
     const point = new egret.Point(target.x, target.y);
     const {center, strong, radius} = this;
     const distance = egret.Point.distance(point, center);
+    let effectStrong = 0;
+    let offsetDistance = 0;
     if (distance < radius) {
       const r1 = radius * strong;
-      const offsetDistance = (radius - distance) / radius * r1;
+      offsetDistance = (radius - distance) / radius * r1;
       const distanceX = point.x - center.x;
       const distanceY = point.y - center.y;
       const offsetY = offsetDistance / distance * distanceY;
       const offsetX = offsetDistance / distance * distanceX;
       point.x += offsetX;
       point.y += offsetY;
+      effectStrong = 1 - distance / radius;
     }
-    return point;
+    return {point, offsetDistance, effectStrong};
   }
 
   /**

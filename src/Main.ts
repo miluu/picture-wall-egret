@@ -13,7 +13,7 @@ class Main extends egret.DisplayObjectContainer {
     this.touchEnabled = true;
     _.times(20, (row) => {
       _.times(20, (col) => {
-        let item = new Item(10, 10);
+        let item = new Item(30, 30);
         item.basePosition.x = col * 40;
         item.basePosition.y = row * 40;
         this.addChild(item);
@@ -36,9 +36,11 @@ class Main extends egret.DisplayObjectContainer {
   private _animate() {
     TWEEN.update();
     _.forEach(this.items, (item) => {
-      let point = this.repel.use(item.basePosition);
+      let {point, effectStrong} = this.repel.use(item.basePosition);
       item.x = point.x;
       item.y = point.y;
+      item.alpha = 1 - effectStrong;
+      item.scaleX = item.scaleY = 1 - effectStrong;
     });
   }
 
