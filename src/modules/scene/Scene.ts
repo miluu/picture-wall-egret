@@ -3,6 +3,9 @@ namespace scene {
     private _items: Item[] = [];
     private _repels: Repel[] = [];
     // private _swiper: swiper.Swiper;
+
+    public state: State = new State();
+
     constructor() {
       super();
     }
