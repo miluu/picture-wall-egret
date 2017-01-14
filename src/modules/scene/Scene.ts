@@ -4,7 +4,7 @@ namespace scene {
     private _repels: Repel[] = [];
     // private _swiper: swiper.Swiper;
 
-    public state: State = new State();
+    public state: IState;
 
     constructor() {
       super();

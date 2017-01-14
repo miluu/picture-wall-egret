@@ -1,13 +1,13 @@
 namespace scene {
-  export class State {
-    private _bgImage: string;
-    private _sceneWidth: number;
-    private _sceneHeight: number;
-    private _padding: number;
-    private _rowCount: number;
-
-    public offset: number;
-    public speed: number;
-    public bgColor: number;
+  export interface IState {
+    sceneWidth: number;
+    sceneHeight: number;
+    padding: number;
+    rowCount: number;
+    offset: number;
+    speed: number;
+    bgColor: number;
+    bgImage: string;
+    apiList: string[];
   }
 }
