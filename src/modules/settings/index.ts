@@ -1,6 +1,6 @@
 namespace settings {
 
-  interface IAppSettings {
+  export interface IAppSettings {
     sceneWidth: number;
     sceneHeight: number;
     rowCount: number;
@@ -14,16 +14,25 @@ namespace settings {
     [key: string]: any;
   }
 
+  type TSubmitCallback = (IAppSettings?) => any;
+
   /**
    * app 设置
    */
   export let appSettings: IAppSettings;
 
   /**
-   * 页面加载后运行初始化设置
+   * 点击提交时回调方法
    */
-  export function init() {
+  let submitCallback: TSubmitCallback;
+
+  /**
+   * 页面加载后运行初始化设置
+   * @param callback {TSubmitCallback} 点击提交时回调方法
+   */
+  export function init(callback?: TSubmitCallback) {
     window.onload = _init;
+    submitCallback = callback;
   }
 
   /**
@@ -84,6 +93,9 @@ namespace settings {
       }
       saveStorageSettings(appSettings);
       showEgretPlayer();
+      if (submitCallback) {
+        submitCallback(appSettings);
+      }
     };
   }
 
@@ -160,7 +172,6 @@ namespace settings {
           parsedValue = value;
           break;
       }
-      // console.log(`${key}: ${valueType} = ${parsedValue}`);
       retObj[key] = parsedValue;
     });
     return retObj;
@@ -172,7 +183,6 @@ namespace settings {
    * @param form {HTMLFormElement} 表单 DOM 元素
    */
   function setSettingsValueToForm(settings: IAppSettings, form: HTMLFormElement) {
-    console.log(settings);
     _.forIn(settings, (value, key) => {
       if (!value) {
         return;

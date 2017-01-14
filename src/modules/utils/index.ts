@@ -13,4 +13,25 @@ namespace util {
     y += center.y;
     return new egret.Point(x, y);
   }
+
+  /**
+   * 将 '#ddd', '#123456' 格式的 css 颜色字符串转换成数字
+   * @param colorString {number} 要进行转换的字符串
+   * @return {number} 转换后的数字，转换不成功则默认为 0 (黑色)
+   */
+  export function colorStringToNumber(colorString: string): number {
+    let str = colorString.replace('#', '');
+    if (str.length === 3) {
+      let charArr = str.split('');
+      str = _.map(str, (c) => c + c).join('');
+    }
+    return parseInt(str, 16) || 0x000000;
+  }
+
+  export function fixHeight(originSize: scene.ISize, height: number): scene.ISize {
+    let newSize = <scene.ISize>{};
+    newSize.height = height;
+    newSize.width = originSize.width / originSize.height * newSize.height;
+    return newSize;
+  }
 };

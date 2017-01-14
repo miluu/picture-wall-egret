@@ -1,8 +1,4 @@
 namespace scene {
-  export interface IPosition {
-    x: number;
-    y: number;
-  }
 
   /**
    * Repel 作用于场景中的一个排斥源对象，会对靠近其半径范围内的对象产生排斥效果，排斥效果从中心逐渐衰减到边缘

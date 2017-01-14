@@ -1,13 +1,18 @@
 class Main extends egret.DisplayObjectContainer {
+  scene: scene.Scene;
 
   public constructor() {
     super();
-    settings.init();
     this.addEventListener(egret.Event.ADDED_TO_STAGE, this._onAddToStage, this);
   }
 
   private _onAddToStage() {
-    const item = new scene.Item(100, 100);
-    this.addChild(item);
+    this.scene = new scene.Scene();
+    this.addChild(this.scene);
+    settings.init(this._sceneStart.bind(this));
+  }
+
+  private _sceneStart(appSetting: settings.IAppSettings) {
+    this.scene.useSettings(appSetting);
   }
 }
