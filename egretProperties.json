@@ -16,9 +16,6 @@
 			"name": "game"
 		},
 		{
-			"name": "eui"
-		},
-		{
 			"name": "tween",
 			"path": "../egret-game-library/tween"
 		},
