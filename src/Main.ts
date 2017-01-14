@@ -1,4 +1,4 @@
-class Main extends eui.UILayer {
+class Main extends egret.DisplayObjectContainer {
 
   public constructor() {
     super();
@@ -7,7 +7,7 @@ class Main extends eui.UILayer {
   }
 
   private _onAddToStage() {
-    const label = new eui.Label('Hello World!');
-    this.addChild(label);
+    const item = new scene.Item(100, 100);
+    this.addChild(item);
   }
 }
