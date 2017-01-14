@@ -2,6 +2,7 @@ class Main extends eui.UILayer {
 
   public constructor() {
     super();
+    settings.init();
     this.addEventListener(egret.Event.ADDED_TO_STAGE, this._onAddToStage, this);
   }
 
