@@ -11,6 +11,9 @@ namespace scene {
     public basePosition: egret.Point = new egret.Point(0, 0);
     public rowIndex: number;
     public acceptRepel: boolean = false;
+    public attatchedRepel: Repel;
+    public isBacking: boolean = false;
+
     constructor(itemWidth: number, itemHeight: number, bgColor?: number) {
       super();
       this.touchEnabled = true;

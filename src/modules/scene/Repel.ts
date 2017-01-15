@@ -67,21 +67,20 @@ namespace scene {
     }
 
     /**
-     * 指定时间内渐变设置强度值至指定值
-     * @param strong {number} 最终的强度值
+     * 指定时间内渐变设置选项至指定值
+     * @param options {strong: number, radius: number} 最终的选项
      * @param time {number} 执行时间间隔
      * @param callback {(Repel?) => any} 执行完毕后的回调函数，可选参数为自身
      */
-    public toStrong(strong: number, time: number, callback?: (Repel?) => any) {
+    public toOptions(options: {strong: number, radius: number}, time: number, callback?: (Repel?) => any) {
       const repel = this;
       let tw = new TWEEN.Tween(this)
         .easing(TWEEN.Easing.Cubic.Out)
-        .to({strong}, time)
+        .to(options, time)
         .onComplete(() => {
           if (callback) {
             callback(this);
           }
-          TWEEN.remove(tw);
         })
         .start();
     }

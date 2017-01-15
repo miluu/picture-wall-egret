@@ -158,7 +158,7 @@ namespace scene {
       let itemsCount = this._items.length;
       console.log('start enter.');
       _.forEach(this._items, (item) => {
-        let time = 3000 + Math.random() * 5000;
+        let time = 2000 + Math.random() * 4000;
         let toY = this._getRowItemY(item.rowIndex);
         let tw = new TWEEN.Tween(item.basePosition)
           .to({y: toY}, time)
@@ -251,10 +251,8 @@ namespace scene {
             item.x = point.x;
             item.y = point.y;
             item.alpha = item.scaleX = item.scaleY = (1 - offsetStrong);
-            // let itemPositionWithRepel = this._repels[0].use(itemPositionWithOffset);
-            // item.x = itemPositionWithRepel.point.x;
-            // item.y = itemPositionWithRepel.point.y;
-            // item.alpha = item.scaleX = item.scaleY = (1 - itemPositionWithRepel.effectStrong);
+          } else if (item.isBacking) {
+            console.log(111);
           } else {
             item.x = itemPositionWithOffset.x;
             item.y = itemPositionWithOffset.y;
@@ -322,12 +320,76 @@ namespace scene {
     }
 
     private _select(item: Item) {
+      if (this.state.selectedItem) {
+        this._itemBack(this.state.selectedItem);
+      }
       this.state.selectedItem = item;
+      let repel = this._addRepel(item, item.x, item.y, 0, 0);
+      repel.toOptions({
+        strong: 0.5,
+        radius: this._getRowHeight() * 2
+      }, 1000, () => {
+        repel.toOptions({
+          strong: 0.65,
+          radius: this._getRepelRadius()
+        }, 1500);
+      });
+
+      let tw1 = new TWEEN.Tween(item)
+        .to({
+          scaleX: 0.8,
+          scaleY: 0.8,
+          opacity: 1
+        }, 1000)
+        .easing(TWEEN.Easing.Cubic.InOut)
+        .start();
+      let tw2 = new TWEEN.Tween(item)
+        .easing(TWEEN.Easing.Back.Out)
+        .to({
+          x: this.state.sceneWidth / 2,
+          y: this.state.sceneHeight / 2,
+          scaleX: 3,
+          scaleY: 3
+        }, 1500);
+      tw1.chain(tw2);
+    }
+
+    private _itemBack(item: Item) {
+      let repel = item.attatchedRepel;
+      item.isBacking = true;
+      if (repel) {
+        repel.toOptions({radius: 0, strong: 0}, 1000, () => {
+          item.acceptRepel = true;
+          item.isBacking = false;
+          this._removeRepel(repel);
+        });
+      }
+    }
+
+    private _removeRepel(repel: Repel) {
+      _.remove(this._repels, repel);
+      repel.die();
+    }
+
+    private _addRepel(item?: Item, x: number = 0, y: number = 0, radius: number = 0, strong: number = 0): Repel {
+      let repel = new Repel(x, y, radius, strong);
+      item.attatchedRepel = repel;
+      this._repels.push(repel);
+      if (item) {
+        repel.attach(item);
+      }
+      return repel;
     }
 
     private _getRowItemY(rowIndex): number {
       let itemHeight = this._getRowHeight();
       return (this.state.padding + itemHeight) * rowIndex + itemHeight / 2 + this.state.padding;
+    }
+
+    private _getRepelRadius(): number {
+      const {sceneWidth, sceneHeight} = this.state;
+      const shorter = _.min([sceneWidth, sceneHeight]);
+      return shorter / 1.7;
     }
 
   }
