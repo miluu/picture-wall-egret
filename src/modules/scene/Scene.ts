@@ -1,17 +1,40 @@
 namespace scene {
+  /**
+   * @class Scene 场景类
+   */
   export class Scene extends egret.DisplayObjectContainer {
+    /**
+     * 添加场景中的所有 Item 实例
+     */
     private _items: Item[] = [];
+
+    /**
+     * 添加到场景中的所有 Repel 实例
+     */
     private _repels: Repel[] = [];
 
+    /**
+     * 场景的背景，包含背景色与背景图片
+     */
     private _bg: SceneBg;
 
+    /**
+     * 存储场景各种状态的对象
+     */
     public state: IState = <IState>{};
 
+    /**
+     * @constructor 生成一个场景实例
+     */
     constructor() {
       super();
       console.log(this);
     }
 
+    /**
+     * 应用设置到场景，并开始播放第一个 api 场景
+     * @param settings {settings.IAppSettings} 设置参数
+     */
     public useSettings(settings: settings.IAppSettings) {
       this.state.sceneWidth = settings.sceneWidth;
       this.state.sceneHeight = settings.sceneHeight;
@@ -25,15 +48,17 @@ namespace scene {
       this.state.autoResetTime = settings.autoResetTime;
       this.state.offset = 0;
       this._createBg();
-      // this.mask = new egret.Rectangle(0, 0, this.state.sceneWidth, this.state.sceneHeight);
+      this.mask = new egret.Rectangle(0, 0, this.state.sceneWidth, this.state.sceneHeight);
 
       if (this.state.apiList.length) {
         this.start();
-        let repel = new Repel(300, 300, 300, 0.4);
-        this._repels = [repel];
       }
     }
 
+    /**
+     * 开始播放场景
+     * @param apiIndex {number} 全用的 api 序号，默认为 0
+     */
     public start(apiIndex: number = 0) {
       console.log(`use api ${apiIndex}: ${this.state.apiList[apiIndex]}`);
       this.state.selectedApiIndex = apiIndex;
@@ -55,6 +80,9 @@ namespace scene {
       });
     }
 
+    /**
+     * 播放下一个 api 的场景
+     */
     public next() {
       let {selectedApiIndex, apiList} = this.state;
       let apiCount = apiList.length;
@@ -65,6 +93,10 @@ namespace scene {
       this.start(selectedApiIndex);
     }
 
+    /**
+     * 将 item 位置移动到所在行的末尾
+     * @param {Item} 要移动的 item
+     */
     private _moveItemToRowTail(item: Item) {
       const {basePosition, rowIndex, width} = item;
       const {rowWidthList, padding} = this.state;
@@ -73,15 +105,30 @@ namespace scene {
       basePosition.x = rowWidth + padding + width / 2;
     }
 
+    /**
+     * 根据设置参数获取每一行的高度
+     * @return {number} 根据设置参数获取每一行的高度
+     */
     private _getRowHeight(): number {
       const {sceneHeight, rowCount, padding} = this.state;
       return (sceneHeight - (rowCount + 1) * padding) / rowCount;
     }
 
+    /**
+     * 获取 item 应用偏移量之后的坐标点
+     * @param item {Item} item 对象
+     * @return {egret.Point} 应用偏移量之后的坐标点
+     */
     private _getItemPositionWithOffset(item: Item): egret.Point {
       return new egret.Point(item.basePosition.x + this.state.offset, item.basePosition.y);
     }
 
+    /**
+     * 判断 x 值是否在场景左侧，可设置偏移范围
+     * @param x {number} x 坐标值
+     * @param rangeOffset {number} 偏移范围
+     * @return {boolean}
+     */
     private _outOfSceneLeftSide(x: number, rangeOffset: number = 50): boolean {
       return x < -rangeOffset;
     }
@@ -138,10 +185,9 @@ namespace scene {
       let itemsCount = this._items.length;
       let done = 0;
       console.log('start leave.');
-      _.forEach(this._items, (item) => {
+      _.forEach(this._items, (item, index) => {
         if (item === this.state.selectedItem) {
           itemsCount--;
-          _.remove(this._items, item);
           return;
         }
         let rotation = 180 * Math.random();
@@ -151,7 +197,7 @@ namespace scene {
           y: item.basePosition.y,
           alpha: item.alpha,
           rotation: item.rotation
-        }
+        };
         let tw = new TWEEN.Tween(twObj)
           .to({
             y: toY,
@@ -166,6 +212,7 @@ namespace scene {
           })
           .onComplete(() => {
             done++;
+            this.removeChild(item);
             _.remove(this._items, item);
             if (done === itemsCount) {
               console.log('leave end.');
@@ -174,22 +221,40 @@ namespace scene {
           })
           .start();
       });
+      if (this.state.selectedItem) {
+        _.remove(this._items, this.state.selectedItem);
+      }
     }
 
     private _onEnterFrame() {
-      const {speed} = this.state;
+      const {speed, selectedItem} = this.state;
       this.state.offset -= speed;
       _.forEach(this._items, (item) => {
+        if (item === selectedItem) {
+          return;
+        }
         let itemPositionWithOffset = this._getItemPositionWithOffset(item);
         if (this._itemOutOfSceneRightSide(item, 50)) {
           item.visible = false;
         } else {
           item.visible = true;
           if (item.acceptRepel) {
-            let itemPositionWithRepel = this._repels[0].use(itemPositionWithOffset);
-            item.x = itemPositionWithRepel.point.x;
-            item.y = itemPositionWithRepel.point.y;
-            item.alpha = item.scaleX = item.scaleY = (1 - itemPositionWithRepel.effectStrong);
+            let point = itemPositionWithOffset;
+            let offsetDistance = 0;
+            let offsetStrong = 0;
+            _.forEach(this._repels, (repel) => {
+              let repelEffect = repel.use(point);
+              point = repelEffect.point;
+              offsetDistance += repelEffect.offsetDistance;
+              offsetStrong += repelEffect.effectStrong;
+            });
+            item.x = point.x;
+            item.y = point.y;
+            item.alpha = item.scaleX = item.scaleY = (1 - offsetStrong);
+            // let itemPositionWithRepel = this._repels[0].use(itemPositionWithOffset);
+            // item.x = itemPositionWithRepel.point.x;
+            // item.y = itemPositionWithRepel.point.y;
+            // item.alpha = item.scaleX = item.scaleY = (1 - itemPositionWithRepel.effectStrong);
           } else {
             item.x = itemPositionWithOffset.x;
             item.y = itemPositionWithOffset.y;
