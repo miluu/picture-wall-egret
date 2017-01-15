@@ -122,9 +122,11 @@ namespace scene {
             if (done === itemsCount) {
               this.state.status = SCENE_STATUS.RUNNING;
               console.log('enter end.');
-              _.delay(() => {
+              let timer = new egret.Timer(this.state.sceneChangeTime * 1000, 1);
+              timer.start();
+              timer.addEventListener(egret.TimerEvent.TIMER_COMPLETE, function() {
                 this._leave();
-              }, this.state.sceneChangeTime * 1000);
+              }, this);
             }
           });
       });
