@@ -1,4 +1,10 @@
 namespace scene {
+  export const SCENE_STATUS = {
+    RUNNING: 'running',
+    LEAVE: 'leave',
+    ENTER: 'enter'
+  };
+
   export interface IState {
     sceneWidth: number;
     sceneHeight: number;
@@ -13,6 +19,8 @@ namespace scene {
     apiList: string[];
     rowWidthList: number[];
     selectedItem: Item;
+    status: string;
+    selectedApiIndex: number;
   }
 
   export interface IApi {

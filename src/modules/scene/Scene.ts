@@ -9,6 +9,7 @@ namespace scene {
 
     constructor() {
       super();
+      console.log(this);
     }
 
     public useSettings(settings: settings.IAppSettings) {
@@ -24,17 +25,18 @@ namespace scene {
       this.state.autoResetTime = settings.autoResetTime;
       this.state.offset = 0;
       this._createBg();
-      this.mask = new egret.Rectangle(0, 0, this.state.sceneWidth, this.state.sceneHeight);
+      // this.mask = new egret.Rectangle(0, 0, this.state.sceneWidth, this.state.sceneHeight);
 
       if (this.state.apiList.length) {
         this.start();
         let repel = new Repel(300, 300, 300, 0.4);
         this._repels = [repel];
-        console.log(repel);
       }
     }
 
     public start(apiIndex: number = 0) {
+      console.log(`use api ${apiIndex}: ${this.state.apiList[apiIndex]}`);
+      this.state.selectedApiIndex = apiIndex;
       ajax.getJson(this.state.apiList[apiIndex], {
         onError: () => {
           alert('加载失败！');
@@ -45,10 +47,22 @@ namespace scene {
             return;
           }
           const apiItems = (<IApi>data).result.items;
+          this.state.status = SCENE_STATUS.ENTER;
           this._createItems(apiItems);
           this._run();
+          this._enter();
         }
       });
+    }
+
+    public next() {
+      let {selectedApiIndex, apiList} = this.state;
+      let apiCount = apiList.length;
+      selectedApiIndex++;
+      if (selectedApiIndex > apiCount - 1) {
+        selectedApiIndex = 0;
+      }
+      this.start(selectedApiIndex);
     }
 
     private _moveItemToRowTail(item: Item) {
@@ -92,6 +106,74 @@ namespace scene {
       this.addEventListener(egret.Event.ENTER_FRAME, this._onEnterFrame, this);
     }
 
+    private _enter() {
+      let done = 0;
+      let itemsCount = this._items.length;
+      console.log('start enter.');
+      _.forEach(this._items, (item) => {
+        let time = 3000 + Math.random() * 5000;
+        let toY = this._getRowItemY(item.rowIndex);
+        let tw = new TWEEN.Tween(item.basePosition)
+          .to({y: toY}, time)
+          .easing(TWEEN.Easing.Cubic.Out)
+          .start()
+          .onComplete(() => {
+            done++;
+            if (done === itemsCount) {
+              this.state.status = SCENE_STATUS.RUNNING;
+              console.log('enter end.');
+              _.delay(() => {
+                this._leave();
+              }, this.state.sceneChangeTime * 1000);
+            }
+          });
+      });
+    }
+
+    private _leave() {
+      this.state.status = SCENE_STATUS.LEAVE;
+      let leaveDirection = Math.random() > 0.5 ? 1 : -1;
+      let itemsCount = this._items.length;
+      let done = 0;
+      console.log('start leave.');
+      _.forEach(this._items, (item) => {
+        if (item === this.state.selectedItem) {
+          itemsCount--;
+          _.remove(this._items, item);
+          return;
+        }
+        let rotation = 180 * Math.random();
+        let time = 2000 + Math.random() * 3000;
+        let toY = item.y + this.state.sceneHeight * leaveDirection;
+        let twObj = {
+          y: item.basePosition.y,
+          alpha: item.alpha,
+          rotation: item.rotation
+        }
+        let tw = new TWEEN.Tween(twObj)
+          .to({
+            y: toY,
+            alpha: 0.5,
+            rotation,
+          }, time)
+          .easing(TWEEN.Easing.Cubic.In)
+          .onUpdate(() => {
+            item.basePosition.y = twObj.y;
+            item.alpha = twObj.alpha;
+            item.rotation = twObj.rotation;
+          })
+          .onComplete(() => {
+            done++;
+            _.remove(this._items, item);
+            if (done === itemsCount) {
+              console.log('leave end.');
+              this.next();
+            }
+          })
+          .start();
+      });
+    }
+
     private _onEnterFrame() {
       const {speed} = this.state;
       this.state.offset -= speed;
@@ -131,6 +213,7 @@ namespace scene {
     private _createItems(apiItems: IApiItem[]) {
       const itemHeight = this._getRowHeight();
       const state = this.state;
+      const enterDirection = Math.random() > 0.5 ? 1 : -1;
       state.rowWidthList = [];
       if (this._items) {
         _.forEach(this._items, (item) => {
@@ -148,7 +231,7 @@ namespace scene {
         let rowIndex = getMinWidthRowIndex();
         let rowWidth = state.rowWidthList[rowIndex];
         item.rowIndex = rowIndex;
-        item.basePosition.y = getRowItemY(rowIndex);
+        item.basePosition.y = this._getRowItemY(rowIndex) + this.state.sceneHeight * enterDirection;
         item.basePosition.x = rowWidth + state.padding + item.width / 2;
         rowWidth += item.width + this.state.padding;
         state.rowWidthList[rowIndex] = rowWidth;
@@ -156,17 +239,8 @@ namespace scene {
         item.y = item.basePosition.y;
         item.acceptRepel = true;
         item.addEventListener(egret.TouchEvent.TOUCH_TAP, function() {
-          repel.strong = 0;
-          repel.toStrong(0.4, 1000);
-          if (repel.attachObject === item) {
-            repel.attach();
-            item.acceptRepel = true;
-          } else {
-            if (repel.attachObject) {
-              (<Item>repel.attachObject).acceptRepel = true;
-            }
-            repel.attach(item);
-            item.acceptRepel = false;
+          if (this.state.status !== SCENE_STATUS.LEAVE) {
+            this._select(item);
           }
         }, this);
         this.addChild(item);
@@ -178,11 +252,17 @@ namespace scene {
         let index = _.findIndex(state.rowWidthList, width => width === minWidth);
         return index;
       }
-
-      function getRowItemY(rowIndex): number {
-        return (state.padding + itemHeight) * rowIndex + itemHeight / 2 + state.padding;
-      }
     }
+
+    private _select(item: Item) {
+      this.state.selectedItem = item;
+    }
+
+    private _getRowItemY(rowIndex): number {
+      let itemHeight = this._getRowHeight();
+      return (this.state.padding + itemHeight) * rowIndex + itemHeight / 2 + this.state.padding;
+    }
+
   }
 
   class SceneBg extends egret.DisplayObjectContainer {
