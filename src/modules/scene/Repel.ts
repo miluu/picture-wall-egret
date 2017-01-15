@@ -47,7 +47,7 @@ namespace scene {
         const r1 = radius * strong;
         offsetDistance = (radius - distance) / radius * r1;
         const distanceX = point.x - center.x;
-        const distanceY = point.y - center.y;
+        const distanceY = point.y - center.y || 1;
         const offsetY = offsetDistance / distance * distanceY;
         const offsetX = offsetDistance / distance * distanceX;
         point.x += offsetX;

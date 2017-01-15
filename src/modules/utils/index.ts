@@ -28,6 +28,12 @@ namespace util {
     return parseInt(str, 16) || 0x000000;
   }
 
+  /**
+   * 将一个尺寸等比缩放至指定高度后的新尺寸
+   * @param originSize {scene.ISize} 原始尺寸，包含宽、高信息
+   * @param height {number} 新的高度值
+   * @return {scene.ISize} 调整后的高度
+   */
   export function fixHeight(originSize: scene.ISize, height: number): scene.ISize {
     let newSize = <scene.ISize>{};
     newSize.height = height;

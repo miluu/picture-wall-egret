@@ -83,6 +83,7 @@ namespace settings {
     );
 
     setSettingsValueToForm(appSettings, settingsForm);
+    (<HTMLInputElement>settingsForm.querySelector('input')).focus();
 
     settingsForm.onsubmit = function(e) {
       e.preventDefault();

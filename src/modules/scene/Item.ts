@@ -2,13 +2,18 @@ namespace scene {
   export class Item extends egret.DisplayObjectContainer {
     static instanceCount = 0;
 
+    public $text: egret.TextField;
+
     private _itemWidth: number;
     private _itemHeight: number;
     private _bgColor: number;
     private _bg: egret.Shape = new egret.Shape();
     public basePosition: egret.Point = new egret.Point(0, 0);
+    public rowIndex: number;
+    public acceptRepel: boolean = false;
     constructor(itemWidth: number, itemHeight: number, bgColor?: number) {
       super();
+      this.touchEnabled = true;
       this._itemWidth = itemWidth;
       this._itemHeight = itemHeight;
       this._bgColor = bgColor || 0xdddddd;
@@ -27,7 +32,7 @@ namespace scene {
       this.addChild(this._bg);
     }
     private _addIndex() {
-      const text = new egret.TextField();
+      const text = this.$text = new egret.TextField();
       text.text = Item.instanceCount.toString();
       text.size = 12;
       text.textColor = 0x000000;

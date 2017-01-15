@@ -14,7 +14,7 @@ var game_file_list = [
 	"bin-debug/modules/scene/Item.js",
 	"bin-debug/modules/scene/Repel.js",
 	"bin-debug/modules/scene/Scene.js",
-	"bin-debug/modules/scene/State.js",
+	"bin-debug/modules/scene/interface.js",
 	"bin-debug/modules/settings/index.js",
 	"bin-debug/modules/swiper/Slide.js",
 	"bin-debug/modules/swiper/Swiper.js",

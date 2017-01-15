@@ -11,6 +11,8 @@ namespace scene {
     sceneChangeTime: number;
     autoResetTime: number;
     apiList: string[];
+    rowWidthList: number[];
+    selectedItem: Item;
   }
 
   export interface IApi {
