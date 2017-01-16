@@ -63,19 +63,19 @@ namespace scene {
       console.log(`use api ${apiIndex}: ${this.state.apiList[apiIndex]}`);
       this.state.selectedApiIndex = apiIndex;
       ajax.getJson(this.state.apiList[apiIndex], {
+        onProgress: function(loaded, totle) {
+          console.log(`${loaded} / ${totle}`);
+        },
         onError: () => {
           alert('加载失败！');
         },
-        onComplete: (data) => {
-          if (!((<IApi>data).status === 'success')) {
-            alert((<IApi>data).message || '加载失败!');
+        onComplete: (_data) => {
+          let data = <IApi>_data;
+          if (!(data.status === 'success')) {
+            alert(data.message || '加载失败!');
             return;
           }
-          const apiItems = (<IApi>data).result.items;
-          this.state.status = SCENE_STATUS.ENTER;
-          this._createItems(apiItems);
-          this._run();
-          this._enter();
+          this._loadSources(data);
         }
       });
     }
@@ -133,6 +133,40 @@ namespace scene {
       return x < -rangeOffset;
     }
 
+    private _loadSources(data: IApi) {
+      let imagesCount = this._getApiImagesCount(data);
+      let successCount = 0;
+      let failedCount = 0;
+      const apiItems = data.result.items;
+      this.state.status = SCENE_STATUS.LOADING;
+      _.forEach(apiItems, (item) => {
+        _.forEach(item.imgs, (img) => {
+          ajax.getTexture(img.url, {
+            onComplete: (texture) => {
+              successCount++;
+              img.texture = texture;
+              loadedHandle();
+            },
+            onError: () => {
+              failedCount++;
+              loadedHandle();
+            }
+          });
+        });
+      });
+
+      function loadedHandle() {
+        console.log(`totle: ${imagesCount}, success: ${successCount}, failed: ${failedCount}`);
+        if (successCount + failedCount === imagesCount) {
+          console.log('资源加载完毕！');
+          console.log(apiItems);
+          // this._createItems(apiItems);
+          // this._run();
+          // this._enter();
+        }
+      }
+    }
+
     private _itemOutOfSceneLeftSide(item: Item, rangeOffset: number = 50): boolean {
       let {x} = this._getItemPositionWithOffset(item);
       x = x + item.width / 2;
@@ -154,6 +188,7 @@ namespace scene {
     }
 
     private _enter() {
+      this.state.status = SCENE_STATUS.ENTER;
       let done = 0;
       let itemsCount = this._items.length;
       console.log('start enter.');
@@ -390,6 +425,17 @@ namespace scene {
       const {sceneWidth, sceneHeight} = this.state;
       const shorter = _.min([sceneWidth, sceneHeight]);
       return shorter / 1.7;
+    }
+
+    private _getApiImagesCount(api: IApi): number {
+      let items = api.result.items;
+      let count = 0;
+      _.forEach(items, (item) => {
+        if (item.imgs) {
+          count += item.imgs.length;
+        }
+      });
+      return count;
     }
 
   }

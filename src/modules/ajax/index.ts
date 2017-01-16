@@ -23,7 +23,8 @@ namespace ajax {
     let defaultOpt: IAjaxOptions = {
       type: 'text',
       onComplete: function() {},
-      onError: function() {}
+      onError: function() {},
+      onProgress: function() {}
     };
     let combinedOptions = _.assign({}, defaultOpt, options) as IAjaxOptions;
     if (combinedOptions.type === 'image') {
@@ -40,7 +41,7 @@ namespace ajax {
       combinedOptions.onError();
     }, null);
     loader.addEventListener(egret.ProgressEvent.PROGRESS, function(e: egret.ProgressEvent) {
-      console.log(`${e.bytesLoaded} / ${e.bytesTotal}`);
+      combinedOptions.onProgress(e.bytesLoaded, e.bytesTotal);
     }, null);
   }
 

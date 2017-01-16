@@ -2,7 +2,8 @@ namespace scene {
   export const SCENE_STATUS = {
     RUNNING: 'running',
     LEAVE: 'leave',
-    ENTER: 'enter'
+    ENTER: 'enter',
+    LOADING: 'loading'
   };
 
   export interface IState {
@@ -49,6 +50,7 @@ namespace scene {
 
   export interface IApiImg extends ISize {
     url: string;
+    texture: egret.Texture;
   }
 
   export interface IApiExtraItem {
