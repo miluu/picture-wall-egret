@@ -389,7 +389,7 @@ namespace scene {
         }, 1500);
       });
 
-      let scale = this._getLargeScale();
+      let scale = this._getLargeItemScale();
       let tw1 = new TWEEN.Tween(item)
         .to({
           scaleX: 0.8,
@@ -456,7 +456,7 @@ namespace scene {
       return shorter;
     }
 
-    private _getLargeScale(): number {
+    private _getLargeItemScale(): number {
       const shorter = this._getShorterWidth();
       const height = shorter * 0.43;
       const itemHeight = this._getRowHeight();
