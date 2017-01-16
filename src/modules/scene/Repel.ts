@@ -72,7 +72,7 @@ namespace scene {
      * @param time {number} 执行时间间隔
      * @param callback {(Repel?) => any} 执行完毕后的回调函数，可选参数为自身
      */
-    public toOptions(options: {strong: number, radius: number}, time: number, callback?: (Repel?) => any) {
+    public toOptions(options: {strong?: number, radius?: number}, time: number, callback?: (Repel?) => any) {
       const repel = this;
       let tw = new TWEEN.Tween(this)
         .easing(TWEEN.Easing.Cubic.Out)

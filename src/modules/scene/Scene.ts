@@ -28,7 +28,6 @@ namespace scene {
      */
     constructor() {
       super();
-      console.log(this);
     }
 
     /**
@@ -60,11 +59,9 @@ namespace scene {
      * @param apiIndex {number} 全用的 api 序号，默认为 0
      */
     public start(apiIndex: number = 0) {
-      console.log(`use api ${apiIndex}: ${this.state.apiList[apiIndex]}`);
       this.state.selectedApiIndex = apiIndex;
       ajax.getJson(this.state.apiList[apiIndex], {
         onProgress: function(loaded, totle) {
-          console.log(`${loaded} / ${totle}`);
         },
         onError: () => {
           alert('加载失败！');
@@ -156,9 +153,7 @@ namespace scene {
       });
 
       function loadedHandle(thisObj: Scene) {
-        console.log(`totle: ${imagesCount}, success: ${successCount}, failed: ${failedCount}`);
         if (successCount + failedCount === imagesCount) {
-          console.log('资源加载完毕！');
           thisObj._createItems(apiItems);
           // Nice code!
           thisObj.once(egret.Event.ENTER_FRAME, function() {
@@ -199,7 +194,6 @@ namespace scene {
       return this._outOfSceneRightSide(x, rangeOffset);
     }
     private _run() {
-
       this.addEventListener(egret.Event.ENTER_FRAME, this._onEnterFrame, this);
     }
 
@@ -207,7 +201,6 @@ namespace scene {
       this.state.status = SCENE_STATUS.ENTER;
       let done = 0;
       let itemsCount = this._items.length;
-      console.log('start enter.');
       _.forEach(this._items, (item) => {
         let time = 2000 + Math.random() * 4000;
         let toY = this._getRowItemY(item.rowIndex);
@@ -219,7 +212,6 @@ namespace scene {
             done++;
             if (done === itemsCount) {
               this.state.status = SCENE_STATUS.RUNNING;
-              console.log('enter end.');
               let timer = new egret.Timer(this.state.sceneChangeTime * 1000, 1);
               timer.start();
               timer.addEventListener(egret.TimerEvent.TIMER_COMPLETE, function() {
@@ -235,7 +227,6 @@ namespace scene {
       let leaveDirection = Math.random() > 0.5 ? 1 : -1;
       let itemsCount = this._items.length;
       let done = 0;
-      console.log('start leave.');
       _.forEach(this._items, (item, index) => {
         if (item === this.state.selectedItem) {
           itemsCount--;
@@ -266,7 +257,6 @@ namespace scene {
             this.removeChild(item);
             _.remove(this._items, item);
             if (done === itemsCount) {
-              console.log('leave end.');
               this.next();
             }
           })
@@ -299,11 +289,16 @@ namespace scene {
               offsetDistance += repelEffect.offsetDistance;
               offsetStrong += repelEffect.effectStrong;
             });
+            let strong = offsetDistance / (this._getRepelRadius() * 0.8);
+            if (strong > 1) {
+              strong = 1;
+            } else if (strong < 0) {
+              strong = 0;
+            }
             item.x = point.x;
             item.y = point.y;
-            item.alpha = item.scaleX = item.scaleY = (1 - offsetStrong);
+            item.alpha = item.scaleX = item.scaleY = (1 - strong);
           } else if (item.isBacking) {
-            console.log(111);
           } else {
             item.x = itemPositionWithOffset.x;
             item.y = itemPositionWithOffset.y;
@@ -357,9 +352,7 @@ namespace scene {
         item.y = item.basePosition.y;
         item.acceptRepel = true;
         item.addEventListener(egret.TouchEvent.TOUCH_TAP, function() {
-          if (this.state.status !== SCENE_STATUS.LEAVE) {
-            this._select(item);
-          }
+          this._selectItem(item);
         }, this);
         this._items.push(item);
         this.addChild(item);
@@ -372,7 +365,15 @@ namespace scene {
       }
     }
 
-    private _select(item: Item) {
+    private _canSelectItem(): boolean {
+      return this.state.status === SCENE_STATUS.ENTER
+        || this.state.status === SCENE_STATUS.RUNNING;
+    }
+
+    private _selectItem(item: Item) {
+      if (!this._canSelectItem()) {
+        return;
+      }
       if (this.state.selectedItem) {
         this._itemBack(this.state.selectedItem);
       }
@@ -388,6 +389,7 @@ namespace scene {
         }, 1500);
       });
 
+      let scale = this._getLargeScale();
       let tw1 = new TWEEN.Tween(item)
         .to({
           scaleX: 0.8,
@@ -401,17 +403,21 @@ namespace scene {
         .to({
           x: this.state.sceneWidth / 2,
           y: this.state.sceneHeight / 2,
-          scaleX: 3,
-          scaleY: 3
+          scaleX: scale,
+          scaleY: scale
         }, 1500);
       tw1.chain(tw2);
+      item.tweens.push(tw1, tw2);
     }
 
     private _itemBack(item: Item) {
       let repel = item.attatchedRepel;
+      repel.attach();
       item.isBacking = true;
+      item.clearTweens();
       if (repel) {
-        repel.toOptions({radius: 0, strong: 0}, 1000, () => {
+        repel.toOptions({radius: 0}, 1000, () => {
+          item.attatchedRepel = null;
           item.acceptRepel = true;
           item.isBacking = false;
           this._removeRepel(repel);
@@ -440,9 +446,21 @@ namespace scene {
     }
 
     private _getRepelRadius(): number {
+      const shorter = this._getShorterWidth();
+      return shorter / 1.7;
+    }
+
+    private _getShorterWidth(): number {
       const {sceneWidth, sceneHeight} = this.state;
       const shorter = _.min([sceneWidth, sceneHeight]);
-      return shorter / 1.7;
+      return shorter;
+    }
+
+    private _getLargeScale(): number {
+      const shorter = this._getShorterWidth();
+      const height = shorter * 0.43;
+      const itemHeight = this._getRowHeight();
+      return height / itemHeight;
     }
 
     private _getApiImagesCount(api: IApi): number {
