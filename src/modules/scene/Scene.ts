@@ -145,24 +145,23 @@ namespace scene {
             onComplete: (texture) => {
               successCount++;
               img.texture = texture;
-              loadedHandle();
+              loadedHandle(this);
             },
             onError: () => {
               failedCount++;
-              loadedHandle();
+              loadedHandle(this);
             }
           });
         });
       });
 
-      function loadedHandle() {
+      function loadedHandle(thisObj: Scene) {
         console.log(`totle: ${imagesCount}, success: ${successCount}, failed: ${failedCount}`);
         if (successCount + failedCount === imagesCount) {
           console.log('资源加载完毕！');
-          console.log(apiItems);
-          // this._createItems(apiItems);
-          // this._run();
-          // this._enter();
+          thisObj._createItems(apiItems);
+          thisObj._run();
+          thisObj._enter();
         }
       }
     }
@@ -327,9 +326,11 @@ namespace scene {
       _.forEach(apiItems, (apiItem, index) => {
         let originSize = {width: apiItem.imgs[0].width, height: apiItem.imgs[0].height};
         let changeSize = util.fixHeight(originSize, itemHeight);
-        let item = new Item(changeSize.width, changeSize.height);
+        let texture = apiItem.imgs[0].texture;
+        let item = new Item(changeSize.width, changeSize.height, null, texture);
         let rowIndex = getMinWidthRowIndex();
         let rowWidth = state.rowWidthList[rowIndex];
+        item.data = apiItem;
         item.rowIndex = rowIndex;
         item.basePosition.y = this._getRowItemY(rowIndex) + this.state.sceneHeight * enterDirection;
         item.basePosition.x = rowWidth + state.padding + item.width / 2;
