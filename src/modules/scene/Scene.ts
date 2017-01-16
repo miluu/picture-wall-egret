@@ -160,8 +160,25 @@ namespace scene {
         if (successCount + failedCount === imagesCount) {
           console.log('资源加载完毕！');
           thisObj._createItems(apiItems);
-          thisObj._run();
-          thisObj._enter();
+          // Nice code!
+          thisObj.once(egret.Event.ENTER_FRAME, function() {
+            thisObj.once(egret.Event.ENTER_FRAME, function() {
+              thisObj.once(egret.Event.ENTER_FRAME, function() {
+                thisObj.once(egret.Event.ENTER_FRAME, function() {
+                  thisObj.once(egret.Event.ENTER_FRAME, function() {
+                    thisObj.once(egret.Event.ENTER_FRAME, function() {
+                      thisObj.once(egret.Event.ENTER_FRAME, function() {
+                        thisObj.once(egret.Event.ENTER_FRAME, function() {
+                          thisObj._run();
+                          thisObj._enter();
+                        }, null);
+                      }, null);
+                    }, null);
+                  }, null);
+                }, null);
+              }, null);
+            }, null);
+          }, null);
         }
       }
     }
@@ -181,8 +198,8 @@ namespace scene {
       x = x - item.width / 2;
       return this._outOfSceneRightSide(x, rangeOffset);
     }
-
     private _run() {
+
       this.addEventListener(egret.Event.ENTER_FRAME, this._onEnterFrame, this);
     }
 
@@ -344,8 +361,8 @@ namespace scene {
             this._select(item);
           }
         }, this);
-        this.addChild(item);
         this._items.push(item);
+        this.addChild(item);
       });
 
       function getMinWidthRowIndex(): number {

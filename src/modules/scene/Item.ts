@@ -7,7 +7,7 @@ namespace scene {
     private _bgColor: number;
     private _texture: egret.Texture;
     private _bg: egret.Shape = new egret.Shape();
-    private _iamge: egret.Bitmap;
+    public image: egret.Bitmap;
     private _itemKey: number;
     public basePosition: egret.Point = new egret.Point(0, 0);
     public rowIndex: number;
@@ -40,12 +40,12 @@ namespace scene {
     }
     private _addImage() {
       if (this._texture) {
-        this._iamge = new egret.Bitmap(this._texture);
-        this._iamge.width = this._itemWidth;
-        this._iamge.height = this._itemHeight;
-        this._iamge.anchorOffsetX = this._itemWidth / 2;
-        this._iamge.anchorOffsetY = this._itemHeight / 2;
-        this.addChild(this._iamge);
+        this.image = new egret.Bitmap(this._texture);
+        this.image.width = this._itemWidth;
+        this.image.height = this._itemHeight;
+        this.image.anchorOffsetX = this._itemWidth / 2;
+        this.image.anchorOffsetY = this._itemHeight / 2;
+        this.addChild(this.image);
       }
     }
     private _addKey() {
