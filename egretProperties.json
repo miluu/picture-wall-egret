@@ -20,10 +20,6 @@
 			"path": "../egret-game-library/tween"
 		},
 		{
-			"name": "mouse",
-			"path": "../egret-game-library/mouse/libsrc"
-		},
-		{
 			"name": "lodash",
 			"path": "../egret-game-library/lodash"
 		}
