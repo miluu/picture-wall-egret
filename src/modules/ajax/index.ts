@@ -4,6 +4,7 @@ namespace ajax {
     type?: string;
     onComplete?: (data?: any) => any;
     onError?: () => any;
+    onProgress?: (bytesLoaded: number, bytesTotal: number) => any;
   }
 
   interface IFormatReturn {
@@ -37,6 +38,9 @@ namespace ajax {
     }, null);
     loader.once(egret.IOErrorEvent.IO_ERROR, function() {
       combinedOptions.onError();
+    }, null);
+    loader.addEventListener(egret.ProgressEvent.PROGRESS, function(e: egret.ProgressEvent) {
+      console.log(`${e.bytesLoaded} / ${e.bytesTotal}`);
     }, null);
   }
 
