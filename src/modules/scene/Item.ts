@@ -9,6 +9,7 @@ namespace scene {
     private _bg: egret.Shape = new egret.Shape();
     private _image: egret.Bitmap;
     private _itemKey: number;
+    private _isClone: boolean;
     public basePosition: egret.Point = new egret.Point(0, 0);
     public rowIndex: number;
     public acceptRepel: boolean = false;
@@ -33,11 +34,28 @@ namespace scene {
     get itemHeight() {
       return this._itemHeight;
     }
+    get isClone() {
+      return this._isClone || false;
+    }
     public clearTweens() {
       _.forEach(this.tweens, (tween) => {
         TWEEN.remove(tween);
       });
       this.tweens.length = 0;
+    }
+    public clone() {
+      const clone = new Item(this._itemWidth, this._itemHeight, this._bgColor, this._texture);
+      clone._isClone = true;
+      clone.basePosition = this.basePosition.clone();
+      clone.rowIndex = this.rowIndex;
+      clone.acceptRepel = this.acceptRepel;
+      clone.isBacking = this.isBacking;
+      clone.data = this.data;
+      clone.x = this.x;
+      clone.y = this.y;
+      clone.alpha = this.alpha;
+      clone.scaleX = this.scaleX;
+      clone.scaleY = this.scaleY;
     }
     private _init() {
       this._addBg();
