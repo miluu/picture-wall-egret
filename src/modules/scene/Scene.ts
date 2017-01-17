@@ -286,7 +286,7 @@ namespace scene {
         if (this._itemOutOfSceneRightSide(item, 50)) {
           item.visible = false;
         } else {
-          item.visible = true;
+          item.visible = !item.isBacking;
           if (item.acceptRepel) {
             let point = itemPositionWithOffset;
             let offsetDistance = 0;
@@ -306,7 +306,6 @@ namespace scene {
             item.x = point.x;
             item.y = point.y;
             item.alpha = item.scaleX = item.scaleY = (1 - strong);
-          } else if (item.isBacking) {
           } else {
             item.x = itemPositionWithOffset.x;
             item.y = itemPositionWithOffset.y;
@@ -446,7 +445,6 @@ namespace scene {
         repel.toOptions({radius: 0}, 1000, () => {
           item.attatchedRepel = null;
           item.acceptRepel = true;
-          item.isBacking = false;
           this._removeRepel(repel);
         });
       }
@@ -458,6 +456,23 @@ namespace scene {
             scaleX: 1,
             scaleY: 1
           }, 1000)
+          .onComplete(() => {
+            this.removeChild(item);
+            item.isBacking = false;
+          })
+          .easing(TWEEN.Easing.Cubic.Out)
+          .start();
+      } else {
+        const clone = item.clone();
+        const index = this.getChildIndex(item);
+        const itemViewInfo = item.viewInfo;
+        this.addChildAt(clone, index);
+        const tw = new TWEEN.Tween(clone)
+          .to(itemViewInfo, 1000)
+          .onComplete(() => {
+            this.removeChild(clone);
+            item.isBacking = false;
+          })
           .easing(TWEEN.Easing.Cubic.Out)
           .start();
       }

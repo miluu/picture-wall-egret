@@ -1,4 +1,13 @@
 namespace scene {
+  interface IItemViewInfo {
+    x?: number;
+    y?: number;
+    scaleX?: number;
+    scaleY?: number;
+    alpha?: number;
+    rotation?: number;
+  };
+
   export class Item extends egret.DisplayObjectContainer {
     static instanceCount = 0;
 
@@ -10,6 +19,7 @@ namespace scene {
     private _image: egret.Bitmap;
     private _itemKey: number;
     private _isClone: boolean;
+    private _viewInfo: IItemViewInfo = {};
     public basePosition: egret.Point = new egret.Point(0, 0);
     public rowIndex: number;
     public acceptRepel: boolean = false;
@@ -37,13 +47,16 @@ namespace scene {
     get isClone() {
       return this._isClone || false;
     }
+    get viewInfo() {
+      return this._viewInfo;
+    }
     public clearTweens() {
       _.forEach(this.tweens, (tween) => {
         TWEEN.remove(tween);
       });
       this.tweens.length = 0;
     }
-    public clone() {
+    public clone(): Item {
       const clone = new Item(this._itemWidth, this._itemHeight, this._bgColor, this._texture);
       clone._isClone = true;
       clone.basePosition = this.basePosition.clone();
@@ -56,11 +69,13 @@ namespace scene {
       clone.alpha = this.alpha;
       clone.scaleX = this.scaleX;
       clone.scaleY = this.scaleY;
+      return clone;
     }
     private _init() {
       this._addBg();
       this._addImage();
       this._addKey();
+      this.addEventListener(egret.Event.ENTER_FRAME, this._updateViewInfo, this);
     }
     private _addBg() {
       const g = this._bg.graphics;
@@ -81,6 +96,17 @@ namespace scene {
     }
     private _addKey() {
       this._itemKey = Item.instanceCount;
+    }
+    private _updateViewInfo() {
+      if (!this.isBacking && !this.isClone) {
+        return;
+      }
+      this._viewInfo.x = this.x;
+      this._viewInfo.y = this.y;
+      this._viewInfo.scaleX = this.scaleX;
+      this._viewInfo.scaleY = this.scaleY;
+      this._viewInfo.alpha = this.alpha;
+      this._viewInfo.rotation = this.rotation;
     }
   }
 }
