@@ -18,6 +18,8 @@ namespace scene {
      */
     private _bg: SceneBg;
 
+    private _loadingView: LoadingView;
+
     /**
      * 存储场景各种状态的对象
      */
@@ -52,16 +54,36 @@ namespace scene {
       this._createBg();
       this.mask = new egret.Rectangle(0, 0, this.state.sceneWidth, this.state.sceneHeight);
 
+      let loading = this._loadingView = new LoadingView('loading...' , this.state.sceneWidth, this.state.sceneHeight, 0.2);
+      loading.x = this.state.sceneWidth / 2;
+      loading.y = this.state.sceneHeight / 2;
+      this.addChild(loading);
+
       if (this.state.apiList.length) {
         this.start();
       }
     }
 
+    public hideLoading() {
+      this._loadingView.text = 'loading';
+      this._loadingView.visible = false;
+    }
+
+    public showLoading(text?: string) {
+      let childCount = this.numChildren;
+      this._loadingView.visible = true;
+      this.setChildIndex(this._loadingView, childCount);
+    }
+
+    public setLoadingText(text: string) {
+      this._loadingView.text = text;
+    }
     /**
      * 开始播放场景
      * @param apiIndex {number} 全用的 api 序号，默认为 0
      */
     public start(apiIndex: number = 0) {
+      this.showLoading();
       this.state.selectedApiIndex = apiIndex;
       this.state.status = SCENE_STATUS.LOADING;
       ajax.getJson(this.state.apiList[apiIndex], {
@@ -156,7 +178,9 @@ namespace scene {
       });
 
       function loadedHandle(thisObj: Scene) {
+        thisObj._loadingView.text = `loading...\n${successCount + failedCount} / ${imagesCount}`;
         if (successCount + failedCount === imagesCount) {
+          thisObj.hideLoading();
           thisObj._createItems(apiItems);
           // Nice code!
           thisObj.once(egret.Event.ENTER_FRAME, function() {
@@ -419,7 +443,7 @@ namespace scene {
         .to({
           scaleX: 0.8,
           scaleY: 0.8,
-          opacity: 1
+          alpha: 1
         }, 1000)
         .easing(TWEEN.Easing.Cubic.InOut)
         .start();

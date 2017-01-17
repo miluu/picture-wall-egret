@@ -72,7 +72,7 @@ namespace scene {
       return clone;
     }
     private _init() {
-      this._addBg();
+      // this._addBg();
       this._addImage();
       this._addKey();
       this.addEventListener(egret.Event.ENTER_FRAME, this._updateViewInfo, this);
