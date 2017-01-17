@@ -28,6 +28,9 @@ namespace scene {
      */
     constructor() {
       super();
+      this.touchEnabled = true;
+      this.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this._touchScene, this);
+      this.addEventListener(egret.TouchEvent.TOUCH_END, this._touchScene, this);
     }
 
     /**
@@ -60,6 +63,7 @@ namespace scene {
      */
     public start(apiIndex: number = 0) {
       this.state.selectedApiIndex = apiIndex;
+      this.state.status = SCENE_STATUS.LOADING;
       ajax.getJson(this.state.apiList[apiIndex], {
         onProgress: function(loaded, totle) {
         },
@@ -135,7 +139,6 @@ namespace scene {
       let successCount = 0;
       let failedCount = 0;
       const apiItems = data.result.items;
-      this.state.status = SCENE_STATUS.LOADING;
       _.forEach(apiItems, (item) => {
         _.forEach(item.imgs, (img) => {
           ajax.getTexture(img.url, {
@@ -176,6 +179,10 @@ namespace scene {
           }, null);
         }
       }
+    }
+
+    private _touchScene() {
+      this.state.lastOperateTime = new Date();
     }
 
     private _itemOutOfSceneLeftSide(item: Item, rangeOffset: number = 50): boolean {
@@ -270,6 +277,7 @@ namespace scene {
     private _onEnterFrame() {
       const {speed, selectedItem} = this.state;
       this.state.offset -= speed;
+      this._autoReset();
       _.forEach(this._items, (item) => {
         if (item === selectedItem) {
           return;
@@ -311,6 +319,21 @@ namespace scene {
       });
       Repel.update();
       TWEEN.update();
+    }
+
+    private _autoReset() {
+      const {autoResetTime, lastOperateTime, selectedItem, status} = this.state;
+      if (!autoResetTime
+        || !lastOperateTime
+        || !selectedItem
+        || status !== SCENE_STATUS.RUNNING
+      ) {
+        return;
+      }
+      const currentTime = new Date();
+      if (currentTime.getTime() - lastOperateTime.getTime() > autoResetTime * 1000) {
+        this._itemBack(selectedItem);
+      }
     }
 
     private _createBg() {
@@ -371,7 +394,10 @@ namespace scene {
     }
 
     private _selectItem(item: Item) {
-      if (!this._canSelectItem()) {
+      if (!this._canSelectItem()
+        || this.state.selectedItem === item
+        || item.isBacking
+      ) {
         return;
       }
       if (this.state.selectedItem) {
@@ -412,10 +438,11 @@ namespace scene {
 
     private _itemBack(item: Item) {
       let repel = item.attatchedRepel;
-      repel.attach();
+      this.state.selectedItem = null;
       item.isBacking = true;
       item.clearTweens();
       if (repel) {
+        repel.attach();
         repel.toOptions({radius: 0}, 1000, () => {
           item.attatchedRepel = null;
           item.acceptRepel = true;
@@ -423,11 +450,35 @@ namespace scene {
           this._removeRepel(repel);
         });
       }
+      if (!this._isBaseItem(item)) {
+        const position = this._randomOutsidePosition();
+        const tw = new TWEEN.Tween(item)
+          .to({
+            ...position,
+            scaleX: 1,
+            scaleY: 1
+          }, 1000)
+          .easing(TWEEN.Easing.Cubic.Out)
+          .start();
+      }
     }
 
     private _removeRepel(repel: Repel) {
       _.remove(this._repels, repel);
       repel.die();
+    }
+
+    private _isBaseItem(item: Item) {
+      return _.includes(this._items, item);
+    }
+
+    private _randomOutsidePosition(): IPosition {
+      const {sceneWidth, sceneHeight} = this.state;
+      const rowHeight = this._getRowHeight();
+      const direction = Math.random() > 0.5 ? 1 : -1;
+      const x = Math.random() * sceneWidth;
+      const y = sceneHeight / 2 + (sceneHeight / 2 + rowHeight + rowHeight * Math.random()) * direction;
+      return {x, y};
     }
 
     private _addRepel(item?: Item, x: number = 0, y: number = 0, radius: number = 0, strong: number = 0): Repel {

@@ -22,6 +22,7 @@ namespace scene {
     selectedItem: Item;
     status: string;
     selectedApiIndex: number;
+    lastOperateTime: Date;
   }
 
   export interface IApi {
