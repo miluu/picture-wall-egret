@@ -169,6 +169,7 @@ namespace scene {
       this._textField.height = this._viewHeight;
       this._textField.x = -this._viewWidth / 2;
       this._textField.y = -this._viewHeight / 2;
+      this._textField.lineSpacing = 5;
       this.addChild(this._textField);
     }
   }
