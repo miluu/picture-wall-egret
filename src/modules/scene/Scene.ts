@@ -1,6 +1,7 @@
 namespace scene {
   /**
    * @class Scene 场景类
+   * @author HuangYaxiong <hyxiong@qq.com>
    */
   export class Scene extends egret.DisplayObjectContainer {
     /**

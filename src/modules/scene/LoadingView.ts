@@ -1,6 +1,7 @@
 namespace scene {
   /**
    * @class LoadingView 加载进度类
+   * @author HuangYaxiong <hyxiong@qq.com>
    */
   export class LoadingView extends egret.DisplayObjectContainer {
     /**

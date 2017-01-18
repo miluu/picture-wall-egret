@@ -1,3 +1,9 @@
+/**
+ * @namespace scene 场景模块
+ * @author HuangYaxiong <hyxiong@qq.com>
+ * 常量与接口
+ */
+
 namespace scene {
 
   /**

@@ -1,3 +1,8 @@
+/**
+ * @namespace ajax 网络请求模块
+ * @author HuangYaxiong <hyxiong@qq.com>
+ */
+
 namespace ajax {
 
   interface IAjaxOptions {

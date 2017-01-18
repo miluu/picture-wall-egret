@@ -1,3 +1,8 @@
+/**
+ * @namespace settings 设置模块
+ * @author HuangYaxiong <hyxiong@qq.com>
+ */
+
 namespace settings {
 
   export interface IAppSettings {
