@@ -592,6 +592,18 @@ namespace scene {
       this.addChild(shp);
     }
     private _createBgImage() {
+      console.log(11111);
+      ajax.getTexture(this._bgImage, {
+        onComplete: (texture) => {
+          console.log(22222);
+          const bgBmp = new egret.Bitmap(texture);
+          const {textureWidth, textureHeight} = <egret.Texture>texture;
+          bgBmp.x = (this._bgWidth - textureWidth) / 2;
+          bgBmp.y = (this._bgHeight - textureHeight) / 2;
+          console.log(bgBmp);
+          this.addChild(bgBmp);
+        }
+      });
     }
   }
 }
