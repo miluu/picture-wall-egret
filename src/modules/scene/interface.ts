@@ -1,4 +1,12 @@
 namespace scene {
+
+  /**
+   * 场景状态常量
+   * RUNNING 运行中
+   * LEAVE 离场状态
+   * ENTER 入场状态
+   * LOADING 加载中
+   */
   export const SCENE_STATUS = {
     RUNNING: 'running',
     LEAVE: 'leave',
@@ -64,5 +72,14 @@ namespace scene {
     x: number;
     y: number;
   }
+
+  export interface IItemViewInfo {
+    x?: number;
+    y?: number;
+    scaleX?: number;
+    scaleY?: number;
+    alpha?: number;
+    rotation?: number;
+  };
 
 }
