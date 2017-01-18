@@ -64,20 +64,32 @@ namespace scene {
       }
     }
 
+    /**
+     * 隐藏 loading 层
+     */
     public hideLoading() {
       this._loadingView.text = 'loading';
       this._loadingView.visible = false;
     }
 
+    /**
+     * 显示 loading 层
+     * @param text {string} 显示的文字内容
+     */
     public showLoading(text?: string) {
       let childCount = this.numChildren;
       this._loadingView.visible = true;
       this.setChildIndex(this._loadingView, childCount);
     }
 
+    /**
+     * 设置 loading 层显示的文字内容
+     * @param text {string} 文字内容
+     */
     public setLoadingText(text: string) {
       this._loadingView.text = text;
     }
+
     /**
      * 开始播放场景
      * @param apiIndex {number} 全用的 api 序号，默认为 0
@@ -147,15 +159,9 @@ namespace scene {
     }
 
     /**
-     * 判断 x 值是否在场景左侧，可设置偏移范围
-     * @param x {number} x 坐标值
-     * @param rangeOffset {number} 偏移范围
-     * @return {boolean}
+     * 加载所有图片资源
+     * @param data {IApi} api数据
      */
-    private _outOfSceneLeftSide(x: number, rangeOffset: number = 50): boolean {
-      return x < -rangeOffset;
-    }
-
     private _loadSources(data: IApi) {
       let imagesCount = this._getApiImagesCount(data);
       let successCount = 0;
@@ -205,29 +211,67 @@ namespace scene {
       }
     }
 
+    /**
+     * 触摸屏幕时的回调方法，更新 lastOperateTime
+     */
     private _touchScene() {
       this.state.lastOperateTime = new Date();
     }
 
+    /**
+     * 判断 x 值是否在场景左侧，可设置偏移范围
+     * @param x {number} x 坐标值
+     * @param rangeOffset {number} 偏移范围
+     * @return {boolean}
+     */
+    private _outOfSceneLeftSide(x: number, rangeOffset: number = 50): boolean {
+      return x < -rangeOffset;
+    }
+
+    /**
+     * 判断 item 否在场景左侧，可设置偏移范围
+     * @param {Item}
+     * @param rangeOffset {number} 偏移范围
+     * @return {boolean}
+     */
     private _itemOutOfSceneLeftSide(item: Item, rangeOffset: number = 50): boolean {
       let {x} = this._getItemPositionWithOffset(item);
       x = x + item.width / 2;
       return this._outOfSceneLeftSide(x, rangeOffset);
     }
 
+    /**
+     * 判断 x 值是否在场景右侧，可设置偏移范围
+     * @param x {number} x 坐标值
+     * @param rangeOffset {number} 偏移范围
+     * @return {boolean}
+     */
     private _outOfSceneRightSide(x: number, rangeOffset: number = 50): boolean {
       return x > this.state.sceneWidth + rangeOffset;
     }
 
+    /**
+     * 判断 item 否在场景右侧，可设置偏移范围
+     * @param {Item}
+     * @param rangeOffset {number} 偏移范围
+     * @return {boolean}
+     */
     private _itemOutOfSceneRightSide(item: Item, rangeOffset: number = 50): boolean {
       let {x} = this._getItemPositionWithOffset(item);
       x = x - item.width / 2;
       return this._outOfSceneRightSide(x, rangeOffset);
     }
+
+    /**
+     * 运行场景动画
+     */
     private _run() {
       this.addEventListener(egret.Event.ENTER_FRAME, this._onEnterFrame, this);
     }
 
+    /**
+     * 入场
+     */
     private _enter() {
       this.state.status = SCENE_STATUS.ENTER;
       let done = 0;
@@ -253,6 +297,9 @@ namespace scene {
       });
     }
 
+    /**
+     * 离场
+     */
     private _leave() {
       this.state.status = SCENE_STATUS.LEAVE;
       let leaveDirection = Math.random() > 0.5 ? 1 : -1;
@@ -298,6 +345,9 @@ namespace scene {
       }
     }
 
+    /**
+     * ENTER_FRAME 事件回调方法，主要设置动画
+     */
     private _onEnterFrame() {
       const {speed, selectedItem} = this.state;
       this.state.offset -= speed;
@@ -344,6 +394,9 @@ namespace scene {
       TWEEN.update();
     }
 
+    /**
+     * 判断当前时间与最后操作时间，间隔超过自动恢复时间则恢复场景状态
+     */
     private _autoReset() {
       const {autoResetTime, lastOperateTime, selectedItem, status} = this.state;
       if (!autoResetTime
@@ -359,6 +412,9 @@ namespace scene {
       }
     }
 
+    /**
+     * 创建场景背景
+     */
     private _createBg() {
       if (this._bg) {
         this.removeChild(this._bg);
@@ -367,6 +423,10 @@ namespace scene {
       this.addChild(this._bg);
     }
 
+    /**
+     * 创建场景 items
+     * @parame apiItems {IApiItem[]} apiItem数组
+     */
     private _createItems(apiItems: IApiItem[]) {
       const itemHeight = this._getRowHeight();
       const state = this.state;
@@ -411,11 +471,18 @@ namespace scene {
       }
     }
 
+    /**
+     * 判断当前场景是否可点击选择 item
+     * @return {boolean}
+     */
     private _canSelectItem(): boolean {
       return this.state.status === SCENE_STATUS.ENTER
         || this.state.status === SCENE_STATUS.RUNNING;
     }
 
+    /**
+     * 选中 item
+     */
     private _selectItem(item: Item) {
       if (!this._canSelectItem()
         || this.state.selectedItem === item
@@ -459,6 +526,10 @@ namespace scene {
       item.tweens.push(tw1, tw2);
     }
 
+    /**
+     * item 复位，若 item 不在场景 items 列表内，则移到场景外随机位置并移除
+     * @param item {Item}
+     */
     private _itemBack(item: Item) {
       let repel = item.attatchedRepel;
       this.state.selectedItem = null;
@@ -502,15 +573,28 @@ namespace scene {
       }
     }
 
+    /**
+     * 移除 repel
+     * @param repel {Repel}
+     */
     private _removeRepel(repel: Repel) {
       _.remove(this._repels, repel);
       repel.die();
     }
 
-    private _isBaseItem(item: Item) {
+    /**
+     * 判断 item 是否在场景 items 列表内
+     * @param item {Item}
+     * @return {boolean}
+     */
+    private _isBaseItem(item: Item): boolean {
       return _.includes(this._items, item);
     }
 
+    /**
+     * 获取场景外部的一个随机位置
+     * @return {IPosition}
+     */
     private _randomOutsidePosition(): IPosition {
       const {sceneWidth, sceneHeight} = this.state;
       const rowHeight = this._getRowHeight();
@@ -520,6 +604,15 @@ namespace scene {
       return {x, y};
     }
 
+    /**
+     * 添加 repel 到场景
+     * @param item {Item} repel 要附加在该 item 上
+     * @param x {number} x 坐标值
+     * @param y {number} y 坐标值
+     * @param radius {number} 作用半径
+     * @param strong {number} 强度
+     * @return {Repel} 添加的 repel 对象
+     */
     private _addRepel(item?: Item, x: number = 0, y: number = 0, radius: number = 0, strong: number = 0): Repel {
       let repel = new Repel(x, y, radius, strong);
       item.attatchedRepel = repel;
@@ -530,22 +623,39 @@ namespace scene {
       return repel;
     }
 
-    private _getRowItemY(rowIndex): number {
+    /**
+     * 获取某一行的 item 的 y 坐标值
+     * @param rowIndex {number} 行号
+     * @return {number} y 坐标值
+     */
+    private _getRowItemY(rowIndex: number): number {
       let itemHeight = this._getRowHeight();
       return (this.state.padding + itemHeight) * rowIndex + itemHeight / 2 + this.state.padding;
     }
 
+    /**
+     * 获取选中某个 item 后最终的 repel 作用半径
+     * @return {number}
+     */
     private _getRepelRadius(): number {
       const shorter = this._getShorterWidth();
       return shorter / 1.7;
     }
 
+    /**
+     * 获取场景的较短边
+     * @return {number}
+     */
     private _getShorterWidth(): number {
       const {sceneWidth, sceneHeight} = this.state;
       const shorter = _.min([sceneWidth, sceneHeight]);
       return shorter;
     }
 
+    /**
+     * 获取 item 选中后的大图绽放比例
+     * @return {number}
+     */
     private _getLargeItemScale(): number {
       const shorter = this._getShorterWidth();
       const height = shorter * 0.43;
@@ -553,6 +663,11 @@ namespace scene {
       return height / itemHeight;
     }
 
+    /**
+     * 获取 api 中的图片数量
+     * @param api {IApi}
+     * @return {number}
+     */
     private _getApiImagesCount(api: IApi): number {
       let items = api.result.items;
       let count = 0;
@@ -566,12 +681,34 @@ namespace scene {
 
   }
 
+  /**
+   * @class 场景背景类
+   */
   class SceneBg extends egret.DisplayObjectContainer {
+    /**
+     * 背景宽度
+     */
     private _bgWidth: number;
+    /**
+     * 背景高度
+     */
     private _bgHeight: number;
+    /**
+     * 背景颜色
+     */
     private _bgColor: number;
+    /**
+     * 背景图片 url
+     */
     private _bgImage: string;
 
+    /**
+     * @constructor 创建场景背景实例
+     * @param width {number} 背景宽度
+     * @param height {number} 背景高度
+     * @param bgColor {number} 背景色
+     * @param bgImage {string} 背景图 url
+     */
     constructor(width: number, height: number, bgColor: number = 0x000000, bgImage?: string) {
       super();
       this._bgWidth = width;
@@ -583,6 +720,9 @@ namespace scene {
       this._createBgImage();
     }
 
+    /**
+     * 创建背景色
+     */
     private _createBgColor() {
       const shp = new egret.Shape();
       const g = shp.graphics;
@@ -591,6 +731,10 @@ namespace scene {
       g.endFill();
       this.addChild(shp);
     }
+
+    /**
+     * 创建背景图
+     */
     private _createBgImage() {
       console.log(11111);
       ajax.getTexture(this._bgImage, {
