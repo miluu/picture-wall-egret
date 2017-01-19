@@ -1,45 +1,80 @@
 namespace swiper {
-  export interface ISlideOptions {
-    index: number;
-    slideIndex: number;
-    isCopy: boolean;
-    [key: string]: any;
-  }
 
-  export class Slide extends egret.Sprite {
-    static index: number = 0;
-    public bg: egret.Shape;
-    public options: ISlideOptions;
-    constructor(public slideWidth: number, public slideHeight: number, public content?: egret.DisplayObject, isCopy: boolean = false) {
+  export class Slide extends egret.DisplayObjectContainer {
+    private static _slideCount: number;
+
+    private _isClone: boolean;
+    private _bg: egret.Shape;
+    private _image: egret.Bitmap;
+    private _texture: egret.Texture;
+    private _slideWidth: number;
+    private _slideHeight: number;
+    private _slideKey: number;
+    private _key: number;
+
+    constructor(width: number, height: number, texture: egret.Texture, debugKey?: number) {
       super();
-      this.addBg(slideWidth, slideHeight);
-      if (content) {
-        this.addContent(content);
+      this._slideWidth = width;
+      this._slideHeight = height;
+      this._texture = texture;
+
+      this._init();
+      if (_.isNumber(debugKey)) {
+        this._addIndex(debugKey);
       }
-      let index = Slide.index++;
-      this.options = {
-        isCopy,
-        index,
-        slideIndex: index
-      };
+      Slide._slideCount++;
     }
-    public setOptions(opt: any) {
-      this.options = _.assign({}, this.options, opt);
+
+    public get isClone() {
+      return !!this._isClone;
     }
-    public addBg(width: number, height: number) {
-      this.bg = new egret.Shape();
-      let g = this.bg.graphics;
+
+    public clone(): Slide {
+      const clone = new Slide(this._slideWidth, this._slideHeight, this._texture);
+      clone._isClone = true;
+      return clone;
+    }
+
+    private _init() {
+      this._setSlideKey();
+      this._addBg();
+      this._addImage();
+    }
+
+    private _addBg() {
+      this._bg = new egret.Shape();
+      const g = this._bg.graphics;
       g.beginFill(0xdddddd);
-      g.lineStyle(1, 0xffffff);
-      g.drawRect(0, 0, width, height);
+      g.drawRect(-this._slideWidth / 2, -this._slideHeight / 2, this._slideWidth, this._slideHeight);
       g.endFill();
-      this.bg.x = -this.slideWidth / 2;
-      this.bg.y = -this.slideHeight / 2;
-      this.addChild(this.bg);
+      this.addChild(this._bg);
     }
-    public addContent(content: egret.DisplayObject) {
-      this.content = content;
-      this.addChild(content);
+
+    private _addImage() {
+      if (this._texture) {
+        const {textureWidth, textureHeight} = this._texture;
+        this._image = new egret.Bitmap(this._texture);
+        this._image.x = -textureWidth / 2;
+        this._image.y = -textureHeight / 2;
+        this.addChild(this._image);
+      }
+    }
+
+    private _setSlideKey() {
+      this._slideKey = Slide._slideCount;
+    }
+
+    private _addIndex(debugKey: number) {
+      this._key = debugKey;
+      let keyText = new egret.TextField();
+      keyText.text = debugKey.toString();
+      keyText.width = this._slideWidth;
+      keyText.height = this._slideHeight;
+      keyText.x = this._slideWidth / 2;
+      keyText.y = this._slideHeight / 2;
+      keyText.textAlign = egret.HorizontalAlign.CENTER;
+      keyText.verticalAlign = egret.VerticalAlign.MIDDLE;
+      this.addChild(keyText);
     }
   }
 }

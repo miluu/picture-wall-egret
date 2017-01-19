@@ -21,9 +21,13 @@ class Main extends egret.DisplayObjectContainer {
    * @private 添加到舞台后执行
    */
   private _onAddToStage() {
-    this.scene = new scene.Scene();
-    this.addChild(this.scene);
-    settings.init(this._sceneStart.bind(this));
+    // this.scene = new scene.Scene();
+    // this.addChild(this.scene);
+    // settings.init(this._sceneStart.bind(this));
+
+    const slide = new swiper.Slide(100, 100, null);
+    slide.x = slide.y = 150;
+    this.addChild(slide);
   }
 
   /**

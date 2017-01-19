@@ -1,3 +1,10 @@
+namespace swiper {
+  export class Swiper extends egret.DisplayObjectContainer {
+
+  }
+}
+
+
 // namespace swiper {
 //   export interface ISwiperOptions {
 //     viewWidth: number;
