@@ -25,9 +25,21 @@ class Main extends egret.DisplayObjectContainer {
     // this.addChild(this.scene);
     // settings.init(this._sceneStart.bind(this));
 
-    const slide = new swiper.Slide(100, 100, null);
-    slide.x = slide.y = 150;
-    this.addChild(slide);
+    const sw = new swiper.Swiper({
+      viewWidth: 500,
+      viewHeight: 200,
+      slideWidth: 150,
+      slideHeight: 150,
+      radius: 200
+    });
+    const slide1 = new swiper.Slide(150, 150, null, 1);
+    const slide2 = new swiper.Slide(150, 150, null, 2);
+    const slide3 = new swiper.Slide(150, 150, null, 3);
+    const slide4 = new swiper.Slide(150, 150, null, 4);
+    sw.addSlide(slide1).addSlide(slide2).addSlide(slide3).addSlide(slide4);
+    this.addChild(sw);
+    sw.x = 300;
+    sw.y = 250;
   }
 
   /**

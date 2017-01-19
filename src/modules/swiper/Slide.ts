@@ -11,15 +11,18 @@ namespace swiper {
     private _slideHeight: number;
     private _slideKey: number;
     private _key: number;
+    private _keyText: egret.TextField;
+    private _debugKey: number;
 
     constructor(width: number, height: number, texture: egret.Texture, debugKey?: number) {
       super();
       this._slideWidth = width;
       this._slideHeight = height;
       this._texture = texture;
+      this._debugKey = debugKey;
 
       this._init();
-      if (_.isNumber(debugKey)) {
+      if (_.isNumber(this._debugKey)) {
         this._addIndex(debugKey);
       }
       Slide._slideCount++;
@@ -30,8 +33,11 @@ namespace swiper {
     }
 
     public clone(): Slide {
-      const clone = new Slide(this._slideWidth, this._slideHeight, this._texture);
+      const clone = new Slide(this._slideWidth, this._slideHeight, this._texture, this._debugKey);
       clone._isClone = true;
+      if (clone._keyText) {
+        clone._keyText.textColor = 0xffff00;
+      }
       return clone;
     }
 
@@ -44,9 +50,12 @@ namespace swiper {
     private _addBg() {
       this._bg = new egret.Shape();
       const g = this._bg.graphics;
-      g.beginFill(0xdddddd);
-      g.drawRect(-this._slideWidth / 2, -this._slideHeight / 2, this._slideWidth, this._slideHeight);
+      g.lineStyle(1, 0x999999);
+      g.beginFill(0xeeeeee);
+      g.drawRect(0, 0, this._slideWidth, this._slideHeight);
       g.endFill();
+      this._bg.x = -this._slideWidth / 2;
+      this._bg.y = -this._slideHeight / 2;
       this.addChild(this._bg);
     }
 
@@ -66,15 +75,16 @@ namespace swiper {
 
     private _addIndex(debugKey: number) {
       this._key = debugKey;
-      let keyText = new egret.TextField();
-      keyText.text = debugKey.toString();
-      keyText.width = this._slideWidth;
-      keyText.height = this._slideHeight;
-      keyText.x = this._slideWidth / 2;
-      keyText.y = this._slideHeight / 2;
-      keyText.textAlign = egret.HorizontalAlign.CENTER;
-      keyText.verticalAlign = egret.VerticalAlign.MIDDLE;
-      this.addChild(keyText);
+      this._keyText = new egret.TextField();
+      this._keyText.text = debugKey.toString();
+      this._keyText.width = this._slideWidth;
+      this._keyText.height = this._slideHeight;
+      this._keyText.x = -this._slideWidth / 2;
+      this._keyText.y = -this._slideHeight / 2;
+      this._keyText.textColor = 0xff0000;
+      this._keyText.textAlign = egret.HorizontalAlign.CENTER;
+      this._keyText.verticalAlign = egret.VerticalAlign.MIDDLE;
+      this.addChild(this._keyText);
     }
   }
 }

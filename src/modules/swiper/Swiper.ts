@@ -1,6 +1,162 @@
 namespace swiper {
+  interface ISwiperOptions {
+    viewWidth: number;
+    viewHeight: number;
+    slideWidth: number;
+    slideHeight: number;
+    radius: number;
+    backTime?: number;
+    onChange: (currentIndex: number, prevIndex: number) => any;
+  }
   export class Swiper extends egret.DisplayObjectContainer {
+    private _slides: Slide[] = [];
+    private _slidesCopy: Slide[] = [];
+    private _slidesContainer: egret.DisplayObjectContainer;
+    private _offset: number;
+    private _viewWidth: number;
+    private _viewHeight: number;
+    private _slideWidth: number;
+    private _slideHeight: number;
+    private _radius: number;
+    private _bg: egret.Shape;
+    private _toutchStart: boolean;
+    private _startX: number;
+    private _startTime: Date;
+    private _startOffset: number;
+    private _touchStart: boolean;
+    private _tween: TWEEN.Tween;
+    private _backTime: number;
 
+    constructor(options: ISwiperOptions) {
+      super();
+      this._viewWidth = options.viewWidth;
+      this._viewHeight = options.viewHeight;
+      this._slideWidth = options.slideWidth;
+      this._slideHeight = options.slideHeight;
+      this._radius = options.radius;
+      this._backTime = options.backTime || 500;
+      this._offset = 0;
+      this._init();
+      this.addEventListener(egret.Event.ENTER_FRAME, function() {
+        TWEEN.update();
+      }, this);
+    }
+
+    private _init() {
+      this._createBg();
+      this._createSlidesContainer();
+    }
+
+    private _createBg() {
+      this._bg = new egret.Shape();
+      const g = this._bg.graphics;
+      g.beginFill(0x666666);
+      g.drawRect(-this._viewWidth / 2, -this._viewHeight / 2, this._viewWidth, this._viewHeight);
+      g.endFill();
+      this.addChild(this._bg);
+      this._bg.touchEnabled = true;
+      this._bg.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this._onTouchBegin, this);
+      this._bg.addEventListener(egret.TouchEvent.TOUCH_MOVE, this._onTouchMove, this);
+      this._bg.addEventListener(egret.TouchEvent.TOUCH_END, this._onTouchEnd, this);
+      this._bg.addEventListener(egret.TouchEvent.TOUCH_RELEASE_OUTSIDE, this._onReleaseOutside, this);
+    }
+
+    private _createSlidesContainer() {
+      this._slidesContainer = new egret.DisplayObjectContainer();
+      this._slidesContainer.x = 0;
+      this._slidesContainer.y = 0;
+      this.addChild(this._slidesContainer);
+    }
+
+    public addSlide(slide: Slide) {
+      const slideCopy = slide.clone();
+      this._slides.push(slide);
+      this._slidesCopy.push(slideCopy);
+      this._slidesContainer.addChild(slide);
+      this._slidesContainer.addChild(slideCopy);
+      this._setSlidesPosition();
+      return this;
+    }
+
+    private _onTouchBegin(e: egret.TouchEvent) {
+      console.log('_onTouchBegin');
+      this._startX = e.stageX;
+      this._startTime = new Date();
+      this._touchStart = true;
+      this._startOffset = this._offset;
+    }
+
+    private _onTouchMove(e: egret.TouchEvent) {
+      if (this._touchStart) {
+        this._updateOffset(e.stageX);
+        this._setSlidesPosition();
+      }
+    }
+
+    private _updateOffset(currentX) {
+      let offsetX = currentX - this._startX;
+      this._offset = this._startOffset + offsetX / this._slideWidth;
+    }
+
+    private _onTouchEnd(e: egret.TouchEvent) {
+      this._stopDrag(e.stageX);
+    }
+
+    private _onReleaseOutside(e: egret.TouchEvent) {
+      this._stopDrag(e.stageX);
+    }
+
+    private _stopDrag(endX: number) {
+      this._updateOffset(endX);
+      let endTime = new Date();
+      let speed = (endX - this._startX) / (endTime.getTime() - this._startTime.getTime());
+      this._startX = null;
+      this._touchStart = false;
+      this._startOffset = null;
+      let endOffset = this._offset;
+      let nearOffset: number = Math.round(endOffset);
+      console.log(speed);
+      if (Math.abs(speed) > 0.2) {
+        if (speed > 0) {
+          nearOffset = Math.ceil(endOffset);
+        } else {
+          nearOffset = Math.floor(endOffset);
+        }
+      } else {
+        nearOffset = Math.round(endOffset);
+      }
+      console.log('nearOffset:', nearOffset);
+      this.goto(nearOffset);
+    }
+
+    public goto(index: number) {
+      console.log(`goto index: ${index}`);
+      this._tween = new TWEEN.Tween(this)
+        .to({_offset: index}, this._backTime)
+        .onStart(() => {
+          console.log(1);
+        })
+        .onUpdate(() => {
+          console.log(this._offset);
+          this._setSlidesPosition();
+        })
+        .onComplete(() => {
+          console.log(3);
+          this._setSlidesPosition();
+        })
+        .easing(TWEEN.Easing.Quartic.Out)
+        .start();
+    }
+
+    private _setSlidesPosition() {
+      const slidesCount = this._slides.length;
+      const slides = this._slidesCopy.concat(this._slides);
+      _.forEach(slides, (slide, index) => {
+        const i = index - slidesCount;
+        slide.y = 0;
+        slide.x = (i + this._offset) * this._slideWidth;
+      });
+    }
   }
 }
 
