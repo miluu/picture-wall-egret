@@ -6,7 +6,7 @@ namespace swiper {
     slideHeight: number;
     radius: number;
     backTime?: number;
-    onChange: (currentIndex: number, prevIndex: number) => any;
+    onChange?: (currentIndex?: number) => any;
   }
   export class Swiper extends egret.DisplayObjectContainer {
     private _slides: Slide[] = [];
@@ -26,6 +26,7 @@ namespace swiper {
     private _touchStart: boolean;
     private _tween: TWEEN.Tween;
     private _backTime: number;
+    public onChange: (currentIndex?: number) => any;
 
     constructor(options: ISwiperOptions) {
       super();
@@ -36,6 +37,7 @@ namespace swiper {
       this._radius = options.radius;
       this._backTime = options.backTime || 500;
       this._offset = 0;
+      this.onChange = options.onChange;
       this._init();
       this.addEventListener(egret.Event.ENTER_FRAME, function() {
         TWEEN.update();
@@ -143,6 +145,9 @@ namespace swiper {
         .onComplete(() => {
           console.log(3);
           this._setSlidesPosition();
+          if (this.onChange) {
+            this.onChange(index);
+          }
         })
         .easing(TWEEN.Easing.Quartic.Out)
         .start();

@@ -30,7 +30,10 @@ class Main extends egret.DisplayObjectContainer {
       viewHeight: 200,
       slideWidth: 150,
       slideHeight: 150,
-      radius: 200
+      radius: 200,
+      onChange: (currentIndex) => {
+        console.log(`Change to ${currentIndex}`);
+      }
     });
     const slide1 = new swiper.Slide(150, 150, null, 1);
     const slide2 = new swiper.Slide(150, 150, null, 2);
