@@ -21,7 +21,7 @@ namespace swiper {
       this._slideHeight = height;
       this._texture = texture;
       this._debugKey = debugKey;
-
+      this.touchEnabled = true;
       this._init();
       if (_.isNumber(this._debugKey)) {
         this._addIndex(debugKey);
@@ -44,7 +44,9 @@ namespace swiper {
 
     private _init() {
       this._setSlideKey();
-      this._addBg();
+      if (!this._texture) {
+        this._addBg();
+      }
       this._addImage();
     }
 
@@ -63,9 +65,16 @@ namespace swiper {
     private _addImage() {
       if (this._texture) {
         const {textureWidth, textureHeight} = this._texture;
+        const height = this._slideHeight;
+        const {width} = util.fixHeight({
+          width: textureWidth,
+          height: textureHeight
+        }, height);
         this._image = new egret.Bitmap(this._texture);
-        this._image.x = -textureWidth / 2;
-        this._image.y = -textureHeight / 2;
+        this._image.width = width;
+        this._image.height = height;
+        this._image.x = -width / 2;
+        this._image.y = -height / 2;
         this.addChild(this._image);
       }
     }

@@ -14,6 +14,8 @@ namespace scene {
      */
     private _repels: Repel[] = [];
 
+    private _swiper: swiper.Swiper;
+
     /**
      * 场景的背景，包含背景色与背景图片
      */
@@ -522,9 +524,42 @@ namespace scene {
           y: this.state.sceneHeight / 2,
           scaleX: scale,
           scaleY: scale
-        }, 1500);
+        }, 1500)
+        .onComplete(() => {
+          this._showSwiper(item);
+        });
       tw1.chain(tw2);
       item.tweens.push(tw1, tw2);
+    }
+
+    private _showSwiper(item: Item) {
+      const height = this._getLargeItemHeight();
+      this._swiper = new swiper.Swiper({
+        viewWidth: height * 2,
+        viewHeight: height,
+        slideWidth: height,
+        slideHeight: height,
+        radius: height * 0.6,
+        effect: swiper.SWIPER_EFFECT.CARROUSEL,
+        backTime: 500
+      });
+      let textures = _.map(item.data.imgs, (img) => {
+        let texture = img.texture;
+        let slide = new swiper.Slide(height, height, texture);
+        this._swiper.addSlide(slide);
+      });
+      const {sceneWidth, sceneHeight} = this.state;
+      this._swiper.x = sceneWidth / 2;
+      this._swiper.y = sceneHeight / 2;
+      this._swiper.alpha = 0;
+      this.addChild(this._swiper);
+      let tw = new TWEEN.Tween(this._swiper)
+        .to({alpha: 1}, 400)
+        .start()
+        .onComplete(() => {
+          item.visible = false;
+        });
+      this._swiper.tween = tw;
     }
 
     /**
@@ -534,6 +569,25 @@ namespace scene {
     private _itemBack(item: Item) {
       let repel = item.attatchedRepel;
       this.state.selectedItem = null;
+      let _swiper = this._swiper;
+      this._swiper = null;
+      if (_swiper) {
+        if (_swiper.tween) {
+          _swiper.tween.stop();
+        }
+        let tw = new TWEEN.Tween(_swiper)
+          .to({
+            alpha: 0,
+            scaleX: 0,
+            scaleY: 0
+          }, 200)
+          .start()
+          .onComplete(() => {
+            this.removeChild(_swiper);
+            _swiper = null;
+          });
+      }
+      item.visible = true;
       item.isBacking = true;
       item.clearTweens();
       if (repel) {
@@ -654,12 +708,21 @@ namespace scene {
     }
 
     /**
-     * 获取 item 选中后的大图绽放比例
+     * @private 获取 item 选中后的大图调试
+     * @return {number}
+     */
+    private _getLargeItemHeight(): number {
+      const shorter = this._getShorterWidth();
+      const height = shorter * 0.43;
+      return height;
+    }
+
+    /**
+     * 获取 item 选中后的大图缩放比例
      * @return {number}
      */
     private _getLargeItemScale(): number {
-      const shorter = this._getShorterWidth();
-      const height = shorter * 0.43;
+      const height = this._getLargeItemHeight();
       const itemHeight = this._getRowHeight();
       return height / itemHeight;
     }

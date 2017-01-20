@@ -8,6 +8,7 @@ namespace swiper {
     effect?: string;
     backTime?: number;
     onChange?: (currentOffset?: number) => any;
+    selfUpdate?: boolean;
   }
   export const SWIPER_EFFECT = {
     SLIDE: 'SLIDE',
@@ -32,6 +33,8 @@ namespace swiper {
     private _tween: TWEEN.Tween;
     private _backTime: number;
     private _effect: string;
+    private _selfUpdate: boolean;
+    public tween: TWEEN.Tween;
     public onChange: (currentIndex?: number) => any;
 
     constructor(options: ISwiperOptions) {
@@ -45,10 +48,13 @@ namespace swiper {
       this._effect = options.effect || SWIPER_EFFECT.SLIDE;
       this._offset = 0;
       this.onChange = options.onChange;
+      this._selfUpdate = options.selfUpdate || false;
       this._init();
-      this.addEventListener(egret.Event.ENTER_FRAME, function() {
-        TWEEN.update();
-      }, this);
+      if (this._selfUpdate) {
+        this.addEventListener(egret.Event.ENTER_FRAME, function() {
+          TWEEN.update();
+        }, this);
+      }
     }
 
     public set effect(effect: string) {
@@ -86,16 +92,6 @@ namespace swiper {
     }
 
     private _createBg() {
-      this._bg = new egret.Shape();
-      const g = this._bg.graphics;
-      g.beginFill(0x666666);
-      g.drawRect(-this._viewWidth / 2, -this._viewHeight / 2, this._viewWidth, this._viewHeight);
-      g.endFill();
-      g.lineStyle(1, 0x333333);
-      g.moveTo(0, -this._viewHeight / 2);
-      g.lineTo(0, this._viewHeight / 2);
-      g.endFill();
-      this.addChild(this._bg);
       this.touchEnabled = true;
       this.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this._onTouchBegin, this);
       this.addEventListener(egret.TouchEvent.TOUCH_MOVE, this._onTouchMove, this);
@@ -218,10 +214,10 @@ namespace swiper {
           slide.z = z;
           if (z > 0) {
             slide.visible = true;
-            if (z > 0.3) {
+            if (z > 0.5) {
               slide.alpha = 1;
             } else {
-              slide.alpha = z / 0.3;
+              slide.alpha = z / 0.5;
             }
           } else {
             slide.visible = false;

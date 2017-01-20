@@ -102,7 +102,7 @@
 </head>
 <body>
 
-    <div id="settings" style="display: none">
+    <div id="settings" style="display: block">
         <div class="content">
             <h1>设置</h1>
             <form class="form">
@@ -161,7 +161,7 @@
         </div>
     </div>
 
-    <div style="margin: auto;width: 100%;height: 100%; visibility: visible;" class="egret-player" id="egret-player"
+    <div style="margin: auto;width: 100%;height: 100%; visibility: hidden;" class="egret-player" id="egret-player"
          data-entry-class="Main"
          data-orientation="auto"
          data-scale-mode="noScale"
@@ -190,12 +190,12 @@
 
     <!--这个标签会被替换为项目中所有的 javascript 文件。删除 game_files 标签后，项目文件加载列表将不会变化，请谨慎操作！-->
     <!--game_files_start-->
+	<script egret="game" src="bin-debug/modules/ajax/index.js"></script>
 	<script egret="game" src="bin-debug/modules/scene/Scene.js"></script>
-	<script egret="game" src="bin-debug/Main.js"></script>
 	<script egret="game" src="bin-debug/modules/scene/Item.js"></script>
 	<script egret="game" src="bin-debug/modules/scene/LoadingView.js"></script>
 	<script egret="game" src="bin-debug/modules/scene/Repel.js"></script>
-	<script egret="game" src="bin-debug/modules/ajax/index.js"></script>
+	<script egret="game" src="bin-debug/Main.js"></script>
 	<script egret="game" src="bin-debug/modules/scene/interface.js"></script>
 	<script egret="game" src="bin-debug/modules/settings/index.js"></script>
 	<script egret="game" src="bin-debug/modules/swiper/Slide.js"></script>
