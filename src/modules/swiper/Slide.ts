@@ -13,6 +13,7 @@ namespace swiper {
     private _key: number;
     private _keyText: egret.TextField;
     private _debugKey: number;
+    public z: number;
 
     constructor(width: number, height: number, texture: egret.Texture, debugKey?: number) {
       super();

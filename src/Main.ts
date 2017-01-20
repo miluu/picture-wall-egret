@@ -26,23 +26,25 @@ class Main extends egret.DisplayObjectContainer {
     // settings.init(this._sceneStart.bind(this));
 
     const sw = new swiper.Swiper({
-      viewWidth: 500,
-      viewHeight: 200,
-      slideWidth: 150,
-      slideHeight: 150,
-      radius: 200,
-      onChange: (currentIndex) => {
-        console.log(`Change to ${currentIndex}`);
+      viewWidth: 300,
+      viewHeight: 100,
+      slideWidth: 70,
+      slideHeight: 70,
+      radius: 100,
+      effect: swiper.SWIPER_EFFECT.CARROUSEL,
+      onChange: () => {
+        console.log(`Change to ${sw.activeIndex}`);
       }
     });
-    const slide1 = new swiper.Slide(150, 150, null, 1);
-    const slide2 = new swiper.Slide(150, 150, null, 2);
-    const slide3 = new swiper.Slide(150, 150, null, 3);
-    const slide4 = new swiper.Slide(150, 150, null, 4);
-    sw.addSlide(slide1).addSlide(slide2).addSlide(slide3).addSlide(slide4);
+    const slide0 = new swiper.Slide(70, 70, null, 0);
+    const slide1 = new swiper.Slide(70, 70, null, 1);
+    const slide2 = new swiper.Slide(70, 70, null, 2);
+    const slide3 = new swiper.Slide(70, 70, null, 3);
+    const slide4 = new swiper.Slide(70, 70, null, 4);
+    sw.addSlide(slide0).addSlide(slide1).addSlide(slide2).addSlide(slide3).addSlide(slide4);
     this.addChild(sw);
-    sw.x = 300;
-    sw.y = 250;
+    sw.x = 170;
+    sw.y = 70;
   }
 
   /**

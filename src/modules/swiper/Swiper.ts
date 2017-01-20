@@ -5,9 +5,14 @@ namespace swiper {
     slideWidth: number;
     slideHeight: number;
     radius: number;
+    effect?: string;
     backTime?: number;
-    onChange?: (currentIndex?: number) => any;
+    onChange?: (currentOffset?: number) => any;
   }
+  export const SWIPER_EFFECT = {
+    SLIDE: 'SLIDE',
+    CARROUSEL: 'CARROUSEL'
+  };
   export class Swiper extends egret.DisplayObjectContainer {
     private _slides: Slide[] = [];
     private _slidesCopy: Slide[] = [];
@@ -26,6 +31,7 @@ namespace swiper {
     private _touchStart: boolean;
     private _tween: TWEEN.Tween;
     private _backTime: number;
+    private _effect: string;
     public onChange: (currentIndex?: number) => any;
 
     constructor(options: ISwiperOptions) {
@@ -36,12 +42,42 @@ namespace swiper {
       this._slideHeight = options.slideHeight;
       this._radius = options.radius;
       this._backTime = options.backTime || 500;
+      this._effect = options.effect || SWIPER_EFFECT.SLIDE;
       this._offset = 0;
       this.onChange = options.onChange;
       this._init();
       this.addEventListener(egret.Event.ENTER_FRAME, function() {
         TWEEN.update();
       }, this);
+    }
+
+    public set effect(effect: string) {
+      this._effect = effect;
+      this._setSlidesPosition();
+    }
+
+    public get effect(): string {
+      return this._effect;
+    }
+
+    public get activeIndex(): number {
+      const offset = Math.round(this._offset);
+      const slidesCount = this._slides.length;
+      let index = -offset % slidesCount;
+      if (index < 0) {
+        index += slidesCount;
+      }
+      return index;
+    }
+
+    public set activeIndex(index: number) {
+      index = Math.round(index);
+      const offset = Math.round(this._offset);
+      const slidesCount = this._slides.length;
+      let currentIndex = -offset % slidesCount;
+      let indexOffset = index - currentIndex;
+      let toOffset = this._offset - indexOffset;
+      this.goto(toOffset);
     }
 
     private _init() {
@@ -55,12 +91,16 @@ namespace swiper {
       g.beginFill(0x666666);
       g.drawRect(-this._viewWidth / 2, -this._viewHeight / 2, this._viewWidth, this._viewHeight);
       g.endFill();
+      g.lineStyle(1, 0x333333);
+      g.moveTo(0, -this._viewHeight / 2);
+      g.lineTo(0, this._viewHeight / 2);
+      g.endFill();
       this.addChild(this._bg);
-      this._bg.touchEnabled = true;
-      this._bg.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this._onTouchBegin, this);
-      this._bg.addEventListener(egret.TouchEvent.TOUCH_MOVE, this._onTouchMove, this);
-      this._bg.addEventListener(egret.TouchEvent.TOUCH_END, this._onTouchEnd, this);
-      this._bg.addEventListener(egret.TouchEvent.TOUCH_RELEASE_OUTSIDE, this._onReleaseOutside, this);
+      this.touchEnabled = true;
+      this.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this._onTouchBegin, this);
+      this.addEventListener(egret.TouchEvent.TOUCH_MOVE, this._onTouchMove, this);
+      this.addEventListener(egret.TouchEvent.TOUCH_END, this._onTouchEnd, this);
+      this.addEventListener(egret.TouchEvent.TOUCH_RELEASE_OUTSIDE, this._onReleaseOutside, this);
     }
 
     private _createSlidesContainer() {
@@ -81,7 +121,6 @@ namespace swiper {
     }
 
     private _onTouchBegin(e: egret.TouchEvent) {
-      console.log('_onTouchBegin');
       this._startX = e.stageX;
       this._startTime = new Date();
       this._touchStart = true;
@@ -117,7 +156,6 @@ namespace swiper {
       this._startOffset = null;
       let endOffset = this._offset;
       let nearOffset: number = Math.round(endOffset);
-      console.log(speed);
       if (Math.abs(speed) > 0.2) {
         if (speed > 0) {
           nearOffset = Math.ceil(endOffset);
@@ -127,26 +165,21 @@ namespace swiper {
       } else {
         nearOffset = Math.round(endOffset);
       }
-      console.log('nearOffset:', nearOffset);
       this.goto(nearOffset);
     }
 
-    public goto(index: number) {
-      console.log(`goto index: ${index}`);
+    public goto(offset: number) {
       this._tween = new TWEEN.Tween(this)
-        .to({_offset: index}, this._backTime)
+        .to({_offset: offset}, this._backTime)
         .onStart(() => {
-          console.log(1);
         })
         .onUpdate(() => {
-          console.log(this._offset);
           this._setSlidesPosition();
         })
         .onComplete(() => {
-          console.log(3);
           this._setSlidesPosition();
           if (this.onChange) {
-            this.onChange(index);
+            this.onChange(offset);
           }
         })
         .easing(TWEEN.Easing.Quartic.Out)
@@ -154,231 +187,53 @@ namespace swiper {
     }
 
     private _setSlidesPosition() {
-      const slidesCount = this._slides.length;
       const slides = this._slidesCopy.concat(this._slides);
       _.forEach(slides, (slide, index) => {
-        const i = index - slidesCount;
-        slide.y = 0;
-        slide.x = (i + this._offset) * this._slideWidth;
+        this._useEffect(slide, index);
       });
+      if (this._effect === SWIPER_EFFECT.CARROUSEL) {
+        _.chain(slides)
+          .sortBy('scaleX')
+          .forEach((slide, index) => {
+            this._slidesContainer.setChildIndex(slide, index);
+          })
+          .value();
+      }
+    }
+
+    private _useEffect(slide: Slide, index: number) {
+      const slidesCount = this._slides.length;
+      const totalCount = slidesCount * 2;
+      const effect = this._effect;
+      const i = index - slidesCount;
+      const radius = this._radius;
+      switch (effect) {
+        case SWIPER_EFFECT.CARROUSEL:
+          let perDeg = Math.PI * 2 / totalCount;
+          let slideDeg = perDeg * (i + this._offset);
+          let x = radius * Math.sin(slideDeg);
+          let z = Math.cos(slideDeg);
+          let scale = (z + 1) / 2;
+          slide.x = x;
+          slide.z = z;
+          if (z > 0) {
+            slide.visible = true;
+            if (z > 0.3) {
+              slide.alpha = 1;
+            } else {
+              slide.alpha = z / 0.3;
+            }
+          } else {
+            slide.visible = false;
+          }
+
+          slide.scaleX = slide.scaleY = scale;
+          break;
+        default:
+          slide.y = 0;
+          slide.x = (i + this._offset) * this._slideWidth;
+          break;
+      }
     }
   }
 }
-
-
-// namespace swiper {
-//   export interface ISwiperOptions {
-//     viewWidth: number;
-//     viewHeight: number;
-//     slideWidth: number;
-//     slideHeight: number;
-//     padding?: number;
-//     effect?: 'none' | 'slide' | 'carrousel';
-//     backTime?: number;
-//     activeCenter?: boolean;
-//     loop?: boolean;
-//     carrousel?: IEffectCarrouselOptions;
-//   }
-
-//   export interface IEffectCarrouselOptions {
-//     maxSideSidesCount?: number;
-//     minScale?: number;
-//     radius?: number;
-//   }
-
-//   export class Swiper extends egret.DisplayObjectContainer {
-//     public slides: Slide[] = [];
-//     private _slideOffset = 0;
-//     private _activeIndex = 0;
-//     private _bg: egret.Shape;
-//     private _slidesContainer: egret.DisplayObjectContainer;
-//     private _startX: number = null;
-//     private _startTime: number = null;
-//     private _touchStart: boolean = false;
-//     private _startSlideOffset: number = null;
-//     private _tw: egret.Tween = null;
-//     private _options: ISwiperOptions;
-//     public onChange: (activeIndex?: number, preActiveIndex?: number) => any;
-
-//     constructor(options: ISwiperOptions) {
-//       super();
-//       this._options = _.assign({}, {
-//         padding: 10,
-//         effect: 'slide',
-//         backTime: 500,
-//         activeCenter: true,
-//         carrousel: {}
-//       }, options);
-//       this._addBg();
-//       this._createSlidesContainer();
-//     }
-//     public start() {
-//       this.updateSlidesPosition();
-//       return this;
-//     }
-//     public slidesCount() {
-//       return this.slides.length;
-//     }
-//     public updateSlidesPosition() {
-//       let offset = this._slideOffset;
-//       console.log(offset.toFixed(3));
-//       const {activeCenter, viewWidth, slideWidth, padding} = this._options;
-//       let posOffset: number = activeCenter
-//         ? viewWidth / 2
-//         : slideWidth / 2 + padding;
-//       _.forEach(this.slides, (slide) => {
-//         this._useEffect(slide, slide.options.index, posOffset);
-//       });
-//       if (this._options.effect === 'carrousel') {
-//         _.chain(this.slides)
-//           .sortBy('scaleX')
-//           .forEach((slide, index) => {
-//             this._slidesContainer.setChildIndex(slide, index);
-//           })
-//           .value();
-//       }
-//       return this;
-//     }
-//     private _useEffect(slide: Slide, index: number, posOffset: number) {
-//       const {slideWidth, padding, effect} = this._options;
-//       switch (effect) {
-//         case 'carrousel':
-//           let haha = index === 0;
-//           let slidesCount = this.slidesCount();
-//           let carrouselOptions = this._options.carrousel;
-//           let radius = carrouselOptions.radius || 130;
-//           let minScale = carrouselOptions.minScale || 0.2;
-//           let sideSlidesCount = Math.floor(slidesCount / 2);
-//           let slideOffset = (this._slideOffset + index) % slidesCount;
-//           if (slideOffset < 0) {
-//             slideOffset += slidesCount;
-//           }
-//           if (haha) {
-//             // console.log('--------');
-//             // console.log('this._slideOffset', this._slideOffset);
-//             // console.log('slideOffset', slideOffset);
-//           }
-//           let ang = slideOffset / (sideSlidesCount + 1) * Math.PI / 2;
-//           let x = radius * Math.sin(ang);
-//           let z = Math.abs(Math.cos(ang));
-//           slide.x = x + posOffset;
-//           slide.scaleX = slide.scaleY = z * (1 - minScale) + minScale;
-//           slide.alpha = z;
-//           break;
-//         default:
-//           slide.x = (this._options.slideWidth + this._options.padding * 2) * (index + this._slideOffset) + posOffset;
-//           break;
-//       }
-//     }
-//     private _addBg() {
-//       this._bg = new egret.Shape();
-//       const {viewWidth, viewHeight} = this._options;
-//       let g = this._bg.graphics;
-//       g.beginFill(0xffffff, 0.5);
-//       g.drawRect(0, 0, viewWidth, viewHeight);
-//       g.endFill();
-//       this.addChild(this._bg);
-//       this._bg.touchEnabled = true;
-//       this._bg.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this._onTouchBegin, this);
-//       this._bg.addEventListener(egret.TouchEvent.TOUCH_MOVE, this._onTouchMove, this);
-//       this._bg.addEventListener(egret.TouchEvent.TOUCH_END, this._onTouchEnd, this);
-//       this._bg.addEventListener(egret.TouchEvent.TOUCH_RELEASE_OUTSIDE, this._onReleaseOutside, this);
-//     }
-//     public get activeIndex() {
-//       return this._activeIndex;
-//     }
-//     public set activeIndex(index: number) {
-//       this.goto(index);
-//     }
-//     public goto(index: number) {
-//       let preActiveIndex = this._activeIndex;
-//       const {backTime, loop} = this._options;
-//       const lastIndex = this.slidesCount() - 1;
-//       if (!loop) {
-//         if (index < 0) {
-//           index = 0;
-//         } else if (index > lastIndex) {
-//           index = lastIndex;
-//         }
-//       }
-//       this._tw = egret.Tween.get(this, {
-//         onChange: function() {
-//           this.updateSlidesPosition();
-//         },
-//         onChangeObj: this
-//       })
-//         .to({_slideOffset: index}, backTime, egret.Ease.quartOut)
-//         .call(function() {
-//           this._activeIndex = index;
-//           this._tw = null;
-//           if (this.onChange) {
-//             this.onChange(index, preActiveIndex);
-//           }
-//         }, this);
-//       return this;
-//     }
-//     private _stopDrag(endX: number) {
-//       this._updateOffset(endX);
-//       let endTime = +new Date();
-//       let speed = (endX - this._startX) / (endTime - this._startTime);
-//       this._startX = null;
-//       this._touchStart = false;
-//       this._startSlideOffset = null;
-//       let endOffset = this._slideOffset;
-//       let nearOffset: number = Math.round(endOffset);
-//       console.log(speed);
-//       if (Math.abs(speed) > 0.2) {
-//         if (speed > 0) {
-//           nearOffset = Math.ceil(endOffset);
-//         } else {
-//           nearOffset = Math.floor(endOffset);
-//         }
-//       } else {
-//         nearOffset = Math.round(endOffset);
-//       }
-//       console.log('nearOffset:', nearOffset);
-//       this.goto(nearOffset);
-//     }
-//     private _updateOffset(currentX) {
-//       let offsetX = currentX - this._startX;
-//       let {padding, slideWidth} = this._options;
-//       this._slideOffset = this._startSlideOffset + (offsetX / (slideWidth + padding * 2));
-//     }
-//     private _onTouchBegin(e: egret.TouchEvent) {
-//       this._startX = e.stageX;
-//       this._startTime = +new Date();
-//       this._touchStart = true;
-//       this._startSlideOffset = this._slideOffset;
-//       if (this._tw) {
-//         this._tw.setPaused(true);
-//         this._tw = null;
-//       }
-//     }
-//     private _onTouchMove(e: egret.TouchEvent) {
-//       if (this._touchStart) {
-//         this._updateOffset(e.stageX);
-//         this.updateSlidesPosition();
-//       }
-//     }
-//     private _onTouchEnd(e: egret.TouchEvent) {
-//       this._stopDrag(e.stageX);
-//     }
-//     private _onReleaseOutside(e: egret.TouchEvent) {
-//       this._stopDrag(e.stageX);
-//     }
-//     private _createSlidesContainer() {
-//       const {viewWidth, viewHeight, slideWidth, slideHeight} = this._options;
-//       this._slidesContainer = new egret.DisplayObjectContainer();
-//       this.addChild(this._slidesContainer);
-//       this._slidesContainer.y = slideHeight / 2;
-//       this._slidesContainer.mask = new egret.Rectangle(0, -slideHeight / 2, viewWidth, viewHeight);
-//     }
-//     public addSlide(content?: egret.DisplayObject) {
-//       const {slideWidth, slideHeight} = this._options;
-//       let slide = new Slide(slideWidth, slideHeight, content);
-//       this.slides.push(slide);
-//       this._slidesContainer.addChild(slide);
-//       return this;
-//     }
-//   }
-// }
