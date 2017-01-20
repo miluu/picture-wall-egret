@@ -532,6 +532,10 @@ namespace scene {
       item.tweens.push(tw1, tw2);
     }
 
+    /**
+     * @private 展示 item 的 swiper
+     * @param item {Item}
+     */
     private _showSwiper(item: Item) {
       const height = this._getLargeItemHeight();
       this._swiper = new swiper.Swiper({
