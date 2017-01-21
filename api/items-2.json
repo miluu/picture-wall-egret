@@ -10,6 +10,16 @@
         "description": "穿过都说超显瘦哦！面料柔软带弹性，中腰腰舒适修身材，简洁设计百搭不费心！",
         "price": 1129,
         "detailUrl": "/detail.html?id=20",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB26ScdqFXXXXbjXpXXXXXXXXXX_!!2262617940.jpg",
@@ -35,6 +45,16 @@
         "description": "非常精致的雪纺面料，独特的定位复古印花，简单却独到的大牌走秀款， 面料垂感，透气，版型极好",
         "price": 929,
         "detailUrl": "/detail.html?id=21",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2ndHPqXXXXXcpXpXXXXXXXXXX_!!2007426154.jpg",
@@ -60,6 +80,16 @@
         "description": "领弧圆润 腹部捏褶工艺 透气舒服 不起球不掉色",
         "price": 115,
         "detailUrl": "/detail.html?id=22",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2cGRDeXXXXXalXXXXXXXXXXXX-1732515120.jpg",
@@ -85,6 +115,16 @@
         "description": "纯棉印花 要的是个性 简约版型 印花亮片",
         "price": 129,
         "detailUrl": "/detail.html?id=23",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2ITRIcFXXXXcVXXXXXXXXXXXX_!!2041089693.jpg",
@@ -110,6 +150,16 @@
         "description": "弹力针织布 修身显瘦 简约百搭",
         "price": 1129,
         "detailUrl": "/detail.html?id=24",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2.zm1mVXXXXXCXpXXXXXXXXXX_!!647430139.jpg",
@@ -135,6 +185,16 @@
         "description": "1、莱卡棉面料，弹力大，不起球，洗后不缩水！ 2、腰部褶皱设计，有效遮挡肚肚上的赘肉！",
         "price": 1129,
         "detailUrl": "/detail.html?id=25",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2VPY7nVXXXXXoXXXXXXXXXXXX_!!405732713.jpg",
@@ -160,6 +220,16 @@
         "description": "原创设计 专注中年女装",
         "price": 1129,
         "detailUrl": "/detail.html?id=26",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2IeVEbVXXXXXlXpXXXXXXXXXX_!!1966677580.jpg",
@@ -185,6 +255,16 @@
         "description": "富有青春气息的百搭上衣，时尚而有个性，是具有可塑性的一款单品。",
         "price": 1129,
         "detailUrl": "/detail.html?id=27",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2jU0AlVXXXXaxXXXXXXXXXXXX_!!1120328108.jpg",
@@ -210,6 +290,16 @@
         "description": "Amii正品 总仓发货 7天退换 全场包邮",
         "price": 1239,
         "detailUrl": "/detail.html?id=28",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2JkbUjVXXXXbwXXXXXXXXXXXX_!!451135386.jpg",
@@ -235,6 +325,16 @@
         "description": "主要颜色: 文艺灰粉小鹿 冰魄蓝粉小鹿 荧光绿粉小鹿 青苹绿粉小鹿 阳光橙粉小鹿 热情红粉小鹿 高雅黑粉小鹿 活力黄粉小鹿 珍珠白粉小鹿 浅花灰粉小鹿 樱花粉粉小鹿 松石绿粉小鹿",
         "price": 1129,
         "detailUrl": "/detail.html?id=29",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2hhm6oVXXXXb2XXXXXXXXXXXX_!!2765355741.jpg",
@@ -260,6 +360,16 @@
         "description": "全店任意 满2件 送10元 现金红包",
         "price": 1129,
         "detailUrl": "/detail.html?id=30",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2LyRKlVXXXXaHXpXXXXXXXXXX_!!1077979376.jpg",
@@ -285,6 +395,16 @@
         "description": "流行元素/工艺: 印花",
         "price": 1222,
         "detailUrl": "/detail.html?id=31",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2vpdJoXXXXXcEXpXXXXXXXXXX_!!913099165.jpg",
@@ -310,6 +430,16 @@
         "description": "思莱德SELECTED女士纯棉彩色图案休闲T恤C416201037 海军蓝 155/76/XS",
         "price": 1129,
         "detailUrl": "/detail.html?id=32",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2f_MGpVXXXXXNXpXXXXXXXXXX_!!913099165.jpg",
@@ -335,6 +465,16 @@
         "description": "不掉色！宝贝描述附面料色牢度检测报告！",
         "price": 5129,
         "detailUrl": "/detail.html?id=33",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2jCasmXXXXXb7XXXXXXXXXXXX_!!917744910.jpg",
@@ -360,6 +500,16 @@
         "description": "主要颜色: 白(超值面料） 黑（超值面料） 绿字（超值面料）",
         "price": 1129,
         "detailUrl": "/detail.html?id=34",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2AOlcnFXXXXXZXFXXXXXXXXXX_!!1030051801.jpg",
@@ -385,6 +535,16 @@
         "description": "修身显瘦 简约百搭 不起球！ 不掉色！ 不缩水！",
         "price": 559,
         "detailUrl": "/detail.html?id=35",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB24MKcmFXXXXXOXpXXXXXXXXXX_!!2126977022.jpg",
@@ -410,6 +570,16 @@
         "description": "材质成分: 棉70% 聚酯纤维30%",
         "price": 239,
         "detailUrl": "/detail.html?id=36",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2eoaemXXXXXbIXpXXXXXXXXXX_!!1893593986.jpg",
@@ -435,6 +605,16 @@
         "description": "成分含量: 51%(含)-70%(含)",
         "price": 1129,
         "detailUrl": "/detail.html?id=37",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2YhsUlFXXXXaxXpXXXXXXXXXX_!!557299735.jpg",
@@ -460,6 +640,16 @@
         "description": "图案: 卡通动漫 人物",
         "price": 1129,
         "detailUrl": "/detail.html?id=38",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2G8TlnVXXXXcTXpXXXXXXXXXX_!!2273190194.jpg",
@@ -485,6 +675,16 @@
         "description": "颜色分类: 202 203 205 206 207 210",
         "price": 1129,
         "detailUrl": "/detail.html?id=39",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2p.YmppXXXXc9XXXXXXXXXXXX_!!793680491.jpg",
@@ -510,6 +710,16 @@
         "description": "材质成分: 棉92.7% 聚氨酯弹性纤维(氨纶)7.3%",
         "price": 719,
         "detailUrl": "/detail.html?id=40",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2uIgDlpXXXXXcXXXXXXXXXXXX_!!1740889780.jpg",
@@ -535,6 +745,16 @@
         "description": "V领条纹设计 简约大方 质量保证 收腰显瘦",
         "price": 889,
         "detailUrl": "/detail.html?id=41",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2fF0QnXXXXXXZXXXXXXXXXXXX_!!1649659426.jpg",
@@ -560,6 +780,16 @@
         "description": "流行元素: 印花 拼接 贴布",
         "price": 929,
         "detailUrl": "/detail.html?id=42",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2ncsElXXXXXagXXXXXXXXXXXX_!!1969755452.jpg",
@@ -585,6 +815,16 @@
         "description": "冲量爆款，拼实力！大版韩国T恤。修身、打底外穿、圆领长袖多种热点集聚",
         "price": 1129,
         "detailUrl": "/detail.html?id=43",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2SltgcXXXXXahXXXXXXXXXXXX_!!1674216432.jpg",
@@ -610,6 +850,16 @@
         "description": "很精美的一款简约T 一如既往蚂蚁家的好品质，穿着体验上佳 宽松的小短款版型",
         "price": 1129,
         "detailUrl": "/detail.html?id=44",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2_RHUnXXXXXX9XFXXXXXXXXXX_!!13225714.jpg",
@@ -635,6 +885,16 @@
         "description": "唯依精品简约简单实用的衣服",
         "price": 329,
         "detailUrl": "/detail.html?id=45",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB278.LXFXXXXb.XXXXXXXXXXXX_!!155325169.jpg",
@@ -650,6 +910,16 @@
         "description": "大厂出 品质量保证",
         "price": 219,
         "detailUrl": "/detail.html?id=46",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2Re8DkpXXXXaMXpXXXXXXXXXX_!!1069627177.jpg",
@@ -675,6 +945,16 @@
         "description": "流行元素/工艺: 荷叶边 镂空 褶皱 拼接 拉链",
         "price": 1129,
         "detailUrl": "/detail.html?id=47",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB27bodpVXXXXc2XXXXXXXXXXXX_!!765619814.jpg",
@@ -700,6 +980,16 @@
         "description": "流行元素/工艺: 蝴蝶结 拼接 拉链",
         "price": 1129,
         "detailUrl": "/detail.html?id=48",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB25zaiqpXXXXXhXXXXXXXXXXXX_!!91372914.jpg",
@@ -725,6 +1015,16 @@
         "description": "流行元素/工艺: 荷叶边 露背 印花",
         "price": 229,
         "detailUrl": "/detail.html?id=49",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2GcRAnFXXXXbtXpXXXXXXXXXX_!!2574381340.jpg",
@@ -750,6 +1050,16 @@
         "description": "细肩带的吊带背心更适于作内搭，满足日常实用需求",
         "price": 129,
         "detailUrl": "/detail.html?id=50",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2EeadnFXXXXbdXpXXXXXXXXXX_!!76245157.jpg",
@@ -775,6 +1085,16 @@
         "description": "思莱德SELECTED女士纯棉彩色图案休闲T恤C416201037 海军蓝 155/76/XS",
         "price": 1129,
         "detailUrl": "/detail.html?id=51",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2N.GhmFXXXXbHXpXXXXXXXXXX_!!1766047907.jpg",
@@ -800,6 +1120,16 @@
         "description": "成分含量: 81%(含)-90%(含)",
         "price": 1129,
         "detailUrl": "/detail.html?id=52",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2yNE4opXXXXbhXpXXXXXXXXXX_!!2297886690.jpg",
@@ -825,6 +1155,16 @@
         "description": "成分含量: 71%(含)-80%(含)",
         "price": 449,
         "detailUrl": "/detail.html?id=53",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2gMAdmXXXXXXpXpXXXXXXXXXX_!!2364466468.jpg",
@@ -850,6 +1190,16 @@
         "description": "泪奔！亏本冲销量！仅限前100名，卖完马上涨价哟，喜欢的亲们不要犹豫哟，赶快下手哟！",
         "price": 1129,
         "detailUrl": "/detail.html?id=54",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2d_xcpFXXXXXCXpXXXXXXXXXX_!!2840408554.jpg",
@@ -875,6 +1225,16 @@
         "description": "主要颜色: 白色 暗粉 绿色 灰色 黑色",
         "price": 829,
         "detailUrl": "/detail.html?id=55",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2yvMmoVXXXXaiXFXXXXXXXXXX_!!1723145627.jpg",
@@ -900,6 +1260,16 @@
         "description": "本款连衣裙拥有着经典的小波点流行元素！纯色连衣裙搭配小波点真的是甜美不单调！圆领的设计不失优雅！",
         "price": 339,
         "detailUrl": "/detail.html?id=56",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2fC8RjFXXXXbqXXXXXXXXXXXX_!!2074808725.jpg",
@@ -925,6 +1295,16 @@
         "description": "思莱德SELECTED女士纯棉彩色图案休闲T恤C416201037 海军蓝 155/76/XS",
         "price": 431,
         "detailUrl": "/detail.html?id=57",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2Vox4opXXXXcQXpXXXXXXXXXX_!!2112052594.jpg",
@@ -950,6 +1330,16 @@
         "description": "款式是齐肚脐的短款，浅浅的露出小蛮腰",
         "price": 88,
         "detailUrl": "/detail.html?id=58",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB23S.fnVXXXXa2XXXXXXXXXXXX_!!828143405.jpg",
@@ -975,6 +1365,16 @@
         "description": "个性扎染面料~不掉色~不褪色~面料柔软~凉爽舒服",
         "price": 99,
         "detailUrl": "/detail.html?id=59",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2fQnPcpXXXXa2XpXXXXXXXXXX_!!369545372.jpg",
@@ -990,6 +1390,16 @@
         "description": "流行元素/工艺: 露背 拼接 背带",
         "price": 759,
         "detailUrl": "/detail.html?id=60",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2xsOUpVXXXXaMXpXXXXXXXXXX_!!811888884.jpg",
@@ -1015,6 +1425,16 @@
         "description": "思莱德SELECTED女士纯棉彩色图案休闲T恤C416201037 海军蓝 155/76/XS",
         "price": 1129,
         "detailUrl": "/detail.html?id=61",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2CWztppXXXXbZXpXXXXXXXXXX_!!2364466468.jpg",
@@ -1032,7 +1452,7 @@
             "height": null
           },
           {
-            "url": "/assets/images/imgs/.jpg",
+            "url": "/assets/images/.jpg",
             "width": 751,
             "height": 759
           }
@@ -1045,6 +1465,16 @@
         "description": "流行元素/工艺: 荷叶边 拉链",
         "price": 989,
         "detailUrl": "/detail.html?id=62",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2pqtnoFXXXXbiXpXXXXXXXXXX_!!2364466468.jpg",
@@ -1070,6 +1500,16 @@
         "description": "亲们，新款哦，收藏夹购物车送礼",
         "price": 1129,
         "detailUrl": "/detail.html?id=63",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB21ud1nFXXXXb9XXXXXXXXXXXX_!!515037664.jpg",
@@ -1095,6 +1535,16 @@
         "description": "奈昕定制 时尚与众不同 合适新款式 优质有档次",
         "price": 1129,
         "detailUrl": "/detail.html?id=64",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2DGDwkVXXXXX6XpXXXXXXXXXX_!!294019224.jpg",
@@ -1120,6 +1570,16 @@
         "description": "思莱德SELECTED女士纯棉彩色图案休闲T恤C416201037 海军蓝 155/76/XS",
         "price": 1129,
         "detailUrl": "/detail.html?id=65",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/T2aBntXtXXXXXXXXXX_!!806408970.jpg",
@@ -1145,6 +1605,16 @@
         "description": "思莱德SELECTED女士纯棉彩色图案休闲T恤C416201037 海军蓝 155/76/XS",
         "price": 1129,
         "detailUrl": "/detail.html?id=66",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2oG5vaVXXXXcXXXXXXXXXXXXX_!!628560662.jpg",
@@ -1170,6 +1640,16 @@
         "description": "思莱德SELECTED女士纯棉彩色图案休闲T恤C416201037 海军蓝 155/76/XS",
         "price": 1129,
         "detailUrl": "/detail.html?id=0",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB25v95qFXXXXXyXpXXXXXXXXXX_!!2175014669.jpg",
@@ -1195,6 +1675,16 @@
         "description": "材质成分: 棉95% 聚氨酯弹性纤维",
         "price": 1456,
         "detailUrl": "/detail.html?id=1",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB20dUSkpXXXXXMXXXXXXXXXXXX_!!2143552968.jpg",
@@ -1220,6 +1710,16 @@
         "description": "主要颜色: 白色 粉红色 西瓜红 湖蓝色",
         "price": 1129,
         "detailUrl": "/detail.html?id=2",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2OGgqlFXXXXXvXXXXXXXXXXXX_!!1986915551.jpg",
@@ -1245,6 +1745,16 @@
         "description": "主要颜色: 白+蓝7132 6049白色 2562 白色 6097 灰色 白色 灰色 军绿色 蓝色",
         "price": 112,
         "detailUrl": "/detail.html?id=3",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2Arh2eXXXXXaeXXXXXXXXXXXX_!!197223493.jpg",
@@ -1270,6 +1780,16 @@
         "description": "材质成分：棉95.2% 聚氨酯弹性",
         "price": 232,
         "detailUrl": "/detail.html?id=4",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2eeyfkVXXXXchXpXXXXXXXXXX_!!1048771310.jpg",
@@ -1295,6 +1815,16 @@
         "description": "思莱德SELECTED女士纯棉彩色图案休闲T恤C416201037 海军蓝 155/76/XS",
         "price": 133,
         "detailUrl": "/detail.html?id=5",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2Ct8GlFXXXXbdXpXXXXXXXXXX_!!1716957969.jpg",
@@ -1320,6 +1850,16 @@
         "description": "材质成分：棉95% 聚氨酯弹性纤维(氨纶)5%",
         "price": 1555,
         "detailUrl": "/detail.html?id=6",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2UxneqpXXXXaCXXXXXXXXXXXX_!!827940181.jpg",
@@ -1345,6 +1885,16 @@
         "description": "基础风格：时尚都市",
         "price": 112,
         "detailUrl": "/detail.html?id=7",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2LynbppXXXXXpXpXXXXXXXXXX-188124207.jpg",
@@ -1370,6 +1920,16 @@
         "description": "主要颜色: 彩蓝 皮粉 烟灰色 白色 黑色 玫红色 红色 西瓜红 桔色 黄色 绿色 荧光绿 湖蓝色 紫罗兰 咖啡色",
         "price": 2003,
         "detailUrl": "/detail.html?id=8",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2uw_dmVXXXXamXXXXXXXXXXXX_!!1640678487.jpg",
@@ -1395,6 +1955,16 @@
         "description": "条纹经典不衰 清晰的 横细条纹 配色淡雅和谐",
         "price": 123,
         "detailUrl": "/detail.html?id=9",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2PoiYkVXXXXbNXXXXXXXXXXXX_!!2030528091.jpg",
@@ -1420,6 +1990,16 @@
         "description": "思莱德SELECTED女士纯棉彩色图案休闲T恤C416201037 海军蓝 155/76/XS",
         "price": 1129,
         "detailUrl": "/detail.html?id=0",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB25v95qFXXXXXyXpXXXXXXXXXX_!!2175014669.jpg",
@@ -1445,6 +2025,16 @@
         "description": "材质成分: 棉95% 聚氨酯弹性纤维",
         "price": 1456,
         "detailUrl": "/detail.html?id=1",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB20dUSkpXXXXXMXXXXXXXXXXXX_!!2143552968.jpg",
@@ -1470,6 +2060,16 @@
         "description": "主要颜色: 白色 粉红色 西瓜红 湖蓝色",
         "price": 1129,
         "detailUrl": "/detail.html?id=2",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2OGgqlFXXXXXvXXXXXXXXXXXX_!!1986915551.jpg",
@@ -1495,6 +2095,16 @@
         "description": "主要颜色: 白+蓝7132 6049白色 2562 白色 6097 灰色 白色 灰色 军绿色 蓝色",
         "price": 112,
         "detailUrl": "/detail.html?id=3",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2Arh2eXXXXXaeXXXXXXXXXXXX_!!197223493.jpg",
@@ -1520,6 +2130,16 @@
         "description": "材质成分：棉95.2% 聚氨酯弹性",
         "price": 232,
         "detailUrl": "/detail.html?id=4",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2eeyfkVXXXXchXpXXXXXXXXXX_!!1048771310.jpg",
@@ -1545,6 +2165,16 @@
         "description": "思莱德SELECTED女士纯棉彩色图案休闲T恤C416201037 海军蓝 155/76/XS",
         "price": 133,
         "detailUrl": "/detail.html?id=5",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2Ct8GlFXXXXbdXpXXXXXXXXXX_!!1716957969.jpg",
@@ -1570,6 +2200,16 @@
         "description": "材质成分：棉95% 聚氨酯弹性纤维(氨纶)5%",
         "price": 1555,
         "detailUrl": "/detail.html?id=6",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2UxneqpXXXXaCXXXXXXXXXXXX_!!827940181.jpg",
@@ -1595,6 +2235,16 @@
         "description": "基础风格：时尚都市",
         "price": 112,
         "detailUrl": "/detail.html?id=7",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2LynbppXXXXXpXpXXXXXXXXXX-188124207.jpg",
@@ -1620,6 +2270,16 @@
         "description": "主要颜色: 彩蓝 皮粉 烟灰色 白色 黑色 玫红色 红色 西瓜红 桔色 黄色 绿色 荧光绿 湖蓝色 紫罗兰 咖啡色",
         "price": 2003,
         "detailUrl": "/detail.html?id=8",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2uw_dmVXXXXamXXXXXXXXXXXX_!!1640678487.jpg",
@@ -1645,6 +2305,16 @@
         "description": "条纹经典不衰 清晰的 横细条纹 配色淡雅和谐",
         "price": 123,
         "detailUrl": "/detail.html?id=9",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2PoiYkVXXXXbNXXXXXXXXXXXX_!!2030528091.jpg",
@@ -1670,6 +2340,16 @@
         "description": "【全棉　不变形　不缩水　不起球】【备注：黑色第一次洗会掉毛不易与其它一起洗】",
         "price": 129,
         "detailUrl": "/detail.html?id=10",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2JhG5kXXXXXcwXpXXXXXXXXXX_!!598633737.jpg",
@@ -1695,6 +2375,16 @@
         "description": "新品上架 质量保证 青春活力 宽松舒适 百搭潮流",
         "price": 512,
         "detailUrl": "/detail.html?id=11",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2ShvsoFXXXXbzXpXXXXXXXXXX_!!2192876822.jpg",
@@ -1720,6 +2410,16 @@
         "description": "材质成分: 棉95% 聚氨酯弹性纤维(氨纶)5%",
         "price": 1129,
         "detailUrl": "/detail.html?id=12",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2zlXMlFXXXXXEXpXXXXXXXXXX_!!2185282132.jpg",
@@ -1745,6 +2445,16 @@
         "description": "100%纯棉 送运费险 不起球 不掉色 限时特价",
         "price": 999,
         "detailUrl": "/detail.html?id=13",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2cgwinpXXXXcbXpXXXXXXXXXX_!!1782948872.jpg",
@@ -1770,6 +2480,16 @@
         "description": "材质成分: 粘胶纤维(粘纤)51.7% 棉44.6% 聚氨酯弹性纤维(氨纶)3.7%",
         "price": 559,
         "detailUrl": "/detail.html?id=14",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2z.islpXXXXc0XXXXXXXXXXXX_!!1765328414.jpg",
@@ -1795,6 +2515,16 @@
         "description": "新品现货 简约圆领 荷叶边 修身显瘦",
         "price": 860,
         "detailUrl": "/detail.html?id=15",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2YWnZkVXXXXXCXXXXXXXXXXXX_!!479218086.jpg",
@@ -1820,6 +2550,16 @@
         "description": "棉麻艺术家",
         "price": 129,
         "detailUrl": "/detail.html?id=16",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2sqvrepXXXXaDXpXXXXXXXXXX-130974249.jpg",
@@ -1845,6 +2585,16 @@
         "description": "材质成分: 新型聚酯纤维90.4% 聚氨酯弹性纤维(氨纶)9.6%",
         "price": 886,
         "detailUrl": "/detail.html?id=17",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2.bipdVXXXXavXXXXXXXXXXXX-1644880265.jpg",
@@ -1870,6 +2620,16 @@
         "description": "夏装尚新 品牌特惠 买够才放手",
         "price": 771,
         "detailUrl": "/detail.html?id=18",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2Lt7SmFXXXXX_XXXXXXXXXXXX_!!874022290.jpg",
@@ -1895,6 +2655,16 @@
         "description": "成分含量: 81%(含)-90%(含)",
         "price": 559,
         "detailUrl": "/detail.html?id=19",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2u_mHcVXXXXXmXpXXXXXXXXXX-1721138839.jpg",
@@ -1920,6 +2690,16 @@
         "description": "【全棉　不变形　不缩水　不起球】【备注：黑色第一次洗会掉毛不易与其它一起洗】",
         "price": 129,
         "detailUrl": "/detail.html?id=10",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2JhG5kXXXXXcwXpXXXXXXXXXX_!!598633737.jpg",
@@ -1945,6 +2725,16 @@
         "description": "新品上架 质量保证 青春活力 宽松舒适 百搭潮流",
         "price": 512,
         "detailUrl": "/detail.html?id=11",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2ShvsoFXXXXbzXpXXXXXXXXXX_!!2192876822.jpg",
@@ -1970,6 +2760,16 @@
         "description": "材质成分: 棉95% 聚氨酯弹性纤维(氨纶)5%",
         "price": 1129,
         "detailUrl": "/detail.html?id=12",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2zlXMlFXXXXXEXpXXXXXXXXXX_!!2185282132.jpg",
@@ -1995,6 +2795,16 @@
         "description": "100%纯棉 送运费险 不起球 不掉色 限时特价",
         "price": 999,
         "detailUrl": "/detail.html?id=13",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2cgwinpXXXXcbXpXXXXXXXXXX_!!1782948872.jpg",
@@ -2020,6 +2830,16 @@
         "description": "材质成分: 粘胶纤维(粘纤)51.7% 棉44.6% 聚氨酯弹性纤维(氨纶)3.7%",
         "price": 559,
         "detailUrl": "/detail.html?id=14",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2z.islpXXXXc0XXXXXXXXXXXX_!!1765328414.jpg",
@@ -2045,6 +2865,16 @@
         "description": "新品现货 简约圆领 荷叶边 修身显瘦",
         "price": 860,
         "detailUrl": "/detail.html?id=15",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2YWnZkVXXXXXCXXXXXXXXXXXX_!!479218086.jpg",
@@ -2070,6 +2900,16 @@
         "description": "棉麻艺术家",
         "price": 129,
         "detailUrl": "/detail.html?id=16",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2sqvrepXXXXaDXpXXXXXXXXXX-130974249.jpg",
@@ -2095,6 +2935,16 @@
         "description": "材质成分: 新型聚酯纤维90.4% 聚氨酯弹性纤维(氨纶)9.6%",
         "price": 886,
         "detailUrl": "/detail.html?id=17",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2.bipdVXXXXavXXXXXXXXXXXX-1644880265.jpg",
@@ -2120,6 +2970,16 @@
         "description": "夏装尚新 品牌特惠 买够才放手",
         "price": 771,
         "detailUrl": "/detail.html?id=18",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2Lt7SmFXXXXX_XXXXXXXXXXXX_!!874022290.jpg",
@@ -2145,6 +3005,16 @@
         "description": "成分含量: 81%(含)-90%(含)",
         "price": 559,
         "detailUrl": "/detail.html?id=19",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2u_mHcVXXXXXmXpXXXXXXXXXX-1721138839.jpg",
@@ -2170,6 +3040,16 @@
         "description": "穿过都说超显瘦哦！面料柔软带弹性，中腰腰舒适修身材，简洁设计百搭不费心！",
         "price": 1129,
         "detailUrl": "/detail.html?id=20",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB26ScdqFXXXXbjXpXXXXXXXXXX_!!2262617940.jpg",
@@ -2195,6 +3075,16 @@
         "description": "非常精致的雪纺面料，独特的定位复古印花，简单却独到的大牌走秀款， 面料垂感，透气，版型极好",
         "price": 929,
         "detailUrl": "/detail.html?id=21",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2ndHPqXXXXXcpXpXXXXXXXXXX_!!2007426154.jpg",
@@ -2220,6 +3110,16 @@
         "description": "领弧圆润 腹部捏褶工艺 透气舒服 不起球不掉色",
         "price": 115,
         "detailUrl": "/detail.html?id=22",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2cGRDeXXXXXalXXXXXXXXXXXX-1732515120.jpg",
@@ -2245,6 +3145,16 @@
         "description": "纯棉印花 要的是个性 简约版型 印花亮片",
         "price": 129,
         "detailUrl": "/detail.html?id=23",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2ITRIcFXXXXcVXXXXXXXXXXXX_!!2041089693.jpg",
@@ -2270,6 +3180,16 @@
         "description": "弹力针织布 修身显瘦 简约百搭",
         "price": 1129,
         "detailUrl": "/detail.html?id=24",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2.zm1mVXXXXXCXpXXXXXXXXXX_!!647430139.jpg",
@@ -2295,6 +3215,16 @@
         "description": "1、莱卡棉面料，弹力大，不起球，洗后不缩水！ 2、腰部褶皱设计，有效遮挡肚肚上的赘肉！",
         "price": 1129,
         "detailUrl": "/detail.html?id=25",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2VPY7nVXXXXXoXXXXXXXXXXXX_!!405732713.jpg",
@@ -2320,6 +3250,16 @@
         "description": "原创设计 专注中年女装",
         "price": 1129,
         "detailUrl": "/detail.html?id=26",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2IeVEbVXXXXXlXpXXXXXXXXXX_!!1966677580.jpg",
@@ -2345,6 +3285,16 @@
         "description": "富有青春气息的百搭上衣，时尚而有个性，是具有可塑性的一款单品。",
         "price": 1129,
         "detailUrl": "/detail.html?id=27",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2jU0AlVXXXXaxXXXXXXXXXXXX_!!1120328108.jpg",
@@ -2370,6 +3320,16 @@
         "description": "Amii正品 总仓发货 7天退换 全场包邮",
         "price": 1239,
         "detailUrl": "/detail.html?id=28",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2JkbUjVXXXXbwXXXXXXXXXXXX_!!451135386.jpg",
@@ -2395,6 +3355,16 @@
         "description": "主要颜色: 文艺灰粉小鹿 冰魄蓝粉小鹿 荧光绿粉小鹿 青苹绿粉小鹿 阳光橙粉小鹿 热情红粉小鹿 高雅黑粉小鹿 活力黄粉小鹿 珍珠白粉小鹿 浅花灰粉小鹿 樱花粉粉小鹿 松石绿粉小鹿",
         "price": 1129,
         "detailUrl": "/detail.html?id=29",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2hhm6oVXXXXb2XXXXXXXXXXXX_!!2765355741.jpg",
@@ -2420,6 +3390,16 @@
         "description": "全店任意 满2件 送10元 现金红包",
         "price": 1129,
         "detailUrl": "/detail.html?id=30",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2LyRKlVXXXXaHXpXXXXXXXXXX_!!1077979376.jpg",
@@ -2445,6 +3425,16 @@
         "description": "流行元素/工艺: 印花",
         "price": 1222,
         "detailUrl": "/detail.html?id=31",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2vpdJoXXXXXcEXpXXXXXXXXXX_!!913099165.jpg",
@@ -2470,6 +3460,16 @@
         "description": "思莱德SELECTED女士纯棉彩色图案休闲T恤C416201037 海军蓝 155/76/XS",
         "price": 1129,
         "detailUrl": "/detail.html?id=32",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2f_MGpVXXXXXNXpXXXXXXXXXX_!!913099165.jpg",
@@ -2495,6 +3495,16 @@
         "description": "不掉色！宝贝描述附面料色牢度检测报告！",
         "price": 5129,
         "detailUrl": "/detail.html?id=33",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2jCasmXXXXXb7XXXXXXXXXXXX_!!917744910.jpg",
@@ -2520,6 +3530,16 @@
         "description": "主要颜色: 白(超值面料） 黑（超值面料） 绿字（超值面料）",
         "price": 1129,
         "detailUrl": "/detail.html?id=34",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2AOlcnFXXXXXZXFXXXXXXXXXX_!!1030051801.jpg",
@@ -2545,6 +3565,16 @@
         "description": "修身显瘦 简约百搭 不起球！ 不掉色！ 不缩水！",
         "price": 559,
         "detailUrl": "/detail.html?id=35",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB24MKcmFXXXXXOXpXXXXXXXXXX_!!2126977022.jpg",
@@ -2570,6 +3600,16 @@
         "description": "材质成分: 棉70% 聚酯纤维30%",
         "price": 239,
         "detailUrl": "/detail.html?id=36",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2eoaemXXXXXbIXpXXXXXXXXXX_!!1893593986.jpg",
@@ -2595,6 +3635,16 @@
         "description": "成分含量: 51%(含)-70%(含)",
         "price": 1129,
         "detailUrl": "/detail.html?id=37",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2YhsUlFXXXXaxXpXXXXXXXXXX_!!557299735.jpg",
@@ -2620,6 +3670,16 @@
         "description": "图案: 卡通动漫 人物",
         "price": 1129,
         "detailUrl": "/detail.html?id=38",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2G8TlnVXXXXcTXpXXXXXXXXXX_!!2273190194.jpg",
@@ -2645,6 +3705,16 @@
         "description": "颜色分类: 202 203 205 206 207 210",
         "price": 1129,
         "detailUrl": "/detail.html?id=39",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2p.YmppXXXXc9XXXXXXXXXXXX_!!793680491.jpg",
@@ -2670,6 +3740,16 @@
         "description": "材质成分: 棉92.7% 聚氨酯弹性纤维(氨纶)7.3%",
         "price": 719,
         "detailUrl": "/detail.html?id=40",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2uIgDlpXXXXXcXXXXXXXXXXXX_!!1740889780.jpg",
@@ -2695,6 +3775,16 @@
         "description": "V领条纹设计 简约大方 质量保证 收腰显瘦",
         "price": 889,
         "detailUrl": "/detail.html?id=41",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2fF0QnXXXXXXZXXXXXXXXXXXX_!!1649659426.jpg",
@@ -2720,6 +3810,16 @@
         "description": "流行元素: 印花 拼接 贴布",
         "price": 929,
         "detailUrl": "/detail.html?id=42",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2ncsElXXXXXagXXXXXXXXXXXX_!!1969755452.jpg",
@@ -2745,6 +3845,16 @@
         "description": "冲量爆款，拼实力！大版韩国T恤。修身、打底外穿、圆领长袖多种热点集聚",
         "price": 1129,
         "detailUrl": "/detail.html?id=43",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2SltgcXXXXXahXXXXXXXXXXXX_!!1674216432.jpg",
@@ -2770,6 +3880,16 @@
         "description": "很精美的一款简约T 一如既往蚂蚁家的好品质，穿着体验上佳 宽松的小短款版型",
         "price": 1129,
         "detailUrl": "/detail.html?id=44",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2_RHUnXXXXXX9XFXXXXXXXXXX_!!13225714.jpg",
@@ -2795,6 +3915,16 @@
         "description": "唯依精品简约简单实用的衣服",
         "price": 329,
         "detailUrl": "/detail.html?id=45",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB278.LXFXXXXb.XXXXXXXXXXXX_!!155325169.jpg",
@@ -2810,6 +3940,16 @@
         "description": "大厂出 品质量保证",
         "price": 219,
         "detailUrl": "/detail.html?id=46",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2Re8DkpXXXXaMXpXXXXXXXXXX_!!1069627177.jpg",
@@ -2835,6 +3975,16 @@
         "description": "流行元素/工艺: 荷叶边 镂空 褶皱 拼接 拉链",
         "price": 1129,
         "detailUrl": "/detail.html?id=47",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB27bodpVXXXXc2XXXXXXXXXXXX_!!765619814.jpg",
@@ -2860,6 +4010,16 @@
         "description": "流行元素/工艺: 蝴蝶结 拼接 拉链",
         "price": 1129,
         "detailUrl": "/detail.html?id=48",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB25zaiqpXXXXXhXXXXXXXXXXXX_!!91372914.jpg",
@@ -2885,6 +4045,16 @@
         "description": "流行元素/工艺: 荷叶边 露背 印花",
         "price": 229,
         "detailUrl": "/detail.html?id=49",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2GcRAnFXXXXbtXpXXXXXXXXXX_!!2574381340.jpg",
@@ -2910,6 +4080,16 @@
         "description": "细肩带的吊带背心更适于作内搭，满足日常实用需求",
         "price": 129,
         "detailUrl": "/detail.html?id=50",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2EeadnFXXXXbdXpXXXXXXXXXX_!!76245157.jpg",
@@ -2935,6 +4115,16 @@
         "description": "思莱德SELECTED女士纯棉彩色图案休闲T恤C416201037 海军蓝 155/76/XS",
         "price": 1129,
         "detailUrl": "/detail.html?id=51",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2N.GhmFXXXXbHXpXXXXXXXXXX_!!1766047907.jpg",
@@ -2960,6 +4150,16 @@
         "description": "成分含量: 81%(含)-90%(含)",
         "price": 1129,
         "detailUrl": "/detail.html?id=52",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2yNE4opXXXXbhXpXXXXXXXXXX_!!2297886690.jpg",
@@ -2985,6 +4185,16 @@
         "description": "成分含量: 71%(含)-80%(含)",
         "price": 449,
         "detailUrl": "/detail.html?id=53",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2gMAdmXXXXXXpXpXXXXXXXXXX_!!2364466468.jpg",
@@ -3010,6 +4220,16 @@
         "description": "泪奔！亏本冲销量！仅限前100名，卖完马上涨价哟，喜欢的亲们不要犹豫哟，赶快下手哟！",
         "price": 1129,
         "detailUrl": "/detail.html?id=54",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2d_xcpFXXXXXCXpXXXXXXXXXX_!!2840408554.jpg",
@@ -3035,6 +4255,16 @@
         "description": "主要颜色: 白色 暗粉 绿色 灰色 黑色",
         "price": 829,
         "detailUrl": "/detail.html?id=55",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2yvMmoVXXXXaiXFXXXXXXXXXX_!!1723145627.jpg",
@@ -3060,6 +4290,16 @@
         "description": "本款连衣裙拥有着经典的小波点流行元素！纯色连衣裙搭配小波点真的是甜美不单调！圆领的设计不失优雅！",
         "price": 339,
         "detailUrl": "/detail.html?id=56",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2fC8RjFXXXXbqXXXXXXXXXXXX_!!2074808725.jpg",
@@ -3085,6 +4325,16 @@
         "description": "思莱德SELECTED女士纯棉彩色图案休闲T恤C416201037 海军蓝 155/76/XS",
         "price": 431,
         "detailUrl": "/detail.html?id=57",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2Vox4opXXXXcQXpXXXXXXXXXX_!!2112052594.jpg",
@@ -3110,6 +4360,16 @@
         "description": "款式是齐肚脐的短款，浅浅的露出小蛮腰",
         "price": 88,
         "detailUrl": "/detail.html?id=58",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB23S.fnVXXXXa2XXXXXXXXXXXX_!!828143405.jpg",
@@ -3135,6 +4395,16 @@
         "description": "个性扎染面料~不掉色~不褪色~面料柔软~凉爽舒服",
         "price": 99,
         "detailUrl": "/detail.html?id=59",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2fQnPcpXXXXa2XpXXXXXXXXXX_!!369545372.jpg",
@@ -3150,6 +4420,16 @@
         "description": "流行元素/工艺: 露背 拼接 背带",
         "price": 759,
         "detailUrl": "/detail.html?id=60",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2xsOUpVXXXXaMXpXXXXXXXXXX_!!811888884.jpg",
@@ -3175,6 +4455,16 @@
         "description": "思莱德SELECTED女士纯棉彩色图案休闲T恤C416201037 海军蓝 155/76/XS",
         "price": 1129,
         "detailUrl": "/detail.html?id=61",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2CWztppXXXXbZXpXXXXXXXXXX_!!2364466468.jpg",
@@ -3192,7 +4482,7 @@
             "height": null
           },
           {
-            "url": "/assets/images/imgs/.jpg",
+            "url": "/assets/images/.jpg",
             "width": 751,
             "height": 759
           }
@@ -3205,6 +4495,16 @@
         "description": "流行元素/工艺: 荷叶边 拉链",
         "price": 989,
         "detailUrl": "/detail.html?id=62",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2pqtnoFXXXXbiXpXXXXXXXXXX_!!2364466468.jpg",
@@ -3230,6 +4530,16 @@
         "description": "亲们，新款哦，收藏夹购物车送礼",
         "price": 1129,
         "detailUrl": "/detail.html?id=63",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB21ud1nFXXXXb9XXXXXXXXXXXX_!!515037664.jpg",
@@ -3255,6 +4565,16 @@
         "description": "奈昕定制 时尚与众不同 合适新款式 优质有档次",
         "price": 1129,
         "detailUrl": "/detail.html?id=64",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2DGDwkVXXXXX6XpXXXXXXXXXX_!!294019224.jpg",
@@ -3280,6 +4600,16 @@
         "description": "思莱德SELECTED女士纯棉彩色图案休闲T恤C416201037 海军蓝 155/76/XS",
         "price": 1129,
         "detailUrl": "/detail.html?id=65",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/T2aBntXtXXXXXXXXXX_!!806408970.jpg",
@@ -3305,6 +4635,16 @@
         "description": "思莱德SELECTED女士纯棉彩色图案休闲T恤C416201037 海军蓝 155/76/XS",
         "price": 1129,
         "detailUrl": "/detail.html?id=66",
+        "extraItems": [
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
+          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+        ],
         "imgs": [
           {
             "url": "/assets/images/imgs/TB2oG5vaVXXXXcXXXXXXXXXXXXX_!!628560662.jpg",

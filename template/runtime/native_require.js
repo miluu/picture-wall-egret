@@ -19,6 +19,7 @@ var game_file_list = [
 	"bin-debug/modules/settings/index.js",
 	"bin-debug/modules/swiper/Slide.js",
 	"bin-debug/modules/swiper/Swiper.js",
+	"bin-debug/modules/utils/colorName.js",
 	"bin-debug/modules/utils/index.js",
 	//----auto game_file_list end----
 ];
