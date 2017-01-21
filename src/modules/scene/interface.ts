@@ -38,6 +38,7 @@ namespace scene {
     selectedApiIndex: number;
     lastOperateTime: Date;
     isButtonsShow: boolean;
+    isExtraButtonsShow: boolean;
   }
 
   export interface IApi {
@@ -72,6 +73,7 @@ namespace scene {
   export interface IApiExtraItem {
     icon?: string;
     texture: egret.Texture;
+    button: Button;
     bgColor?: string;
     itemsUrl: string;
   }

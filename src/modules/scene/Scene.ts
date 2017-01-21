@@ -69,6 +69,7 @@ namespace scene {
       this.state.autoResetTime = settings.autoResetTime;
       this.state.offset = 0;
       this.state.isButtonsShow = false;
+      this.state.isExtraButtonsShow = false;
       this._createBg();
       this._setButtonsPosition();
       this.mask = new egret.Rectangle(0, 0, this.state.sceneWidth, this.state.sceneHeight);
@@ -183,7 +184,7 @@ namespace scene {
         .easing(TWEEN.Easing.Back.Out)
         .start();
       let tw2 = new TWEEN.Tween(this._detailButton)
-        .delay(400)
+        .delay(200)
         .to(scaleTo, 800)
         .easing(TWEEN.Easing.Back.Out)
         .start();
@@ -199,23 +200,93 @@ namespace scene {
 
     private _showDetail() {
       const {selectedItem} = this.state;
-      console.log('detail: >>>');
-      console.log(selectedItem.data.extraItems);
     }
 
     private _showMore() {
-      const {selectedItem} = this.state;
-      console.log('more >>>');
-      console.log(selectedItem.data.extraItems);
-      _.forEach(selectedItem.data.extraItems, (item, index) => {
-          let colorNumber = util.colorStringToNumber(item.bgColor);
-          let btn = new Button(15, colorNumber, item.texture, false);
-          btn.y = 50;
-          btn.x = 50 * (index + 1);
-          this.addChild(btn);
+      const {selectedItem, isExtraButtonsShow} = this.state;
+      const {extraItems} = selectedItem.data;
+      if (isExtraButtonsShow) {
+        this._hideExtraButtons(extraItems);
+      } else {
+        this._showExtraButtons(extraItems);
+      }
+    }
+
+    private _showExtraButtons(extraItems: IApiExtraItem[]) {
+      const {x, y} = this._moreButton;
+      const moreButtonIndex = this.getChildIndex(this._moreButton);
+      const centerPoint = new egret.Point(x, y);
+      let btnsCount = extraItems.length;
+      this.state.isExtraButtonsShow = true;
+      _.forEach(extraItems, (item, index) => {
+        let btn: Button = item.button;
+        if (!btn) {
+          const colorNumber = util.colorStringToNumber(item.bgColor);
+          btn = new Button(15, colorNumber, item.texture, false);
+          item.button = btn;
           btn.onClick = () => {
-            console.log(item.itemsUrl);
           };
+        }
+        btn.clearTweens();
+        btn.y = y;
+        btn.x = x;
+        if (this.getChildIndex(btn) < 0) {
+          this.addChildAt(btn, moreButtonIndex);
+        }
+        const twObj = btn.twObj || {
+          deg: 360 / btnsCount * index,
+          radius: 0
+        };
+        const tw = new TWEEN.Tween(twObj)
+          .to({deg: '-360', radius: 60}, 1000)
+          .easing(TWEEN.Easing.Cubic.Out)
+          .onUpdate(() => {
+            const pos = util.cyclePoint(centerPoint, twObj.radius, twObj.deg);
+            btn.x = pos.x;
+            btn.y = pos.y;
+          });
+        const tw2 = new TWEEN.Tween(twObj)
+          .to({deg: '+360'}, 40000)
+          .repeat(Infinity)
+          .onUpdate(() => {
+            const pos = util.cyclePoint(centerPoint, twObj.radius, twObj.deg);
+            btn.x = pos.x;
+            btn.y = pos.y;
+          });
+        tw.chain(tw2);
+        tw.start();
+        btn.tweens = [tw, tw2];
+        btn.twObj = twObj;
+      });
+    }
+
+    private _hideExtraButtons(extraItems: IApiExtraItem[]) {
+      const btnsCount = extraItems.length;
+      const {x, y} = this._moreButton;
+      const point = new egret.Point(x, y);
+      this.state.isExtraButtonsShow = false;
+      _.forEach(extraItems, (item, index) => {
+        const btn = item.button;
+        btn.clearTweens();
+        const twObj = btn.twObj;
+        const twObjOrign = {
+          deg: 360 / btnsCount * index,
+          radius: 0
+        };
+        const tw = new TWEEN.Tween(twObj)
+          .to(twObjOrign, 1000)
+          .easing(TWEEN.Easing.Cubic.Out)
+          .start()
+          .onUpdate(() => {
+            const pos = util.cyclePoint(point, twObj.radius, twObj.deg);
+            btn.x = pos.x;
+            btn.y = pos.y;
+          })
+          .onComplete(() => {
+            this.removeChild(btn);
+          });
+        btn.tweens = [tw];
+        btn.twObj = twObj;
       });
     }
 
@@ -678,6 +749,9 @@ namespace scene {
       let _swiper = this._swiper;
       this._swiper = null;
       this._hideButtons();
+      if (this.state.isExtraButtonsShow) {
+        this._hideExtraButtons(item.data.extraItems);
+      }
       if (_swiper) {
         if (_swiper.tween) {
           _swiper.tween.stop();

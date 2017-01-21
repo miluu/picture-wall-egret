@@ -6,6 +6,8 @@ namespace scene {
     private _shape: egret.Shape;
     private _icon: egret.Bitmap;
     private _outline: egret.Shape;
+    public tweens: TWEEN.Tween[] = [];
+    public twObj: any;
     public onClick: (event?: egret.TouchEvent) => any;
 
     constructor(radius: number, bgColor: number, iconTexture: egret.Texture, showOutline: boolean = true) {
@@ -16,6 +18,14 @@ namespace scene {
       this._createShape();
       this._createIcon();
       this._createOutline(showOutline);
+    }
+
+    public clearTweens() {
+      _.forEach(this.tweens, (tw) => {
+        tw.stop();
+        TWEEN.remove(tw);
+      });
+      this.tweens = [];
     }
 
     private _createShape() {
