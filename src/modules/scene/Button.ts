@@ -43,6 +43,9 @@ namespace scene {
     }
 
     private _createOutline(showOutline: boolean) {
+      if (!showOutline) {
+        return;
+      }
       this._outline = new egret.Shape();
       const g = this._outline.graphics;
       g.lineStyle(this._radius / 3, 0xffffff);

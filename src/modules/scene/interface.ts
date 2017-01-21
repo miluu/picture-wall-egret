@@ -71,6 +71,7 @@ namespace scene {
 
   export interface IApiExtraItem {
     icon?: string;
+    texture: egret.Texture;
     bgColor?: string;
     itemsUrl: string;
   }

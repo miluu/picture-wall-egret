@@ -198,11 +198,25 @@ namespace scene {
     }
 
     private _showDetail() {
+      const {selectedItem} = this.state;
       console.log('detail: >>>');
+      console.log(selectedItem.data.extraItems);
     }
 
     private _showMore() {
+      const {selectedItem} = this.state;
       console.log('more >>>');
+      console.log(selectedItem.data.extraItems);
+      _.forEach(selectedItem.data.extraItems, (item, index) => {
+          let colorNumber = util.colorStringToNumber(item.bgColor);
+          let btn = new Button(15, colorNumber, item.texture, false);
+          btn.y = 50;
+          btn.x = 50 * (index + 1);
+          this.addChild(btn);
+          btn.onClick = () => {
+            console.log(item.itemsUrl);
+          };
+      });
     }
 
     /**
@@ -245,6 +259,19 @@ namespace scene {
       let failedCount = 0;
       const apiItems = data.result.items;
       _.forEach(apiItems, (item) => {
+        _.forEach(item.extraItems, (extraItem) => {
+          ajax.getTexture(extraItem.icon, {
+            onComplete: (texture) => {
+              successCount++;
+              extraItem.texture = texture;
+              loadedHandle(this);
+            },
+            onError: () => {
+              failedCount++;
+              loadedHandle(this);
+            }
+          });
+        });
         _.forEach(item.imgs, (img) => {
           ajax.getTexture(img.url, {
             onComplete: (texture) => {
@@ -818,6 +845,9 @@ namespace scene {
       _.forEach(items, (item) => {
         if (item.imgs) {
           count += item.imgs.length;
+        }
+        if (item.extraItems) {
+          count += item.extraItems.length;
         }
       });
       return count;

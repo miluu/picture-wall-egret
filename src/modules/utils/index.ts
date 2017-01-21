@@ -190,8 +190,6 @@ namespace util {
     return parseInt(str, 16) || 0x000000;
   }
 
-  (<any>window).colorStringToNumber = colorStringToNumber;
-
   /**
    * 将 [255, 255, 255] 格式的 rgb 数值转换成 16 进制颜色数值
    * @param rgb {[number, number, number]}
