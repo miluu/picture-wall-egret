@@ -37,6 +37,7 @@ namespace scene {
     status: string;
     selectedApiIndex: number;
     lastOperateTime: Date;
+    isButtonsShow: boolean;
   }
 
   export interface IApi {

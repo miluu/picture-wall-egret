@@ -21,7 +21,20 @@ namespace scene {
      */
     private _bg: SceneBg;
 
+    /**
+     * 加载进度界面
+     */
     private _loadingView: LoadingView;
+
+    /**
+     * 详情按钮
+     */
+    private _detailButton: Button;
+
+    /**
+     * 更多按钮
+     */
+    private _moreButton: Button;
 
     /**
      * 存储场景各种状态的对象
@@ -36,6 +49,7 @@ namespace scene {
       this.touchEnabled = true;
       this.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this._touchScene, this);
       this.addEventListener(egret.TouchEvent.TOUCH_END, this._touchScene, this);
+      this._createButtons();
     }
 
     /**
@@ -54,7 +68,9 @@ namespace scene {
       this.state.sceneChangeTime = settings.sceneChangeTime;
       this.state.autoResetTime = settings.autoResetTime;
       this.state.offset = 0;
+      this.state.isButtonsShow = false;
       this._createBg();
+      this._setButtonsPosition();
       this.mask = new egret.Rectangle(0, 0, this.state.sceneWidth, this.state.sceneHeight);
 
       let loading = this._loadingView = new LoadingView('loading...' , this.state.sceneWidth, this.state.sceneHeight, 0.2);
@@ -129,6 +145,64 @@ namespace scene {
         selectedApiIndex = 0;
       }
       this.start(selectedApiIndex);
+    }
+
+    private _createButtons() {
+      this._detailButton = new Button(25, 0x000000, null, true);
+      this._moreButton = new Button(25, 0x000000, null, true);
+      this._detailButton.x = 300;
+      this._detailButton.y = 100;
+      this._moreButton.x = 200;
+      this._moreButton.y = 100;
+      this._detailButton.onClick = this._showDetail.bind(this);
+      this._moreButton.onClick = this._showMore.bind(this);
+    }
+
+    private _setButtonsPosition() {
+      const {sceneWidth, sceneHeight} = this.state;
+      const largeItemHeight = this._getLargeItemHeight();
+      this._moreButton.x = (sceneWidth - largeItemHeight) / 2;
+      this._detailButton.x = (sceneWidth + largeItemHeight) / 2;
+      this._moreButton.y = this._detailButton.y = (sceneHeight - largeItemHeight) / 2;
+    }
+
+    private _showButtons() {
+      this.state.isButtonsShow = true;
+      this.addChild(this._detailButton);
+      this.addChild(this._moreButton);
+      this._detailButton.scaleX
+        = this._detailButton.scaleY
+        = this._detailButton.alpha
+        = this._moreButton.scaleX
+        = this._moreButton.scaleY
+        = this._moreButton.alpha
+        = 0;
+      const scaleTo = {scaleX: 1, scaleY: 1, alpha: 1};
+      let tw = new TWEEN.Tween(this._moreButton)
+        .to(scaleTo, 800)
+        .easing(TWEEN.Easing.Back.Out)
+        .start();
+      let tw2 = new TWEEN.Tween(this._detailButton)
+        .delay(400)
+        .to(scaleTo, 800)
+        .easing(TWEEN.Easing.Back.Out)
+        .start();
+    }
+
+    private _hideButtons() {
+      if (this.state.isButtonsShow) {
+        this.removeChild(this._detailButton);
+        this.removeChild(this._moreButton);
+        this.state.isButtonsShow = false;
+      }
+    }
+
+    private _showDetail() {
+      console.log('detail: >>>');
+    }
+
+    private _showMore() {
+      console.log('more >>>');
     }
 
     /**
@@ -562,6 +636,7 @@ namespace scene {
         .start()
         .onComplete(() => {
           item.visible = false;
+          this._showButtons();
         });
       this._swiper.tween = tw;
     }
@@ -575,6 +650,7 @@ namespace scene {
       this.state.selectedItem = null;
       let _swiper = this._swiper;
       this._swiper = null;
+      this._hideButtons();
       if (_swiper) {
         if (_swiper.tween) {
           _swiper.tween.stop();
@@ -804,15 +880,12 @@ namespace scene {
      * 创建背景图
      */
     private _createBgImage() {
-      console.log(11111);
       ajax.getTexture(this._bgImage, {
         onComplete: (texture) => {
-          console.log(22222);
           const bgBmp = new egret.Bitmap(texture);
           const {textureWidth, textureHeight} = <egret.Texture>texture;
           bgBmp.x = (this._bgWidth - textureWidth) / 2;
           bgBmp.y = (this._bgHeight - textureHeight) / 2;
-          console.log(bgBmp);
           this.addChild(bgBmp);
         }
       });
