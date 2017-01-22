@@ -10,10 +10,18 @@ namespace scene {
     private _items: Item[] = [];
 
     /**
+     * extraItem
+     */
+    private _extraItems: Item[] = [];
+
+    /**
      * 添加到场景中的所有 Repel 实例
      */
     private _repels: Repel[] = [];
 
+    /**
+     * swiper对象
+     */
     private _swiper: swiper.Swiper;
 
     /**
@@ -98,6 +106,7 @@ namespace scene {
      */
     public showLoading(text?: string) {
       let childCount = this.numChildren;
+      this.setLoadingText(text || 'loading...');
       this._loadingView.visible = true;
       this.setChildIndex(this._loadingView, childCount);
     }
@@ -130,7 +139,7 @@ namespace scene {
             alert(data.message || '加载失败!');
             return;
           }
-          this._loadSources(data);
+          this._loadSources(data, this._loadedHandle.bind(this));
         }
       });
     }
@@ -257,10 +266,79 @@ namespace scene {
         tw.start();
         btn.tweens = [tw, tw2];
         btn.twObj = twObj;
+        btn.onClick = () => {
+          this._createExtraItems(item.itemsUrl);
+        };
       });
     }
 
-    private _hideExtraButtons(extraItems: IApiExtraItem[]) {
+    private _createExtraItems(url: string) {
+      this.showLoading();
+      this._hideExtraButtons(this.state.selectedItem.data.extraItems);
+      ajax.getJson(url, {
+        onError: () => {
+          this.setLoadingText('加载失败！');
+          setTimeout(() => {
+            this.hideLoading();
+          }, 1000);
+        },
+        onComplete: (data) => {
+          this.hideLoading();
+          const api = <IApi>data;
+          console.log(api);
+          this._loadSources(api, (successCount, failedCount, imagesCount, apiItems) => {
+            console.log(`${successCount + failedCount} / ${imagesCount}`);
+            if (successCount + failedCount < imagesCount) {
+              return;
+            }
+            const itemHeight = this._getRowHeight();
+            if (this._extraItems) {
+              _.forEach(this._extraItems, (item) => {
+                this.removeChild(item);
+              });
+              this._extraItems = [];
+            }
+            _.forEach(<IApiItem[]>apiItems, (apiItem, index) => {
+              let originSize = {width: apiItem.imgs[0].width, height: apiItem.imgs[0].height};
+              let changeSize = util.fixHeight(originSize, itemHeight);
+              let texture = apiItem.imgs[0].texture;
+              let item = new Item(changeSize.width, changeSize.height, null, texture);
+              item.data = apiItem;
+              let randomPos = this._randomOutsidePosition();
+              item.x = randomPos.x;
+              item.y = randomPos.y;
+              item.acceptRepel = false;
+              item.addEventListener(egret.TouchEvent.TOUCH_TAP, function() {
+                this._selectItem(item);
+              }, this);
+              this._extraItems.push(item);
+              this.addChild(item);
+            });
+
+          });
+        }
+      });
+    }
+
+    private getRandomOuterPos(center: IPosition): IPosition {
+      let pos: IPosition = <IPosition>{};
+      let rowHeight = this._getRowHeight();
+      let {sceneWidth, sceneHeight} = this.state;
+      let onTop = Math.random() > 0.5;
+      if (onTop) {
+        pos.y = -rowHeight * (1 + Math.random());
+      } else {
+        pos.y = sceneHeight + rowHeight * (1 + Math.random());
+      }
+      pos.x = Math.random() * sceneWidth;
+      return pos;
+    }
+
+
+    private _hideExtraButtons(extraItems: IApiExtraItem[], animate: boolean = true) {
+      if (!this.state.isExtraButtonsShow) {
+        return;
+      }
       const btnsCount = extraItems.length;
       const {x, y} = this._moreButton;
       const point = new egret.Point(x, y);
@@ -268,25 +346,31 @@ namespace scene {
       _.forEach(extraItems, (item, index) => {
         const btn = item.button;
         btn.clearTweens();
-        const twObj = btn.twObj;
-        const twObjOrign = {
-          deg: 360 / btnsCount * index,
-          radius: 0
-        };
-        const tw = new TWEEN.Tween(twObj)
-          .to(twObjOrign, 1000)
-          .easing(TWEEN.Easing.Cubic.Out)
-          .start()
-          .onUpdate(() => {
-            const pos = util.cyclePoint(point, twObj.radius, twObj.deg);
-            btn.x = pos.x;
-            btn.y = pos.y;
-          })
-          .onComplete(() => {
-            this.removeChild(btn);
-          });
-        btn.tweens = [tw];
-        btn.twObj = twObj;
+        if (animate) {
+          const twObj = btn.twObj;
+          const twObjOrign = {
+            deg: 360 / btnsCount * index,
+            radius: 0
+          };
+          const tw = new TWEEN.Tween(twObj)
+            .to(twObjOrign, 1000)
+            .easing(TWEEN.Easing.Cubic.Out)
+            .start()
+            .onUpdate(() => {
+              const pos = util.cyclePoint(point, twObj.radius, twObj.deg);
+              btn.x = pos.x;
+              btn.y = pos.y;
+            })
+            .onComplete(() => {
+              this.removeChild(btn);
+            });
+          btn.tweens = [tw];
+          btn.twObj = twObj;
+        } else {
+          btn.twObj = null;
+          btn.tweens = [];
+          this.removeChild(btn);
+        }
       });
     }
 
@@ -324,22 +408,27 @@ namespace scene {
      * 加载所有图片资源
      * @param data {IApi} api数据
      */
-    private _loadSources(data: IApi) {
+    private _loadSources(data: IApi, callback: Function) {
       let imagesCount = this._getApiImagesCount(data);
       let successCount = 0;
       let failedCount = 0;
       const apiItems = data.result.items;
+      console.log(apiItems);
       _.forEach(apiItems, (item) => {
         _.forEach(item.extraItems, (extraItem) => {
           ajax.getTexture(extraItem.icon, {
             onComplete: (texture) => {
               successCount++;
               extraItem.texture = texture;
-              loadedHandle(this);
+              if (callback) {
+                callback(successCount, failedCount, imagesCount, apiItems);
+              }
             },
             onError: () => {
               failedCount++;
-              loadedHandle(this);
+              if (callback) {
+                callback(successCount, failedCount, imagesCount, apiItems);
+              }
             }
           });
         });
@@ -348,33 +437,37 @@ namespace scene {
             onComplete: (texture) => {
               successCount++;
               img.texture = texture;
-              loadedHandle(this);
+              if (callback) {
+                callback(successCount, failedCount, imagesCount, apiItems);
+              }
             },
             onError: () => {
               failedCount++;
-              loadedHandle(this);
+              if (callback) {
+                callback(successCount, failedCount, imagesCount, apiItems);
+              }
             }
           });
         });
       });
+    }
 
-      function loadedHandle(thisObj: Scene) {
-        thisObj._loadingView.text = `loading...\n${successCount + failedCount} / ${imagesCount}`;
-        if (successCount + failedCount === imagesCount) {
-          thisObj.hideLoading();
-          thisObj._createItems(apiItems);
-          // Nice code!
-          thisObj.once(egret.Event.ENTER_FRAME, function() {
-            thisObj.once(egret.Event.ENTER_FRAME, function() {
-              thisObj.once(egret.Event.ENTER_FRAME, function() {
-                thisObj.once(egret.Event.ENTER_FRAME, function() {
-                  thisObj.once(egret.Event.ENTER_FRAME, function() {
-                    thisObj.once(egret.Event.ENTER_FRAME, function() {
-                      thisObj.once(egret.Event.ENTER_FRAME, function() {
-                        thisObj.once(egret.Event.ENTER_FRAME, function() {
-                          thisObj._run();
-                          thisObj._enter();
-                        }, null);
+    private _loadedHandle(successCount: number, failedCount: number, imagesCount: number, apiItems: IApiItem[]) {
+      this._loadingView.text = `loading...\n${successCount + failedCount} / ${imagesCount}`;
+      if (successCount + failedCount === imagesCount) {
+        this.hideLoading();
+        this._createItems(apiItems);
+        // Nice code!
+        this.once(egret.Event.ENTER_FRAME, () => {
+          this.once(egret.Event.ENTER_FRAME, () => {
+            this.once(egret.Event.ENTER_FRAME, () => {
+              this.once(egret.Event.ENTER_FRAME, () => {
+                this.once(egret.Event.ENTER_FRAME, () => {
+                  this.once(egret.Event.ENTER_FRAME, () => {
+                    this.once(egret.Event.ENTER_FRAME, () => {
+                      this.once(egret.Event.ENTER_FRAME, () => {
+                        this._run();
+                        this._enter();
                       }, null);
                     }, null);
                   }, null);
@@ -382,7 +475,7 @@ namespace scene {
               }, null);
             }, null);
           }, null);
-        }
+        }, null);
       }
     }
 
@@ -596,7 +689,23 @@ namespace scene {
       }
       this._bg = new SceneBg(this.state.sceneWidth, this.state.sceneHeight, this.state.bgColor, this.state.bgImage);
       this.addChild(this._bg);
+      this._bg.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this._touchBg, this);
     }
+
+    private _touchBg() {
+      const {selectedItem} = this.state;
+      if (selectedItem) {
+        this._hideExtraButtons(selectedItem.data.extraItems);
+      }
+    }
+
+    private _touchSwiper() {
+      const {selectedItem} = this.state;
+      if (selectedItem) {
+        this._hideExtraButtons(selectedItem.data.extraItems);
+      }
+    }
+
 
     /**
      * 创建场景 items
@@ -636,6 +745,9 @@ namespace scene {
           this._selectItem(item);
         }, this);
         this._items.push(item);
+        if (this._itemOutOfSceneRightSide(item, 50)) {
+          item.visible = false;
+        }
         this.addChild(item);
       });
 
@@ -719,6 +831,7 @@ namespace scene {
         effect: swiper.SWIPER_EFFECT.CARROUSEL,
         backTime: 500
       });
+      this._swiper.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this._touchSwiper, this);
       let textures = _.map(item.data.imgs, (img) => {
         let texture = img.texture;
         let slide = new swiper.Slide(height, height, texture);
@@ -750,7 +863,7 @@ namespace scene {
       this._swiper = null;
       this._hideButtons();
       if (this.state.isExtraButtonsShow) {
-        this._hideExtraButtons(item.data.extraItems);
+        this._hideExtraButtons(item.data.extraItems, false);
       }
       if (_swiper) {
         if (_swiper.tween) {
@@ -966,6 +1079,7 @@ namespace scene {
 
       this._createBgColor();
       this._createBgImage();
+      this.touchEnabled = true;
     }
 
     /**
