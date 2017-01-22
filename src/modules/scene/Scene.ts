@@ -285,9 +285,7 @@ namespace scene {
         onComplete: (data) => {
           this.hideLoading();
           const api = <IApi>data;
-          console.log(api);
           this._loadSources(api, (successCount, failedCount, imagesCount, apiItems) => {
-            console.log(`${successCount + failedCount} / ${imagesCount}`);
             if (successCount + failedCount < imagesCount) {
               return;
             }
@@ -298,6 +296,7 @@ namespace scene {
               });
               this._extraItems = [];
             }
+            const itemsCount = apiItems.length;
             _.forEach(<IApiItem[]>apiItems, (apiItem, index) => {
               let originSize = {width: apiItem.imgs[0].width, height: apiItem.imgs[0].height};
               let changeSize = util.fixHeight(originSize, itemHeight);
@@ -312,12 +311,58 @@ namespace scene {
                 this._selectItem(item);
               }, this);
               this._extraItems.push(item);
-              this.addChild(item);
+              this._delayFrames(() => {
+                this.addChild(item);
+                if (index === itemsCount - 1) {
+                  this._extraItemsEnter();
+                }
+              }, index * 3);
             });
-
           });
         }
       });
+    }
+
+    private _extraItemsEnter() {
+      console.log('extra items enter!!!!!!');
+      if (!this._extraItems || !this._extraItems.length) {
+        return;
+      }
+      const {sceneWidth, sceneHeight} = this.state;
+      const itemsCount = this._extraItems.length;
+      const radius = this._getExtraItemsRadius();
+      const centerPoint = new egret.Point(sceneWidth / 2, sceneHeight / 2);
+      _.forEach(this._extraItems, (item, index) => {
+        const deg = 360 / itemsCount * index;
+        const {x, y} = util.cyclePoint(centerPoint, radius, deg);
+        let tw = new TWEEN.Tween(item)
+          .to({x, y}, 1000)
+          .easing(TWEEN.Easing.Cubic.Out)
+          .start();
+        let twObj = {deg};
+        let tw2 = new TWEEN.Tween(twObj)
+          .to({deg: '+360'}, 50000)
+          .repeat(Infinity)
+          .onUpdate(() => {
+            const p = util.cyclePoint(centerPoint, radius, twObj.deg);
+            item.x = p.x;
+            item.y = p.y;
+          });
+        tw.chain(tw2);
+        item.tweens = [tw, tw2];
+      });
+    }
+
+    private _delayFrames(callback: Function, count: number = 1) {
+      let passedFrames = 0;
+      this.addEventListener(egret.Event.ENTER_FRAME, onEnterFrame, this);
+      function onEnterFrame() {
+        passedFrames++;
+        if (passedFrames >= count) {
+          this.removeEventListener(egret.Event.ENTER_FRAME, onEnterFrame, this);
+          callback();
+        }
+      }
     }
 
     private getRandomOuterPos(center: IPosition): IPosition {
@@ -413,7 +458,6 @@ namespace scene {
       let successCount = 0;
       let failedCount = 0;
       const apiItems = data.result.items;
-      console.log(apiItems);
       _.forEach(apiItems, (item) => {
         _.forEach(item.extraItems, (extraItem) => {
           ajax.getTexture(extraItem.icon, {
@@ -457,25 +501,10 @@ namespace scene {
       if (successCount + failedCount === imagesCount) {
         this.hideLoading();
         this._createItems(apiItems);
-        // Nice code!
-        this.once(egret.Event.ENTER_FRAME, () => {
-          this.once(egret.Event.ENTER_FRAME, () => {
-            this.once(egret.Event.ENTER_FRAME, () => {
-              this.once(egret.Event.ENTER_FRAME, () => {
-                this.once(egret.Event.ENTER_FRAME, () => {
-                  this.once(egret.Event.ENTER_FRAME, () => {
-                    this.once(egret.Event.ENTER_FRAME, () => {
-                      this.once(egret.Event.ENTER_FRAME, () => {
-                        this._run();
-                        this._enter();
-                      }, null);
-                    }, null);
-                  }, null);
-                }, null);
-              }, null);
-            }, null);
-          }, null);
-        }, null);
+        this._delayFrames(() => {
+          this._run();
+          this._enter();
+        }, 10);
       }
     }
 
@@ -989,6 +1018,12 @@ namespace scene {
     private _getRepelRadius(): number {
       const shorter = this._getShorterWidth();
       return shorter / 1.7;
+    }
+
+    private _getExtraItemsRadius(): number {
+      const shorter = this._getShorterWidth();
+      const rowHeight = this._getRowHeight();
+      return (shorter - rowHeight) / 2 - this.state.padding;
     }
 
     /**
