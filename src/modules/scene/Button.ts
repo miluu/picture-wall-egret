@@ -1,15 +1,54 @@
 namespace scene {
+
+  /**
+   * @class Button 类，展示为一个圆形的按钮，可设置背景色，图标，大小
+   * @author HuangYaxiong <hyxiong@qq.com>
+   */
   export class Button extends egret.DisplayObjectContainer {
+    /**
+     * 半径
+     */
     private _radius: number;
+    /**
+     * 背景色
+     */
     private _bgColor: number;
+    /**
+     * 图标 Texture 对象
+     */
     private _iconTexture: egret.Texture;
+    /**
+     * 按钮主体 Shape 对象
+     */
     private _shape: egret.Shape;
+    /**
+     * 图标 Bitmap 对象
+     */
     private _icon: egret.Bitmap;
+    /**
+     * bling bling 的外框
+     */
     private _outline: egret.Shape;
+    /**
+     * 关联的 Tween 对象数组
+     */
     public tweens: TWEEN.Tween[] = [];
+    /**
+     * 关联的 Tween 对象的 obj
+     */
     public twObj: any;
+    /**
+     * 点击按钮时的回调方法
+     */
     public onClick: (event?: egret.TouchEvent) => any;
 
+    /**
+     * @constructor 生成一个 Button 实例
+     * @param radius {number} 半径大小
+     * @param bgColor {number} 背景色
+     * @param iconTexture {egret.Texture} 图标纹理 Texture 对象的
+     * @param showOutline {boolean} 是否显示发光外框
+     */
     constructor(radius: number, bgColor: number, iconTexture: egret.Texture, showOutline: boolean = true) {
       super();
       this._radius = radius;
@@ -20,6 +59,9 @@ namespace scene {
       this._createOutline(showOutline);
     }
 
+    /**
+     * @public 清除关联的所有 Tween 对象
+     */
     public clearTweens() {
       _.forEach(this.tweens, (tw) => {
         tw.stop();
@@ -28,6 +70,9 @@ namespace scene {
       this.tweens = [];
     }
 
+    /**
+     * @private 创建按钮主体 Shape 对象
+     */
     private _createShape() {
       this._shape = new egret.Shape();
       const g = this._shape.graphics;
@@ -43,6 +88,9 @@ namespace scene {
       }, this);
     }
 
+    /**
+     * @parivate 创建按钮图标
+     */
     private  _createIcon() {
       this._icon = new egret.Bitmap(this._iconTexture);
       this._icon.width = this._radius * 2;
@@ -52,6 +100,9 @@ namespace scene {
       this.addChild(this._icon);
     }
 
+    /**
+     * 创建发光外框
+     */
     private _createOutline(showOutline: boolean) {
       if (!showOutline) {
         return;

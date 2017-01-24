@@ -157,6 +157,9 @@ namespace scene {
       this.start(selectedApiIndex);
     }
 
+    /**
+     * 创建详情和更多功能按钮
+     */
     private _createButtons() {
       this._detailButton = new Button(25, 0x000000, null, true);
       this._moreButton = new Button(25, 0x000000, null, true);
@@ -168,6 +171,9 @@ namespace scene {
       this._moreButton.onClick = this._showMore.bind(this);
     }
 
+    /**
+     * 设置按钮的位置
+     */
     private _setButtonsPosition() {
       const {sceneWidth, sceneHeight} = this.state;
       const largeItemHeight = this._getLargeItemHeight();
@@ -176,6 +182,9 @@ namespace scene {
       this._moreButton.y = this._detailButton.y = (sceneHeight - largeItemHeight) / 2;
     }
 
+    /**
+     * 显示按钮
+     */
     private _showButtons() {
       this.state.isButtonsShow = true;
       this.addChild(this._detailButton);
@@ -199,6 +208,9 @@ namespace scene {
         .start();
     }
 
+    /**
+     * 隐藏按钮
+     */
     private _hideButtons() {
       if (this.state.isButtonsShow) {
         this.removeChild(this._detailButton);
@@ -207,10 +219,17 @@ namespace scene {
       }
     }
 
+    /**
+     * 显示详情
+     */
     private _showDetail() {
       const {selectedItem} = this.state;
+      // TODO
     }
 
+    /**
+     * 显示更多功能
+     */
     private _showMore() {
       const {selectedItem, isExtraButtonsShow} = this.state;
       const {extraItems} = selectedItem.data;
@@ -221,6 +240,9 @@ namespace scene {
       }
     }
 
+    /**
+     * 显示更多功能扩展按钮
+     */
     private _showExtraButtons(extraItems: IApiExtraItem[]) {
       const {x, y} = this._moreButton;
       const moreButtonIndex = this.getChildIndex(this._moreButton);
@@ -272,6 +294,10 @@ namespace scene {
       });
     }
 
+    /**
+     * 创建扩展 items
+     * @param url {string} 扩展 items Api 地址
+     */
     private _createExtraItems(url: string) {
       this.showLoading();
       this._hideExtraButtons(this.state.selectedItem.data.extraItems);
@@ -323,6 +349,9 @@ namespace scene {
       });
     }
 
+    /**
+     * 扩展 item 进入
+     */
     private _extraItemsEnter() {
       console.log('extra items enter!!!!!!');
       if (!this._extraItems || !this._extraItems.length) {
@@ -353,6 +382,11 @@ namespace scene {
       });
     }
 
+    /**
+     * 延迟数帧执行方法
+     * @param callback {Function} 回调的方法
+     * @param count {number} 延迟的帧数
+     */
     private _delayFrames(callback: Function, count: number = 1) {
       let passedFrames = 0;
       this.addEventListener(egret.Event.ENTER_FRAME, onEnterFrame, this);
@@ -365,6 +399,9 @@ namespace scene {
       }
     }
 
+    /**
+     * 获取随机一个场景外的位置
+     */
     private getRandomOuterPos(center: IPosition): IPosition {
       let pos: IPosition = <IPosition>{};
       let rowHeight = this._getRowHeight();
@@ -379,7 +416,9 @@ namespace scene {
       return pos;
     }
 
-
+    /**
+     * 隐藏扩展按钮
+     */
     private _hideExtraButtons(extraItems: IApiExtraItem[], animate: boolean = true) {
       if (!this.state.isExtraButtonsShow) {
         return;
@@ -496,6 +535,13 @@ namespace scene {
       });
     }
 
+    /**
+     * 所有 items 的图像资源加载后执行的方法
+     * @param successCount {number} 加载成功的数量
+     * @param failedCount {number} 加载失败的数量
+     * @param imagesCount {number} 总共需要加载的数量
+     * @param apiItem {IApiItem[]} items api 数据对象
+     */
     private _loadedHandle(successCount: number, failedCount: number, imagesCount: number, apiItems: IApiItem[]) {
       this._loadingView.text = `loading...\n${successCount + failedCount} / ${imagesCount}`;
       if (successCount + failedCount === imagesCount) {
@@ -721,6 +767,9 @@ namespace scene {
       this._bg.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this._touchBg, this);
     }
 
+    /**
+     * 触摸背景时的回调方法
+     */
     private _touchBg() {
       const {selectedItem} = this.state;
       if (selectedItem) {
@@ -728,6 +777,9 @@ namespace scene {
       }
     }
 
+    /**
+     * 触摸 swiper 时的回调方法
+     */
     private _touchSwiper() {
       const {selectedItem} = this.state;
       if (selectedItem) {
@@ -1020,6 +1072,10 @@ namespace scene {
       return shorter / 1.7;
     }
 
+    /**
+     * 获取扩展 items 旋转的半径大小
+     * @return {number}
+     */
     private _getExtraItemsRadius(): number {
       const shorter = this._getShorterWidth();
       const rowHeight = this._getRowHeight();
