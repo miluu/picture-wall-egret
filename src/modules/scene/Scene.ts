@@ -952,7 +952,7 @@ namespace scene {
         repel.toOptions({
           strong: 0.65,
           radius: this._getRepelRadius()
-        }, 1500);
+        }, 2500);
       });
 
       let scale = this._getLargeItemScale();
@@ -965,10 +965,17 @@ namespace scene {
         .easing(TWEEN.Easing.Cubic.InOut)
         .start();
       let tw2 = new TWEEN.Tween(item)
+        .easing(TWEEN.Easing.Cubic.InOut)
+        .to({
+          scaleX: 0.8,
+          scaleY: 0.8,
+          alpha: 1,
+          x: this.state.sceneWidth / 2,
+          y: this.state.sceneHeight / 2
+        }, 1000);
+      let tw3 = new TWEEN.Tween(item)
         .easing(TWEEN.Easing.Back.Out)
         .to({
-          x: this.state.sceneWidth / 2,
-          y: this.state.sceneHeight / 2,
           scaleX: scale,
           scaleY: scale
         }, 1500)
@@ -976,7 +983,8 @@ namespace scene {
           this._showSwiper(item);
         });
       tw1.chain(tw2);
-      item.tweens.push(tw1, tw2);
+      tw2.chain(tw3);
+      item.tweens.push(tw1, tw2, tw3);
     }
 
     /**
@@ -1070,6 +1078,7 @@ namespace scene {
       this._itemBack(item);
       if (repel) {
         repel.attach();
+        repel.clearTweens();
         repel.toOptions({radius: 0}, 1000, () => {
           item.attatchedRepel = null;
           item.acceptRepel = true;

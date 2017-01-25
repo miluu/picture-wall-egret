@@ -22,6 +22,11 @@ namespace scene {
     public center: egret.Point;
 
     /**
+     * 关联的 Tween 对象
+     */
+    private _tweens: TWEEN.Tween[] = [];
+
+    /**
      * @constructor 创建一个 Repel 对象，中心点位于 (x, y) 的位置。
      * @param x {number} 中心点 x 坐标值, 默认为 0
      * @param y {number} 中心点 y 坐标值, 默认为 0
@@ -81,9 +86,21 @@ namespace scene {
         .onComplete(() => {
           if (callback) {
             callback(this);
+            _.remove(this._tweens, tw);
           }
         })
         .start();
+      this._tweens.push(tw);
+    }
+
+    /**
+     * 清除关联的 Tween 对象
+     */
+    public clearTweens() {
+      _.forEach(this._tweens, (tween) => {
+        tween.stop();
+      });
+      this._tweens = [];
     }
 
     /**
