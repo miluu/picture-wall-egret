@@ -60,6 +60,23 @@ namespace scene {
     }
 
     /**
+     * @public
+     * @get 获取 icon 图片Texture
+     */
+    public get iconTexture(): egret.Texture {
+      return this._iconTexture;
+    }
+
+    /**
+     * @public
+     * @set 设置 icon 图片 Texture
+     */
+    public set iconTexture(texture: egret.Texture) {
+      this._iconTexture = texture;
+      this._icon.texture = texture;
+    }
+
+    /**
      * @public 清除关联的所有 Tween 对象
      */
     public clearTweens() {

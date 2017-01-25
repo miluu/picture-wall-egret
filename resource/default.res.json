@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "star_png,info,close",
+			"keys": "star,info,close",
 			"name": "preload"
 		}
 	],
@@ -9,7 +9,7 @@
 		{
 			"url": "assets/star.png",
 			"type": "image",
-			"name": "star_png"
+			"name": "star"
 		},
 		{
 			"url": "assets/i.png",

@@ -16,6 +16,9 @@
 			"name": "game"
 		},
 		{
+			"name": "RES"
+		},
+		{
 			"name": "tween",
 			"path": "../egret-game-library/tween"
 		},

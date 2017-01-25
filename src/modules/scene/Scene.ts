@@ -58,6 +58,7 @@ namespace scene {
       this.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this._touchScene, this);
       this.addEventListener(egret.TouchEvent.TOUCH_END, this._touchScene, this);
       this._createButtons();
+      this._loadRes();
     }
 
     /**
@@ -158,6 +159,47 @@ namespace scene {
     }
 
     /**
+     * 预加载资源
+     */
+    private _loadRes() {
+      RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this._onResLoaded, this);
+      RES.addEventListener(RES.ResourceEvent.GROUP_PROGRESS, this._onResLoading, this);
+      RES.addEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR, this._onResLoadErr, this);
+      RES.addEventListener(RES.ResourceEvent.CONFIG_COMPLETE, function() {
+        console.log('config loaded.');
+      }, this);
+      RES.addEventListener(RES.ResourceEvent.CONFIG_LOAD_ERROR, function() {
+        console.log('config load error.');
+      }, this);
+      RES.loadConfig('resource/default.res.json', 'resource/');
+      RES.loadGroup('preload');
+      console.log('load start.');
+    }
+
+    /**
+     * 资源加载完成回调
+     */
+    private _onResLoaded() {
+      console.log('loaded!!!');
+      this._moreButton.iconTexture = RES.getRes('star');
+      this._detailButton.iconTexture = RES.getRes('info');
+    }
+
+    /**
+     * 资源加载中回调
+     */
+    private _onResLoading() {
+      console.log('loading');
+    }
+
+    /**
+     * 资源加载失败回调
+     */
+    private _onResLoadErr() {
+      console.log('load error!!!!!');
+    }
+
+    /**
      * 创建详情和更多功能按钮
      */
     private _createButtons() {
@@ -223,6 +265,10 @@ namespace scene {
      * 显示详情
      */
     private _showDetail() {
+      this._extraItemsLeave();
+      if (this.state.isExtraButtonsShow) {
+        this._hideExtraButtons(this.state.selectedItem.data.extraItems);
+      }
       const {selectedItem} = this.state;
       // TODO
     }
@@ -233,6 +279,7 @@ namespace scene {
     private _showMore() {
       const {selectedItem, isExtraButtonsShow} = this.state;
       const {extraItems} = selectedItem.data;
+      this._extraItemsLeave();
       if (isExtraButtonsShow) {
         this._hideExtraButtons(extraItems);
       } else {
@@ -301,6 +348,7 @@ namespace scene {
     private _createExtraItems(url: string) {
       this.showLoading();
       this._hideExtraButtons(this.state.selectedItem.data.extraItems);
+      this._extraItemsLeave();
       ajax.getJson(url, {
         onError: () => {
           this.setLoadingText('加载失败！');
@@ -334,6 +382,9 @@ namespace scene {
               item.y = randomPos.y;
               item.acceptRepel = false;
               item.addEventListener(egret.TouchEvent.TOUCH_TAP, function() {
+                item.clearTweens();
+                _.remove(this._extraItems, item);
+                this._extraItemsLeave();
                 this._selectItem(item);
               }, this);
               this._extraItems.push(item);
@@ -379,6 +430,18 @@ namespace scene {
           });
         tw.chain(tw2);
         item.tweens = [tw, tw2];
+      });
+    }
+
+    /**
+     * 扩展 item 离开
+     */
+    private _extraItemsLeave() {
+      const items = this._extraItems;
+      this._extraItems = [];
+      _.forEach(items, (item) => {
+        item.clearTweens();
+        this._itemBack(item);
       });
     }
 
@@ -648,6 +711,7 @@ namespace scene {
       let leaveDirection = Math.random() > 0.5 ? 1 : -1;
       let itemsCount = this._items.length;
       let done = 0;
+      this._extraItemsLeave();
       _.forEach(this._items, (item, index) => {
         if (item === this.state.selectedItem) {
           itemsCount--;
@@ -751,7 +815,7 @@ namespace scene {
       }
       const currentTime = new Date();
       if (currentTime.getTime() - lastOperateTime.getTime() > autoResetTime * 1000) {
-        this._itemBack(selectedItem);
+        this._resetItem(selectedItem);
       }
     }
 
@@ -774,6 +838,7 @@ namespace scene {
       const {selectedItem} = this.state;
       if (selectedItem) {
         this._hideExtraButtons(selectedItem.data.extraItems);
+        this._extraItemsLeave();
       }
     }
 
@@ -784,6 +849,7 @@ namespace scene {
       const {selectedItem} = this.state;
       if (selectedItem) {
         this._hideExtraButtons(selectedItem.data.extraItems);
+        this._extraItemsLeave();
       }
     }
 
@@ -859,7 +925,7 @@ namespace scene {
         return;
       }
       if (this.state.selectedItem) {
-        this._itemBack(this.state.selectedItem);
+        this._resetItem(this.state.selectedItem);
       }
       this.state.selectedItem = item;
       let repel = this._addRepel(item, item.x, item.y, 0, 0);
@@ -937,16 +1003,17 @@ namespace scene {
      * item 复位，若 item 不在场景 items 列表内，则移到场景外随机位置并移除
      * @param item {Item}
      */
-    private _itemBack(item: Item) {
+    private _resetItem(item: Item) {
       let repel = item.attatchedRepel;
       this.state.selectedItem = null;
       let _swiper = this._swiper;
-      this._swiper = null;
       this._hideButtons();
+      this._extraItemsLeave();
       if (this.state.isExtraButtonsShow) {
         this._hideExtraButtons(item.data.extraItems, false);
       }
       if (_swiper) {
+        this._swiper = null;
         if (_swiper.tween) {
           _swiper.tween.stop();
         }
@@ -962,9 +1029,7 @@ namespace scene {
             _swiper = null;
           });
       }
-      item.visible = true;
-      item.isBacking = true;
-      item.clearTweens();
+      this._itemBack(item);
       if (repel) {
         repel.attach();
         repel.toOptions({radius: 0}, 1000, () => {
@@ -973,6 +1038,16 @@ namespace scene {
           this._removeRepel(repel);
         });
       }
+    }
+
+    /**
+     * @private item 返回原位或离开场景
+     * @param item {Item}
+     */
+    private _itemBack(item) {
+      item.visible = true;
+      item.isBacking = true;
+      item.clearTweens();
       if (!this._isBaseItem(item)) {
         const position = this._randomOutsidePosition();
         const tw = new TWEEN.Tween(item)
