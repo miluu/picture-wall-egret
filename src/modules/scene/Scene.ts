@@ -25,6 +25,10 @@ namespace scene {
     private _swiper: swiper.Swiper;
 
     /**
+     * 文字容器
+     */
+
+    /**
      * 场景的背景，包含背景色与背景图片
      */
     private _bg: SceneBg;
@@ -1273,6 +1277,60 @@ namespace scene {
           this.addChild(bgBmp);
         }
       });
+    }
+  }
+
+  interface ITextOptions {
+    brand: string;
+    title: string;
+    price: number;
+    description: string;
+  };
+  /**
+   * @class 场景文字类
+   */
+  const TEXT_RATIO = {
+    BRAND: 0.158,
+    TITLE: 0.095,
+    PRICE: 0.074,
+    DESCRIPTION: 0.074
+  };
+  class SceneText extends egret.DisplayObjectContainer {
+    private _brand: egret.TextField = new egret.TextField();
+    private _title: egret.TextField = new egret.TextField();
+    private _price: egret.TextField = new egret.TextField();
+    private _description: egret.TextField = new egret.TextField();
+    private _textWidth: number;
+    private _itemHeight: number;
+    private _blockHeight: number;
+    constructor(sceneHeight: number, itemHeight: number, scenePadding: number) {
+      super();
+      this._init(sceneHeight, itemHeight, scenePadding);
+    }
+    public setText(options: ITextOptions) {
+      this._brand.text = options.brand;
+      this._title.text = options.title;
+      this._price.text = `￥${options.price.toFixed(2)}`;
+      this._description.text = options.description;
+    }
+    private _init(sceneHeight: number, itemHeight: number, scenePadding: number) {
+      this._itemHeight = itemHeight;
+      this._textWidth = itemHeight;
+      this._blockHeight = (sceneHeight - itemHeight) / 2 - scenePadding * 2;
+      this._brand.width = this._textWidth;
+      this._title.width = this._textWidth;
+      this._price.width = this._textWidth;
+      this._description.width = this._textWidth;
+      this._brand.textColor = 0x000000;
+      this._title.textColor = 0x000000;
+      this._price.textColor = 0x000000;
+      this._description.textColor = 0x000000;
+      this._brand.textAlign = egret.HorizontalAlign.CENTER;
+      this._title.textAlign = egret.HorizontalAlign.CENTER;
+      this._price.textAlign = egret.HorizontalAlign.CENTER;
+      this._description.textAlign = egret.HorizontalAlign.CENTER;
+      this._brand.size = this._blockHeight * TEXT_RATIO.BRAND;
+      this._brand.y = -itemHeight - 0.35 * this._blockHeight;
     }
   }
 }
