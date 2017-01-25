@@ -25,8 +25,9 @@ namespace scene {
     private _swiper: swiper.Swiper;
 
     /**
-     * 文字容器
+     * 文字
      */
+    private _text: SceneText;
 
     /**
      * 场景的背景，包含背景色与背景图片
@@ -84,6 +85,7 @@ namespace scene {
       this.state.isButtonsShow = false;
       this.state.isExtraButtonsShow = false;
       this._createBg();
+      this._createText();
       this._setButtonsPosition();
       this.mask = new egret.Rectangle(0, 0, this.state.sceneWidth, this.state.sceneHeight);
 
@@ -824,6 +826,16 @@ namespace scene {
     }
 
     /**
+     * 创建文字
+     */
+    private _createText() {
+      const {sceneHeight, sceneWidth, padding} = this.state;
+      this._text = new SceneText(sceneHeight, this._getLargeItemHeight(), padding);
+      this._text.x = Math.round(sceneWidth / 2);
+      this._text.y = Math.round(sceneHeight / 2);
+    }
+
+    /**
      * 创建场景背景
      */
     private _createBg() {
@@ -1001,7 +1013,28 @@ namespace scene {
           this._showButtons();
         });
       this._swiper.tween = tw;
+      this._showText(item);
     }
+
+    /**
+     * 显示文字
+     * @param item {Item} 对应的 item
+     */
+    private _showText(item: Item) {
+      const {brand, title, price, description} = item.data;
+      const options: ITextOptions = {brand, title, price, description};
+      this._text.setText(options);
+      this.addChild(this._text);
+    }
+
+    /**
+     * 隐藏文字
+     */
+    private _hideText() {
+      console.log(1111);
+      this.removeChild(this._text);
+    }
+
 
     /**
      * item 复位，若 item 不在场景 items 列表内，则移到场景外随机位置并移除
@@ -1018,6 +1051,7 @@ namespace scene {
       }
       if (_swiper) {
         this._swiper = null;
+        this._hideText();
         if (_swiper.tween) {
           _swiper.tween.stop();
         }
@@ -1290,10 +1324,10 @@ namespace scene {
    * @class 场景文字类
    */
   const TEXT_RATIO = {
-    BRAND: 0.158,
-    TITLE: 0.095,
-    PRICE: 0.074,
-    DESCRIPTION: 0.074
+    BRAND: 0.22,
+    TITLE: 0.12,
+    PRICE: 0.1,
+    DESCRIPTION: 0.1
   };
   class SceneText extends egret.DisplayObjectContainer {
     private _brand: egret.TextField = new egret.TextField();
@@ -1315,7 +1349,7 @@ namespace scene {
     }
     private _init(sceneHeight: number, itemHeight: number, scenePadding: number) {
       this._itemHeight = itemHeight;
-      this._textWidth = itemHeight;
+      this._textWidth = Math.round(itemHeight);
       this._blockHeight = (sceneHeight - itemHeight) / 2 - scenePadding * 2;
       this._brand.width = this._textWidth;
       this._title.width = this._textWidth;
@@ -1329,8 +1363,29 @@ namespace scene {
       this._title.textAlign = egret.HorizontalAlign.CENTER;
       this._price.textAlign = egret.HorizontalAlign.CENTER;
       this._description.textAlign = egret.HorizontalAlign.CENTER;
-      this._brand.size = this._blockHeight * TEXT_RATIO.BRAND;
-      this._brand.y = -itemHeight - 0.35 * this._blockHeight;
+      this._brand.height = this._brand.size = Math.round(this._blockHeight * TEXT_RATIO.BRAND);
+      this._brand.y = Math.round(-itemHeight / 2 - 0.45 * this._blockHeight);
+      this._brand.x = Math.round(-this._textWidth / 2);
+      this._brand.bold = true;
+      this._brand.multiline = false;
+      this._title.height = this._title.size = Math.round(this._blockHeight * TEXT_RATIO.TITLE);
+      this._title.y = Math.round(itemHeight / 2 + this._blockHeight * 0.1);
+      this._title.x = Math.round(-this._textWidth / 2);
+      this._title.bold = true;
+      this._title.multiline = false;
+      this._price.height = this._price.size = Math.round(this._blockHeight * TEXT_RATIO.PRICE);
+      this._price.y = Math.round(itemHeight / 2 + this._blockHeight * 0.3);
+      this._price.x = Math.round(-this._textWidth / 2);
+      this._price.multiline = false;
+      this._description.size = Math.round(this._blockHeight * TEXT_RATIO.DESCRIPTION);
+      this._description.y = Math.round(itemHeight / 2 + this._blockHeight * 0.48);
+      this._description.x = Math.round(-this._textWidth / 2);
+      this._description.lineSpacing = this._description.size * 0.3;
+      this._description.height = (this._description.lineSpacing + this._description.size) * 3;
+      this.addChild(this._brand);
+      this.addChild(this._title);
+      this.addChild(this._price);
+      this.addChild(this._description);
     }
   }
 }

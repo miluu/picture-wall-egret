@@ -15,6 +15,7 @@ class Main extends egret.DisplayObjectContainer {
   public constructor() {
     super();
     this.addEventListener(egret.Event.ADDED_TO_STAGE, this._onAddToStage, this);
+    egret.TextField.default_fontFamily = 'Microsoft YaHei,Helvetica,Meiryo UI,Malgun Gothic,Segoe UI,Trebuchet MS, Monaco, monospace, Tahoma, STXihei, 华文细黑, STHeiti,Helvetica Neue,Droid Sans,wenquanyi micro hei, FreeSans, Arimo, Arial, SimSun, 宋体, Heiti, 黑体, sans-serif';
   }
 
   /**
