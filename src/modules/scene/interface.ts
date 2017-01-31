@@ -30,6 +30,8 @@ namespace scene {
     bgColor: number;
     bgImage: string;
     sceneChangeTime: number;
+    sceneStartTime: Date;
+    scenePassedTime: Date;
     autoResetTime: number;
     apiList: string[];
     rowWidthList: number[];
@@ -39,6 +41,8 @@ namespace scene {
     lastOperateTime: Date;
     isButtonsShow: boolean;
     isExtraButtonsShow: boolean;
+    nextApiItemsReady: boolean;
+    nextApiRowWidthList: number[];
   }
 
   export interface IApi {

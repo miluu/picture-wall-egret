@@ -10,6 +10,11 @@ namespace scene {
     private _items: Item[] = [];
 
     /**
+     * 预的加载下一场景的 Item 实例
+     */
+    private _nextItems: Item[] = [];
+
+    /**
      * extraItem
      */
     private _extraItems: Item[] = [];
@@ -84,6 +89,7 @@ namespace scene {
       this.state.offset = 0;
       this.state.isButtonsShow = false;
       this.state.isExtraButtonsShow = false;
+      this.state.nextApiItemsReady = false;
       this._createBg();
       this._createText();
       this._setButtonsPosition();
@@ -155,13 +161,35 @@ namespace scene {
      * 播放下一个 api 的场景
      */
     public next() {
-      let {selectedApiIndex, apiList} = this.state;
+      let {selectedApiIndex, apiList, sceneChangeTime} = this.state;
       let apiCount = apiList.length;
       selectedApiIndex++;
       if (selectedApiIndex > apiCount - 1) {
         selectedApiIndex = 0;
       }
-      this.start(selectedApiIndex);
+      // this.start(selectedApiIndex);
+      this.state.rowWidthList = this.state.nextApiRowWidthList;
+      this.state.nextApiRowWidthList = [];
+      this._items = this._nextItems;
+      this._nextItems = [];
+      this.state.offset = 0;
+      this._enter();
+      if (sceneChangeTime) {
+        this._preLoadNextApi();
+      }
+    }
+
+    /**
+     * 下一场景 Api 地址
+     */
+    public getNextApi(): string {
+      let {selectedApiIndex, apiList} = this.state;
+      let apiCount = apiList.length;
+      let nextApiIndex = selectedApiIndex + 1;
+      if (nextApiIndex > apiCount - 1) {
+        nextApiIndex = 0;
+      }
+      return apiList[nextApiIndex];
     }
 
     /**
@@ -172,21 +200,17 @@ namespace scene {
       RES.addEventListener(RES.ResourceEvent.GROUP_PROGRESS, this._onResLoading, this);
       RES.addEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR, this._onResLoadErr, this);
       RES.addEventListener(RES.ResourceEvent.CONFIG_COMPLETE, function() {
-        console.log('config loaded.');
       }, this);
       RES.addEventListener(RES.ResourceEvent.CONFIG_LOAD_ERROR, function() {
-        console.log('config load error.');
       }, this);
       RES.loadConfig('resource/default.res.json', 'resource/');
       RES.loadGroup('preload');
-      console.log('load start.');
     }
 
     /**
      * 资源加载完成回调
      */
     private _onResLoaded() {
-      console.log('loaded!!!');
       this._moreButton.iconTexture = RES.getRes('star');
       this._detailButton.iconTexture = RES.getRes('info');
     }
@@ -195,14 +219,12 @@ namespace scene {
      * 资源加载中回调
      */
     private _onResLoading() {
-      console.log('loading');
     }
 
     /**
      * 资源加载失败回调
      */
     private _onResLoadErr() {
-      console.log('load error!!!!!');
     }
 
     /**
@@ -342,7 +364,9 @@ namespace scene {
         btn.tweens = [tw, tw2];
         btn.twObj = twObj;
         btn.onClick = () => {
-          this._createExtraItems(item.itemsUrl);
+          if (this._canSelectItem()) {
+            this._createExtraItems(item.itemsUrl);
+          }
         };
       });
     }
@@ -388,6 +412,9 @@ namespace scene {
               item.y = randomPos.y;
               item.acceptRepel = false;
               item.addEventListener(egret.TouchEvent.TOUCH_TAP, function() {
+                if (!this._canSelectItem()) {
+                  return;
+                }
                 item.clearTweens();
                 _.remove(this._extraItems, item);
                 this._extraItemsLeave();
@@ -410,7 +437,6 @@ namespace scene {
      * 扩展 item 进入
      */
     private _extraItemsEnter() {
-      console.log('extra items enter!!!!!!');
       if (!this._extraItems || !this._extraItems.length) {
         return;
       }
@@ -615,11 +641,49 @@ namespace scene {
       this._loadingView.text = `loading...\n${successCount + failedCount} / ${imagesCount}`;
       if (successCount + failedCount === imagesCount) {
         this.hideLoading();
+        this.state.offset = 0;
         this._createItems(apiItems);
         this._delayFrames(() => {
           this._run();
           this._enter();
+          this._preLoadNextApi();
         }, 10);
+      }
+    }
+
+    /**
+     * 预的加载下一场景的资源
+     */
+    private _preLoadNextApi() {
+      const nextApi = this.getNextApi();
+      ajax.getJson(nextApi, {
+        onError: () => {
+          alert('加载失败！');
+        },
+        onComplete: (_data) => {
+          let data = <IApi>_data;
+          if (!(data.status === 'success')) {
+            alert(data.message || '加载失败!');
+            return;
+          }
+          this._loadSources(data, this._preLoadHandle.bind(this));
+        }
+      });
+    }
+
+    /**
+     * 所有 items 的图像资源加载后执行的方法
+     * @param successCount {number} 加载成功的数量
+     * @param failedCount {number} 加载失败的数量
+     * @param imagesCount {number} 总共需要加载的数量
+     * @param apiItem {IApiItem[]} items api 数据对象
+     */
+    private _preLoadHandle(successCount: number, failedCount: number, imagesCount: number, apiItems: IApiItem[]) {
+      let text = `Next api source loaded: ${successCount + failedCount} / ${imagesCount}`;
+      if (successCount + failedCount === imagesCount) {
+        this._delayFrames(() => {
+          this._createNextItems(apiItems);
+        }, 60);
       }
     }
 
@@ -699,11 +763,12 @@ namespace scene {
             done++;
             if (done === itemsCount) {
               this.state.status = SCENE_STATUS.RUNNING;
-              let timer = new egret.Timer(this.state.sceneChangeTime * 1000, 1);
-              timer.start();
-              timer.addEventListener(egret.TimerEvent.TIMER_COMPLETE, function() {
-                this._leave();
-              }, this);
+              this.state.sceneStartTime = new Date();
+              // let timer = new egret.Timer(this.state.sceneChangeTime * 1000, 1);
+              // timer.start();
+              // timer.addEventListener(egret.TimerEvent.TIMER_COMPLETE, function() {
+              //   this._leave();
+              // }, this);
             }
           });
       });
@@ -714,10 +779,15 @@ namespace scene {
      */
     private _leave() {
       this.state.status = SCENE_STATUS.LEAVE;
+      this.state.sceneStartTime = null;
+      this.state.nextApiItemsReady = false;
       let leaveDirection = Math.random() > 0.5 ? 1 : -1;
       let itemsCount = this._items.length;
       let done = 0;
-      this._extraItemsLeave();
+      // this._extraItemsLeave();
+      // if (this.state.isExtraButtonsShow) {
+      //   this._hideExtraButtons(this.state.selectedItem.data.extraItems);
+      // }
       _.forEach(this._items, (item, index) => {
         if (item === this.state.selectedItem) {
           itemsCount--;
@@ -762,9 +832,19 @@ namespace scene {
      * ENTER_FRAME 事件回调方法，主要设置动画
      */
     private _onEnterFrame() {
-      const {speed, selectedItem} = this.state;
+      const {speed, selectedItem, sceneStartTime, sceneChangeTime, nextApiItemsReady} = this.state;
       this.state.offset -= speed;
       this._autoReset();
+      if (sceneStartTime) {
+        const scenePassedTime = (new Date().getTime() - sceneStartTime.getTime()) / 1000;
+        if (
+          sceneChangeTime
+          && scenePassedTime > sceneChangeTime
+          && nextApiItemsReady
+        ) {
+          this._leave();
+        }
+      }
       _.forEach(this._items, (item) => {
         if (item === selectedItem) {
           return;
@@ -874,6 +954,69 @@ namespace scene {
      * 创建场景 items
      * @parame apiItems {IApiItem[]} apiItem数组
      */
+    private _createNextItems(apiItems: IApiItem[]) {
+      const scene = this;
+      const itemHeight = this._getRowHeight();
+      const state = this.state;
+      const enterDirection = Math.random() > 0.5 ? 1 : -1;
+      state.nextApiRowWidthList = [];
+      state.nextApiRowWidthList = new Array(this.state.rowCount);
+      _.fill(state.nextApiRowWidthList, 0);
+
+      let itemsCount = apiItems.length;
+      let currentIndex = 0;
+      this._nextItems = [];
+      createNextApiItem(currentIndex);
+
+      function createNextApiItem(index: number) {
+        let apiItem = apiItems[index];
+        let originSize = {width: apiItem.imgs[0].width, height: apiItem.imgs[0].height};
+        let changeSize = util.fixHeight(originSize, itemHeight);
+        let texture = apiItem.imgs[0].texture;
+        let item = new Item(changeSize.width, changeSize.height, null, texture);
+        let rowIndex = scene._getMinWidthRowIndex(state.nextApiRowWidthList);
+        let rowWidth = state.nextApiRowWidthList[rowIndex];
+        item.data = apiItem;
+        item.rowIndex = rowIndex;
+        item.basePosition.y = scene._getRowItemY(rowIndex) + scene.state.sceneHeight * enterDirection;
+        item.basePosition.x = rowWidth + state.padding + item.width / 2;
+        rowWidth += item.width + scene.state.padding;
+        state.nextApiRowWidthList[rowIndex] = rowWidth;
+        item.x = item.basePosition.x;
+        item.y = item.basePosition.y;
+        item.acceptRepel = true;
+        item.addEventListener(egret.TouchEvent.TOUCH_TAP, function() {
+          scene._selectItem(item);
+        }, scene);
+        scene._nextItems.push(item);
+        item.x = item.y = -state.sceneWidth;
+        scene.addChild(item);
+        currentIndex++;
+        if (currentIndex < itemsCount) {
+          scene._delayFrames(() => {
+            createNextApiItem(currentIndex);
+          }, 10);
+        } else {
+          state.nextApiItemsReady = true;
+        }
+      }
+
+
+    }
+
+    /**
+     * 获取宽度最小的行
+     */
+    private _getMinWidthRowIndex(rowWidthList: number[]): number {
+      let minWidth = _.min(rowWidthList);
+      let index = _.findIndex(rowWidthList, width => width === minWidth);
+      return index;
+    }
+
+    /**
+     * 创建下一场景的 items
+     * @parame apiItems {IApiItem[]} apiItem数组
+     */
     private _createItems(apiItems: IApiItem[]) {
       const itemHeight = this._getRowHeight();
       const state = this.state;
@@ -893,7 +1036,7 @@ namespace scene {
         let changeSize = util.fixHeight(originSize, itemHeight);
         let texture = apiItem.imgs[0].texture;
         let item = new Item(changeSize.width, changeSize.height, null, texture);
-        let rowIndex = getMinWidthRowIndex();
+        let rowIndex = this._getMinWidthRowIndex(state.rowWidthList);
         let rowWidth = state.rowWidthList[rowIndex];
         item.data = apiItem;
         item.rowIndex = rowIndex;
@@ -913,12 +1056,6 @@ namespace scene {
         }
         this.addChild(item);
       });
-
-      function getMinWidthRowIndex(): number {
-        let minWidth = _.min(state.rowWidthList);
-        let index = _.findIndex(state.rowWidthList, width => width === minWidth);
-        return index;
-      }
     }
 
     /**
@@ -1039,7 +1176,6 @@ namespace scene {
      * 隐藏文字
      */
     private _hideText() {
-      console.log(1111);
       this.removeChild(this._text);
     }
 
