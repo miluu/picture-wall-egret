@@ -190,7 +190,7 @@ namespace settings {
    */
   function setSettingsValueToForm(settings: IAppSettings, form: HTMLFormElement) {
     _.forIn(settings, (value, key) => {
-      if (!value) {
+      if (_.isUndefined(value) || _.isNull(value)) {
         return;
       }
       let input: HTMLInputElement = <HTMLInputElement>form.querySelector(`[name="${key}"]`);
