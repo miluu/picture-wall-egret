@@ -579,7 +579,10 @@ namespace scene {
      * @param item {Item} item 对象
      * @return {egret.Point} 应用偏移量之后的坐标点
      */
-    private _getItemPositionWithOffset(item: Item): egret.Point {
+    private _getItemPositionWithOffset(item: Item, offset?: number): egret.Point {
+      if (!_.isNumber(offset)) {
+        offset = this.state.offset;
+      }
       return new egret.Point(item.basePosition.x + this.state.offset, item.basePosition.y);
     }
 
@@ -732,8 +735,8 @@ namespace scene {
      * @param rangeOffset {number} 偏移范围
      * @return {boolean}
      */
-    private _itemOutOfSceneRightSide(item: Item, rangeOffset: number = 50): boolean {
-      let {x} = this._getItemPositionWithOffset(item);
+    private _itemOutOfSceneRightSide(item: Item, rangeOffset: number = 50, offset?: number): boolean {
+      let {x} = this._getItemPositionWithOffset(item, offset);
       x = x - item.width / 2;
       return this._outOfSceneRightSide(x, rangeOffset);
     }
@@ -910,7 +913,7 @@ namespace scene {
      */
     private _createText() {
       const {sceneHeight, sceneWidth, padding} = this.state;
-      this._text = new SceneText(sceneHeight, this._getLargeItemHeight(), padding);
+      this._text = new SceneText(sceneHeight, sceneWidth, this._getLargeItemHeight(), padding);
       this._text.x = Math.round(sceneWidth / 2);
       this._text.y = Math.round(sceneHeight / 2);
     }
@@ -989,6 +992,12 @@ namespace scene {
           scene._selectItem(item);
         }, scene);
         scene._nextItems.push(item);
+        if (scene._itemOutOfSceneRightSide(item, 50, 0)) {
+          item.visible = false;
+        } else {
+          item.visible = true;
+        }
+        console.log(`${index}: ${item.visible}`);
         item.x = item.y = -state.sceneWidth;
         scene.addChild(item);
         currentIndex++;
@@ -1000,8 +1009,6 @@ namespace scene {
           state.nextApiItemsReady = true;
         }
       }
-
-
     }
 
     /**
@@ -1482,9 +1489,9 @@ namespace scene {
     private _textWidth: number;
     private _itemHeight: number;
     private _blockHeight: number;
-    constructor(sceneHeight: number, itemHeight: number, scenePadding: number) {
+    constructor(sceneHeight: number, sceneWidth: number, itemHeight: number, scenePadding: number) {
       super();
-      this._init(sceneHeight, itemHeight, scenePadding);
+      this._init(sceneHeight, sceneWidth, itemHeight, scenePadding);
     }
     public setText(options: ITextOptions) {
       this._brand.text = options.brand;
@@ -1492,10 +1499,11 @@ namespace scene {
       this._price.text = `￥${options.price.toFixed(2)}`;
       this._description.text = options.description;
     }
-    private _init(sceneHeight: number, itemHeight: number, scenePadding: number) {
+    private _init(sceneHeight: number, sceneWidth: number, itemHeight: number, scenePadding: number) {
+      const shorter = _.min([sceneHeight, sceneWidth]);
       this._itemHeight = itemHeight;
       this._textWidth = Math.round(itemHeight);
-      this._blockHeight = (sceneHeight - itemHeight) / 2 - scenePadding * 2;
+      this._blockHeight = (shorter - itemHeight) / 2 - scenePadding * 2;
       this._brand.width = this._textWidth;
       this._title.width = this._textWidth;
       this._price.width = this._textWidth;
