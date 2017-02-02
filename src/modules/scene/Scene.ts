@@ -69,6 +69,9 @@ namespace scene {
       this.addEventListener(egret.TouchEvent.TOUCH_END, this._touchScene, this);
       this._createButtons();
       this._loadRes();
+      detail.operateCallback = function() {
+        console.log('yyyyyyy');
+      };
     }
 
     /**
@@ -299,6 +302,8 @@ namespace scene {
       }
       const {selectedItem} = this.state;
       // TODO
+      console.log(111111);
+      detail.show();
     }
 
     /**
@@ -694,6 +699,7 @@ namespace scene {
      * 触摸屏幕时的回调方法，更新 lastOperateTime
      */
     private _touchScene() {
+      console.log('xxxxxxxxxxxx');
       this.state.lastOperateTime = new Date();
     }
 
@@ -1227,6 +1233,9 @@ namespace scene {
           item.acceptRepel = true;
           this._removeRepel(repel);
         });
+      }
+      if (detail.shown) {
+        detail.hide();
       }
     }
 

@@ -11,6 +11,7 @@ var game_file_list = [
 	"libs/modules/lodash/lodash.js",
 	"bin-debug/modules/ajax/index.js",
 	"bin-debug/modules/scene/Scene.js",
+	"bin-debug/modules/detail/detail.js",
 	"bin-debug/modules/scene/Button.js",
 	"bin-debug/modules/scene/Item.js",
 	"bin-debug/modules/scene/LoadingView.js",

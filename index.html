@@ -10,6 +10,34 @@
     <meta name="x5-fullscreen" content="true"/>
     <meta name="360-fullscreen" content="true"/>
     <style>
+        * {
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+        @keyframes xiuxiu {
+            0% {
+                transform: scale(1);
+                opacity: 0.9;
+            }
+            50% {
+                transform: scale(2);
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+            }
+            @-webkit-keyframes xiuxiu {
+            from {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+            to {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
         html, body {
             touch-action: none;
             -ms-touch-action: none;
@@ -95,6 +123,73 @@
             background: #ddd;
         }
 
+        #detail {
+            background: transparent;
+            margin: 0;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 200;
+        }
+        #detail .detail-content {
+            position: absolute;
+            background: #fff;
+            padding: 10px;
+            width: 300px;
+            height: 300px;
+            top: 100px;
+            left: 100px;
+        }
+        #detail.detail-out .detail-content {
+            opacity: 0;
+            transform: translateY(-50px);
+            -webkit-transform: translateY(-50px);
+        }
+        #detail.detail-in .detail-content {
+            opacity: 1;
+            transform: translateY(0);
+            -webkit-transform: translateY(0);
+        }
+        #detail .detail-content.transition-in {
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+        }
+        #detail iframe {
+            width: 100%;
+            height: 100%;
+        }
+        #detail .btn {
+            display: block;
+            width: 50px;
+            height: 50px;
+            background: #000;
+            border-radius: 50%;
+            position: absolute;
+            z-index: 300;
+            top: -25px;
+            right: -25px;
+        }
+        #detail .btn .outline {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #fff;
+            position: absolute;
+            border-radius: 50%;
+            animation: xiuxiu ease-out 1.5s infinite;
+            -webkit-animation: xiuxiu ease-out 1.5s infinite;
+        }
+        #detail .btn.btn-close {
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpiZDUxZGNhZC0zMjI0LTQ3ZjUtOGZlYi0yMGZkYzk2MDVlMWIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QzExNTJFNzQzMjQyMTFFNjk4QTU5QzdDMERDRTM0MkYiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QzExNTJFNzMzMjQyMTFFNjk4QTU5QzdDMERDRTM0MkYiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDplZjdiMDM5NS1lMmE3LTRmMTQtOTRiYS1jOGNhNGRjMTBjYTAiIHN0UmVmOmRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDpiZWUzM2VkNC03YWFlLTExNzktOGYwNS1jY2Q0YTZmOWQwZjYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz71AOMXAAACc0lEQVR42uzcv0ocYRiF8dlVtNLcgKBoa2GlpVqJFpGAvQT0FkJIk0vRJmm1CIiNjZU3YKdG0DZgaTWegVVE1J1ZZ7457+Y5cApdhdn3x87s/O3keZ4Rn3QAAYQAAggBBBACCCAEEECYAiAEEEAIIIAQQAAhgABCACGAAEKsQSbUXXVE/a3eMv72QKbVE3W29/M/dUM9M57NuPpTXVWv1G/qzTCATKmn6syL39+pa6YoBcaBuv7sd3/VFfU6Osi+uv3Ga44or2E85kJd7H3CG0k3wRucf+e1T+qxuhQAo8ic+rXJBUgB8qfP6y4o/TCe1irRV1lj6mGJN9rm6qssRrGMC73tSehvWVXecGoUq2VLuR/iiGK3TKn31J0GYPmpbePQicMgbFehbR3LanMgztuzVg8utjEYa4y2QVIPyB7DASTVoEJguIA0PbAwGE4gTQ0uFIYbSN0DDIfhCFLXIENiuIJ8dKBhMZxBBh1saAx3kKoon9XvkTEigFRBKRNrjCggdaHYY0QC+ShKCIxoIIOihMGICFIVJRRGkW5G+ISwymKjzkadr73sGA4FSndIMIpBL6tHff7O7VriUJ8QDi4Gx6jjfwGpGSM8CqdwOYWbdIBc5GCEERKFC+XMULiU1AyFi63NULgdwQyFG3bMULil7T++pY2bPo1AuC3aCIQHB1RIivMhPwLskN2rX7Jy51O2mlyQFCCbEQ5ZVEDJo4OcB8Aoi3Kp7kXfhgzTA8xWm9x+pPyWxSP+DPdDJtUddVT9lfEQTJtDJwQQQAgggBBAACGAAMIUACGAAEIAAYQAAggBBBACCAEEEAIIIKTWPAgwABq7JoaV3y0gAAAAAElFTkSuQmCC);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        #detail.hide {
+            top: -9999px;
+            height: 0px;
+            bottom: auto;
+        }
         canvas {
             background: #000;
         }
@@ -173,6 +268,14 @@
          data-multi-fingered="2">
     </div>
 
+    <div id="detail" class="detail-out hide">
+        <div class="detail-content transition-in">
+            <div class="btn btn-close"><div class="outline"></div></div>
+            <iframe src="" frameborder="0"></iframe>
+        </div>
+        <div class="mask"></div>
+    </div>
+
 
 
     <!--这个标签为通过egret提供的第三方库的方式生成的 javascript 文件。删除 modules_files 标签后，库文件加载列表将不会变化，请谨慎操作！-->
@@ -194,6 +297,7 @@
     <!--game_files_start-->
 	<script egret="game" src="bin-debug/modules/ajax/index.js"></script>
 	<script egret="game" src="bin-debug/modules/scene/Scene.js"></script>
+	<script egret="game" src="bin-debug/modules/detail/detail.js"></script>
 	<script egret="game" src="bin-debug/modules/scene/Button.js"></script>
 	<script egret="game" src="bin-debug/modules/scene/Item.js"></script>
 	<script egret="game" src="bin-debug/modules/scene/LoadingView.js"></script>
@@ -215,7 +319,7 @@
          * "antialias": //WebGL模式下是否开启抗锯齿，true:开启，false:关闭，默认为false
          * }
          **/
-        egret.runEgret({renderMode:"webgl", audioType:0});
+        egret.runEgret({renderMode:"webgl", audioType:0, antialias: true});
     </script>
 </body>
 </html>
