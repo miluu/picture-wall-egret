@@ -126,18 +126,19 @@ namespace scene {
       }
       this._outline = new egret.Shape();
       const g = this._outline.graphics;
-      g.lineStyle(this._radius / 3, 0xffffff);
+      g.lineStyle(5, 0xffffff);
       g.drawCircle(0, 0, this._radius);
       g.endFill();
       this._outline.alpha = 0.5;
       this.addChildAt(this._outline, 0);
       let tw = new TWEEN.Tween(this._outline)
-        .delay(200)
+        .delay(500)
+        .easing(TWEEN.Easing.Cubic.Out)
         .to({
           scaleX: 2,
           scaleY: 2,
           alpha: 0
-        }, 600)
+        }, 1000)
         .repeat(Infinity)
         .start();
     }

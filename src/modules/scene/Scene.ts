@@ -69,9 +69,7 @@ namespace scene {
       this.addEventListener(egret.TouchEvent.TOUCH_END, this._touchScene, this);
       this._createButtons();
       this._loadRes();
-      detail.operateCallback = function() {
-        console.log('yyyyyyy');
-      };
+      detail.operateCallback = this._touchScene.bind(this);
     }
 
     /**
@@ -699,7 +697,7 @@ namespace scene {
      * 触摸屏幕时的回调方法，更新 lastOperateTime
      */
     private _touchScene() {
-      console.log('xxxxxxxxxxxx');
+      console.log('xxxxxxxxxxxx', this);
       this.state.lastOperateTime = new Date();
     }
 

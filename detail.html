@@ -1,10 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
+
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Detail</title>
+  <style>
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+      overflow: hidden;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .content {
+      margin: 0 auto;
+    }
+
+    .content img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+  </style>
 </head>
+
 <body>
-    <h3>Detail</h3>
+  <div class="content">
+    <img src="/assets/images/detail-img/1.jpg" alt="">
+    <img src="/assets/images/detail-img/2.jpg" alt="">
+    <img src="/assets/images/detail-img/3.jpg" alt="">
+    <img src="/assets/images/detail-img/4.jpg" alt="">
+    <img src="/assets/images/detail-img/5.jpg" alt="">
+    <img src="/assets/images/detail-img/6.jpg" alt="">
+    <img src="/assets/images/detail-img/7.jpg" alt="">
+    <img src="/assets/images/detail-img/8.jpg" alt="">
+    <img src="/assets/images/detail-img/9.jpg" alt="">
+  </div>
+
+  <script src="libs/add-on/jquery.min.js"></script>
+  <script src="libs/add-on/jquery.nicescroll.min.js"></script>
+  <script>
+  $('html').niceScroll({
+    touchbehavior: true
+  })
+  </script>
 </body>
+
 </html>
