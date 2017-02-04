@@ -298,10 +298,17 @@ namespace scene {
       if (this.state.isExtraButtonsShow) {
         this._hideExtraButtons(this.state.selectedItem.data.extraItems);
       }
-      const {selectedItem} = this.state;
-      // TODO
-      console.log(111111);
-      detail.show();
+      const {selectedItem, sceneWidth, sceneHeight} = this.state;
+      const detailHeight = this._getExtraItemsRadius() * 2;
+      const maxWidth = _.min([1000, sceneWidth - 200]);
+      const detailWidth = _.max([maxWidth, detailHeight]);
+      detail.show({
+        url: selectedItem.data.detailUrl,
+        width: detailWidth,
+        height: detailHeight,
+        sceneWidth,
+        sceneHeight
+      });
     }
 
     /**
@@ -697,7 +704,6 @@ namespace scene {
      * 触摸屏幕时的回调方法，更新 lastOperateTime
      */
     private _touchScene() {
-      console.log('xxxxxxxxxxxx', this);
       this.state.lastOperateTime = new Date();
     }
 
@@ -1001,7 +1007,6 @@ namespace scene {
         } else {
           item.visible = true;
         }
-        console.log(`${index}: ${item.visible}`);
         item.x = item.y = -state.sceneWidth;
         scene.addChild(item);
         currentIndex++;

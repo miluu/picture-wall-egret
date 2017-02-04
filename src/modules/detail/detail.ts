@@ -17,6 +17,14 @@ namespace detail {
    */
   export let shown = false;
 
+  export interface IShowDetailOptions {
+    url: string;
+    sceneWidth: number;
+    sceneHeight: number;
+    width: number;
+    height: number;
+  }
+
   init();
 
   /**
@@ -36,13 +44,18 @@ namespace detail {
 
   /**
    * @export 显示详情
+   * @param options {IShowDetailOptions}
    */
-  export function show() {
+  export function show(options: IShowDetailOptions) {
     shown = true;
     detailDiv.classList.remove('hide');
     detailDiv.classList.remove('detail-out');
     detailMaskDiv.classList.add('show');
-    detailIframe.setAttribute('src', '/detail.html');
+    detailContentDiv.style.width = `${options.width}px`;
+    detailContentDiv.style.height = `${options.height}px`;
+    detailContentDiv.style.left = `${(options.sceneWidth - options.width) / 2}px`;
+    detailContentDiv.style.top = `${(options.sceneHeight - options.height) / 2}px`;
+    detailIframe.setAttribute('src', options.url);
     detailIframe.addEventListener('load', function() {
       detailIframe.contentWindow.document.addEventListener('mousedown', operate);
       detailIframe.contentWindow.document.addEventListener('touchstart', operate);
