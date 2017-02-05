@@ -174,7 +174,9 @@ namespace scene {
       this._items = this._nextItems;
       this._nextItems = [];
       this.state.offset = 0;
-      this._enter();
+      this._delayFrames(() => {
+        this._enter();
+      }, 10);
       if (sceneChangeTime) {
         this._preLoadNextApi();
       }
@@ -660,7 +662,7 @@ namespace scene {
           this._run();
           this._enter();
           this._preLoadNextApi();
-        }, 10);
+        }, 20);
       }
     }
 
