@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "message": "加载成功",
+  "result": {
+    "config": {
+      "sceneWidth": 400,
+      "sceneHeight": 400,
+      "rowCount": 5,
+      "padding": 10,
+      "speed": 0.5,
+      "sceneChangeTime": 60,
+      "bgColor": "#f2f2f2",
+      "bgImage": "/assets/images/bg/bg.jpg",
+      "autoResetTime": 15
+    }
+  }
+}

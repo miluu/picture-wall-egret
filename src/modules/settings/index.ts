@@ -43,7 +43,7 @@ namespace settings {
   /**
    * 默认设置选项
    */
-  const defaultSetting: IAppSettings = {
+  export const defaultSetting: IAppSettings = {
     sceneWidth: 1366,
     sceneHeight: 768,
     padding: 30,

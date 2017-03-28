@@ -3,6 +3,7 @@ namespace scene {
    * @class Scene 场景类
    * @author HuangYaxiong <hyxiong@qq.com>
    */
+  console.log(scene);
   export class Scene extends egret.DisplayObjectContainer {
     /**
      * 添加场景中的所有 Item 实例
@@ -70,6 +71,31 @@ namespace scene {
       this._createButtons();
       this._loadRes();
       detail.operateCallback = this._touchScene.bind(this);
+    }
+
+    /**
+     * 获取设置选项
+     *
+     */
+    public getSettings(callback?: (IappSettings?) => any) {
+      const settingsUrl = (<any>window).$$config.getConfigApi;
+      let appSettings: settings.IAppSettings;
+      ajax.getJson(settingsUrl, {
+        onComplete: (_data) => {
+          let data = <ISettingsApi>_data;
+          if (data.status !== 'success') {
+            alert(data.message || '加载失败!');
+            return;
+          }
+          appSettings = _.assign({}, settings.defaultSetting, data.result.config);
+          if (callback) {
+            callback(appSettings);
+          }
+        },
+        onError: () => {
+          alert('加载配置出错!');
+        }
+      });
     }
 
     /**

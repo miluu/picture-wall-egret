@@ -53,6 +53,14 @@ namespace scene {
     };
   }
 
+  export interface ISettingsApi {
+    status: string;
+    message: string;
+    result: {
+      config: settings.IAppSettings;
+    };
+  }
+
   export interface IApiItem {
     id: string;
     brand: string;
