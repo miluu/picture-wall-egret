@@ -608,6 +608,21 @@ namespace scene {
       let failedCount = 0;
       const apiItems = data.result.items;
       _.forEach(apiItems, (item) => {
+        ajax.getTexture(item.thumbnail, {
+            onComplete: (texture) => {
+              successCount++;
+              item.thumbnailTexture = texture;
+              if (callback) {
+                callback(successCount, failedCount, imagesCount, apiItems);
+              }
+            },
+            onError: () => {
+              failedCount++;
+              if (callback) {
+                callback(successCount, failedCount, imagesCount, apiItems);
+              }
+            }
+        });
         _.forEach(item.extraItems, (extraItem) => {
           ajax.getTexture(extraItem.icon, {
             onComplete: (texture) => {
@@ -1400,6 +1415,9 @@ namespace scene {
       let items = api.result.items;
       let count = 0;
       _.forEach(items, (item) => {
+        if (item.thumbnail) {
+          count ++;
+        }
         if (item.imgs) {
           count += item.imgs.length;
         }
