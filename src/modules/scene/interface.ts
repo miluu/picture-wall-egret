@@ -60,6 +60,7 @@ namespace scene {
     description: string;
     price: number;
     detailUrl: string;
+    thumbnail?: IApiImg;
     imgs: IApiImg[];
     extraItems: IApiExtraItem[];
   }
