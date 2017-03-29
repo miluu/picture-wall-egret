@@ -24,7 +24,7 @@ class Main extends egret.DisplayObjectContainer {
   private _onAddToStage() {
     this.scene = new scene.Scene();
     this.addChild(this.scene);
-    settings.init(this._sceneStart.bind(this));
+    this.scene.getSettings(this._sceneStart.bind(this));
   }
 
   /**

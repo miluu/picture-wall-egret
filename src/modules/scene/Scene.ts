@@ -3,7 +3,6 @@ namespace scene {
    * @class Scene 场景类
    * @author HuangYaxiong <hyxiong@qq.com>
    */
-  console.log(scene);
   export class Scene extends egret.DisplayObjectContainer {
     /**
      * 添加场景中的所有 Item 实例
@@ -56,6 +55,11 @@ namespace scene {
     private _moreButton: Button;
 
     /**
+     * 配置
+     */
+    private _config: IConfig = <IConfig>{};
+
+    /**
      * 存储场景各种状态的对象
      */
     public state: IState = <IState>{};
@@ -74,19 +78,21 @@ namespace scene {
     }
 
     /**
-     * 获取设置选项
-     *
+     * @public 获取设置选项
+     * @param callback <callback?: (IappSettings?) => any> 获取设置数据后回调方法
      */
     public getSettings(callback?: (IappSettings?) => any) {
-      const settingsUrl = (<any>window).$$config.getConfigApi;
       let appSettings: settings.IAppSettings;
-      ajax.getJson(settingsUrl, {
+      this._getConfig();
+      console.log('开始读取配置信息...');
+      ajax.getJson(this.getNextApi(), {
         onComplete: (_data) => {
           let data = <ISettingsApi>_data;
           if (data.status !== 'success') {
             alert(data.message || '加载失败!');
             return;
           }
+          console.log('配置读取完成。');
           appSettings = _.assign({}, settings.defaultSetting, data.result.config);
           if (callback) {
             callback(appSettings);
@@ -99,6 +105,17 @@ namespace scene {
     }
 
     /**
+     * 读取配置文件内容
+     */
+    private _getConfig() {
+      this._config = (<any>window).$$config;
+      if (!this._config.getConfigApi || !this._config.getItemsApi || !this._config.getItemDetailApi) {
+        alert('配置错误。');
+        throw new Error('配置信息错误。');
+      }
+    }
+
+    /**
      * 应用设置到场景，并开始播放第一个 api 场景
      * @param settings {settings.IAppSettings} 设置参数
      */
@@ -107,7 +124,6 @@ namespace scene {
       this.state.sceneHeight = settings.sceneHeight;
       this.state.bgColor = util.colorStringToNumber(settings.bgColor);
       this.state.bgImage = settings.bgImage;
-      this.state.apiList = settings.apiList;
       this.state.rowCount = settings.rowCount;
       this.state.padding = settings.padding;
       this.state.speed = settings.speed;
@@ -126,10 +142,7 @@ namespace scene {
       loading.x = this.state.sceneWidth / 2;
       loading.y = this.state.sceneHeight / 2;
       this.addChild(loading);
-
-      if (this.state.apiList.length) {
-        this.start();
-      }
+      this.start();
     }
 
     /**
@@ -165,9 +178,8 @@ namespace scene {
      */
     public start(apiIndex: number = 0) {
       this.showLoading();
-      this.state.selectedApiIndex = apiIndex;
       this.state.status = SCENE_STATUS.LOADING;
-      ajax.getJson(this.state.apiList[apiIndex], {
+      ajax.getJson(this.getNextApi(), {
         onProgress: function(loaded, totle) {
         },
         onError: () => {
@@ -188,12 +200,7 @@ namespace scene {
      * 播放下一个 api 的场景
      */
     public next() {
-      let {selectedApiIndex, apiList, sceneChangeTime} = this.state;
-      let apiCount = apiList.length;
-      selectedApiIndex++;
-      if (selectedApiIndex > apiCount - 1) {
-        selectedApiIndex = 0;
-      }
+      let {sceneChangeTime} = this.state;
       // this.start(selectedApiIndex);
       this.state.rowWidthList = this.state.nextApiRowWidthList;
       this.state.nextApiRowWidthList = [];
@@ -212,13 +219,8 @@ namespace scene {
      * 下一场景 Api 地址
      */
     public getNextApi(): string {
-      let {selectedApiIndex, apiList} = this.state;
-      let apiCount = apiList.length;
-      let nextApiIndex = selectedApiIndex + 1;
-      if (nextApiIndex > apiCount - 1) {
-        nextApiIndex = 0;
-      }
-      return apiList[nextApiIndex];
+      let {deviceid, getItemsApi} = this._config;
+      return `${getItemsApi}?deviceid=${deviceid}&t=${+new Date()}`;
     }
 
     /**

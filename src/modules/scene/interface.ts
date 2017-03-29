@@ -33,16 +33,22 @@ namespace scene {
     sceneStartTime: Date;
     scenePassedTime: Date;
     autoResetTime: number;
-    apiList: string[];
     rowWidthList: number[];
     selectedItem: Item;
     status: string;
-    selectedApiIndex: number;
     lastOperateTime: Date;
     isButtonsShow: boolean;
     isExtraButtonsShow: boolean;
     nextApiItemsReady: boolean;
     nextApiRowWidthList: number[];
+  }
+
+  export interface IConfig {
+    deviceid: number | string;
+    getConfigApi: string;
+    getItemsApi: string;
+    getItemDetailApi: string;
+    getBackgroundApi?: string;
   }
 
   export interface IApi {
