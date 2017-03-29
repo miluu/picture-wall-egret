@@ -636,10 +636,10 @@ namespace scene {
       let failedCount = 0;
       const apiItems = data.result.items;
       _.forEach(apiItems, (item) => {
-        ajax.getTexture(item.thumbnail, {
+        ajax.getTexture(item.thumbnail.url, {
             onComplete: (texture) => {
               successCount++;
-              item.thumbnailTexture = texture;
+              item.thumbnail.texture = texture;
               if (callback) {
                 callback(successCount, failedCount, imagesCount, apiItems);
               }

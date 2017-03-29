@@ -1819,46 +1819,6 @@
         ]
       },
       {
-        "id": "66",
-        "brand": "SELECTED",
-        "title": "尚潮流/性感浪漫/修身包臀洋装连衣裙",
-        "description": "思莱德SELECTED女士纯棉彩色图案休闲T恤C416201037 海军蓝 155/76/XS",
-        "price": 1129,
-        "detailUrl": "/detail.html?id=66",
-        "extraItems": [
-          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
-        ],
-        "thumbnail": {
-          "url": "/assets/images/imgs/thumbnail/TB2oG5vaVXXXXcXXXXXXXXXXXXX_!!628560662.jpg",
-          "width": 974,
-          "height": 653
-        },
-        "imgs": [
-          {
-            "url": "/assets/images/imgs/TB2oG5vaVXXXXcXXXXXXXXXXXXX_!!628560662.jpg",
-            "width": 974,
-            "height": 653
-          },
-          {
-            "url": "/assets/images/imgs/TB2JVOuaVXXXXXCXpXXXXXXXXXX_!!628560662.jpg",
-            "width": 679,
-            "height": 851
-          },
-          {
-            "url": "/assets/images/imgs/TB265SzaVXXXXahXXXXXXXXXXXX_!!628560662.jpg",
-            "width": 978,
-            "height": 654
-          }
-        ]
-      },
-      {
         "id": "0",
         "brand": "SELECTED",
         "title": "青少年圆领体恤",
@@ -5260,46 +5220,6 @@
             "url": "/assets/images/imgs/T2fWHsXtRaXXXXXXXX_!!806408970.jpg",
             "width": 501,
             "height": 668
-          }
-        ]
-      },
-      {
-        "id": "66",
-        "brand": "SELECTED",
-        "title": "尚潮流/性感浪漫/修身包臀洋装连衣裙",
-        "description": "思莱德SELECTED女士纯棉彩色图案休闲T恤C416201037 海军蓝 155/76/XS",
-        "price": 1129,
-        "detailUrl": "/detail.html?id=66",
-        "extraItems": [
-          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
-        ],
-        "thumbnail": {
-          "url": "/assets/images/imgs/thumbnail/TB2oG5vaVXXXXcXXXXXXXXXXXXX_!!628560662.jpg",
-          "width": 974,
-          "height": 653
-        },
-        "imgs": [
-          {
-            "url": "/assets/images/imgs/TB2oG5vaVXXXXcXXXXXXXXXXXXX_!!628560662.jpg",
-            "width": 974,
-            "height": 653
-          },
-          {
-            "url": "/assets/images/imgs/TB2JVOuaVXXXXXCXpXXXXXXXXXX_!!628560662.jpg",
-            "width": 679,
-            "height": 851
-          },
-          {
-            "url": "/assets/images/imgs/TB265SzaVXXXXahXXXXXXXXXXXX_!!628560662.jpg",
-            "width": 978,
-            "height": 654
           }
         ]
       }

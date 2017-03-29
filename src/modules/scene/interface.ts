@@ -74,8 +74,7 @@ namespace scene {
     description: string;
     price: number;
     detailUrl: string;
-    thumbnail?: string;
-    thumbnailTexture: egret.Texture;
+    thumbnail: IApiImg;
     imgs: IApiImg[];
     extraItems: IApiExtraItem[];
   }
