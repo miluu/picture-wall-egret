@@ -3,10 +3,10 @@
   "message": "加载成功",
   "result": {
     "config": {
-      "sceneWidth": 500,
-      "sceneHeight": 500,
-      "rowCount": 5,
-      "padding": 10,
+      "sceneWidth": 1399,
+      "sceneHeight": 768,
+      "rowCount": 6,
+      "padding": 20,
       "speed": 0.5,
       "sceneChangeTime": 60,
       "bgColor": "#f2f2f2",

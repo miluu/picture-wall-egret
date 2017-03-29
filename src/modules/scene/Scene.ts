@@ -442,9 +442,10 @@ namespace scene {
             }
             const itemsCount = apiItems.length;
             _.forEach(<IApiItem[]>apiItems, (apiItem, index) => {
-              let originSize = {width: apiItem.imgs[0].width, height: apiItem.imgs[0].height};
+              let thumbImg = this._getThumbImg(apiItem);
+              let originSize = {width: thumbImg.width, height: thumbImg.height};
               let changeSize = util.fixHeight(originSize, itemHeight);
-              let texture = apiItem.imgs[0].texture;
+              let texture = thumbImg.texture;
               let item = new Item(changeSize.width, changeSize.height, null, texture);
               item.data = apiItem;
               let randomPos = this._randomOutsidePosition();
@@ -1028,9 +1029,10 @@ namespace scene {
 
       function createNextApiItem(index: number) {
         let apiItem = apiItems[index];
-        let originSize = {width: apiItem.imgs[0].width, height: apiItem.imgs[0].height};
+        let thumbImg = scene._getThumbImg(apiItem);
+        let originSize = {width: thumbImg.width, height: thumbImg.height};
         let changeSize = util.fixHeight(originSize, itemHeight);
-        let texture = apiItem.imgs[0].texture;
+        let texture = thumbImg.texture;
         let item = new Item(changeSize.width, changeSize.height, null, texture);
         let rowIndex = scene._getMinWidthRowIndex(state.nextApiRowWidthList);
         let rowWidth = state.nextApiRowWidthList[rowIndex];
@@ -1093,9 +1095,10 @@ namespace scene {
       _.fill(state.rowWidthList, 0);
       let repel = this._repels[0];
       _.forEach(apiItems, (apiItem, index) => {
-        let originSize = {width: apiItem.imgs[0].width, height: apiItem.imgs[0].height};
+        let thumbImg = this._getThumbImg(apiItem);
+        let originSize = {width: thumbImg.width, height: thumbImg.height};
         let changeSize = util.fixHeight(originSize, itemHeight);
-        let texture = apiItem.imgs[0].texture;
+        let texture = thumbImg.texture;
         let item = new Item(changeSize.width, changeSize.height, null, texture);
         let rowIndex = this._getMinWidthRowIndex(state.rowWidthList);
         let rowWidth = state.rowWidthList[rowIndex];
@@ -1117,6 +1120,18 @@ namespace scene {
         }
         this.addChild(item);
       });
+    }
+
+    /**
+     * @private 获取缩略图：有缩略图使用缩略图，没有就使用第一张图片
+     * @param apiItem {IApiItem}
+     * @return {IApiImg}
+     */
+    private _getThumbImg(apiItem: IApiItem): IApiImg {
+      if (apiItem.thumbnail && apiItem.thumbnail.texture) {
+        return apiItem.thumbnail;
+      }
+      return apiItem.imgs[0];
     }
 
     /**
