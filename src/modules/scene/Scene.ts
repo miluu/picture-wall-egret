@@ -85,7 +85,7 @@ namespace scene {
       let appSettings: settings.IAppSettings;
       this._getConfig();
       console.log('开始读取配置信息...');
-      ajax.getJson(this.getNextApi(), {
+      ajax.getJson(this._config.getConfigApi, {
         onComplete: (_data) => {
           let data = <ISettingsApi>_data;
           if (data.status !== 'success') {
