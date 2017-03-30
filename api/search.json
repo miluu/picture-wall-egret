@@ -11,14 +11,14 @@
         "price": 1129,
         "detailUrl": "/detail.html?id=0",
         "extraItems": [
-          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/8.png", "type": 2, "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "/assets/images/imgs/thumb/TB25v95qFXXXXXyXpXXXXXXXXXX_!!2175014669.jpg",
@@ -51,14 +51,14 @@
         "price": 1456,
         "detailUrl": "/detail.html?id=1",
         "extraItems": [
-          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/8.png", "type": 2, "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "/assets/images/imgs/thumb/TB20dUSkpXXXXXMXXXXXXXXXXXX_!!2143552968.jpg",
@@ -91,14 +91,14 @@
         "price": 1129,
         "detailUrl": "/detail.html?id=2",
         "extraItems": [
-          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/8.png", "type": 2, "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "/assets/images/imgs/thumb/TB2OGgqlFXXXXXvXXXXXXXXXXXX_!!1986915551.jpg",
@@ -126,14 +126,14 @@
         "price": 112,
         "detailUrl": "/detail.html?id=3",
         "extraItems": [
-          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/8.png", "type": 2, "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "/assets/images/imgs/thumb/TB2Arh2eXXXXXaeXXXXXXXXXXXX_!!197223493.jpg",
@@ -166,14 +166,14 @@
         "price": 232,
         "detailUrl": "/detail.html?id=4",
         "extraItems": [
-          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/8.png", "type": 2, "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "/assets/images/imgs/thumb/TB2eeyfkVXXXXchXpXXXXXXXXXX_!!1048771310.jpg",
@@ -206,14 +206,14 @@
         "price": 133,
         "detailUrl": "/detail.html?id=5",
         "extraItems": [
-          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/8.png", "type": 2, "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "/assets/images/imgs/thumb/TB2Ct8GlFXXXXbdXpXXXXXXXXXX_!!1716957969.jpg",
@@ -246,14 +246,14 @@
         "price": 1555,
         "detailUrl": "/detail.html?id=6",
         "extraItems": [
-          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/8.png", "type": 2, "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "/assets/images/imgs/thumb/TB2UxneqpXXXXaCXXXXXXXXXXXX_!!827940181.jpg",
@@ -286,14 +286,14 @@
         "price": 112,
         "detailUrl": "/detail.html?id=7",
         "extraItems": [
-          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/8.png", "type": 2, "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "/assets/images/imgs/thumb/TB2LynbppXXXXXpXpXXXXXXXXXX-188124207.jpg",
@@ -326,14 +326,14 @@
         "price": 2003,
         "detailUrl": "/detail.html?id=8",
         "extraItems": [
-          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/8.png", "type": 2, "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "/assets/images/imgs/thumb/TB2uw_dmVXXXXamXXXXXXXXXXXX_!!1640678487.jpg",
@@ -366,14 +366,14 @@
         "price": 123,
         "detailUrl": "/detail.html?id=9",
         "extraItems": [
-          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/8.png", "type": 2, "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "/assets/images/imgs/thumb/TB2PoiYkVXXXXbNXXXXXXXXXXXX_!!2030528091.jpg",
@@ -406,14 +406,14 @@
         "price": 129,
         "detailUrl": "/detail.html?id=10",
         "extraItems": [
-          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/8.png", "type": 2, "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "/assets/images/imgs/thumb/TB2JhG5kXXXXXcwXpXXXXXXXXXX_!!598633737.jpg",
@@ -446,14 +446,14 @@
         "price": 512,
         "detailUrl": "/detail.html?id=11",
         "extraItems": [
-          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/8.png", "type": 2, "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "/assets/images/imgs/thumb/TB2ShvsoFXXXXbzXpXXXXXXXXXX_!!2192876822.jpg",
@@ -486,14 +486,14 @@
         "price": 1129,
         "detailUrl": "/detail.html?id=12",
         "extraItems": [
-          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "itemsUrl": "/api/items-extra.json"},
-          {"icon": "/assets/images/icons/8.png", "itemsUrl": "/api/items-extra.json"}
+          {"icon": "/assets/images/icons/1.png", "bgColor": "red", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/4.png", "bgColor": "green", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
+          {"icon": "/assets/images/icons/8.png", "type": 2, "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "/assets/images/imgs/thumb/TB2zlXMlFXXXXXEXpXXXXXXXXXX_!!2185282132.jpg",

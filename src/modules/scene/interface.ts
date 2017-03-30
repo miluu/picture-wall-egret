@@ -41,14 +41,17 @@ namespace scene {
     isExtraButtonsShow: boolean;
     nextApiItemsReady: boolean;
     nextApiRowWidthList: number[];
+    page: number;
   }
 
   export interface IConfig {
     deviceid: number | string;
     getConfigApi: string;
     getItemsApi: string;
+    getSearchApi: string;
     getItemDetailApi: string;
     getBackgroundApi?: string;
+    getSaleTypeApi?: string;
   }
 
   export interface IApi {
@@ -94,7 +97,8 @@ namespace scene {
     texture: egret.Texture;
     button: Button;
     bgColor?: string;
-    itemsUrl: string;
+    type: number;
+    condition: string;
   }
 
   export interface IPosition {

@@ -133,6 +133,7 @@ namespace scene {
       this.state.isButtonsShow = false;
       this.state.isExtraButtonsShow = false;
       this.state.nextApiItemsReady = false;
+      this.state.page = 0;
       this._createBg();
       this._createText();
       this._setButtonsPosition();
@@ -201,7 +202,6 @@ namespace scene {
      */
     public next() {
       let {sceneChangeTime} = this.state;
-      // this.start(selectedApiIndex);
       this.state.rowWidthList = this.state.nextApiRowWidthList;
       this.state.nextApiRowWidthList = [];
       this._items = this._nextItems;
@@ -220,7 +220,10 @@ namespace scene {
      */
     public getNextApi(): string {
       const {getItemsApi} = this._config;
-      return util.urlWithParams(getItemsApi);
+      this.state.page++;
+      return util.urlWithParams(getItemsApi, {
+        page: this.state.page
+      });
     }
 
     /**
@@ -405,11 +408,26 @@ namespace scene {
         btn.twObj = twObj;
         btn.onClick = () => {
           if (this._canSelectItem()) {
-            this._createExtraItems(item.itemsUrl);
+            this._createExtraItems(this._getExtraItemsUrl(item));
           }
         };
       });
     }
+
+    /**
+     * @private 获取扩展按钮的请求 url
+     * @param item {IApiExtraItem}
+     * @return {string}
+     */
+    private _getExtraItemsUrl(item: IApiExtraItem): string {
+      const {type, condition} = item;
+      const searchUrl = this._config.getSearchApi;
+      const url = util.urlWithParams(searchUrl, {
+        type: type,
+        condition: condition
+      });
+      return url;
+    };
 
     /**
      * 创建扩展 items
