@@ -3,9 +3,13 @@ var $$config = {
   // getConfigApi: '/getconfig',
   // getBackgroundApi: '/getbackground',
   // getItemsApi: '/getitems',
-  // getItemDetailApi: '/getitemdetail'
+  // getItemDetailApi: '/getitemdetail',
+  // getSaleTypeApi: '/getsaletype',
+  // getSearchApi: '/getsearch',
   getConfigApi: '/api/config.json',
   getBackgroundApi: '/api/background.json',
   getItemsApi: '/api/items.json',
-  getItemDetailApi: '/api/item-detail.json'
+  getItemDetailApi: '/api/item-detail.json',
+  getSaleTypeApi: '/api/sale-type.json',
+  getSearchApi: '/api/search.json'
 };
