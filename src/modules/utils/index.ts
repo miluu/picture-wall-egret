@@ -215,4 +215,24 @@ namespace util {
     newSize.width = originSize.width / originSize.height * newSize.height;
     return newSize;
   }
+
+  export function urlWithParams (baseUrl: string, params?: Object): string {
+    let b = false;
+    let prefix: string;
+    let url = baseUrl;
+    let defaultParams = {
+      deviceid: (<any>window).$$config.deviceid,
+      t: +new Date()
+    };
+    let _params = _.assign({}, defaultParams, params);
+    if (baseUrl.indexOf('?') >= 0) {
+      b = true;
+    }
+    _.forEach(_params, function (v, k) {
+      prefix = b ? '&' : '?';
+      b = true;
+      url += `${prefix + k}=${v}`;
+    });
+    return url;
+  }
 };

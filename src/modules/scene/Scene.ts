@@ -85,7 +85,7 @@ namespace scene {
       let appSettings: settings.IAppSettings;
       this._getConfig();
       console.log('开始读取配置信息...');
-      ajax.getJson(this._config.getConfigApi, {
+      ajax.getJson(util.urlWithParams(this._config.getConfigApi), {
         onComplete: (_data) => {
           let data = <ISettingsApi>_data;
           if (data.status !== 'success') {
@@ -219,8 +219,8 @@ namespace scene {
      * 下一场景 Api 地址
      */
     public getNextApi(): string {
-      let {deviceid, getItemsApi} = this._config;
-      return `${getItemsApi}?deviceid=${deviceid}&t=${+new Date()}`;
+      const {getItemsApi} = this._config;
+      return util.urlWithParams(getItemsApi);
     }
 
     /**
