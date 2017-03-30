@@ -15,6 +15,11 @@ namespace scene {
     private _nextItems: Item[] = [];
 
     /**
+     * 环形菜单业态 Item 实例
+     */
+    private _searchItems: Item[] = [];
+
+    /**
      * extraItem
      */
     private _extraItems: Item[] = [];
@@ -408,7 +413,11 @@ namespace scene {
         btn.twObj = twObj;
         btn.onClick = () => {
           if (this._canSelectItem()) {
-            this._createExtraItems(this._getExtraItemsUrl(item));
+            if (item.type === 1) {
+              this._runSearchScene(this._getExtraItemsUrl(item));
+            } else {
+              this._createExtraItems(this._getExtraItemsUrl(item));
+            }
           }
         };
       });
@@ -428,6 +437,12 @@ namespace scene {
       });
       return url;
     };
+
+    private _runSearchScene(url: string) {
+      this.showLoading();
+      this._hideExtraButtons(this.state.selectedItem.data.extraItems);
+      this._extraItemsLeave();
+    }
 
     /**
      * 创建扩展 items

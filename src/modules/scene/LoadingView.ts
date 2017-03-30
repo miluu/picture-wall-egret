@@ -149,6 +149,7 @@ namespace scene {
      */
     private _createMask() {
       this._mask = new egret.Shape();
+      this._mask.touchEnabled = true;
       const g = this._mask.graphics;
       g.beginFill(0x000000);
       g.drawRect(-this._viewWidth / 2, -this._viewHeight / 2, this._viewWidth, this._viewHeight);
