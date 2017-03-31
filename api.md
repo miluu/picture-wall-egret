@@ -21,11 +21,6 @@
 }
 ```
 
-## `getbackground` 获取背景图片URL
-> getbackground?deviceid=9
-
-背景图片 url 在 `getconfig` 中返回了 (`bgColor`、`bgImage` 字段分别是背景颜色和背景图片url)，应该不需要单独再获取背景图了
-
 ## `getitems` 获取商品列表
 > getitems?deviceid=9&page=1
 
@@ -36,7 +31,7 @@
   "result": {
     "items": [
       {
-        "id": "0",                   // {string} 商品 id (goodsno?)
+        "goodsno": "0",                   // {string} 商品 id (goodsno?)
         "brand": "SELECTED",         // {string} 商品品牌
         "title": "青少年圆领体恤",   // {string} 商品标题
         "description": "思莱德SELECTED女士纯棉彩色图案休闲T恤C416201037 海军蓝 155/76/XS",    // {string} 商品描述
@@ -72,16 +67,12 @@
 ```
 
 ## `getitemdetail` 获取商品详细信息
-> getitemdetaikl?deviceid=9&goodsno=101
+> getitemdetail?deviceid=9&getype=1&goodsno=1
 
-目前做法详情页面是一个 html 页面通过 iframe 加载进来的, items 中的 detailUrl 为对应的 url 地址。
-`getitemdetail` 是作什么用途的？
-
+> getitemdetail?deviceid=9&getype=2&goodsno=1
 
 ## `getsaletype` 获取业态列表，返回如餐饮、男装、鞋子之类，显示在星星环绕
 > getsaletype?deviceid=9
-
-这个业态列表我目前是在 `getitems` 返回的数据里面获取了 (每个商品的 `extraItems` 字段)，是需要改成单独获取的吗
 
 ```js
 {

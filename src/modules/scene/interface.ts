@@ -71,7 +71,7 @@ namespace scene {
   }
 
   export interface IApiItem {
-    id: string;
+    goodsno: string;
     brand: string;
     title: string;
     description: string;

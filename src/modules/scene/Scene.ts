@@ -125,8 +125,7 @@ namespace scene {
      * @param settings {settings.IAppSettings} 设置参数
      */
     public useSettings(settings: settings.IAppSettings) {
-      this.state.sceneWidth = settings.sceneWidth;
-      this.state.sceneHeight = settings.sceneHeight;
+      this._setSceneSize(settings.sceneWidth, settings.sceneHeight);
       this.state.bgColor = util.colorStringToNumber(settings.bgColor);
       this.state.bgImage = settings.bgImage;
       this.state.rowCount = settings.rowCount;
@@ -149,6 +148,16 @@ namespace scene {
       loading.y = this.state.sceneHeight / 2;
       this.addChild(loading);
       this.start();
+    }
+
+    /**
+     * @private 设置场景的尺寸，如未设置尺寸，则按窗口浏览器窗口的宽度
+     * @param width {number}
+     * @param height {number}
+     */
+    private _setSceneSize(width: number, height: number) {
+      this.state.sceneWidth = width || window.innerWidth;
+      this.state.sceneHeight = height || window.innerHeight;
     }
 
     /**
@@ -347,6 +356,8 @@ namespace scene {
         sceneWidth,
         sceneHeight
       });
+      /* 发送日志请求 */
+      ajax.get(util.urlWithParams((<any>window).$$config.getItemDetailApi, {goodsno: selectedItem.data.goodsno, getype: 2}));
     }
 
     /**
@@ -1230,6 +1241,9 @@ namespace scene {
       ) {
         return;
       }
+      /* 发送日志请求 */
+      ajax.get(util.urlWithParams((<any>window).$$config.getItemDetailApi, {goodsno: item.data.goodsno, getype: 1}));
+
       if (this.state.selectedItem) {
         this._resetItem(this.state.selectedItem);
       }
