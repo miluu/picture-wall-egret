@@ -454,7 +454,7 @@ namespace scene {
         btn.tweens = [tw, tw2];
         btn.twObj = twObj;
         btn.onClick = () => {
-          if (this._canSelectItem()) {
+          if (this.state.status === SCENE_STATUS.RUNNING) {
             if (item.type === 1) {
               this._runSearchScene(this._getExtraItemsUrl(item));
             } else {
@@ -517,9 +517,7 @@ namespace scene {
           this.state.offset = 0;
           this._createItems(apiItems);
           this._delayFrames(() => {
-            this._run();
             this._enter();
-            // this._preLoadNextApi();
           }, 20);
         });
       }
