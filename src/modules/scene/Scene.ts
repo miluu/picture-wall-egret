@@ -435,6 +435,10 @@ namespace scene {
         type: type,
         condition: condition
       });
+      if (type === 1 && (<any>window).$$config.__env__ === 'dev') {
+        console.log('__env__: dev.');
+        return '/api/search-type1.json';
+      }
       return url;
     };
 
@@ -442,7 +446,43 @@ namespace scene {
       this.showLoading();
       this._hideExtraButtons(this.state.selectedItem.data.extraItems);
       this._extraItemsLeave();
+      this.state.status = SCENE_STATUS.LOADING;
+      ajax.getJson(url, {
+        onProgress: function(loaded, totle) {
+        },
+        onError: () => {
+          alert('加载失败！');
+        },
+        onComplete: (_data) => {
+          let data = <IApi>_data;
+          if (!(data.status === 'success')) {
+            alert(data.message || '加载失败!');
+            return;
+          }
+          this._loadSources(data, this._searchSceneResourceLoadedHandle.bind(this));
+        }
+      });
     }
+
+    /**
+     * @private 扩展 items 场景资源加载回调
+     */
+    private _searchSceneResourceLoadedHandle(successCount: number, failedCount: number, imagesCount: number, apiItems: IApiItem[]) {
+      this._loadingView.text = `loading...\n${successCount + failedCount} / ${imagesCount}`;
+      if (successCount + failedCount === imagesCount) {
+        this.hideLoading();
+        this._leave(() => {
+          this.state.offset = 0;
+          this._createItems(apiItems);
+          this._delayFrames(() => {
+            this._run();
+            this._enter();
+            // this._preLoadNextApi();
+          }, 20);
+        });
+      }
+    }
+
 
     /**
      * 创建扩展 items
@@ -869,7 +909,7 @@ namespace scene {
     /**
      * 离场
      */
-    private _leave() {
+    private _leave(callback?: Function) {
       this.state.status = SCENE_STATUS.LEAVE;
       this.state.sceneStartTime = null;
       this.state.nextApiItemsReady = false;
@@ -910,7 +950,11 @@ namespace scene {
             this.removeChild(item);
             _.remove(this._items, item);
             if (done === itemsCount) {
-              this.next();
+              if (callback) {
+                callback();
+              } else {
+                this.next();
+              }
             }
           })
           .start();

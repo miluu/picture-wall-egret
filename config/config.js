@@ -1,4 +1,5 @@
 var $$config = {
+  __env__: 'dev',
   deviceid: 9,
   // getConfigApi: '/getconfig',
   // getBackgroundApi: '/getbackground',

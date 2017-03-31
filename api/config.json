@@ -3,12 +3,12 @@
   "message": "加载成功",
   "result": {
     "config": {
-      "sceneWidth": 1366,
-      "sceneHeight": 768,
+      "sceneWidth": 400,
+      "sceneHeight": 400,
       "rowCount": 6,
       "padding": 20,
       "speed": 0.5,
-      "sceneChangeTime": 60,
+      "sceneChangeTime": 20,
       "bgColor": "#f2f2f2",
       "bgImage": "/assets/images/bg/bg.jpg",
       "autoResetTime": 15
