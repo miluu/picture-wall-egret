@@ -437,7 +437,7 @@ namespace scene {
       });
       if (type === 1 && (<any>window).$$config.__env__ === 'dev') {
         console.log('__env__: dev.');
-        return '/api/search-type1.json';
+        return (<any>window).$$config.getSearchType1Api;
       }
       return url;
     };
