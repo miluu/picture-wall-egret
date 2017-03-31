@@ -2,7 +2,7 @@
   "status": "success",
   "message": "加载成功",
   "result": {
-    "saleType": [
+    "saleTypes": [
       {"icon": "/assets/images/icons/1.png", "bgColor": "red", "type": 1, "condition": "男装" },
       {"icon": "/assets/images/icons/2.png", "bgColor": "orange", "type": 1, "condition": "女装" },
       {"icon": "/assets/images/icons/3.png", "bgColor": "yellow", "type": 1, "condition": "餐饮" },

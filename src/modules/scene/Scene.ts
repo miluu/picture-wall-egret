@@ -65,6 +65,12 @@ namespace scene {
     public state: IState = <IState>{};
 
     /**
+     * @private 业态g列表
+     */
+
+    private _saleTypes: IApiExtraItem[];
+
+    /**
      * @constructor 生成一个场景实例
      */
     constructor() {
@@ -247,7 +253,15 @@ namespace scene {
         },
         onComplete: (_data) => {
           const data = <ISaleTypesApi>_data;
-
+          this._saleTypes = data.result.saleTypes || [];
+          _.forEach(this._saleTypes, (extraItem) => {
+            const iconUrl = extraItem.icon;
+            ajax.getTexture(iconUrl, {
+              onComplete: (texture) => {
+                extraItem.texture = texture;
+              }
+            });
+          });
         }
       });
     }
@@ -377,7 +391,12 @@ namespace scene {
      */
     private _showMore() {
       const {selectedItem, isExtraButtonsShow} = this.state;
-      const {extraItems} = selectedItem.data;
+      let {extraItems} = selectedItem.data;
+      if (!selectedItem.data.extraItemsMerged) {
+        console.log('merge.');
+        extraItems = selectedItem.data.extraItems = this._saleTypes.concat(extraItems);
+        selectedItem.data.extraItemsMerged = true;
+      }
       this._extraItemsLeave();
       if (isExtraButtonsShow) {
         this._hideExtraButtons(extraItems);

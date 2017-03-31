@@ -88,6 +88,7 @@ namespace scene {
     thumbnail: IApiImg;
     imgs: IApiImg[];
     extraItems: IApiExtraItem[];
+    extraItemsMerged?: boolean;
   }
 
   export interface ISize {
