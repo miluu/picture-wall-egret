@@ -63,7 +63,7 @@ namespace detail {
   }
 
   /**
-   * @export 隐藏说成
+   * @export 隐藏详情
    */
   export function hide() {
     shown = false;
