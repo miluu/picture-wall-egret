@@ -15,11 +15,6 @@ namespace scene {
     private _nextItems: Item[] = [];
 
     /**
-     * 环形菜单业态 Item 实例
-     */
-    private _searchItems: Item[] = [];
-
-    /**
      * extraItem
      */
     private _extraItems: Item[] = [];
@@ -194,6 +189,7 @@ namespace scene {
     public start(apiIndex: number = 0) {
       this.showLoading();
       this.state.status = SCENE_STATUS.LOADING;
+      this._loadSaleTypes();
       ajax.getJson(this.getNextApi(), {
         onProgress: function(loaded, totle) {
         },
@@ -237,6 +233,22 @@ namespace scene {
       this.state.page++;
       return util.urlWithParams(getItemsApi, {
         page: this.state.page
+      });
+    }
+
+    /**
+     * @private 加载业态列表
+     */
+    private _loadSaleTypes() {
+      const url = util.urlWithParams((<any>window).$$config.getSaleTypeApi);
+      ajax.getJson(url, {
+        onError: () => {
+          console.error('加载业态列表失败。');
+        },
+        onComplete: (_data) => {
+          const data = <ISaleTypesApi>_data;
+
+        }
       });
     }
 

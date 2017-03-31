@@ -62,6 +62,14 @@ namespace scene {
     };
   }
 
+  export interface ISaleTypesApi {
+    status: string;
+    message: string;
+    result: {
+      saleTypes: IApiExtraItem[]
+    };
+  }
+
   export interface ISettingsApi {
     status: string;
     message: string;
