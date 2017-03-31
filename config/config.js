@@ -13,5 +13,5 @@ var $$config = {
   getItemDetailApi: '/api/item-detail.json',
   getSaleTypeApi: '/api/sale-type.json',
   getSearchApi: '/api/search.json',
-  getSearchApiType1Api: '/api/search-type1.json'
+  getSearchType1Api: '/api/search-type1.json'
 };
