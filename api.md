@@ -7,15 +7,14 @@
   "message": "加载成功",
   "result": {
     "config": {
-      "sceneWidth": 400,    // {number} 场景宽度(px)
-      "sceneHeight": 400,   // {number} 场景高度(px)
       "rowCount": 6,        // {number} 显示行数
       "padding": 20,        // {number} 图片间隔(px)
       "speed": 0.5,         // {number} 滚动速度
       "sceneChangeTime": 60,    // {number} 场景切换时间间隔(秒)
       "autoResetTime": 15,      // {number} 无人操作自动恢复时间间隔(秒)
       "bgColor": "#f2f2f2",     // {string} 背景色
-      "bgImage": "/assets/images/bg/bg.jpg"    // {string} 背景图url
+      "bgImage": "/assets/images/bg/bg.jpg",    // {string} 背景图url
+      "showDetailAnimationTime": 3000           // {number} 点击商品后的过渡动画时间间隔(毫秒)
     }
   }
 }
