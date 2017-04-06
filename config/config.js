@@ -1,5 +1,6 @@
 var $$config = {
   deviceid: 9,
+  showDetailAnimationTime: 2300,
   // getConfigApi: '/getconfig',
   // getBackgroundApi: '/getbackground',
   // getItemsApi: '/getitems',

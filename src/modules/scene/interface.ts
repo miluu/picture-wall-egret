@@ -46,6 +46,7 @@ namespace scene {
 
   export interface IConfig {
     deviceid: number | string;
+    showDetailAnimationTime: number;
     getConfigApi: string;
     getItemsApi: string;
     getSearchApi: string;
