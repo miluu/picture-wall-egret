@@ -41,12 +41,12 @@ namespace scene {
     isExtraButtonsShow: boolean;
     nextApiItemsReady: boolean;
     nextApiRowWidthList: number[];
+    showDetailAnimationTime: number;
     page: number;
   }
 
   export interface IConfig {
     deviceid: number | string;
-    showDetailAnimationTime: number;
     getConfigApi: string;
     getItemsApi: string;
     getSearchApi: string;

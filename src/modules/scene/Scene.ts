@@ -115,7 +115,7 @@ namespace scene {
      */
     private _getConfig() {
       this._config = (<any>window).$$config;
-      this._config.showDetailAnimationTime = this._config.showDetailAnimationTime || 3500;
+      // this._config.showDetailAnimationTime = this._config.showDetailAnimationTime || 3500;
       if (!this._config.getConfigApi || !this._config.getItemsApi || !this._config.getItemDetailApi) {
         alert('配置错误。');
         throw new Error('配置信息错误。');
@@ -140,6 +140,7 @@ namespace scene {
       this.state.isExtraButtonsShow = false;
       this.state.nextApiItemsReady = false;
       this.state.page = 0;
+      this.state.showDetailAnimationTime = settings.showDetailAnimationTime;
       this._createBg();
       this._createText();
       this._setButtonsPosition();
@@ -1282,11 +1283,11 @@ namespace scene {
       repel.toOptions({
         strong: 0.5,
         radius: this._getRowHeight() * 2
-    }, this._config.showDetailAnimationTime * 1000 / 3500, () => {
+    }, this.state.showDetailAnimationTime * 1000 / 3500, () => {
         repel.toOptions({
           strong: 0.65,
           radius: this._getRepelRadius()
-    }, this._config.showDetailAnimationTime * 2500 / 3500);
+    }, this.state.showDetailAnimationTime * 2500 / 3500);
       });
 
       let scale = this._getLargeItemScale();
@@ -1295,7 +1296,7 @@ namespace scene {
           scaleX: 0.8,
           scaleY: 0.8,
           alpha: 1
-    }, this._config.showDetailAnimationTime * 1000 / 3500)
+    }, this.state.showDetailAnimationTime * 1000 / 3500)
         .easing(TWEEN.Easing.Cubic.InOut)
         .start();
       let tw2 = new TWEEN.Tween(item)
@@ -1306,13 +1307,13 @@ namespace scene {
           alpha: 1,
           x: this.state.sceneWidth / 2,
           y: this.state.sceneHeight / 2
-    }, this._config.showDetailAnimationTime * 1000 / 3500);
+    }, this.state.showDetailAnimationTime * 1000 / 3500);
       let tw3 = new TWEEN.Tween(item)
         .easing(TWEEN.Easing.Back.Out)
         .to({
           scaleX: scale,
           scaleY: scale
-    }, this._config.showDetailAnimationTime * 1500 / 3500)
+    }, this.state.showDetailAnimationTime * 1500 / 3500)
         .onComplete(() => {
           this._showSwiper(item);
         });

@@ -15,6 +15,7 @@ namespace settings {
     bgColor: string;
     bgImage?: string;
     autoResetTime: number;
+    showDetailAnimationTime?: number;
     [key: string]: any;
   }
 
@@ -29,7 +30,8 @@ namespace settings {
     speed: 1,
     bgColor: '#000',
     sceneChangeTime: 120,
-    autoResetTime: 30
+    autoResetTime: 30,
+    showDetailAnimationTime: 3500
   };
 
 }
