@@ -279,7 +279,7 @@ namespace scene {
       }, this);
       RES.addEventListener(RES.ResourceEvent.CONFIG_LOAD_ERROR, function() {
       }, this);
-      RES.loadConfig('resource/default.res.json', 'resource/');
+      RES.loadConfig('resource/default.res.js', 'resource/');
       RES.loadGroup('preload');
     }
 
