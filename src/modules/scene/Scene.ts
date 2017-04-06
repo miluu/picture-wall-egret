@@ -1654,7 +1654,7 @@ namespace scene {
      * 创建背景图
      */
     private _createBgImage() {
-      ajax.getTexture(this._bgImage, {
+      ajax.getTexture(util.urlWithParams(this._bgImage), {
         onComplete: (texture) => {
           const bgBmp = new egret.Bitmap(texture);
           const {textureWidth, textureHeight} = <egret.Texture>texture;
