@@ -8,7 +8,7 @@
       "speed": 0.5,
       "sceneChangeTime": 20,
       "bgColor": "#f2f2f2",
-      "bgImage": "/assets/images/bg/bg.jpg",
+      "bgImage": "assets/images/bg/bg.jpg",
       "autoResetTime": 15,
       "showDetailAnimationTime": 2300
     }

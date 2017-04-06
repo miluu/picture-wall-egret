@@ -395,7 +395,6 @@ namespace scene {
       const {selectedItem, isExtraButtonsShow} = this.state;
       let {extraItems} = selectedItem.data;
       if (!selectedItem.data.extraItemsMerged) {
-        console.log('merge.');
         extraItems = selectedItem.data.extraItems = this._saleTypes.concat(extraItems);
         selectedItem.data.extraItemsMerged = true;
       }
