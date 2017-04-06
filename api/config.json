@@ -7,8 +7,9 @@
       "padding": 30,
       "speed": 0.5,
       "sceneChangeTime": 20,
-      "bgColor": "#f2f2f2",
+      "bgColor": "red",
       "bgImage": "assets/images/bg/bg.jpg",
+      "bgFixMode": "noBorder",
       "autoResetTime": 15,
       "showDetailAnimationTime": 2300
     }

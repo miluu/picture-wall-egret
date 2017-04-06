@@ -29,6 +29,7 @@ namespace scene {
     speed: number;
     bgColor: number;
     bgImage: string;
+    bgFixMode: string;
     sceneChangeTime: number;
     sceneStartTime: Date;
     scenePassedTime: Date;
@@ -52,6 +53,8 @@ namespace scene {
     getSearchApi: string;
     getItemDetailApi: string;
     getSaleTypeApi?: string;
+    getSearchType1Api?: string;
+    __env__?: string;
   }
 
   export interface IApi {

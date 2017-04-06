@@ -141,6 +141,7 @@ namespace scene {
       this.state.nextApiItemsReady = false;
       this.state.page = 0;
       this.state.showDetailAnimationTime = settings.showDetailAnimationTime;
+      this.state.bgFixMode = settings.bgFixMode;
       this._createBg();
       this._createText();
       this._setButtonsPosition();
@@ -248,7 +249,7 @@ namespace scene {
      * @private 加载业态列表
      */
     private _loadSaleTypes() {
-      const url = util.urlWithParams((<any>window).$$config.getSaleTypeApi);
+      const url = util.urlWithParams(this._config.getSaleTypeApi);
       ajax.getJson(url, {
         onError: () => {
           console.error('加载业态列表失败。');
@@ -385,7 +386,7 @@ namespace scene {
         sceneHeight
       });
       /* 发送日志请求 */
-      ajax.get(util.urlWithParams((<any>window).$$config.getItemDetailApi, {goodsno: selectedItem.data.goodsno, getype: 2}));
+      ajax.get(util.urlWithParams(this._config.getItemDetailApi, {goodsno: selectedItem.data.goodsno, getype: 2}));
     }
 
     /**
@@ -478,9 +479,9 @@ namespace scene {
         type: type,
         condition: condition
       });
-      if (type === 1 && (<any>window).$$config.__env__ === 'dev') {
+      if (type === 1 && this._config.__env__ === 'dev') {
         console.log('__env__: dev.');
-        return (<any>window).$$config.getSearchType1Api;
+        return this._config.getSearchType1Api;
       }
       return url;
     };
@@ -1099,7 +1100,7 @@ namespace scene {
       if (this._bg) {
         this.removeChild(this._bg);
       }
-      this._bg = new SceneBg(this.state.sceneWidth, this.state.sceneHeight, this.state.bgColor, this.state.bgImage);
+      this._bg = new SceneBg(this.state.sceneWidth, this.state.sceneHeight, this.state.bgColor, this.state.bgImage, this.state.bgFixMode);
       this.addChild(this._bg);
       this._bg.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this._touchBg, this);
     }
@@ -1272,7 +1273,7 @@ namespace scene {
         return;
       }
       /* 发送日志请求 */
-      ajax.get(util.urlWithParams((<any>window).$$config.getItemDetailApi, {goodsno: item.data.goodsno, getype: 1}));
+      ajax.get(util.urlWithParams(this._config.getItemDetailApi, {goodsno: item.data.goodsno, getype: 1}));
 
       if (this.state.selectedItem) {
         this._resetItem(this.state.selectedItem);
@@ -1614,6 +1615,8 @@ namespace scene {
      * 背景图片 url
      */
     private _bgImage: string;
+    /** 背景图片缩放模式 */
+    private _fixMode: string;
 
     /**
      * @constructor 创建场景背景实例
@@ -1622,12 +1625,13 @@ namespace scene {
      * @param bgColor {number} 背景色
      * @param bgImage {string} 背景图 url
      */
-    constructor(width: number, height: number, bgColor: number = 0x000000, bgImage?: string) {
+    constructor(width: number, height: number, bgColor: number = 0x000000, bgImage?: string, fixMode?: string) {
       super();
       this._bgWidth = width;
       this._bgHeight = height;
       this._bgColor = bgColor;
       this._bgImage = bgImage;
+      this._fixMode = fixMode;
 
       this._createBgColor();
       this._createBgImage();
@@ -1654,8 +1658,51 @@ namespace scene {
         onComplete: (texture) => {
           const bgBmp = new egret.Bitmap(texture);
           const {textureWidth, textureHeight} = <egret.Texture>texture;
-          bgBmp.x = (this._bgWidth - textureWidth) / 2;
-          bgBmp.y = (this._bgHeight - textureHeight) / 2;
+          let imgWidth, imgHeight;
+          console.log('fixMode:', this._fixMode);
+          console.log(`scene: ${this._bgWidth} * ${this._bgHeight}`);
+          console.log(`bgImg: ${textureWidth} * ${textureHeight}`);
+          switch (this._fixMode) {
+            case 'showAll':
+              if (textureWidth / textureHeight > this._bgWidth / this._bgHeight) {
+                imgWidth = this._bgWidth;
+                imgHeight = imgWidth / textureWidth * textureHeight;
+              } else {
+                imgHeight = this._bgHeight;
+                imgWidth = imgHeight / textureHeight * textureWidth;
+              }
+              break;
+            case 'fixWidth':
+              imgWidth = this._bgWidth;
+              imgHeight = imgWidth / textureWidth * textureHeight;
+              break;
+            case 'fixHeight':
+              imgHeight = this._bgHeight;
+              imgWidth = imgHeight / textureHeight * textureWidth;
+              break;
+            case 'noBorder':
+              if (textureWidth / textureHeight < this._bgWidth / this._bgHeight) {
+                imgWidth = this._bgWidth;
+                imgHeight = imgWidth / textureWidth * textureHeight;
+              } else {
+                imgHeight = this._bgHeight;
+                imgWidth = imgHeight / textureHeight * textureWidth;
+              }
+              break;
+            case 'exactFix':
+              imgWidth = this._bgWidth;
+              imgHeight = this._bgHeight;
+              break;
+            default: // 'noScale'
+              imgWidth = textureWidth;
+              imgHeight = textureHeight;
+              break;
+          }
+          console.log(`size: ${imgWidth} * ${imgHeight}`);
+          bgBmp.width = imgWidth;
+          bgBmp.height = imgHeight;
+          bgBmp.x = (this._bgWidth - imgWidth) / 2;
+          bgBmp.y = (this._bgHeight - imgHeight) / 2;
           this.addChild(bgBmp);
         }
       });

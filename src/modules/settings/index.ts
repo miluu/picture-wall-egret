@@ -14,6 +14,7 @@ namespace settings {
     sceneChangeTime: number;
     bgColor: string;
     bgImage?: string;
+    bgFixMode?: string;
     autoResetTime: number;
     showDetailAnimationTime?: number;
     [key: string]: any;
@@ -29,6 +30,7 @@ namespace settings {
     rowCount: 6,
     speed: 1,
     bgColor: '#000',
+    bgFixMode: 'noScale',
     sceneChangeTime: 120,
     autoResetTime: 30,
     showDetailAnimationTime: 3500

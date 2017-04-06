@@ -14,11 +14,21 @@
       "autoResetTime": 15,      // {number} 无人操作自动恢复时间间隔(秒)
       "bgColor": "#f2f2f2",     // {string} 背景色
       "bgImage": "/assets/images/bg/bg.jpg",    // {string} 背景图url
+      "bgFixMode": "showAll",                   // {string} 背景图缩放模式, 默认为 'noScale'
       "showDetailAnimationTime": 3000           // {number} 点击商品后的过渡动画时间间隔(毫秒)
     }
   }
 }
 ```
+
+`bgFixMode` 背景图缩放模式可选项
+* `showAll`: 按比例缩放至场景刚好能全部显示整个背景图片，并居中显示
+* `fixWidth`: 按比例缩放至背景图片宽度与场景宽度一致，并居中显示
+* `fixHeight`: 按比例缩放至背景图片高度与场景高度一致，并居中显示
+* `noScale`: 按原始图片尺寸居中显示
+* `noBorder`: 按比例缩放至刚好能填充满整个场景，并居中显示
+* `exactFix`: 缩放至与场景尺寸相同 (不按比例)
+
 
 ## `getitems` 获取商品列表
 > getitems?deviceid=9&page=1
