@@ -51,7 +51,6 @@ namespace scene {
     getItemsApi: string;
     getSearchApi: string;
     getItemDetailApi: string;
-    getBackgroundApi?: string;
     getSaleTypeApi?: string;
   }
 
