@@ -7,11 +7,16 @@
       "padding": 30,
       "speed": 0.5,
       "sceneChangeTime": 20,
-      "bgColor": "red",
+      "bgColor": "#f2f2f2",
       "bgImage": "assets/images/bg/bg.jpg",
       "bgFixMode": "noBorder",
       "autoResetTime": 15,
-      "showDetailAnimationTime": 2300
+      "showDetailAnimationTime": 2300,
+
+      "brandTextColor": "#fff",
+      "titleTextColor": "#FF8C00",
+      "priceTextColor": "orangered",
+      "descriptionTextColor": "#F4A460"
     }
   }
 }

@@ -142,6 +142,10 @@ namespace scene {
       this.state.page = 0;
       this.state.showDetailAnimationTime = settings.showDetailAnimationTime;
       this.state.bgFixMode = settings.bgFixMode;
+      this.state.brandTextColor = settings.brandTextColor;
+      this.state.titleTextColor = settings.titleTextColor;
+      this.state.priceTextColor = settings.priceTextColor;
+      this.state.descriptionTextColor = settings.descriptionTextColor;
       this._createBg();
       this._createText();
       this._setButtonsPosition();
@@ -1087,8 +1091,10 @@ namespace scene {
      * 创建文字
      */
     private _createText() {
-      const {sceneHeight, sceneWidth, padding} = this.state;
-      this._text = new SceneText(sceneHeight, sceneWidth, this._getLargeItemHeight(), padding);
+      const {sceneHeight, sceneWidth, padding, brandTextColor, titleTextColor, priceTextColor, descriptionTextColor} = this.state;
+      this._text = new SceneText(sceneHeight, sceneWidth, this._getLargeItemHeight(), padding, {
+        brandTextColor, titleTextColor, priceTextColor, descriptionTextColor
+      });
       this._text.x = Math.round(sceneWidth / 2);
       this._text.y = Math.round(sceneHeight / 2);
     }
@@ -1724,6 +1730,12 @@ namespace scene {
     PRICE: 0.1,
     DESCRIPTION: 0.1
   };
+  interface IColorOpts {
+    brandTextColor?: string;
+    titleTextColor?: string;
+    priceTextColor?: string;
+    descriptionTextColor?: string;
+  };
   class SceneText extends egret.DisplayObjectContainer {
     private _brand: egret.TextField = new egret.TextField();
     private _title: egret.TextField = new egret.TextField();
@@ -1732,9 +1744,15 @@ namespace scene {
     private _textWidth: number;
     private _itemHeight: number;
     private _blockHeight: number;
-    constructor(sceneHeight: number, sceneWidth: number, itemHeight: number, scenePadding: number) {
+    constructor(sceneHeight: number, sceneWidth: number, itemHeight: number, scenePadding: number, colorOpts?: IColorOpts) {
       super();
-      this._init(sceneHeight, sceneWidth, itemHeight, scenePadding);
+      const mergedColorOpts: IColorOpts = _.assign({}, {
+        brandTextColor: '#000',
+        titleTextColor: '#000',
+        priceTextColor: '#000',
+        descriptionTextColor: '#000'
+      }, colorOpts);
+      this._init(sceneHeight, sceneWidth, itemHeight, scenePadding, mergedColorOpts);
     }
     public setText(options: ITextOptions) {
       this._brand.text = options.brand;
@@ -1742,7 +1760,7 @@ namespace scene {
       this._price.text = `￥${options.price.toFixed(2)}`;
       this._description.text = options.description;
     }
-    private _init(sceneHeight: number, sceneWidth: number, itemHeight: number, scenePadding: number) {
+    private _init(sceneHeight: number, sceneWidth: number, itemHeight: number, scenePadding: number, colorOpts: IColorOpts) {
       const shorter = _.min([sceneHeight, sceneWidth]);
       this._itemHeight = itemHeight;
       this._textWidth = Math.round(itemHeight);
@@ -1751,10 +1769,10 @@ namespace scene {
       this._title.width = this._textWidth;
       this._price.width = this._textWidth;
       this._description.width = this._textWidth;
-      this._brand.textColor = 0x000000;
-      this._title.textColor = 0x000000;
-      this._price.textColor = 0x000000;
-      this._description.textColor = 0x000000;
+      this._brand.textColor = util.colorStringToNumber(colorOpts.brandTextColor);
+      this._title.textColor = util.colorStringToNumber(colorOpts.titleTextColor);
+      this._price.textColor = util.colorStringToNumber(colorOpts.priceTextColor);
+      this._description.textColor = util.colorStringToNumber(colorOpts.descriptionTextColor);
       this._brand.textAlign = egret.HorizontalAlign.CENTER;
       this._title.textAlign = egret.HorizontalAlign.CENTER;
       this._price.textAlign = egret.HorizontalAlign.CENTER;

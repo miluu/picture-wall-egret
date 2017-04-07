@@ -44,6 +44,10 @@ namespace scene {
     nextApiRowWidthList: number[];
     showDetailAnimationTime: number;
     page: number;
+    brandTextColor: string;
+    titleTextColor: string;
+    priceTextColor: string;
+    descriptionTextColor: string;
   }
 
   export interface IConfig {

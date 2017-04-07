@@ -15,7 +15,11 @@
       "bgColor": "#f2f2f2",     // {string} 背景色
       "bgImage": "/assets/images/bg/bg.jpg",    // {string} 背景图url
       "bgFixMode": "showAll",                   // {string} 背景图缩放模式, 默认为 'noScale'
-      "showDetailAnimationTime": 3000           // {number} 点击商品后的过渡动画时间间隔(毫秒)
+      "showDetailAnimationTime": 3000,          // {number} 点击商品后的过渡动画时间间隔(毫秒)
+      "brandTextColor": "#fff",                 // {string} 品牌文字颜色值
+      "titleTextColor": "#FF8C00",              // {string} 标题文字颜色值
+      "priceTextColor": "orangered",            // {string} 价格文字颜色值
+      "descriptionTextColor": "#F4A460"         // {string} 描述文字颜色值
     }
   }
 }

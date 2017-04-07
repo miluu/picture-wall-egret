@@ -17,6 +17,10 @@ namespace settings {
     bgFixMode?: string;
     autoResetTime: number;
     showDetailAnimationTime?: number;
+    brandTextColor?: string;
+    titleTextColor?: string;
+    priceTextColor?: string;
+    descriptionTextColor?: string;
     [key: string]: any;
   }
 
@@ -33,7 +37,11 @@ namespace settings {
     bgFixMode: 'noScale',
     sceneChangeTime: 120,
     autoResetTime: 30,
-    showDetailAnimationTime: 3500
+    showDetailAnimationTime: 3500,
+    brandTextColor: '#000',
+    titleTextColor: '#000',
+    priceTextColor: '#000',
+    descriptionTextColor: '#000'
   };
 
 }
