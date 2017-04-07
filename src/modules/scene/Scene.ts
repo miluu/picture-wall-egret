@@ -760,6 +760,8 @@ namespace scene {
             onComplete: (texture) => {
               successCount++;
               item.thumbnail.texture = texture;
+              item.thumbnail.width = item.thumbnail.width || item.thumbnail.texture.textureWidth;
+              item.thumbnail.height = item.thumbnail.height || item.thumbnail.texture.textureHeight;
               if (callback) {
                 callback(successCount, failedCount, imagesCount, apiItems);
               }
@@ -793,6 +795,8 @@ namespace scene {
             onComplete: (texture) => {
               successCount++;
               img.texture = texture;
+              img.width = img.width || img.texture.textureWidth;
+              img.height = img.height || img.texture.textureHeight;
               if (callback) {
                 callback(successCount, failedCount, imagesCount, apiItems);
               }
