@@ -68,7 +68,7 @@ namespace scene {
      * @private 业态g列表
      */
 
-    private _saleTypes: IApiExtraItem[];
+    private _saleTypes: IApiExtraItem[] = [];
 
     /**
      * @constructor 生成一个场景实例
