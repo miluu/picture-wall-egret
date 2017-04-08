@@ -479,10 +479,13 @@ namespace scene {
     private _getExtraItemsUrl(item: IApiExtraItem): string {
       const {type, condition} = item;
       const searchUrl = this._config.getSearchApi;
+      const {selectedItem} = this.state;
       const url = util.urlWithParams(searchUrl, {
-        type: type,
-        condition: condition
+        type,
+        condition,
+        goodsno: selectedItem.data.goodsno
       });
+      console.log(url);
       if (type === 1 && this._config.__env__ === 'dev') {
         console.log('__env__: dev.');
         return this._config.getSearchType1Api;
