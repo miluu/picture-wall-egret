@@ -115,6 +115,7 @@ namespace scene {
      */
     private _getConfig() {
       this._config = (<any>window).$$config;
+      this._config.deviceid = localStorage.getItem('deviceid') || '';
       // this._config.showDetailAnimationTime = this._config.showDetailAnimationTime || 3500;
       if (!this._config.getConfigApi || !this._config.getItemsApi || !this._config.getItemDetailApi) {
         alert('配置错误。');
