@@ -219,7 +219,7 @@ namespace util {
   export function urlWithParams (baseUrl: string, params?: Object): string {
     let b = false;
     let prefix: string;
-    let url = baseUrl;
+    let url = baseUrl || '';
     let defaultParams = {
       deviceid: (<any>window).$$config.deviceid,
       t: +new Date()
