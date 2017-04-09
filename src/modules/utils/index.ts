@@ -235,4 +235,8 @@ namespace util {
     });
     return url;
   }
+
+  export function getDPI () {
+    return window.devicePixelRatio || 1;
+  }
 };

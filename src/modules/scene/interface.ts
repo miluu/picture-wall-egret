@@ -50,6 +50,7 @@ namespace scene {
     titleTextColor: string;
     priceTextColor: string;
     descriptionTextColor: string;
+    dpi: number;
   }
 
   export interface IConfig {

@@ -30,6 +30,10 @@ namespace scene {
      */
     private _outline: egret.Shape;
     /**
+     * 屏幕 dpi
+     */
+    private _dpi: number = 1;
+    /**
      * 关联的 Tween 对象数组
      */
     public tweens: TWEEN.Tween[] = [];
@@ -49,11 +53,12 @@ namespace scene {
      * @param iconTexture {egret.Texture} 图标纹理 Texture 对象的
      * @param showOutline {boolean} 是否显示发光外框
      */
-    constructor(radius: number, bgColor: number, iconTexture: egret.Texture, showOutline: boolean = true) {
+    constructor(radius: number, bgColor: number, iconTexture: egret.Texture, showOutline: boolean = true, dpi: number = 1) {
       super();
-      this._radius = radius;
+      this._radius = radius * dpi;
       this._bgColor = bgColor;
       this._iconTexture = iconTexture;
+      this._dpi = dpi;
       this._createShape();
       this._createIcon();
       this._createOutline(showOutline);
@@ -126,7 +131,7 @@ namespace scene {
       }
       this._outline = new egret.Shape();
       const g = this._outline.graphics;
-      g.lineStyle(5, 0xffffff);
+      g.lineStyle(5 * this._dpi, 0xffffff);
       g.drawCircle(0, 0, this._radius);
       g.endFill();
       this._outline.alpha = 0.5;
