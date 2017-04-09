@@ -20,6 +20,8 @@ namespace scene {
     LOADING: 'loading'
   };
 
+  export const DEFAULT_DEVICEID = '1';
+
   export interface IState {
     sceneWidth: number;
     sceneHeight: number;
