@@ -976,7 +976,9 @@ namespace scene {
       // if (this.state.isExtraButtonsShow) {
       //   this._hideExtraButtons(this.state.selectedItem.data.extraItems);
       // }
-      this._hideExtraButtons(this.state.selectedItem.data.extraItems);
+      if (this.state.selectedItem) {
+        this._hideExtraButtons(this.state.selectedItem.data.extraItems);
+      }
       _.forEach(this._items, (item, index) => {
         if (item === this.state.selectedItem) {
           itemsCount--;
