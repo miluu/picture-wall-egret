@@ -397,7 +397,10 @@ namespace scene {
      * 显示更多功能
      */
     private _showMore() {
-      const {selectedItem, isExtraButtonsShow} = this.state;
+      const {selectedItem, isExtraButtonsShow, status} = this.state;
+      if (status === SCENE_STATUS.LEAVE || status === SCENE_STATUS.ENTER) {
+        return;
+      }
       let {extraItems} = selectedItem.data;
       if (!selectedItem.data.extraItemsMerged) {
         extraItems = selectedItem.data.extraItems = this._saleTypes.concat(extraItems);
@@ -973,6 +976,7 @@ namespace scene {
       // if (this.state.isExtraButtonsShow) {
       //   this._hideExtraButtons(this.state.selectedItem.data.extraItems);
       // }
+      this._hideExtraButtons(this.state.selectedItem.data.extraItems);
       _.forEach(this._items, (item, index) => {
         if (item === this.state.selectedItem) {
           itemsCount--;
