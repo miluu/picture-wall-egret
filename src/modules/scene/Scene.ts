@@ -78,7 +78,7 @@ namespace scene {
       this.touchEnabled = true;
       this.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this._touchScene, this);
       this.addEventListener(egret.TouchEvent.TOUCH_END, this._touchScene, this);
-      this.state.dpi = util.getDPI();
+      this.state.pixcelRatio = util.getPixcelRatio();
       this._createButtons();
       this._loadRes();
       detail.operateCallback = this._touchScene.bind(this);
@@ -128,13 +128,13 @@ namespace scene {
      * @param settings {settings.IAppSettings} 设置参数
      */
     public useSettings(settings: settings.IAppSettings) {
-      const dpi = util.getDPI();
+      const pixcelRatio = util.getPixcelRatio();
       this._setSceneSize(settings.sceneWidth, settings.sceneHeight);
       this.state.bgColor = util.colorStringToNumber(settings.bgColor);
       this.state.bgImage = settings.bgImage;
       this.state.rowCount = settings.rowCount;
-      this.state.padding = settings.padding * dpi;
-      this.state.speed = settings.speed * dpi;
+      this.state.padding = settings.padding * pixcelRatio;
+      this.state.speed = settings.speed * pixcelRatio;
       this.state.sceneChangeTime = settings.sceneChangeTime;
       this.state.autoResetTime = settings.autoResetTime;
       this.state.offset = 0;
@@ -154,7 +154,7 @@ namespace scene {
       this.mask = new egret.Rectangle(0, 0, this.state.sceneWidth, this.state.sceneHeight);
 
       let loading = this._loadingView = new LoadingView('loading...' , this.state.sceneWidth, this.state.sceneHeight, 0.2);
-      this._loadingView.fontSize = 12 * dpi;
+      this._loadingView.fontSize = 12 * pixcelRatio;
       loading.x = this.state.sceneWidth / 2;
       loading.y = this.state.sceneHeight / 2;
       this.addChild(loading);
@@ -167,7 +167,7 @@ namespace scene {
      * @param height {number}
      */
     private _setSceneSize(width: number, height: number) {
-      const dpi = util.getDPI();
+      const dpi = util.getPixcelRatio();
       console.log(this.stage);
       this.state.sceneWidth = width || (window.innerWidth * dpi);
       this.state.sceneHeight = height || (window.innerHeight * dpi);
@@ -318,9 +318,9 @@ namespace scene {
      * 创建详情和更多功能按钮
      */
     private _createButtons() {
-      const {dpi} = this.state;
-      this._detailButton = new Button(25, 0x000000, null, true, dpi);
-      this._moreButton = new Button(25, 0x000000, null, true, dpi);
+      const {pixcelRatio} = this.state;
+      this._detailButton = new Button(25, 0x000000, null, true, pixcelRatio);
+      this._moreButton = new Button(25, 0x000000, null, true, pixcelRatio);
       this._detailButton.x = 300;
       this._detailButton.y = 100;
       this._moreButton.x = 200;
@@ -381,21 +381,21 @@ namespace scene {
      * 显示详情
      */
     private _showDetail() {
-      const dpi = util.getDPI();
+      const pixcelRatio = util.getPixcelRatio();
       this._extraItemsLeave();
       if (this.state.isExtraButtonsShow) {
         this._hideExtraButtons(this.state.selectedItem.data.extraItems);
       }
       const {selectedItem, sceneWidth, sceneHeight} = this.state;
-      const detailHeight = this._getExtraItemsRadius() * 2 / dpi;
+      const detailHeight = this._getExtraItemsRadius() * 2 / pixcelRatio;
       const maxWidth = _.min([1000, sceneWidth - 200]);
-      const detailWidth = _.max([maxWidth, detailHeight]) / dpi;
+      const detailWidth = _.max([maxWidth, detailHeight]) / pixcelRatio;
       detail.show({
         url: selectedItem.data.detailUrl,
         width: detailWidth,
         height: detailHeight,
-        sceneWidth: sceneWidth / dpi,
-        sceneHeight: sceneHeight / dpi
+        sceneWidth: sceneWidth / pixcelRatio,
+        sceneHeight: sceneHeight / pixcelRatio
       });
       /* 发送日志请求 */
       ajax.get(util.urlWithParams(this._config.getItemDetailApi, {goodsno: selectedItem.data.goodsno, getype: 2}));
@@ -431,12 +431,12 @@ namespace scene {
       const centerPoint = new egret.Point(x, y);
       let btnsCount = extraItems.length;
       this.state.isExtraButtonsShow = true;
-      const dpi = util.getDPI();
+      const pixcelRatio = util.getPixcelRatio();
       _.forEach(extraItems, (item, index) => {
         let btn: Button = item.button;
         if (!btn) {
           const colorNumber = util.colorStringToNumber(item.bgColor);
-          btn = new Button(15, colorNumber, item.texture, false, dpi);
+          btn = new Button(15, colorNumber, item.texture, false, pixcelRatio);
           item.button = btn;
           btn.onClick = () => {
           };
@@ -452,7 +452,7 @@ namespace scene {
           radius: 0
         };
         const tw = new TWEEN.Tween(twObj)
-          .to({deg: '-360', radius: 60 * dpi}, 1000)
+          .to({deg: '-360', radius: 60 * pixcelRatio}, 1000)
           .easing(TWEEN.Easing.Cubic.Out)
           .onUpdate(() => {
             const pos = util.cyclePoint(centerPoint, twObj.radius, twObj.deg);

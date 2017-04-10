@@ -236,7 +236,7 @@ namespace util {
     return url;
   }
 
-  export function getDPI () {
+  export function getPixcelRatio () {
     return window.devicePixelRatio || 1;
   }
 };
