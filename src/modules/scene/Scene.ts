@@ -406,9 +406,6 @@ namespace scene {
      */
     private _showMore() {
       const {selectedItem, isExtraButtonsShow, status} = this.state;
-      if (status === SCENE_STATUS.LEAVE || status === SCENE_STATUS.ENTER) {
-        return;
-      }
       let {extraItems} = selectedItem.data;
       if (!selectedItem.data.extraItemsMerged) {
         extraItems = selectedItem.data.extraItems = this._saleTypes.concat(extraItems);
@@ -472,12 +469,10 @@ namespace scene {
         btn.tweens = [tw, tw2];
         btn.twObj = twObj;
         btn.onClick = () => {
-          if (this.state.status === SCENE_STATUS.RUNNING) {
-            if (item.type === 1) {
-              this._runSearchScene(this._getExtraItemsUrl(item));
-            } else {
-              this._createExtraItems(this._getExtraItemsUrl(item));
-            }
+          if (item.type === 1) {
+            this._runSearchScene(this._getExtraItemsUrl(item));
+          } else {
+            this._createExtraItems(this._getExtraItemsUrl(item));
           }
         };
       });
@@ -497,9 +492,7 @@ namespace scene {
         condition,
         goodsno: selectedItem.data.goodsno
       });
-      console.log(url);
       if (type === 1 && this._config.__env__ === 'dev') {
-        console.log('__env__: dev.');
         return this._config.getSearchType1Api;
       }
       return url;
@@ -507,8 +500,10 @@ namespace scene {
 
     private _runSearchScene(url: string) {
       this.showLoading();
-      this._hideExtraButtons(this.state.selectedItem.data.extraItems);
-      this._extraItemsLeave();
+      if (this.state.selectedItem) {
+        _.remove(this._items, this.state.selectedItem);
+        this._resetItem(this.state.selectedItem);
+      }
       this.state.status = SCENE_STATUS.LOADING;
       ajax.getJson(url, {
         onProgress: function(loaded, totle) {
@@ -534,13 +529,22 @@ namespace scene {
       this._loadingView.text = `loading...\n${successCount + failedCount} / ${imagesCount}`;
       if (successCount + failedCount === imagesCount) {
         this.hideLoading();
+        if (this.state.status === SCENE_STATUS.LEAVE) {
+          this.state.searchJump = () => {
+            this.state.offset = 0;
+            this._createItems(apiItems);
+            this._delayFrames(() => {
+              this._enter(1000, 2000);
+            }, 20);
+          };
+        }
         this._leave(() => {
           this.state.offset = 0;
           this._createItems(apiItems);
           this._delayFrames(() => {
-            this._enter();
+            this._enter(1000, 2000);
           }, 20);
-        });
+        }, 1000, 2000);
       }
     }
 
@@ -945,12 +949,12 @@ namespace scene {
     /**
      * 入场
      */
-    private _enter() {
+    private _enter(minTime: number = 2000, maxTime: number = 4000) {
       this.state.status = SCENE_STATUS.ENTER;
       let done = 0;
       let itemsCount = this._items.length;
       _.forEach(this._items, (item) => {
-        let time = 2000 + Math.random() * 4000;
+        let time = minTime + Math.random() * (maxTime - minTime);
         let toY = this._getRowItemY(item.rowIndex);
         let tw = new TWEEN.Tween(item.basePosition)
           .to({y: toY}, time)
@@ -974,27 +978,19 @@ namespace scene {
     /**
      * 离场
      */
-    private _leave(callback?: Function) {
+    private _leave(callback?: Function, minTime: number = 2000, maxTime = 5000) {
       this.state.status = SCENE_STATUS.LEAVE;
       this.state.sceneStartTime = null;
-      this.state.nextApiItemsReady = false;
       let leaveDirection = Math.random() > 0.5 ? 1 : -1;
       let itemsCount = this._items.length;
       let done = 0;
-      // this._extraItemsLeave();
-      // if (this.state.isExtraButtonsShow) {
-      //   this._hideExtraButtons(this.state.selectedItem.data.extraItems);
-      // }
-      if (this.state.selectedItem) {
-        this._hideExtraButtons(this.state.selectedItem.data.extraItems);
-      }
       _.forEach(this._items, (item, index) => {
         if (item === this.state.selectedItem) {
           itemsCount--;
           return;
         }
         let rotation = 180 * Math.random();
-        let time = 2000 + Math.random() * 3000;
+        let time = minTime + Math.random() * (maxTime - minTime);
         let toY = item.y + this.state.sceneHeight * leaveDirection;
         let twObj = {
           y: item.basePosition.y,
@@ -1020,7 +1016,11 @@ namespace scene {
             if (done === itemsCount) {
               if (callback) {
                 callback();
+              } else if (this.state.searchJump) {
+                this.state.searchJump();
+                this.state.searchJump = null;
               } else {
+                this.state.nextApiItemsReady = false;
                 this.next();
               }
             }
@@ -1456,7 +1456,7 @@ namespace scene {
      * @private item 返回原位或离开场景
      * @param item {Item}
      */
-    private _itemBack(item) {
+    private _itemBack(item: Item) {
       item.visible = true;
       item.isBacking = true;
       item.clearTweens();
@@ -1687,9 +1687,6 @@ namespace scene {
           const bgBmp = new egret.Bitmap(texture);
           const {textureWidth, textureHeight} = <egret.Texture>texture;
           let imgWidth, imgHeight;
-          console.log('fixMode:', this._fixMode);
-          console.log(`scene: ${this._bgWidth} * ${this._bgHeight}`);
-          console.log(`bgImg: ${textureWidth} * ${textureHeight}`);
           switch (this._fixMode) {
             case 'showAll':
               if (textureWidth / textureHeight > this._bgWidth / this._bgHeight) {
@@ -1726,7 +1723,6 @@ namespace scene {
               imgHeight = textureHeight;
               break;
           }
-          console.log(`size: ${imgWidth} * ${imgHeight}`);
           bgBmp.width = imgWidth;
           bgBmp.height = imgHeight;
           bgBmp.x = (this._bgWidth - imgWidth) / 2;
