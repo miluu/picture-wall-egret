@@ -153,7 +153,7 @@ namespace scene {
       this._setButtonsPosition();
       this.mask = new egret.Rectangle(0, 0, this.state.sceneWidth, this.state.sceneHeight);
 
-      let loading = this._loadingView = new LoadingView('loading...' , this.state.sceneWidth, this.state.sceneHeight, 0.2);
+      let loading = this._loadingView = new LoadingView('loading...' , this.state.sceneWidth, this.state.sceneHeight, 0.01);
       this._loadingView.fontSize = 12 * pixcelRatio;
       loading.x = this.state.sceneWidth / 2;
       loading.y = this.state.sceneHeight / 2;
@@ -615,12 +615,12 @@ namespace scene {
                 this._selectItem(item);
               }, this);
               this._extraItems.push(item);
-              this._delayFrames(() => {
+              // this._delayFrames(() => {
                 this.addChild(item);
                 if (index === itemsCount - 1) {
                   this._extraItemsEnter();
                 }
-              }, index * 3);
+              // }, index * 3);
             });
           });
         }
