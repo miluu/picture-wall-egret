@@ -504,6 +504,10 @@ namespace scene {
         _.remove(this._items, this.state.selectedItem);
         this._resetItem(this.state.selectedItem);
       }
+      if (this.state.status === SCENE_STATUS.LEAVE) {
+        this.state.searchJump = () => {};
+      }
+      this.state.searchLoading = true;
       this.state.status = SCENE_STATUS.LOADING;
       ajax.getJson(url, {
         onProgress: function(loaded, totle) {
@@ -529,7 +533,8 @@ namespace scene {
       this._loadingView.text = `loading...\n${successCount + failedCount} / ${imagesCount}`;
       if (successCount + failedCount === imagesCount) {
         this.hideLoading();
-        if (this.state.status === SCENE_STATUS.LEAVE) {
+        this.state.searchLoading = false;
+        if (this.state.searchJump) {
           this.state.searchJump = () => {
             this.state.offset = 0;
             this._createItems(apiItems);
@@ -537,6 +542,16 @@ namespace scene {
               this._enter(1000, 2000);
             }, 20);
           };
+          return;
+        }
+        if (this.state.alreadySearchJump) {
+          this.state.alreadySearchJump = false;
+          this.state.offset = 0;
+          this._createItems(apiItems);
+          this._delayFrames(() => {
+            this._enter(1000, 2000);
+          }, 20);
+          return;
         }
         this._leave(() => {
           this.state.offset = 0;
@@ -1011,7 +1026,11 @@ namespace scene {
           })
           .onComplete(() => {
             done++;
-            this.removeChild(item);
+            try {
+              this.removeChild(item);
+            } catch (e) {
+              console.log(e);
+            }
             _.remove(this._items, item);
             if (done === itemsCount) {
               if (callback) {
@@ -1019,7 +1038,10 @@ namespace scene {
               } else if (this.state.searchJump) {
                 this.state.searchJump();
                 this.state.searchJump = null;
-              } else {
+                if (this.state.searchLoading) {
+                  this.state.alreadySearchJump = true;
+                }
+              } else if (!this.state.searchLoading) {
                 this.state.nextApiItemsReady = false;
                 this.next();
               }

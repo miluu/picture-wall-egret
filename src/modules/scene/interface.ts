@@ -51,7 +51,9 @@ namespace scene {
     priceTextColor: string;
     descriptionTextColor: string;
     pixcelRatio: number;
+    searchLoading: boolean;
     searchJump: Function;
+    alreadySearchJump: boolean;
   }
 
   export interface IConfig {
