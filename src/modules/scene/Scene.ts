@@ -606,9 +606,6 @@ namespace scene {
               item.y = randomPos.y;
               item.acceptRepel = false;
               item.addEventListener(egret.TouchEvent.TOUCH_TAP, function() {
-                if (!this._canSelectItem()) {
-                  return;
-                }
                 item.clearTweens();
                 _.remove(this._extraItems, item);
                 this._extraItemsLeave();
@@ -1307,7 +1304,10 @@ namespace scene {
      * 判断当前场景是否可点击选择 item
      * @return {boolean}
      */
-    private _canSelectItem(): boolean {
+    private _canSelectItem(item: Item): boolean {
+      if (!_.includes(this._items, item)) {
+        return true;
+      }
       return this.state.status === SCENE_STATUS.ENTER
         || this.state.status === SCENE_STATUS.RUNNING;
     }
@@ -1316,7 +1316,7 @@ namespace scene {
      * 选中 item
      */
     private _selectItem(item: Item) {
-      if (!this._canSelectItem()
+      if (!this._canSelectItem(item)
         || this.state.selectedItem === item
         || item.isBacking
       ) {
