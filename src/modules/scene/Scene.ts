@@ -499,7 +499,7 @@ namespace scene {
     };
 
     private _runSearchScene(url: string) {
-      this.showLoading();
+      this.showLoading(' ');
       if (this.state.selectedItem) {
         _.remove(this._items, this.state.selectedItem);
         this._resetItem(this.state.selectedItem);
@@ -530,7 +530,7 @@ namespace scene {
      * @private 扩展 items 场景资源加载回调
      */
     private _searchSceneResourceLoadedHandle(successCount: number, failedCount: number, imagesCount: number, apiItems: IApiItem[]) {
-      this._loadingView.text = `loading...\n${successCount + failedCount} / ${imagesCount}`;
+      // this._loadingView.text = `loading...\n${successCount + failedCount} / ${imagesCount}`;
       if (successCount + failedCount === imagesCount) {
         this.hideLoading();
         this.state.searchLoading = false;
@@ -569,7 +569,7 @@ namespace scene {
      * @param url {string} 扩展 items Api 地址
      */
     private _createExtraItems(url: string) {
-      this.showLoading();
+      this.showLoading(' ');
       this._hideExtraButtons(this.state.selectedItem.data.extraItems);
       this._extraItemsLeave();
       ajax.getJson(url, {
