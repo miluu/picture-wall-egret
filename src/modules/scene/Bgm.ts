@@ -31,7 +31,7 @@ namespace scene {
       this._sound.load(url);
     }
 
-    play(resume: boolean) {
+    play(resume?: boolean) {
       if (!this._ready) {
         console.warn('Sound resouce is not ready yet.');
         return;

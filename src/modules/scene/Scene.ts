@@ -71,6 +71,11 @@ namespace scene {
     private _saleTypes: IApiExtraItem[] = [];
 
     /**
+     * @private 背景音乐
+     */
+    private _bgm: Bgm = new Bgm();
+
+    /**
      * @constructor 生成一个场景实例
      */
     constructor() {
@@ -81,6 +86,11 @@ namespace scene {
       this.state.pixcelRatio = util.getPixcelRatio();
       this._createButtons();
       this._loadRes();
+      this._bgm.load('assets/audio/bgm.mp3', () => {
+        this._bgm.play();
+      }, () => {
+        console.error('背景乐加载失败');
+      });
       detail.operateCallback = this._touchScene.bind(this);
     }
 
