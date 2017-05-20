@@ -11,10 +11,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=20",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB26ScdqFXXXXbjXpXXXXXXXXXX_!!2262617940.jpg"
@@ -39,10 +39,10 @@
         "price": 929,
         "detailUrl": "detail.html?id=21",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2ndHPqXXXXXcpXpXXXXXXXXXX_!!2007426154.jpg"
@@ -67,10 +67,10 @@
         "price": 115,
         "detailUrl": "detail.html?id=22",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2cGRDeXXXXXalXXXXXXXXXXXX-1732515120.jpg"
@@ -95,10 +95,10 @@
         "price": 129,
         "detailUrl": "detail.html?id=23",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2ITRIcFXXXXcVXXXXXXXXXXXX_!!2041089693.jpg"
@@ -123,10 +123,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=24",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2.zm1mVXXXXXCXpXXXXXXXXXX_!!647430139.jpg"
@@ -151,10 +151,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=25",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2VPY7nVXXXXXoXXXXXXXXXXXX_!!405732713.jpg"
@@ -179,10 +179,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=26",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2IeVEbVXXXXXlXpXXXXXXXXXX_!!1966677580.jpg"
@@ -207,10 +207,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=27",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2jU0AlVXXXXaxXXXXXXXXXXXX_!!1120328108.jpg"
@@ -235,10 +235,10 @@
         "price": 1239,
         "detailUrl": "detail.html?id=28",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2JkbUjVXXXXbwXXXXXXXXXXXX_!!451135386.jpg"
@@ -263,10 +263,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=29",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2hhm6oVXXXXb2XXXXXXXXXXXX_!!2765355741.jpg"
@@ -291,10 +291,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=30",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2LyRKlVXXXXaHXpXXXXXXXXXX_!!1077979376.jpg"
@@ -319,10 +319,10 @@
         "price": 1222,
         "detailUrl": "detail.html?id=31",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2vpdJoXXXXXcEXpXXXXXXXXXX_!!913099165.jpg"
@@ -347,10 +347,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=32",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2f_MGpVXXXXXNXpXXXXXXXXXX_!!913099165.jpg"
@@ -375,10 +375,10 @@
         "price": 5129,
         "detailUrl": "detail.html?id=33",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2jCasmXXXXXb7XXXXXXXXXXXX_!!917744910.jpg"
@@ -403,10 +403,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=34",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2AOlcnFXXXXXZXFXXXXXXXXXX_!!1030051801.jpg"
@@ -431,10 +431,10 @@
         "price": 559,
         "detailUrl": "detail.html?id=35",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB24MKcmFXXXXXOXpXXXXXXXXXX_!!2126977022.jpg"
@@ -459,10 +459,10 @@
         "price": 239,
         "detailUrl": "detail.html?id=36",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2eoaemXXXXXbIXpXXXXXXXXXX_!!1893593986.jpg"
@@ -487,10 +487,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=37",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2YhsUlFXXXXaxXpXXXXXXXXXX_!!557299735.jpg"
@@ -515,10 +515,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=38",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2G8TlnVXXXXcTXpXXXXXXXXXX_!!2273190194.jpg"
@@ -543,10 +543,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=39",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2p.YmppXXXXc9XXXXXXXXXXXX_!!793680491.jpg"
@@ -571,10 +571,10 @@
         "price": 719,
         "detailUrl": "detail.html?id=40",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2uIgDlpXXXXXcXXXXXXXXXXXX_!!1740889780.jpg"
@@ -599,10 +599,10 @@
         "price": 889,
         "detailUrl": "detail.html?id=41",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2fF0QnXXXXXXZXXXXXXXXXXXX_!!1649659426.jpg"
@@ -627,10 +627,10 @@
         "price": 929,
         "detailUrl": "detail.html?id=42",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2ncsElXXXXXagXXXXXXXXXXXX_!!1969755452.jpg"
@@ -655,10 +655,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=43",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2SltgcXXXXXahXXXXXXXXXXXX_!!1674216432.jpg"
@@ -683,10 +683,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=44",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2_RHUnXXXXXX9XFXXXXXXXXXX_!!13225714.jpg"
@@ -711,10 +711,10 @@
         "price": 329,
         "detailUrl": "detail.html?id=45",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB278.LXFXXXXb.XXXXXXXXXXXX_!!155325169.jpg"
@@ -733,10 +733,10 @@
         "price": 219,
         "detailUrl": "detail.html?id=46",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2Re8DkpXXXXaMXpXXXXXXXXXX_!!1069627177.jpg"
@@ -761,10 +761,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=47",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB27bodpVXXXXc2XXXXXXXXXXXX_!!765619814.jpg"
@@ -789,10 +789,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=48",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB25zaiqpXXXXXhXXXXXXXXXXXX_!!91372914.jpg"
@@ -817,10 +817,10 @@
         "price": 229,
         "detailUrl": "detail.html?id=49",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2GcRAnFXXXXbtXpXXXXXXXXXX_!!2574381340.jpg"
@@ -845,10 +845,10 @@
         "price": 129,
         "detailUrl": "detail.html?id=50",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2EeadnFXXXXbdXpXXXXXXXXXX_!!76245157.jpg"
@@ -873,10 +873,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=51",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2N.GhmFXXXXbHXpXXXXXXXXXX_!!1766047907.jpg"
@@ -901,10 +901,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=52",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2yNE4opXXXXbhXpXXXXXXXXXX_!!2297886690.jpg"
@@ -929,10 +929,10 @@
         "price": 449,
         "detailUrl": "detail.html?id=53",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2gMAdmXXXXXXpXpXXXXXXXXXX_!!2364466468.jpg"
@@ -957,10 +957,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=54",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2d_xcpFXXXXXCXpXXXXXXXXXX_!!2840408554.jpg"
@@ -985,10 +985,10 @@
         "price": 829,
         "detailUrl": "detail.html?id=55",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2yvMmoVXXXXaiXFXXXXXXXXXX_!!1723145627.jpg"
@@ -1013,10 +1013,10 @@
         "price": 339,
         "detailUrl": "detail.html?id=56",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2fC8RjFXXXXbqXXXXXXXXXXXX_!!2074808725.jpg"
@@ -1041,10 +1041,10 @@
         "price": 431,
         "detailUrl": "detail.html?id=57",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2Vox4opXXXXcQXpXXXXXXXXXX_!!2112052594.jpg"
@@ -1069,10 +1069,10 @@
         "price": 88,
         "detailUrl": "detail.html?id=58",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB23S.fnVXXXXa2XXXXXXXXXXXX_!!828143405.jpg"
@@ -1097,10 +1097,10 @@
         "price": 99,
         "detailUrl": "detail.html?id=59",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2fQnPcpXXXXa2XpXXXXXXXXXX_!!369545372.jpg"
@@ -1119,10 +1119,10 @@
         "price": 759,
         "detailUrl": "detail.html?id=60",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2xsOUpVXXXXaMXpXXXXXXXXXX_!!811888884.jpg"
@@ -1147,10 +1147,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=61",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2CWztppXXXXbZXpXXXXXXXXXX_!!2364466468.jpg"
@@ -1172,10 +1172,10 @@
         "price": 989,
         "detailUrl": "detail.html?id=62",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2pqtnoFXXXXbiXpXXXXXXXXXX_!!2364466468.jpg"
@@ -1200,10 +1200,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=63",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB21ud1nFXXXXb9XXXXXXXXXXXX_!!515037664.jpg"
@@ -1228,10 +1228,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=64",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2DGDwkVXXXXX6XpXXXXXXXXXX_!!294019224.jpg"
@@ -1256,10 +1256,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=65",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/T2aBntXtXXXXXXXXXX_!!806408970.jpg"
@@ -1284,10 +1284,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=0",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB25v95qFXXXXXyXpXXXXXXXXXX_!!2175014669.jpg"
@@ -1312,10 +1312,10 @@
         "price": 1456,
         "detailUrl": "detail.html?id=1",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB20dUSkpXXXXXMXXXXXXXXXXXX_!!2143552968.jpg"
@@ -1340,10 +1340,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=2",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2OGgqlFXXXXXvXXXXXXXXXXXX_!!1986915551.jpg"
@@ -1365,10 +1365,10 @@
         "price": 112,
         "detailUrl": "detail.html?id=3",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2Arh2eXXXXXaeXXXXXXXXXXXX_!!197223493.jpg"
@@ -1393,10 +1393,10 @@
         "price": 232,
         "detailUrl": "detail.html?id=4",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2eeyfkVXXXXchXpXXXXXXXXXX_!!1048771310.jpg"
@@ -1421,10 +1421,10 @@
         "price": 133,
         "detailUrl": "detail.html?id=5",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2Ct8GlFXXXXbdXpXXXXXXXXXX_!!1716957969.jpg"
@@ -1449,10 +1449,10 @@
         "price": 1555,
         "detailUrl": "detail.html?id=6",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2UxneqpXXXXaCXXXXXXXXXXXX_!!827940181.jpg"
@@ -1477,10 +1477,10 @@
         "price": 112,
         "detailUrl": "detail.html?id=7",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2LynbppXXXXXpXpXXXXXXXXXX-188124207.jpg"
@@ -1505,10 +1505,10 @@
         "price": 2003,
         "detailUrl": "detail.html?id=8",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2uw_dmVXXXXamXXXXXXXXXXXX_!!1640678487.jpg"
@@ -1533,10 +1533,10 @@
         "price": 123,
         "detailUrl": "detail.html?id=9",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2PoiYkVXXXXbNXXXXXXXXXXXX_!!2030528091.jpg"
@@ -1561,10 +1561,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=0",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB25v95qFXXXXXyXpXXXXXXXXXX_!!2175014669.jpg"
@@ -1589,10 +1589,10 @@
         "price": 1456,
         "detailUrl": "detail.html?id=1",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB20dUSkpXXXXXMXXXXXXXXXXXX_!!2143552968.jpg"
@@ -1617,10 +1617,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=2",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2OGgqlFXXXXXvXXXXXXXXXXXX_!!1986915551.jpg"
@@ -1642,10 +1642,10 @@
         "price": 112,
         "detailUrl": "detail.html?id=3",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2Arh2eXXXXXaeXXXXXXXXXXXX_!!197223493.jpg"
@@ -1670,10 +1670,10 @@
         "price": 232,
         "detailUrl": "detail.html?id=4",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2eeyfkVXXXXchXpXXXXXXXXXX_!!1048771310.jpg"
@@ -1698,10 +1698,10 @@
         "price": 133,
         "detailUrl": "detail.html?id=5",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2Ct8GlFXXXXbdXpXXXXXXXXXX_!!1716957969.jpg"
@@ -1726,10 +1726,10 @@
         "price": 1555,
         "detailUrl": "detail.html?id=6",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2UxneqpXXXXaCXXXXXXXXXXXX_!!827940181.jpg"
@@ -1754,10 +1754,10 @@
         "price": 112,
         "detailUrl": "detail.html?id=7",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2LynbppXXXXXpXpXXXXXXXXXX-188124207.jpg"
@@ -1782,10 +1782,10 @@
         "price": 2003,
         "detailUrl": "detail.html?id=8",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2uw_dmVXXXXamXXXXXXXXXXXX_!!1640678487.jpg"
@@ -1810,10 +1810,10 @@
         "price": 123,
         "detailUrl": "detail.html?id=9",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2PoiYkVXXXXbNXXXXXXXXXXXX_!!2030528091.jpg"
@@ -1838,10 +1838,10 @@
         "price": 129,
         "detailUrl": "detail.html?id=10",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2JhG5kXXXXXcwXpXXXXXXXXXX_!!598633737.jpg"
@@ -1866,10 +1866,10 @@
         "price": 512,
         "detailUrl": "detail.html?id=11",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2ShvsoFXXXXbzXpXXXXXXXXXX_!!2192876822.jpg"
@@ -1894,10 +1894,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=12",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2zlXMlFXXXXXEXpXXXXXXXXXX_!!2185282132.jpg"
@@ -1922,10 +1922,10 @@
         "price": 999,
         "detailUrl": "detail.html?id=13",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2cgwinpXXXXcbXpXXXXXXXXXX_!!1782948872.jpg"
@@ -1950,10 +1950,10 @@
         "price": 559,
         "detailUrl": "detail.html?id=14",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2z.islpXXXXc0XXXXXXXXXXXX_!!1765328414.jpg"
@@ -1978,10 +1978,10 @@
         "price": 860,
         "detailUrl": "detail.html?id=15",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2YWnZkVXXXXXCXXXXXXXXXXXX_!!479218086.jpg"
@@ -2006,10 +2006,10 @@
         "price": 129,
         "detailUrl": "detail.html?id=16",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2sqvrepXXXXaDXpXXXXXXXXXX-130974249.jpg"
@@ -2034,10 +2034,10 @@
         "price": 886,
         "detailUrl": "detail.html?id=17",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2.bipdVXXXXavXXXXXXXXXXXX-1644880265.jpg"
@@ -2062,10 +2062,10 @@
         "price": 771,
         "detailUrl": "detail.html?id=18",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2Lt7SmFXXXXX_XXXXXXXXXXXX_!!874022290.jpg"
@@ -2090,10 +2090,10 @@
         "price": 559,
         "detailUrl": "detail.html?id=19",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2u_mHcVXXXXXmXpXXXXXXXXXX-1721138839.jpg"
@@ -2118,10 +2118,10 @@
         "price": 129,
         "detailUrl": "detail.html?id=10",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2JhG5kXXXXXcwXpXXXXXXXXXX_!!598633737.jpg"
@@ -2146,10 +2146,10 @@
         "price": 512,
         "detailUrl": "detail.html?id=11",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2ShvsoFXXXXbzXpXXXXXXXXXX_!!2192876822.jpg"
@@ -2174,10 +2174,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=12",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2zlXMlFXXXXXEXpXXXXXXXXXX_!!2185282132.jpg"
@@ -2202,10 +2202,10 @@
         "price": 999,
         "detailUrl": "detail.html?id=13",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2cgwinpXXXXcbXpXXXXXXXXXX_!!1782948872.jpg"
@@ -2230,10 +2230,10 @@
         "price": 559,
         "detailUrl": "detail.html?id=14",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2z.islpXXXXc0XXXXXXXXXXXX_!!1765328414.jpg"
@@ -2258,10 +2258,10 @@
         "price": 860,
         "detailUrl": "detail.html?id=15",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2YWnZkVXXXXXCXXXXXXXXXXXX_!!479218086.jpg"
@@ -2286,10 +2286,10 @@
         "price": 129,
         "detailUrl": "detail.html?id=16",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2sqvrepXXXXaDXpXXXXXXXXXX-130974249.jpg"
@@ -2314,10 +2314,10 @@
         "price": 886,
         "detailUrl": "detail.html?id=17",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2.bipdVXXXXavXXXXXXXXXXXX-1644880265.jpg"
@@ -2342,10 +2342,10 @@
         "price": 771,
         "detailUrl": "detail.html?id=18",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2Lt7SmFXXXXX_XXXXXXXXXXXX_!!874022290.jpg"
@@ -2370,10 +2370,10 @@
         "price": 559,
         "detailUrl": "detail.html?id=19",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2u_mHcVXXXXXmXpXXXXXXXXXX-1721138839.jpg"
@@ -2398,10 +2398,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=20",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB26ScdqFXXXXbjXpXXXXXXXXXX_!!2262617940.jpg"
@@ -2426,10 +2426,10 @@
         "price": 929,
         "detailUrl": "detail.html?id=21",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2ndHPqXXXXXcpXpXXXXXXXXXX_!!2007426154.jpg"
@@ -2454,10 +2454,10 @@
         "price": 115,
         "detailUrl": "detail.html?id=22",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2cGRDeXXXXXalXXXXXXXXXXXX-1732515120.jpg"
@@ -2482,10 +2482,10 @@
         "price": 129,
         "detailUrl": "detail.html?id=23",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2ITRIcFXXXXcVXXXXXXXXXXXX_!!2041089693.jpg"
@@ -2510,10 +2510,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=24",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2.zm1mVXXXXXCXpXXXXXXXXXX_!!647430139.jpg"
@@ -2538,10 +2538,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=25",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2VPY7nVXXXXXoXXXXXXXXXXXX_!!405732713.jpg"
@@ -2566,10 +2566,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=26",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2IeVEbVXXXXXlXpXXXXXXXXXX_!!1966677580.jpg"
@@ -2594,10 +2594,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=27",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2jU0AlVXXXXaxXXXXXXXXXXXX_!!1120328108.jpg"
@@ -2622,10 +2622,10 @@
         "price": 1239,
         "detailUrl": "detail.html?id=28",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2JkbUjVXXXXbwXXXXXXXXXXXX_!!451135386.jpg"
@@ -2650,10 +2650,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=29",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2hhm6oVXXXXb2XXXXXXXXXXXX_!!2765355741.jpg"
@@ -2678,10 +2678,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=30",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2LyRKlVXXXXaHXpXXXXXXXXXX_!!1077979376.jpg"
@@ -2706,10 +2706,10 @@
         "price": 1222,
         "detailUrl": "detail.html?id=31",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2vpdJoXXXXXcEXpXXXXXXXXXX_!!913099165.jpg"
@@ -2734,10 +2734,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=32",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2f_MGpVXXXXXNXpXXXXXXXXXX_!!913099165.jpg"
@@ -2762,10 +2762,10 @@
         "price": 5129,
         "detailUrl": "detail.html?id=33",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2jCasmXXXXXb7XXXXXXXXXXXX_!!917744910.jpg"
@@ -2790,10 +2790,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=34",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2AOlcnFXXXXXZXFXXXXXXXXXX_!!1030051801.jpg"
@@ -2818,10 +2818,10 @@
         "price": 559,
         "detailUrl": "detail.html?id=35",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB24MKcmFXXXXXOXpXXXXXXXXXX_!!2126977022.jpg"
@@ -2846,10 +2846,10 @@
         "price": 239,
         "detailUrl": "detail.html?id=36",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2eoaemXXXXXbIXpXXXXXXXXXX_!!1893593986.jpg"
@@ -2874,10 +2874,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=37",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2YhsUlFXXXXaxXpXXXXXXXXXX_!!557299735.jpg"
@@ -2902,10 +2902,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=38",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2G8TlnVXXXXcTXpXXXXXXXXXX_!!2273190194.jpg"
@@ -2930,10 +2930,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=39",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2p.YmppXXXXc9XXXXXXXXXXXX_!!793680491.jpg"
@@ -2958,10 +2958,10 @@
         "price": 719,
         "detailUrl": "detail.html?id=40",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2uIgDlpXXXXXcXXXXXXXXXXXX_!!1740889780.jpg"
@@ -2986,10 +2986,10 @@
         "price": 889,
         "detailUrl": "detail.html?id=41",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2fF0QnXXXXXXZXXXXXXXXXXXX_!!1649659426.jpg"
@@ -3014,10 +3014,10 @@
         "price": 929,
         "detailUrl": "detail.html?id=42",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2ncsElXXXXXagXXXXXXXXXXXX_!!1969755452.jpg"
@@ -3042,10 +3042,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=43",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2SltgcXXXXXahXXXXXXXXXXXX_!!1674216432.jpg"
@@ -3070,10 +3070,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=44",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2_RHUnXXXXXX9XFXXXXXXXXXX_!!13225714.jpg"
@@ -3098,10 +3098,10 @@
         "price": 329,
         "detailUrl": "detail.html?id=45",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB278.LXFXXXXb.XXXXXXXXXXXX_!!155325169.jpg"
@@ -3120,10 +3120,10 @@
         "price": 219,
         "detailUrl": "detail.html?id=46",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2Re8DkpXXXXaMXpXXXXXXXXXX_!!1069627177.jpg"
@@ -3148,10 +3148,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=47",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB27bodpVXXXXc2XXXXXXXXXXXX_!!765619814.jpg"
@@ -3176,10 +3176,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=48",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB25zaiqpXXXXXhXXXXXXXXXXXX_!!91372914.jpg"
@@ -3204,10 +3204,10 @@
         "price": 229,
         "detailUrl": "detail.html?id=49",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2GcRAnFXXXXbtXpXXXXXXXXXX_!!2574381340.jpg"
@@ -3232,10 +3232,10 @@
         "price": 129,
         "detailUrl": "detail.html?id=50",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2EeadnFXXXXbdXpXXXXXXXXXX_!!76245157.jpg"
@@ -3260,10 +3260,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=51",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2N.GhmFXXXXbHXpXXXXXXXXXX_!!1766047907.jpg"
@@ -3288,10 +3288,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=52",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2yNE4opXXXXbhXpXXXXXXXXXX_!!2297886690.jpg"
@@ -3316,10 +3316,10 @@
         "price": 449,
         "detailUrl": "detail.html?id=53",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2gMAdmXXXXXXpXpXXXXXXXXXX_!!2364466468.jpg"
@@ -3344,10 +3344,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=54",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2d_xcpFXXXXXCXpXXXXXXXXXX_!!2840408554.jpg"
@@ -3372,10 +3372,10 @@
         "price": 829,
         "detailUrl": "detail.html?id=55",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2yvMmoVXXXXaiXFXXXXXXXXXX_!!1723145627.jpg"
@@ -3400,10 +3400,10 @@
         "price": 339,
         "detailUrl": "detail.html?id=56",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2fC8RjFXXXXbqXXXXXXXXXXXX_!!2074808725.jpg"
@@ -3428,10 +3428,10 @@
         "price": 431,
         "detailUrl": "detail.html?id=57",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2Vox4opXXXXcQXpXXXXXXXXXX_!!2112052594.jpg"
@@ -3456,10 +3456,10 @@
         "price": 88,
         "detailUrl": "detail.html?id=58",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB23S.fnVXXXXa2XXXXXXXXXXXX_!!828143405.jpg"
@@ -3484,10 +3484,10 @@
         "price": 99,
         "detailUrl": "detail.html?id=59",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2fQnPcpXXXXa2XpXXXXXXXXXX_!!369545372.jpg"
@@ -3506,10 +3506,10 @@
         "price": 759,
         "detailUrl": "detail.html?id=60",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2xsOUpVXXXXaMXpXXXXXXXXXX_!!811888884.jpg"
@@ -3534,10 +3534,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=61",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2CWztppXXXXbZXpXXXXXXXXXX_!!2364466468.jpg"
@@ -3559,10 +3559,10 @@
         "price": 989,
         "detailUrl": "detail.html?id=62",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2pqtnoFXXXXbiXpXXXXXXXXXX_!!2364466468.jpg"
@@ -3587,10 +3587,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=63",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB21ud1nFXXXXb9XXXXXXXXXXXX_!!515037664.jpg"
@@ -3615,10 +3615,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=64",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/TB2DGDwkVXXXXX6XpXXXXXXXXXX_!!294019224.jpg"
@@ -3643,10 +3643,10 @@
         "price": 1129,
         "detailUrl": "detail.html?id=65",
         "extraItems": [
-          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "condition": "紫色"},
-          {"icon": "assets/images/icons/8.png", "type": 2, "condition": "紫色"}
+          {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/7.png", "bgColor": "purple", "type": 2, "label": "文字",  "condition": "紫色"},
+          {"icon": "assets/images/icons/8.png", "type": 2, "label": "文字",  "condition": "紫色"}
         ],
         "thumbnail": {
           "url": "assets/images/imgs/thumb/T2aBntXtXXXXXXXXXX_!!806408970.jpg"

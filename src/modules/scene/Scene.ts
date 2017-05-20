@@ -620,6 +620,9 @@ namespace scene {
               let changeSize = util.fixHeight(originSize, itemHeight);
               let texture = thumbImg.texture;
               let item = new Item(changeSize.width, changeSize.height, null, texture);
+              if (apiItem.flag && apiItem.flag.texture) {
+                item.addFlag(apiItem.flag.texture, apiItem.flag.position);
+              }
               item.data = apiItem;
               let randomPos = this._randomOutsidePosition();
               item.x = randomPos.x;
@@ -968,7 +971,7 @@ namespace scene {
      */
     private _itemOutOfSceneLeftSide(item: Item, rangeOffset: number = 50): boolean {
       let {x} = this._getItemPositionWithOffset(item);
-      x = x + item.width / 2;
+      x = x + item.itemWidth / 2;
       return this._outOfSceneLeftSide(x, rangeOffset);
     }
 
@@ -990,7 +993,7 @@ namespace scene {
      */
     private _itemOutOfSceneRightSide(item: Item, rangeOffset: number = 50, offset?: number): boolean {
       let {x} = this._getItemPositionWithOffset(item, offset);
-      x = x - item.width / 2;
+      x = x - item.itemWidth / 2;
       return this._outOfSceneRightSide(x, rangeOffset);
     }
 
@@ -1281,11 +1284,14 @@ namespace scene {
         let item = new Item(changeSize.width, changeSize.height, null, texture);
         let rowIndex = scene._getMinWidthRowIndex(state.nextApiRowWidthList);
         let rowWidth = state.nextApiRowWidthList[rowIndex];
+        if (apiItem.flag && apiItem.flag.texture) {
+          item.addFlag(apiItem.flag.texture, apiItem.flag.position);
+        }
         item.data = apiItem;
         item.rowIndex = rowIndex;
         item.basePosition.y = scene._getRowItemY(rowIndex) + scene.state.sceneHeight * enterDirection;
-        item.basePosition.x = rowWidth + state.padding + item.width / 2;
-        rowWidth += item.width + scene.state.padding;
+        item.basePosition.x = rowWidth + state.padding + item.itemWidth / 2;
+        rowWidth += item.itemWidth + scene.state.padding;
         state.nextApiRowWidthList[rowIndex] = rowWidth;
         item.x = item.basePosition.x;
         item.y = item.basePosition.y;
@@ -1347,11 +1353,14 @@ namespace scene {
         let item = new Item(changeSize.width, changeSize.height, null, texture);
         let rowIndex = this._getMinWidthRowIndex(state.rowWidthList);
         let rowWidth = state.rowWidthList[rowIndex];
+        if (apiItem.flag && apiItem.flag.texture) {
+          item.addFlag(apiItem.flag.texture, apiItem.flag.position);
+        }
         item.data = apiItem;
         item.rowIndex = rowIndex;
         item.basePosition.y = this._getRowItemY(rowIndex) + this.state.sceneHeight * enterDirection;
-        item.basePosition.x = rowWidth + state.padding + item.width / 2;
-        rowWidth += item.width + this.state.padding;
+        item.basePosition.x = rowWidth + state.padding + item.itemWidth / 2;
+        rowWidth += item.itemWidth + this.state.padding;
         state.rowWidthList[rowIndex] = rowWidth;
         item.x = item.basePosition.x;
         item.y = item.basePosition.y;
@@ -1400,6 +1409,9 @@ namespace scene {
         || item.isBacking
       ) {
         return;
+      }
+      if (item.flagImg) {
+        item.flagImg.alpha = 0;
       }
       /* 发送日志请求 */
       ajax.get(util.urlWithParams(this._config.getItemDetailApi, {goodsno: item.data.goodsno, getype: 1}));
@@ -1585,6 +1597,9 @@ namespace scene {
           .onComplete(() => {
             this.removeChild(clone);
             item.isBacking = false;
+            if (item.flagImg) {
+              item.flagImg.alpha = 1;
+            }
           })
           .easing(TWEEN.Easing.Cubic.Out)
           .start();

@@ -129,6 +129,7 @@ namespace scene {
     bgColor?: string;
     type: number;
     condition: string;
+    label?: string;
   }
 
   export interface IPosition {

@@ -76,6 +76,11 @@ namespace scene {
     public data: IApiItem;
 
     /**
+     * @public 角标 Shape
+     */
+    public flagImg: egret.Bitmap;
+
+    /**
      * @constructor
      * @param itemWidth {number} 宽度
      * @param itemHeight {number} 高度
@@ -120,6 +125,41 @@ namespace scene {
      */
     get viewInfo(): IItemViewInfo {
       return this._viewInfo;
+    }
+
+    /**
+     * @public 添加角标
+     */
+    public addFlag(texture: egret.Texture, position?: 'TL' | 'TR' | 'BL' | 'BR') {
+      console.log('addflag....');
+      let {itemWidth, itemHeight} = this;
+      let width = texture.textureWidth;
+      let height = texture.textureHeight;
+      let x: number, y: number;
+      this.flagImg = new egret.Bitmap(texture);
+      this.flagImg.anchorOffsetX = width / 2;
+      this.flagImg.anchorOffsetY = height / 2;
+      switch (position ? position.toUpperCase() : '') {
+        case 'TL':
+          x = -itemWidth / 2;
+          y = -itemHeight / 2;
+          break;
+        case 'BL':
+          x = -itemWidth / 2;
+          y = itemHeight / 2;
+          break;
+        case 'BR':
+          x = itemWidth / 2;
+          y = itemHeight / 2;
+          break;
+        default:
+          x = itemWidth / 2;
+          y = -itemHeight / 2;
+          break;
+      }
+      this.flagImg.x = x;
+      this.flagImg.y = y;
+      this.addChild(this.flagImg);
     }
 
     /**
