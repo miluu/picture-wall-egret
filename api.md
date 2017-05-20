@@ -51,6 +51,10 @@
         "description": "思莱德SELECTED女士纯棉彩色图案休闲T恤C416201037 海军蓝 155/76/XS",    // {string} 商品描述
         "price": 1129,               // {number} 商品价格
         "detailUrl": "/detail.html?id=0",   // {string} 商品详情页面url
+        "flag": {                                   // 商品促销标志（可选）
+          "icon": "assets/images/flags/2.png",      // {string} 促销标志图标 url
+          "position": "TR"                          // {string} 促销标志图标位置： TR: 右上(默认), TL: 左上, BL: 左下, BR: 右下
+        },
         "thumbnail": {               // 缩略图
           "url": "/assets/images/imgs/thumb/TB25v95qFXXXXXyXpXXXXXXXXXX_!!2175014669.jpg",    // {string} 缩略图url
           "width": 750,              // {number} 图片宽度(px)
@@ -70,6 +74,7 @@
             "bgColor": "red",                           // {string} 菜单按钮背景色
             "type": 1,                                  // {number} 类型，业态type=1、标签type=2
             "condition": "红色"                         // {string} 搜索条件
+            "label": "红色"                             // {string} 显示的标签文字
           },
           // ...
         ],
@@ -99,6 +104,7 @@
         "bgColor": "red",                           // {string} 菜单按钮背景色
         "type": 1,                                  // {number} 类型，业态type=1、标签type=2
         "condition": "红色"                         // {string} 搜索条件
+        "label": "红色"                             // {string} 显示的标签文字
       },
       // ...
     ],
