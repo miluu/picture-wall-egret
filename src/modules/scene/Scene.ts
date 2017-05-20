@@ -336,8 +336,8 @@ namespace scene {
      */
     private _createButtons() {
       const {pixcelRatio} = this.state;
-      this._detailButton = new Button(25, 0x000000, null, true, pixcelRatio);
-      this._moreButton = new Button(25, 0x000000, null, true, pixcelRatio);
+      this._detailButton = new Button(25, 0x000000, null, null, true, pixcelRatio);
+      this._moreButton = new Button(25, 0x000000, null, null, true, pixcelRatio);
       this._detailButton.x = 300;
       this._detailButton.y = 100;
       this._moreButton.x = 200;
@@ -450,7 +450,7 @@ namespace scene {
         let btn: Button = item.button;
         if (!btn) {
           const colorNumber = util.colorStringToNumber(item.bgColor);
-          btn = new Button(15, colorNumber, item.texture, false, pixcelRatio);
+          btn = new Button(15, colorNumber, item.texture, item.label, false, pixcelRatio);
           item.button = btn;
           btn.onClick = () => {
           };
@@ -468,6 +468,12 @@ namespace scene {
         const tw = new TWEEN.Tween(twObj)
           .to({deg: '-360', radius: 60 * pixcelRatio}, 1000)
           .easing(TWEEN.Easing.Cubic.Out)
+          .onComplete(() => {
+            btn.showLable();
+            setTimeout(function() {
+              btn.hideLable();
+            }, 3000);
+          })
           .onUpdate(() => {
             const pos = util.cyclePoint(centerPoint, twObj.radius, twObj.deg);
             btn.x = pos.x;
@@ -739,6 +745,7 @@ namespace scene {
       _.forEach(extraItems, (item, index) => {
         const btn = item.button;
         btn.clearTweens();
+        btn.hideLable();
         if (animate) {
           const twObj = btn.twObj;
           const twObjOrign = {

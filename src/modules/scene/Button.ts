@@ -38,6 +38,14 @@ namespace scene {
      */
     public tweens: TWEEN.Tween[] = [];
     /**
+     * 标签
+     */
+    public label: egret.TextField;
+    /**
+     * label 动画的 tween
+     */
+    public labelTween: TWEEN.Tween;
+    /**
      * 关联的 Tween 对象的 obj
      */
     public twObj: any;
@@ -53,7 +61,7 @@ namespace scene {
      * @param iconTexture {egret.Texture} 图标纹理 Texture 对象的
      * @param showOutline {boolean} 是否显示发光外框
      */
-    constructor(radius: number, bgColor: number, iconTexture: egret.Texture, showOutline: boolean = true, dpi: number = 1) {
+    constructor(radius: number, bgColor: number, iconTexture: egret.Texture, lableStr?: string , showOutline: boolean = true, dpi: number = 1) {
       super();
       this._radius = radius * dpi;
       this._bgColor = bgColor;
@@ -61,6 +69,7 @@ namespace scene {
       this._dpi = dpi;
       this._createShape();
       this._createIcon();
+      this._createLabel(lableStr);
       this._createOutline(showOutline);
     }
 
@@ -111,7 +120,7 @@ namespace scene {
     }
 
     /**
-     * @parivate 创建按钮图标
+     * @private 创建按钮图标
      */
     private  _createIcon() {
       this._icon = new egret.Bitmap(this._iconTexture);
@@ -120,6 +129,67 @@ namespace scene {
       this._icon.x = -this._radius;
       this._icon.y = -this._radius;
       this.addChild(this._icon);
+    }
+
+    /**
+     * @private 创建标签文字
+     */
+    private _createLabel(labelStr?: string) {
+      if (!labelStr) {
+        return;
+      }
+      this.label = new egret.TextField;
+      this.label.text = labelStr;
+      this.label.textColor = this._bgColor;
+      this.label.backgroundColor = 0xffffff;
+      this.label.size = 12 * this._dpi;
+      this.label.x = -this.label.width / 2;
+      this.label.y = this.label.height * 1.5;
+      this.label.alpha = 0;
+      this.addChild(this.label);
+    }
+
+    /**
+     *  显示标签
+     */
+    public showLable() {
+      console.log(this);
+      if (!this.label || this.label.alpha === 1) {
+        return;
+      }
+      if (this.labelTween) {
+        this.labelTween.stop();
+        TWEEN.remove(this.labelTween);
+      }
+      let label = this.label;
+      let tween = new TWEEN.Tween(this.label)
+        .to({alpha: 1}, 500)
+        .onComplete(() => {
+          this.labelTween = null;
+        })
+        .start();
+      this.labelTween = tween;
+    }
+
+    /**
+     * 隐藏标签
+     */
+    public hideLable() {
+      if (!this.label || this.label.alpha === 0) {
+        return;
+      }
+      if (this.labelTween) {
+        this.labelTween.stop();
+        TWEEN.remove(this.labelTween);
+      }
+      let label = this.label;
+      let tween = new TWEEN.Tween(this.label)
+        .to({alpha: 0}, 500)
+        .onComplete(() => {
+          this.labelTween = null;
+        })
+        .start();
+      this.labelTween = tween;
     }
 
     /**
