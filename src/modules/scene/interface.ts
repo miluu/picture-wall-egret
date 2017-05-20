@@ -71,6 +71,7 @@ namespace scene {
     status: string;
     message: string;
     result: {
+      bgm: string;
       items: IApiItem[]
     };
   }
@@ -102,6 +103,7 @@ namespace scene {
     imgs: IApiImg[];
     extraItems: IApiExtraItem[];
     extraItemsMerged?: boolean;
+    flag?: IApiFlag;
   }
 
   export interface ISize {
@@ -111,6 +113,12 @@ namespace scene {
 
   export interface IApiImg extends ISize {
     url: string;
+    texture: egret.Texture;
+  }
+
+  export interface IApiFlag extends ISize {
+    icon: string;
+    position?: 'TL' | 'TR' | 'BL' | 'BR';
     texture: egret.Texture;
   }
 

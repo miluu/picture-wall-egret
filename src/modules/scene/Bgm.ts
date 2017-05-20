@@ -4,35 +4,47 @@ namespace scene {
     private _ready: boolean;
     private _chanel: egret.SoundChannel;
     private _position: number;
-    private _soundUrl: string;
+    private _inTween: boolean = false;
+    public url: string;
 
     constructor (url?: string) {
       this._sound = new egret.Sound();
-      this._soundUrl = url;
       if (url) {
         this.load(url);
       }
     }
 
     load(url: string, onComplete?: Function, onError?: Function) {
-      this._sound.addEventListener(egret.Event.COMPLETE, function loadOver(event: egret.Event) {
+      if (this._inTween) {
+        return;
+      }
+      this.url = url;
+      this._sound.once(egret.Event.COMPLETE, loadOver, this);
+      this._sound.once(egret.IOErrorEvent.IO_ERROR, loadError, this);
+      this._sound.load(url);
+
+      const _this = this;
+      function loadOver(event: egret.Event) {
           this._ready = true;
           if (onComplete) {
             onComplete();
-          }
-      }, this);
-      this._sound.addEventListener(egret.IOErrorEvent.IO_ERROR, function loadError(event: egret.IOErrorEvent) {
+        }
+      }
+      function loadError(event: egret.IOErrorEvent) {
           this._ready = false;
           console.warn('Sound load error.');
           if (onError) {
             onError();
           }
-      }, this);
-      this._sound.load(url);
+      }
+      function unListen () {
+        _this._sound.removeEventListener(egret.Event.COMPLETE, loadOver, this);
+        _this._sound.removeEventListener(egret.IOErrorEvent.IO_ERROR, loadError, this);
+      }
     }
 
     play(resume?: boolean) {
-      if (!this._ready) {
+      if (!this._ready || this._inTween) {
         console.warn('Sound resouce is not ready yet.');
         return;
       }
@@ -44,10 +56,50 @@ namespace scene {
     }
 
     stop() {
+      if (this._inTween) {
+        return;
+      }
       if (this._chanel) {
         this._position = this._chanel.position;
         this._chanel.stop();
       }
+    }
+
+    fadeOut(callback?: Function) {
+      if (!this._chanel || this._inTween) {
+        return;
+      }
+      this._inTween = true;
+      let tween = new TWEEN.Tween(this._chanel)
+        .to({volume: 0}, 3000)
+        .start()
+        .onComplete(() => {
+          this._inTween = false;
+          this.stop();
+          TWEEN.remove(tween);
+          if (callback) {
+            callback();
+          }
+        });
+    }
+
+    fadeIn(callback?: Function) {
+      this.play();
+      if (!this._chanel || this._inTween) {
+        return;
+      }
+      this._chanel.volume = 0;
+      this._inTween = true;
+      let tween = new TWEEN.Tween(this._chanel)
+        .to({volume: 1}, 3000)
+        .start()
+        .onComplete(() => {
+          this._inTween = false;
+          TWEEN.remove(tween);
+          if (callback) {
+            callback();
+          }
+        });
     }
   }
 }

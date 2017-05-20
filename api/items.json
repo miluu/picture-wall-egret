@@ -2,6 +2,7 @@
   "status": "success",
   "message": "加载成功",
   "result": {
+    "bgm": "assets/audio/bgm2.mp3",
     "items": [
       {
         "goodsno": "0",
@@ -282,11 +283,15 @@
       },
       {
         "goodsno": "10",
-        "brand": "澳玛斯汀",
+        "brand": "*澳玛斯汀*",
         "title": "澳玛斯汀民族风新款女装",
         "description": "【全棉　不变形　不缩水　不起球】【备注：黑色第一次洗会掉毛不易与其它一起洗】",
         "price": 129,
         "detailUrl": "detail.html?id=10",
+        "flag": {
+          "icon": "assets/images/flags/2.png",
+          "position": "TR"
+        },
         "extraItems": [
           {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "红色" },
           {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "红色" },
@@ -1150,11 +1155,15 @@
       },
       {
         "goodsno": "41",
-        "brand": "粉粉家",
+        "brand": "*粉粉家*",
         "title": "中长款条纹连衣裙夏女装",
         "description": "V领条纹设计 简约大方 质量保证 收腰显瘦",
         "price": 889,
         "detailUrl": "detail.html?id=41",
+        "flag": {
+          "icon": "assets/images/flags/1.png",
+          "position": "TL"
+        },
         "extraItems": [
           {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "condition": "红色" },
           {"icon": "assets/images/icons/6.png", "bgColor": "blue", "type": 2, "condition": "红色" },

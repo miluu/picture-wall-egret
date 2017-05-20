@@ -15,6 +15,11 @@ namespace scene {
     private _nextItems: Item[] = [];
 
     /**
+     * 下一场景的 bgm url.
+     */
+    private _nextBgmUrl: string;
+
+    /**
      * extraItem
      */
     private _extraItems: Item[] = [];
@@ -73,24 +78,22 @@ namespace scene {
     /**
      * @private 背景音乐
      */
-    private _bgm: Bgm = new Bgm();
+    private _bgm: Bgm;
+
+    private static _devBgmCount?: number = 0;
 
     /**
      * @constructor 生成一个场景实例
      */
     constructor() {
       super();
+      console.log(this);
       this.touchEnabled = true;
       this.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this._touchScene, this);
       this.addEventListener(egret.TouchEvent.TOUCH_END, this._touchScene, this);
       this.state.pixcelRatio = util.getPixcelRatio();
       this._createButtons();
       this._loadRes();
-      this._bgm.load('assets/audio/bgm.mp3', () => {
-        this._bgm.play();
-      }, () => {
-        console.error('背景乐加载失败');
-      });
       detail.operateCallback = this._touchScene.bind(this);
     }
 
@@ -178,7 +181,6 @@ namespace scene {
      */
     private _setSceneSize(width: number, height: number) {
       const dpi = util.getPixcelRatio();
-      console.log(this.stage);
       this.state.sceneWidth = width || (window.innerWidth * dpi);
       this.state.sceneHeight = height || (window.innerHeight * dpi);
       this.stage.setContentSize(this.state.sceneWidth, this.state.sceneHeight);
@@ -227,10 +229,13 @@ namespace scene {
         },
         onComplete: (_data) => {
           let data = <IApi>_data;
+          let bgmUrl;
           if (!(data.status === 'success')) {
             alert(data.message || '加载失败!');
             return;
           }
+          bgmUrl = data.result.bgm;
+          this._changeBgm(bgmUrl);
           this._loadSources(data, this._loadedHandle.bind(this));
         }
       });
@@ -247,6 +252,8 @@ namespace scene {
       this._nextItems = [];
       this.state.offset = 0;
       this._delayFrames(() => {
+        this._changeBgm(this._nextBgmUrl);
+        this._nextBgmUrl = null;
         this._enter();
       }, 10);
       if (sceneChangeTime) {
@@ -527,10 +534,13 @@ namespace scene {
         },
         onComplete: (_data) => {
           let data = <IApi>_data;
+          let bgmUrl;
           if (!(data.status === 'success')) {
             alert(data.message || '加载失败!');
             return;
           }
+          bgmUrl = data.result.bgm;
+          this._changeBgm(bgmUrl);
           this._loadSources(data, this._searchSceneResourceLoadedHandle.bind(this));
         }
       });
@@ -814,6 +824,28 @@ namespace scene {
               }
             }
         });
+        if (item.flag && item.flag.icon) {
+          console.log('flag:', item.flag.icon);
+          ajax.getTexture(item.flag.icon, {
+              onComplete: (texture) => {
+                console.log('flag success');
+                successCount++;
+                item.flag.texture = texture;
+                item.flag.width = item.flag.width || item.flag.texture.textureWidth;
+                item.flag.height = item.flag.height || item.flag.texture.textureHeight;
+                if (callback) {
+                  callback(successCount, failedCount, imagesCount, apiItems);
+                }
+              },
+              onError: () => {
+                console.log('flag failed');
+                failedCount++;
+                if (callback) {
+                  callback(successCount, failedCount, imagesCount, apiItems);
+                }
+              }
+          });
+        }
         _.forEach(item.extraItems, (extraItem) => {
           ajax.getTexture(extraItem.icon, {
             onComplete: (texture) => {
@@ -889,6 +921,7 @@ namespace scene {
             alert(data.message || '加载失败!');
             return;
           }
+          this._nextBgmUrl = data.result.bgm;
           this._loadSources(data, this._preLoadHandle.bind(this));
         }
       });
@@ -1059,6 +1092,42 @@ namespace scene {
       if (this.state.selectedItem) {
         _.remove(this._items, this.state.selectedItem);
       }
+    }
+
+    /**
+     * @private 切换背景音乐
+     */
+    private _changeBgm(url: string) {
+      let preBgm;
+      if (this._config.__env__ === 'dev') {
+        Scene._devBgmCount++;
+        url = `assets/audio/bgm${Scene._devBgmCount % 2 + 1}.mp3`;
+      }
+      if (!url) {
+        return;
+      }
+      if (!this._bgm) {
+        this._bgm = new Bgm();
+        this._bgm.load(url, () => {
+          this._bgm.fadeIn();
+        }, () => {
+          console.error('背景乐加载失败');
+        });
+        return;
+      }
+      if (this._bgm.url === url) {
+        return;
+      }
+      let tmp = this._bgm;
+      tmp.fadeOut(() => {
+        tmp = null;
+        this._bgm = new Bgm();
+        this._bgm.load(url, () => {
+          this._bgm.fadeIn();
+        }, () => {
+          console.error('背景乐加载失败');
+        });
+      });
     }
 
     /**
@@ -1648,6 +1717,9 @@ namespace scene {
         }
         if (item.extraItems) {
           count += item.extraItems.length;
+        }
+        if (item.flag && item.flag.icon) {
+          count++;
         }
       });
       return count;

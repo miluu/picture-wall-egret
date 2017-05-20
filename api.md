@@ -42,6 +42,7 @@
   "status": "success",
   "message": "加载成功",
   "result": {
+    "bgm": "assets/audio/bgm1.mp3",
     "items": [
       {
         "goodsno": "0",                   // {string} 商品 id (goodsno?)
