@@ -54,6 +54,7 @@
         "flag": {                                   // 商品促销标志（可选）
           "icon": "assets/images/flags/2.png",      // {string} 促销标志图标 url
           "position": "TR"                          // {string} 促销标志图标位置： TR: 右上(默认), TL: 左上, BL: 左下, BR: 右下
+          "offset": 0.3                             // {number} 偏移量。 0 表示无偏移，即促销标志与商品缩略图边缘对齐, 1 代表偏移1个flag图标的位置，默认值为 0.5，即偏移 0.5 个 flag 的位置(促销图标的中心与商品缩略图角落对齐)
         },
         "thumbnail": {               // 缩略图
           "url": "/assets/images/imgs/thumb/TB25v95qFXXXXXyXpXXXXXXXXXX_!!2175014669.jpg",    // {string} 缩略图url
