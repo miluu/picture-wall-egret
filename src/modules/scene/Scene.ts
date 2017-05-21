@@ -627,7 +627,7 @@ namespace scene {
               let texture = thumbImg.texture;
               let item = new Item(changeSize.width, changeSize.height, null, texture);
               if (apiItem.flag && apiItem.flag.texture) {
-                item.addFlag(apiItem.flag.texture, apiItem.flag.position);
+                item.addFlag(apiItem.flag.texture, apiItem.flag.position, apiItem.flag.offset);
               }
               item.data = apiItem;
               let randomPos = this._randomOutsidePosition();
@@ -1292,7 +1292,7 @@ namespace scene {
         let rowIndex = scene._getMinWidthRowIndex(state.nextApiRowWidthList);
         let rowWidth = state.nextApiRowWidthList[rowIndex];
         if (apiItem.flag && apiItem.flag.texture) {
-          item.addFlag(apiItem.flag.texture, apiItem.flag.position);
+          item.addFlag(apiItem.flag.texture, apiItem.flag.position, apiItem.flag.offset);
         }
         item.data = apiItem;
         item.rowIndex = rowIndex;
@@ -1361,7 +1361,7 @@ namespace scene {
         let rowIndex = this._getMinWidthRowIndex(state.rowWidthList);
         let rowWidth = state.rowWidthList[rowIndex];
         if (apiItem.flag && apiItem.flag.texture) {
-          item.addFlag(apiItem.flag.texture, apiItem.flag.position);
+          item.addFlag(apiItem.flag.texture, apiItem.flag.position, apiItem.flag.offset);
         }
         item.data = apiItem;
         item.rowIndex = rowIndex;

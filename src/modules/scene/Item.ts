@@ -129,32 +129,36 @@ namespace scene {
 
     /**
      * @public 添加角标
+     * @param {egret.Texture} texture - 纹理
+     * @param {'TL' | 'TR' | 'BL' | 'BR'} position - 位置
+     * @param {number} offset - 偏移量，默认 0.5
      */
-    public addFlag(texture: egret.Texture, position?: 'TL' | 'TR' | 'BL' | 'BR') {
+    public addFlag(texture: egret.Texture, position?: 'TL' | 'TR' | 'BL' | 'BR', offset: number = 0.5) {
       console.log('addflag....');
       let {itemWidth, itemHeight} = this;
       let width = texture.textureWidth;
       let height = texture.textureHeight;
+      let _offset = offset - 0.5;
       let x: number, y: number;
       this.flagImg = new egret.Bitmap(texture);
       this.flagImg.anchorOffsetX = width / 2;
       this.flagImg.anchorOffsetY = height / 2;
       switch (position ? position.toUpperCase() : '') {
         case 'TL':
-          x = -itemWidth / 2;
-          y = -itemHeight / 2;
+          x = -itemWidth / 2 - width * _offset;
+          y = -itemHeight / 2 - height * _offset;
           break;
         case 'BL':
-          x = -itemWidth / 2;
-          y = itemHeight / 2;
+          x = -itemWidth / 2 - width * _offset;
+          y = itemHeight / 2 + height * _offset;
           break;
         case 'BR':
-          x = itemWidth / 2;
-          y = itemHeight / 2;
+          x = itemWidth / 2 + width * _offset;
+          y = itemHeight / 2 + height * _offset;
           break;
         default:
-          x = itemWidth / 2;
-          y = -itemHeight / 2;
+          x = itemWidth / 2 + width * _offset;
+          y = -itemHeight / 2 - height * _offset;
           break;
       }
       this.flagImg.x = x;

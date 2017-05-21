@@ -290,7 +290,8 @@
         "detailUrl": "detail.html?id=10",
         "flag": {
           "icon": "assets/images/flags/2.png",
-          "position": "TR"
+          "position": "TR",
+          "offset": 0.2
         },
         "extraItems": [
           {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "红色" },
@@ -1162,7 +1163,8 @@
         "detailUrl": "detail.html?id=41",
         "flag": {
           "icon": "assets/images/flags/1.png",
-          "position": "TL"
+          "position": "TL",
+          "offset": 0.2
         },
         "extraItems": [
           {"icon": "assets/images/icons/9.png", "bgColor": "cyan", "type": 2, "label": "文字",  "condition": "红色" },

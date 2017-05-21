@@ -120,6 +120,7 @@ namespace scene {
     icon: string;
     position?: 'TL' | 'TR' | 'BL' | 'BR';
     texture: egret.Texture;
+    offset?: number;
   }
 
   export interface IApiExtraItem {
