@@ -1024,6 +1024,7 @@ namespace scene {
           .start()
           .onComplete(() => {
             done++;
+            // console.log(`enter: ${done} / ${itemsCount}`);
             if (done === itemsCount - 1) {
               this.state.status = SCENE_STATUS.RUNNING;
               this.state.sceneStartTime = new Date();
@@ -1073,6 +1074,7 @@ namespace scene {
           })
           .onComplete(() => {
             done++;
+            // console.log(`leave: ${done} / ${itemsCount}`);
             try {
               this.removeChild(item);
             } catch (e) {
