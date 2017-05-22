@@ -134,7 +134,7 @@ namespace scene {
      * @param {number} offset - 偏移量，默认 0.5
      */
     public addFlag(texture: egret.Texture, position?: 'TL' | 'TR' | 'BL' | 'BR', offset: number = 0.5) {
-      console.log('addflag....');
+      console.log('addflag....offset:', offset);
       let {itemWidth, itemHeight} = this;
       let width = texture.textureWidth;
       let height = texture.textureHeight;

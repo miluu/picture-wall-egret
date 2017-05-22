@@ -153,7 +153,6 @@ namespace scene {
      *  显示标签
      */
     public showLable() {
-      console.log(this);
       if (!this.label || this.label.alpha === 1) {
         return;
       }

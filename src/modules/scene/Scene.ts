@@ -835,10 +835,8 @@ namespace scene {
             }
         });
         if (item.flag && item.flag.icon) {
-          console.log('flag:', item.flag.icon);
           ajax.getTexture(item.flag.icon, {
               onComplete: (texture) => {
-                console.log('flag success');
                 successCount++;
                 item.flag.texture = texture;
                 item.flag.width = item.flag.width || item.flag.texture.textureWidth;
@@ -848,7 +846,6 @@ namespace scene {
                 }
               },
               onError: () => {
-                console.log('flag failed');
                 failedCount++;
                 if (callback) {
                   callback(successCount, failedCount, imagesCount, apiItems);
@@ -1018,26 +1015,16 @@ namespace scene {
       this.state.status = SCENE_STATUS.ENTER;
       let done = 0;
       let itemsCount = this._items.length;
-      let c = 0;
-      let sc = 0;
       _.forEach(this._items, (item, i) => {
         let time = minTime + Math.random() * (maxTime - minTime);
         let toY = this._getRowItemY(item.rowIndex);
-        c++;
-        console.info('count:', c, '; index:', i);
         let tw = new TWEEN.Tween(item.basePosition)
           .to({y: toY}, time)
           .easing(TWEEN.Easing.Cubic.Out)
           .start()
-          .onStart(() => {
-            sc++;
-            console.info('start:', sc);
-          })
           .onComplete(() => {
             done++;
-            console.info(`${done} / ${itemsCount}`);
             if (done === itemsCount - 1) {
-              console.info('---------');
               this.state.status = SCENE_STATUS.RUNNING;
               this.state.sceneStartTime = new Date();
               // let timer = new egret.Timer(this.state.sceneChangeTime * 1000, 1);
