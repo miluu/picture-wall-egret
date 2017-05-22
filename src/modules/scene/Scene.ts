@@ -80,6 +80,8 @@ namespace scene {
      */
     private _bgm: Bgm;
 
+    private _labelHideTimmers: number[] = [];
+
     private static _devBgmCount?: number = 0;
 
     /**
@@ -161,6 +163,7 @@ namespace scene {
       this.state.titleTextColor = settings.titleTextColor;
       this.state.priceTextColor = settings.priceTextColor;
       this.state.descriptionTextColor = settings.descriptionTextColor;
+      this.state.labelHideTime = settings.labelHideTime;
       this._createBg();
       this._createText();
       this._setButtonsPosition();
@@ -469,10 +472,15 @@ namespace scene {
           .to({deg: '-360', radius: 60 * pixcelRatio}, 1000)
           .easing(TWEEN.Easing.Cubic.Out)
           .onComplete(() => {
+            if (this._labelHideTimmers[index]) {
+              clearTimeout(this._labelHideTimmers[index]);
+            }
+            this._labelHideTimmers = [];
             btn.showLable();
-            setTimeout(function() {
+            let t = setTimeout(function() {
               btn.hideLable();
-            }, 3000);
+            }, this.state.labelHideTime || 3000);
+            this._labelHideTimmers[index] = t;
           })
           .onUpdate(() => {
             const pos = util.cyclePoint(centerPoint, twObj.radius, twObj.deg);

@@ -21,6 +21,7 @@ namespace settings {
     titleTextColor?: string;
     priceTextColor?: string;
     descriptionTextColor?: string;
+    labelHideTime?: number;
     [key: string]: any;
   }
 

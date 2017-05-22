@@ -6,17 +6,18 @@
       "rowCount": 5,
       "padding": 30,
       "speed": 0.5,
-      "sceneChangeTime": 10,
+      "sceneChangeTime": 60,
       "bgColor": "#f2f2f2",
       "bgImage": "assets/images/bg/bg.jpg",
       "bgFixMode": "noBorder",
-      "autoResetTime": 15,
+      "autoResetTime": 30,
       "showDetailAnimationTime": 2300,
 
       "brandTextColor": "#fff",
       "titleTextColor": "#FF8C00",
       "priceTextColor": "orangered",
-      "descriptionTextColor": "#F4A460"
+      "descriptionTextColor": "#F4A460",
+      "labelHideTime": 6000
     }
   }
 }

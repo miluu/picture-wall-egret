@@ -54,6 +54,7 @@ namespace scene {
     searchLoading: boolean;
     searchJump: Function;
     alreadySearchJump: boolean;
+    labelHideTime: number;
   }
 
   export interface IConfig {
