@@ -38,6 +38,7 @@ namespace refManager {
           texture,
           count: 0
         };
+        TextureManager.textureRefs.push(textureRef);
       }
       textureRef.count += count;
       return textureRef.count;
@@ -64,9 +65,9 @@ namespace refManager {
       }
       if (!retCount) {
         texture.dispose();
-      }
-      if (textureRef) {
-        _.remove(TextureManager.textureRefs, textureRef);
+        if (textureRef) {
+          _.remove(TextureManager.textureRefs, textureRef);
+        }
       }
       return retCount;
     }

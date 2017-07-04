@@ -26,12 +26,14 @@ namespace scene {
       const _this = this;
       function loadOver(event: egret.Event) {
           this._ready = true;
+          unListen();
           if (onComplete) {
             onComplete();
         }
       }
       function loadError(event: egret.IOErrorEvent) {
           this._ready = false;
+          unListen();
           console.warn('Sound load error.');
           if (onError) {
             onError();

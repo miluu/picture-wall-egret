@@ -142,7 +142,6 @@ namespace scene {
       let height = texture.textureHeight;
       let _offset = offset - 0.5;
       let x: number, y: number;
-      refManager.TextureManager.addRef(texture);
       this.flagImg = new egret.Bitmap(texture);
       this.flagImg.anchorOffsetX = width / 2;
       this.flagImg.anchorOffsetY = height / 2;
@@ -170,7 +169,7 @@ namespace scene {
     }
 
     /**
-     * @public 清除所有作用在其上的 Tween 是否为克隆对象
+     * @public 清除所有作用在其上的 Tween
      */
     public clearTweens() {
       _.forEach(this.tweens, (tween) => {
@@ -214,8 +213,8 @@ namespace scene {
       this.flagImg = null;
       this.data = null;
       if (this._texture) {
-        this._texture = null;
         refManager.TextureManager.removeRef(this._texture);
+        this._texture = null;
       }
     }
 
