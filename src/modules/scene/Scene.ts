@@ -1614,6 +1614,7 @@ namespace scene {
           .to(itemViewInfo, 1000)
           .onComplete(() => {
             this.removeChild(clone);
+            clone.destroy();
             item.isBacking = false;
             if (item.flagImg) {
               item.flagImg.alpha = 1;

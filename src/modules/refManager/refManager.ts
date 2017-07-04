@@ -3,15 +3,13 @@
  * @author HuangYaxiong <hyxiong@qq.com>
  */
 
-namespace refManager {
+declare class WeakMap<K, V> {
+  set(k: K, v: V): WeakMap<K, V>;
+  get(k: K): V;
+  delete(k: K): boolean;
+}
 
-  /**
-   * @interface 纹理引用
-   */
-  export interface ITextureRef {
-    texture: egret.Texture;
-    count: number;
-  }
+namespace refManager {
 
   /**
    * @class 纹理管理类
@@ -20,7 +18,7 @@ namespace refManager {
     /**
      * @static {ITextureRef[]}
      */
-    static textureRefs: ITextureRef[] = [];
+    static textureRefs: WeakMap<egret.Texture, number> = new WeakMap<egret.Texture, number>();
 
     /**
      * @static 增加纹理的引用
@@ -32,16 +30,9 @@ namespace refManager {
       if (!texture) {
         return -1;
       }
-      let textureRef: ITextureRef = _.find(TextureManager.textureRefs, {texture});
-      if (!textureRef) {
-        textureRef = {
-          texture,
-          count: 0
-        };
-        TextureManager.textureRefs.push(textureRef);
-      }
-      textureRef.count += count;
-      return textureRef.count;
+      let refCount = TextureManager.textureRefs.get(texture) || 0;
+      refCount += count;
+      TextureManager.textureRefs.set(texture, count);
     }
 
     /**
@@ -54,22 +45,14 @@ namespace refManager {
       if (!texture) {
         return -1;
       }
-      let textureRef: ITextureRef = _.find(TextureManager.textureRefs, {texture});
-      let retCount = 0;
-      if (textureRef) {
-        textureRef.count -= count;
-        if (textureRef.count < 0) {
-          textureRef.count = 0;
-        }
-        retCount = textureRef.count;
-      }
-      if (!retCount) {
+      let refCount = TextureManager.textureRefs.get(texture) || 0;
+      refCount -= count;
+      if (refCount <= 0) {
         texture.dispose();
-        if (textureRef) {
-          _.remove(TextureManager.textureRefs, textureRef);
-        }
+        TextureManager.textureRefs.delete(texture);
+      } else {
+        TextureManager.textureRefs.set(texture, refCount);
       }
-      return retCount;
     }
   }
 };

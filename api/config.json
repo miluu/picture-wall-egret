@@ -10,7 +10,7 @@
       "bgColor": "#f2f2f2",
       "bgImage": "assets/images/bg/bg.jpg",
       "bgFixMode": "noBorder",
-      "autoResetTime": 30,
+      "autoResetTime": 5,
       "showDetailAnimationTime": 2300,
 
       "brandTextColor": "#fff",

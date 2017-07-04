@@ -12,7 +12,7 @@ var game_file_list = [
 	"bin-debug/modules/ajax/index.js",
 	"bin-debug/modules/scene/Repel.js",
 	"bin-debug/modules/detail/detail.js",
-	"bin-debug/modules/refManager/resManager.js",
+	"bin-debug/modules/refManager/refManager.js",
 	"bin-debug/modules/scene/Bgm.js",
 	"bin-debug/modules/scene/Button.js",
 	"bin-debug/modules/scene/Item.js",
