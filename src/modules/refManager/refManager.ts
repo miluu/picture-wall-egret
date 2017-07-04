@@ -20,6 +20,8 @@ namespace refManager {
      * @static {ITextureRef[]}
      */
     static textureRefs: WeakMap<egret.Texture, number> = new WeakMap<egret.Texture, number>();
+    static newTextureCount = 0;
+    static disposeTextureCount = 0;
 
     /**
      * @static 增加纹理的引用
@@ -32,6 +34,10 @@ namespace refManager {
         return -1;
       }
       let refCount = TextureManager.textureRefs.get(texture) || 0;
+      if (!refCount) {
+        TextureManager.newTextureCount++;
+        console.log('newTextureCount:', TextureManager.newTextureCount);
+      }
       refCount += count;
       TextureManager.textureRefs.set(texture, refCount);
     }
@@ -51,6 +57,8 @@ namespace refManager {
       if (refCount <= 0) {
         texture.dispose();
         TextureManager.textureRefs.delete(texture);
+        TextureManager.disposeTextureCount++;
+        console.log('disposeTextureCount:', TextureManager.disposeTextureCount);
       } else {
         TextureManager.textureRefs.set(texture, refCount);
       }

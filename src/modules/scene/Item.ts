@@ -71,9 +71,9 @@ namespace scene {
      */
     public isBacking: boolean = false;
     /**
-     * @public 对应的 api 数据
+     * @private 对应的 api 数据
      */
-    public data: IApiItem;
+    private _data: IApiItem;
 
     /**
      * @public 角标 Shape
@@ -96,9 +96,70 @@ namespace scene {
       this._bgColor = bgColor;
       if (texture) {
         this._texture = texture;
-        refManager.TextureManager.addRef(texture);
       }
       this._init();
+    }
+
+    /**
+     * @get
+     * @return {IApiItem}
+     */
+    get data(): IApiItem {
+      return this._data;
+    }
+
+    /**
+     * @set
+     * @return {IApiItem}
+     */
+    set data(data: IApiItem) {
+      this._removeData();
+      this._data = data;
+      if (!data) {
+        return;
+      }
+      if (this._data.thumbnail && this._data.thumbnail.texture) {
+        refManager.TextureManager.addRef(this._data.thumbnail.texture);
+      }
+      _.forEach(this._data.imgs, img => {
+        if (img.texture) {
+          refManager.TextureManager.addRef(img.texture);
+        }
+      });
+      _.forEach(this._data.extraItems, extraItem => {
+        if (extraItem.type !== 1 && extraItem.texture) {
+          refManager.TextureManager.addRef(extraItem.texture);
+        }
+      });
+      if (this._data.flag && this._data.flag.texture) {
+        refManager.TextureManager.addRef(this._data.flag.texture);
+      }
+    }
+
+    /**
+     * @private
+     */
+    private _removeData() {
+      if (!this._data) {
+        return;
+      }
+      if (this._data.thumbnail && this._data.thumbnail.texture) {
+        refManager.TextureManager.removeRef(this._data.thumbnail.texture);
+      }
+      _.forEach(this._data.imgs, img => {
+        if (img.texture) {
+          refManager.TextureManager.removeRef(img.texture);
+        }
+      });
+      _.forEach(this._data.extraItems, extraItem => {
+        if (extraItem.texture) {
+          refManager.TextureManager.removeRef(extraItem.texture);
+        }
+      });
+      if (this._data.flag && this._data.flag.texture) {
+        refManager.TextureManager.removeRef(this._data.flag.texture);
+      }
+      this._data = null;
     }
 
     /**
@@ -211,9 +272,8 @@ namespace scene {
       this.acceptRepel = false;
       this.attatchedRepel = null;
       this.flagImg = null;
-      this.data = null;
+      this._removeData();
       if (this._texture) {
-        refManager.TextureManager.removeRef(this._texture);
         this._texture = null;
       }
     }
