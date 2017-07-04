@@ -6,6 +6,7 @@
 declare class WeakMap<K, V> {
   set(k: K, v: V): WeakMap<K, V>;
   get(k: K): V;
+  has(k: K): boolean;
   delete(k: K): boolean;
 }
 
