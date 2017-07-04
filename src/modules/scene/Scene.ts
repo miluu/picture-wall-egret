@@ -624,6 +624,7 @@ namespace scene {
             if (this._extraItems) {
               _.forEach(this._extraItems, (item) => {
                 this.removeChild(item);
+                item.destroy();
               });
               this._extraItems = [];
             }
@@ -1085,6 +1086,7 @@ namespace scene {
             // console.log(`leave: ${done} / ${itemsCount}`);
             try {
               this.removeChild(item);
+              item.destroy();
             } catch (e) {
               console.log(e);
             }
@@ -1353,6 +1355,7 @@ namespace scene {
       if (this._items) {
         _.forEach(this._items, (item) => {
           this.removeChild(item);
+          item.destroy();
         });
         this._items = [];
       }
@@ -1597,6 +1600,7 @@ namespace scene {
           }, 1000)
           .onComplete(() => {
             this.removeChild(item);
+            item.destroy();
             item.isBacking = false;
           })
           .easing(TWEEN.Easing.Cubic.Out)

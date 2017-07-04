@@ -1,14 +1,14 @@
 /**
- * @namespace resManager 资源管理模块
+ * @namespace refManager 引用管理模块
  * @author HuangYaxiong <hyxiong@qq.com>
  */
 
-namespace resManager {
+namespace refManager {
 
   /**
    * @interface 纹理引用
    */
-  interface ITextureRef {
+  export interface ITextureRef {
     texture: egret.Texture;
     count: number;
   }
@@ -29,6 +29,9 @@ namespace resManager {
      * @returns {number} - 执行操作后的该纹理的引用总数
      */
     static addRef(texture: egret.Texture, count: number = 1): number {
+      if (!texture) {
+        return -1;
+      }
       let textureRef: ITextureRef = _.find(TextureManager.textureRefs, {texture});
       if (!textureRef) {
         textureRef = {
@@ -47,6 +50,9 @@ namespace resManager {
      * @returns {number} - 执行操作后的该纹理的引用总数
      */
     static removeRef(texture: egret.Texture, count: number = 1): number {
+      if (!texture) {
+        return -1;
+      }
       let textureRef: ITextureRef = _.find(TextureManager.textureRefs, {texture});
       let retCount = 0;
       if (textureRef) {

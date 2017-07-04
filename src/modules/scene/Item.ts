@@ -94,7 +94,10 @@ namespace scene {
       this._itemWidth = itemWidth;
       this._itemHeight = itemHeight;
       this._bgColor = bgColor;
-      this._texture = texture;
+      if (texture) {
+        this._texture = texture;
+        refManager.TextureManager.addRef(texture);
+      }
       this._init();
     }
 
@@ -134,12 +137,12 @@ namespace scene {
      * @param {number} offset - 偏移量，默认 0.5
      */
     public addFlag(texture: egret.Texture, position?: 'TL' | 'TR' | 'BL' | 'BR', offset: number = 0.5) {
-      console.log('addflag....offset:', offset);
       let {itemWidth, itemHeight} = this;
       let width = texture.textureWidth;
       let height = texture.textureHeight;
       let _offset = offset - 0.5;
       let x: number, y: number;
+      refManager.TextureManager.addRef(texture);
       this.flagImg = new egret.Bitmap(texture);
       this.flagImg.anchorOffsetX = width / 2;
       this.flagImg.anchorOffsetY = height / 2;
@@ -194,6 +197,26 @@ namespace scene {
       clone.scaleX = this.scaleX;
       clone.scaleY = this.scaleY;
       return clone;
+    }
+
+    /**
+     * @public 销毁实例
+     */
+    public destroy() {
+      this.removeEventListener(egret.Event.ENTER_FRAME, this._updateViewInfo, this);
+      this.clearTweens();
+      this._image = null;
+      this._bg = null;
+      this._viewInfo = null;
+      this.basePosition = null;
+      this.acceptRepel = false;
+      this.attatchedRepel = null;
+      this.flagImg = null;
+      this.data = null;
+      if (this._texture) {
+        this._texture = null;
+        refManager.TextureManager.removeRef(this._texture);
+      }
     }
 
     /**
