@@ -36,7 +36,7 @@ namespace refManager {
       let refCount = TextureManager.textureRefs.get(texture) || 0;
       if (!refCount) {
         TextureManager.newTextureCount++;
-        console.log('newTextureCount:', TextureManager.newTextureCount);
+        // console.log('newTextureCount:', TextureManager.newTextureCount);
       }
       refCount += count;
       TextureManager.textureRefs.set(texture, refCount);

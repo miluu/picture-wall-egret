@@ -66,6 +66,9 @@ namespace scene {
       this._radius = radius * dpi;
       this._bgColor = bgColor;
       this._iconTexture = iconTexture;
+      if (iconTexture) {
+        refManager.TextureManager.addRef(iconTexture);
+      }
       this._dpi = dpi;
       this._createShape();
       this._createIcon();
@@ -86,8 +89,14 @@ namespace scene {
      * @set 设置 icon 图片 Texture
      */
     public set iconTexture(texture: egret.Texture) {
+      if (this._iconTexture) {
+        refManager.TextureManager.removeRef(this._iconTexture);
+      }
       this._iconTexture = texture;
       this._icon.texture = texture;
+      if (this._iconTexture) {
+        refManager.TextureManager.addRef(this._iconTexture);
+      }
     }
 
     /**
@@ -112,11 +121,16 @@ namespace scene {
       g.endFill();
       this.addChild(this._shape);
       this._shape.touchEnabled = true;
-      this._shape.addEventListener(egret.TouchEvent.TOUCH_TAP, function(event: egret.TouchEvent) {
+      this._shape.addEventListener(egret.TouchEvent.TOUCH_TAP, this._onClickFunc, this);
+    }
+
+    /**
+     * @private
+     */
+    private _onClickFunc(event: egret.TouchEvent) {
         if (this.onClick) {
           this.onClick(event);
         }
-      }, this);
     }
 
     /**
@@ -190,6 +204,26 @@ namespace scene {
         .start();
       this.labelTween = tween;
     }
+
+    /**
+     * @public 销毁实例
+     */
+    public destroy() {
+      if (this._iconTexture) {
+        refManager.TextureManager.removeRef(this._iconTexture);
+        this._iconTexture = null;
+      }
+      this._shape.removeEventListener(egret.TouchEvent.TOUCH_TAP, this._onClickFunc, this);
+      this._shape = null;
+      this._icon = null;
+      this._outline = null;
+      this.clearTweens();
+      this.label = null;
+      TWEEN.remove(this.labelTween);
+      this.labelTween = null;
+      this.twObj = null;
+      this.onClick = null;
+    };
 
     /**
      * 创建发光外框

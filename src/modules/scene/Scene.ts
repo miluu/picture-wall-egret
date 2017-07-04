@@ -292,6 +292,7 @@ namespace scene {
             ajax.getTexture(iconUrl, {
               onComplete: (texture) => {
                 extraItem.texture = texture;
+                refManager.TextureManager.addRef(extraItem.texture, Infinity);
               }
             });
           });
@@ -1590,6 +1591,12 @@ namespace scene {
       item.visible = true;
       item.isBacking = true;
       item.clearTweens();
+      _.forEach(item.data.extraItems, extraItem => {
+        if (extraItem.button && extraItem.type !== 1) {
+          extraItem.button.destroy();
+          extraItem.button = null;
+        }
+      });
       if (!this._isBaseItem(item)) {
         const position = this._randomOutsidePosition();
         const tw = new TWEEN.Tween(item)
