@@ -33,7 +33,7 @@ namespace refManager {
       }
       let refCount = TextureManager.textureRefs.get(texture) || 0;
       refCount += count;
-      TextureManager.textureRefs.set(texture, count);
+      TextureManager.textureRefs.set(texture, refCount);
     }
 
     /**
